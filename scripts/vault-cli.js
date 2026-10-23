@@ -315,8 +315,10 @@ function cmdTokens(demoId, format = "tailwind") {
   const bodyFont = demo.bodyFont || "sans-serif";
   const primaryFont = demo.primaryFont || "sans-serif";
 
+  const demoTitle = demo.name || demo.title || demoId;
+
   if (format === "css") {
-    console.log(`/* Design Tokens pour ${demo.title} */
+    console.log(`/* Design Tokens for ${demoTitle} */
 :root {
   --color-primary: ${primary};
   --color-secondary: ${secondary};
@@ -327,15 +329,15 @@ function cmdTokens(demoId, format = "tailwind") {
   }
 
   if (format === "rn" || format === "react-native") {
-    console.log(`// Theme React Native / Expo pour ${demo.title}
+    console.log(`// React Native / Expo Theme for ${demoTitle}
 export const theme = {
   colors: {
     primary: '${primary}',
     secondary: '${secondary}',
-    background: '#0d1117',
-    surface: '#161b22',
-    text: '#ffffff',
-    textMuted: '#8b949e',
+    background: '#0a0a0a',
+    surface: '#121212',
+    text: '#ededed',
+    textMuted: '#888888',
     border: 'rgba(255, 255, 255, 0.1)'
   },
   fonts: {
@@ -347,7 +349,7 @@ export const theme = {
   }
 
   // Tailwind (default)
-  console.log(`// tailwind.config.js — Extension de thème pour ${demo.title}
+  console.log(`// tailwind.config.js — Theme extension for ${demoTitle}
 module.exports = {
   theme: {
     extend: {

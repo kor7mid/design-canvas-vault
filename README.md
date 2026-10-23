@@ -1,17 +1,30 @@
 # Design Canvas Vault
 
-> **The ultimate repository of 1,245 Canvas templates, 79 business demo design systems, visual Lookbook, local Studio GUI, and AI Agent Skill for Zed.**
+> **The ultimate repository of 1,245 Canvas templates, 79 business demo design systems, visual Lookbook, local Studio GUI, and universal AI Agent Skill.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Templates](https://img.shields.io/badge/Templates-1%2C245_Indexed-emerald.svg)](#)
 [![Business Demos](https://img.shields.io/badge/Business_Demos-79_Niches-orange.svg)](#)
-[![Zed Skill](https://img.shields.io/badge/Zed_Agent-Skill_Compatible-purple.svg)](#)
+[![Universal Skill](https://img.shields.io/badge/AI_Agent-Skill_Compatible-purple.svg)](#)
+[![Live Studio](https://img.shields.io/badge/Live_Studio-kor7mid.github.io%2Fdesign--canvas--vault-111111?style=flat&logo=githubpages&logoColor=white)](https://kor7mid.github.io/design-canvas-vault/)
 
 ---
 
-## Universal Skill Installation (Zed AI)
+## 🌐 Live Interactive Studio & Online Lookbook
 
-To install this skill globally for your Zed coding agent:
+Preview, filter, and inspect all 1,245 templates and 79 business design systems directly in your browser without installing anything:
+
+👉 **[Launch Live Studio — https://kor7mid.github.io/design-canvas-vault/](https://kor7mid.github.io/design-canvas-vault/)**
+
+- **Split Studio**: Real-time live rendering across Desktop (100%), Tablet (768px), and Mobile (375px) viewports with live accent color customization.
+- **Lookbook Gallery**: Visual browsing with 16:10 preview thumbnails and instant category filtering.
+- **Page Composer**: Interactive full-page stack builder with real-time assembled preview and one-click code generation.
+
+---
+
+## Universal Skill Installation
+
+To install this skill globally for your AI coding agent (Cursor, Claude Code, Windsurf, Zed, etc.):
 
 ```bash
 npx skills add kor7mid/design-canvas-vault -g

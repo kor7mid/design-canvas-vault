@@ -27,7 +27,8 @@
     "tailwind",
     "react",
     "react-native",
-    "zed-skill",
+    "agent-skill",
+    "ai-skill",
     "lookbook",
     "vault-studio"
   ],
