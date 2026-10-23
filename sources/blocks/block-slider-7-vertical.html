@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slider 7 Vertical | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.swiper-pagination {
+			--cnvs-swiper-bar-color: #000;
+			--cnvs-swiper-bar-size: 30px;
+			--cnvs-swiper-bar-dot-size: 8px;
+			--cnvs-swiper-bar-dot-color: #000;
+			--cnvs-swiper-stroke-width: 6;
+			--cnvs-swiper-autoplay-speed: 5000ms;
+			--cnvs-swiper-bullet-gutter: 3px;
+			--cnvs-swiper-bullet-offset: 25px;
+
+			bottom: var(--cnvs-swiper-bullet-offset) !important;
+		}
+
+		.swiper-pagination.center-left,
+		.swiper-pagination.center-right {
+			display: block;
+			width: var(--cnvs-swiper-bar-size);
+			top: 50% !important;
+			bottom: auto !important;
+			left: var(--cnvs-swiper-bullet-offset) !important;
+			transform: translateY(-50%);
+		}
+
+		.swiper-pagination.center-right {
+			right: var(--cnvs-swiper-bullet-offset) !important;
+			left: auto !important;
+		}
+
+		.dark .swiper-pagination,
+        .dark.swiper-pagination {
+			--cnvs-swiper-bar-color: var(--bs-light);
+			--cnvs-swiper-bar-dot-color: var(--bs-light);
+		}
+
+		.swiper-pagination span,
+		.swiper-pagination-bullet svg {
+			position: relative;
+			width: var(--cnvs-swiper-bar-size);
+			height: var(--cnvs-swiper-bar-size);
+			background-color: transparent;
+			border: 0;
+		}
+
+		.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+			margin: 0 var(--cnvs-swiper-bullet-gutter);
+		}
+
+		.swiper-horizontal>.swiper-pagination.center-left.swiper-pagination-bullets .swiper-pagination-bullet,
+		.swiper-horizontal>.swiper-pagination.center-right.swiper-pagination-bullets .swiper-pagination-bullet {
+			margin: var(--cnvs-swiper-bullet-gutter) 0;
+		}
+
+		.swiper-pagination span:hover,
+		.swiper-pagination span.swiper-pagination-bullet-active {
+			background: transparent !important;
+		}
+
+		.swiper-pagination-bullet circle {
+			stroke: var(--cnvs-swiper-bar-color);
+			stroke-width: var(--cnvs-swiper-stroke-width);
+			fill: none;
+		}
+
+		.swiper-pagination-bullet::before {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: var(--cnvs-swiper-bar-dot-size);
+			height: var(--cnvs-swiper-bar-dot-size);
+			background: var(--cnvs-swiper-bar-dot-color);
+			border-radius: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.swiper-pagination-bullet circle {
+			stroke-dashoffset: 260;
+			stroke-dasharray: 259;
+		}
+		.swiper-pagination-bullet-active circle {
+			transform: rotate(-90deg);
+			transform-origin: center;
+			animation-name: swiperSVGAnim;
+			animation-duration: var(--cnvs-swiper-autoplay-speed);
+			animation-timing-function: ease-in;
+			animation-iteration-count: 1;
+			animation-direction: alternate;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes swiperSVGAnim {
+			0% {
+				stroke-dashoffset: 260;
+			}
+			100% {
+				stroke-dashoffset: 0;
+			}
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<!-- Hero Section
+				============================================= -->
+				<div class="slider-element swiper_wrapper min-vh-100 customjs">
+
+					<div class="swiper swiper-parent">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="container">
+									<div class="slider-caption slider-caption-center dark">
+										<h2>Slider One</h2>
+										<p>Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.</p>
+										<div>
+											<a href="block-slider-7.html" class="button button-large button-light button-white px-4 py-3 text-dark m-0 mt-4" target="_blank">Horizontal Pagination</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide-bg" style="background-image: url('../demos/store/images/slider/1.jpg');"></div>
+							</div>
+							<div class="swiper-slide">
+								<div class="container">
+									<div class="slider-caption slider-caption-center dark">
+										<h2>Slider Two</h2>
+										<p>Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.</p>
+										<div>
+											<a href="block-slider-7.html" class="button button-large button-light button-white px-4 py-3 text-dark m-0 mt-4" target="_blank">Horizontal Pagination</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide-bg" style="background-image: url('../demos/shop/images/slider/1.jpg');"></div>
+							</div>
+							<div class="swiper-slide">
+								<div class="container">
+									<div class="slider-caption slider-caption-center dark">
+										<h2>Slider Three</h2>
+										<p>Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.</p>
+										<div>
+											<a href="block-slider-7.html" class="button button-large button-light button-white px-4 py-3 text-dark m-0 mt-4" target="_blank">Horizontal Pagination</a>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide-bg" style="background-image: url('../demos/store/images/slider/3.jpg');"></div>
+							</div>
+						</div>
+						<!-- If we need pagination -->
+						<div class="swiper-pagination center-right"></div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

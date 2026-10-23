@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop Select | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.block-shop-select {
+			--cnvs-earpods-colors-sizes: 26px;
+			--cnvs-earpods-colors-rounded: 50%;
+			--cnvs-earpods-colors-gutters: 4px;
+			--cnvs-earpods-colors-rounded: 50%;
+			--cnvs-earpods-colors-borders: 2px;
+			--cnvs-earpods-colors-border-color: #DDD;
+		}
+
+		.block-shop-select .earpods-colors .nav-link {
+			position: relative;
+			width: var(--cnvs-earpods-colors-sizes, 26px);
+			height: var(--cnvs-earpods-colors-sizes, 26px);
+			border-radius: var(--cnvs-earpods-colors-rounded, 50%);
+			background-color: var(--cnvs-earpods-colors-background, #111);
+			margin: 0 var(--cnvs-earpods-colors-gutters, 4px);
+			padding: 0;
+			z-index: 1;
+			border: 3px solid #FFF;
+			box-shadow: 0 0 0 var(--cnvs-earpods-colors-borders, 2px) var(--cnvs-earpods-colors-border-color);
+		}
+
+		.block-shop-select .earpods-colors .nav-link.active {
+			--cnvs-earpods-colors-border-color: var(--bs-danger);
+		}
+
+		.block-shop-select .item-price {
+			font-weight: normal;
+			font-size: 90%;
+			opacity: .7;
+
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap py-0">
+
+				<div class="container py-5">
+					<div class="row align-items-center justify-content-between text-center text-sm-start block-shop-select">
+						<div class="col-sm-6">
+							<div class="tab-content">
+								<div class="tab-pane show active" id="earpods-case-black" role="tabpanel" aria-labelledby="earpods-case-black-tab">
+									<img src="../previews/preview/shop-select/black.jpg" alt="Black">
+								</div>
+								<div class="tab-pane" id="earpods-case-blue" role="tabpanel" aria-labelledby="earpods-case-blue-tab">
+									<img src="../previews/preview/shop-select/blue.jpg" alt="blue">
+								</div>
+								<div class="tab-pane" id="earpods-case-grey" role="tabpanel" aria-labelledby="earpods-case-grey-tab">
+									<img src="../previews/preview/shop-select/clear.jpg" alt="clear">
+								</div>
+								<div class="tab-pane" id="earpods-case-green" role="tabpanel" aria-labelledby="earpods-case-green-tab">
+									<img src="../previews/preview/shop-select/green.jpg" alt="green">
+								</div>
+								<div class="tab-pane" id="earpods-case-orange" role="tabpanel" aria-labelledby="earpods-case-orange-tab">
+									<img src="../previews/preview/shop-select/orange.jpg" alt="orange">
+								</div>
+								<div class="tab-pane" id="earpods-case-lightblue" role="tabpanel" aria-labelledby="earpods-case-lightblue-tab">
+									<img src="../previews/preview/shop-select/lightblue.jpg" alt="lightblue">
+								</div>
+								<div class="tab-pane" id="earpods-case-white" role="tabpanel" aria-labelledby="earpods-case-white-tab">
+									<img src="../previews/preview/shop-select/white.jpg" alt="white">
+								</div>
+							</div>
+						</div>
+						<div class="col-md-5 col-sm-6">
+							<h2>Choose Your Earpods Case</h2>
+							<h4 class="item-name">Black - <span class="item-price text-dark">$299</span></h4>
+							<div class="nav nav-pills earpods-colors mb-5 justify-content-center justify-content-sm-start" id="earpods-case-tab" role="tablist" aria-orientation="vertical">
+								<a class="nav-link active ms-0" id="earpods-case-black-tab" data-bs-toggle="tab" href="#earpods-case-black" role="tab" aria-controls="earpods-case-black" aria-selected="true" data-desc="Black - <span class='item-price text-dark'>$299</span>" style="--cnvs-earpods-colors-background: Black"></a>
+								<a class="nav-link" id="earpods-case-blue-tab" data-bs-toggle="tab" href="#earpods-case-blue" role="tab" aria-controls="earpods-case-blue" aria-selected="false" data-desc="Blue - <span class='item-price text-dark'>$279</span>" style="--cnvs-earpods-colors-background: Blue"></a>
+								<a class="nav-link" id="earpods-case-grey-tab" data-bs-toggle="tab" href="#earpods-case-grey" role="tab" aria-controls="earpods-case-grey" aria-selected="false" data-desc="Grey - <span class='item-price text-dark'>$239</span>" style="--cnvs-earpods-colors-background: Grey;"></a>
+								<a class="nav-link" id="earpods-case-green-tab" data-bs-toggle="tab" href="#earpods-case-green" role="tab" aria-controls="earpods-case-green" aria-selected="false" data-desc="Green - <span class='item-price text-dark'>$249</span>" style="--cnvs-earpods-colors-background: green;"></a>
+								<a class="nav-link" id="earpods-case-orange-tab" data-bs-toggle="tab" href="#earpods-case-orange" role="tab" aria-controls="earpods-case-orange" aria-selected="false" data-desc="Orange - <span class='item-price text-dark'>$199</span>" style="--cnvs-earpods-colors-background: orange;"></a>
+								<a class="nav-link" id="earpods-case-lightblue-tab" data-bs-toggle="tab" href="#earpods-case-lightblue" role="tab" aria-controls="earpods-case-lightblue" aria-selected="false" data-desc="Sky Blue - <span class='item-price text-dark'>$199</span>" style="--cnvs-earpods-colors-background: skyblue;"></a>
+								<a class="nav-link" id="earpods-case-white-tab" data-bs-toggle="tab" href="#earpods-case-white" role="tab" aria-controls="earpods-case-white" aria-selected="false" data-desc="White - <span class='item-price text-dark'>$299</span>" style="--cnvs-earpods-colors-background: whitesmoke"></a>
+							</div>
+							<a href="#" class="btn btn-lg btn-danger">Buy Now</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skeleton Loading | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.skeleton {
+			--skeleton-avatar-w: 80px;
+			--skeleton-avatar-h: var(--skeleton-avatar-w);
+			--skeleton-avatar-rounded: 50%;
+			--skeleton-avatar-gap: 20px;
+			--skeleton-color: #EEE;
+			--skeleton-title-height: 20px;
+			--skeleton-title-radius: 3px;
+			--skeleton-anim-bg: rgba(255, 255, 255, 0.4);
+			--skeleton-anim-speed: 1.5s;
+			--skeleton-bg: transparent;
+
+			background-color: var(--skeleton-bg);
+		}
+
+		.lazy .skeleton { display: none; }
+		.lazy.lazy-loaded .skeleton { display: block; }
+
+		/*
+		 * Skeleton for Loading
+		 */
+		.skeleton-avatar {
+			width: var(--skeleton-avatar-w);
+			height: var(--skeleton-avatar-h);
+			border-radius: var(--skeleton-avatar-rounded);
+			background-color: var(--skeleton-color);
+			margin-bottom: var(--skeleton-avatar-gap);
+			overflow: hidden;
+			position: relative;
+		}
+
+		.skeleton-title,
+		.skeleton-para li {
+			height: var(--skeleton-title-height);
+			border-radius: var(--skeleton-title-radius);
+			background-color: var(--skeleton-color);
+			margin: calc(var(--skeleton-avatar-gap) / 2) 0;
+			overflow: hidden;
+			position: relative;
+		}
+
+		.skeleton-para li { height: calc(var(--skeleton-title-height) - 7px);overflow: hidden; }
+
+		[class*="skeleton-"]::after {
+			display: block;
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			transform: translateX(-100%);
+			background: -webkit-gradient(linear, left top,
+				right top, from(transparent),
+				color-stop(var(--skeleton-anim-bg)),
+				to(transparent));
+
+			background: linear-gradient(90deg, transparent,
+				var(--skeleton-anim-bg), transparent);
+
+			/* Adding animation */
+			animation: loading var(--skeleton-anim-speed) infinite;
+		}
+
+		/* Loading Animation */
+		@keyframes loading {
+			100% {
+				transform: translateX(100%);
+			}
+		}
+
+		@-webkit-keyframes loading {
+			100% {
+				transform: translateX(100%);
+			}
+		}
+
+		.skeleton-2 {
+			--skeleton-avatar-w: 100%;
+			--skeleton-avatar-h: 150px;
+			--skeleton-avatar-rounded: 6px;
+			--skeleton-color: #EEE;
+		}
+
+		.skeleton.card {
+			--skeleton-bg: #EEE;
+			--skeleton-color: #FFF;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+				<div class="container">
+
+					<h1 class="text-center mb-6">Skeleton Loading</h1>
+
+					<div class="clear"></div>
+
+					<div class="row">
+						<div class="col-md-3">
+							<div class="skeleton">
+								<div class="skeleton-avatar"></div>
+								<div class="skeleton-title w-50 mb-4"></div>
+								<ul class="skeleton-para list-unstyled mb-0">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="skeleton">
+								<div class="skeleton-avatar mx-auto"></div>
+								<div class="skeleton-title w-50 mb-4 mx-auto"></div>
+								<ul class="skeleton-para list-unstyled mb-0">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="skeleton">
+								<div class="skeleton-avatar mx-auto"></div>
+								<div class="skeleton-title w-50 mb-4 mx-auto"></div>
+								<ul class="skeleton-para list-unstyled mb-0">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="skeleton">
+								<div class="skeleton-avatar ms-auto"></div>
+								<div class="skeleton-title w-50 mb-4 ms-auto"></div>
+								<ul class="skeleton-para list-unstyled mb-0">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="clear line"></div>
+
+						<div class="col-md-3">
+							<div class="skeleton skeleton-2">
+								<div class="skeleton-title w-50 mb-3"></div>
+								<div class="skeleton-avatar"></div>
+								<ul class="skeleton-para list-unstyled mb-0">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="skeleton skeleton-2">
+								<div class="skeleton-title w-50 mb-3 mx-auto"></div>
+								<div class="skeleton-avatar"></div>
+								<ul class="skeleton-para list-unstyled mb-0">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="skeleton skeleton-2">
+								<div class="skeleton-title w-50 mb-3 mx-auto"></div>
+								<div class="skeleton-avatar"></div>
+								<ul class="skeleton-para list-unstyled mb-0">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="skeleton skeleton-2">
+								<div class="skeleton-title w-50 mb-3 ms-auto"></div>
+								<div class="skeleton-avatar"></div>
+								<ul class="skeleton-para list-unstyled mb-0">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="clear line"></div>
+
+						<div class="col-md-3">
+							<div class="skeleton">
+								<div class="d-flex align-items-center mb-4">
+									<div class="skeleton-avatar mb-0"></div>
+									<div class="d-flex flex-column flex-fill">
+										<div class="skeleton-title w-50 mb-0 ms-3 mt-0" style="height: 10px;"></div>
+										<div class="skeleton-title mb-0 ms-3"></div>
+									</div>
+								</div>
+								<ul class="skeleton-para list-unstyled mb-0">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="skeleton">
+								<div class="skeleton-avatar mx-auto"></div>
+								<div class="skeleton-title w-50 mb-3 mx-auto"></div>
+								<ul class="skeleton-para list-unstyled mb-0 mx-auto">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="skeleton">
+								<div class="skeleton-avatar mx-auto"></div>
+								<div class="skeleton-title w-50 mb-3 mx-auto"></div>
+								<ul class="skeleton-para list-unstyled mb-0 mx-auto">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-3">
+							<div class="skeleton">
+								<div class="d-flex flex-row-reverse align-items-center mb-4">
+									<div class="skeleton-avatar mb-0"></div>
+									<div class="d-flex flex-column flex-fill">
+										<div class="skeleton-title w-50 mb-0 me-3 mt-0 ms-auto" style="height: 10px;"></div>
+										<div class="skeleton-title mb-0 me-3"></div>
+									</div>
+								</div>
+								<ul class="skeleton-para list-unstyled mb-0">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="clear line"></div>
+
+						<div class="col-md-4">
+							<div class="skeleton card border-0 p-5">
+								<div class="bg-white skeleton-avatar"></div>
+								<div class="bg-white skeleton-title w-50 mb-4"></div>
+								<ul class="skeleton-para list-unstyled mb-0">
+									<li class="bg-white"></li>
+									<li class="bg-white"></li>
+									<li class="bg-white"></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="skeleton skeleton-2 card border-0 p-4">
+								<div class="skeleton-title w-50 mb-3"></div>
+								<div class="skeleton-avatar w-75"></div>
+								<ul class="skeleton-para list-unstyled mb-0">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-4">
+							<div class="skeleton card border-0 p-5">
+								<div class="d-flex align-items-center mb-4">
+									<div class="skeleton-avatar mb-0"></div>
+									<div class="d-flex flex-column flex-fill">
+										<div class="skeleton-title w-50 mb-0 ms-3 mt-0" style="height: 10px;"></div>
+										<div class="skeleton-title mb-0 ms-3"></div>
+									</div>
+								</div>
+								<ul class="skeleton-para list-unstyled mb-0">
+									<li></li>
+									<li></li>
+									<li></li>
+								</ul>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

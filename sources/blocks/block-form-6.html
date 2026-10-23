@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Layout 6 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.block-form-6 .form-control {
+			--cnvs-input-btn-input-bg: var(--cnvs-contrast-200);
+			--cnvs-input-btn-input-color: var(--cnvs-contrast-1000);
+			--cnvs-input-focus-color: var(--cnvs-input-btn-input-color);
+		}
+</style>
+</head>
+<body class="stretched block-form-6">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap overflow-visible">
+
+				<div class="container mw-lg">
+
+					<div class="row justify-content-between col-mb-30">
+						<div class="col-lg-2 sticky-lg-top h-100" style="top: 20px">
+							<h2 class="mb-3">Ready to Hire?</h2>
+							<p class="mb-3 text-muted">Compellingly negotiate multimedia based information with.</p>
+						</div>
+						<div class="col-lg-8">
+							<div class="card bg-dark dark">
+								<div class="text-center">
+									<img src="../images/logo-dark@2x.png" alt="Logo" height="100">
+								</div>
+								<div class="line line-sm mt-0"></div>
+								<div class="card-body px-md-6">
+
+									<h4 class="mb-4 fw-normal">Enter your Details to Book a Schedule.</h4>
+
+									<div class="form-widget">
+
+										<div class="form-result"></div>
+
+										<form class="mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
+
+											<div class="form-process">
+												<div class="css3-spinner">
+													<div class="css3-spinner-scaler"></div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-12 form-group">
+													<label for="template-contactform-name">Name <small>*</small></label>
+													<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="form-control required">
+												</div>
+
+												<div class="col-12 form-group">
+													<label for="template-contactform-email">Email <small>*</small></label>
+													<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email form-control">
+												</div>
+
+												<div class="col-12 form-group">
+													<label for="template-contactform-phone">Phone <small>*</small></label>
+													<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="form-control required">
+												</div>
+
+												<div class="w-100"></div>
+
+												<div class="col-12 form-group">
+													<label for="template-contactform-company">Name of your Company? <small>*</small></label>
+													<input type="text" id="template-contactform-company" name="company" value="" class="required form-control">
+												</div>
+
+												<div class="col-12 form-group">
+													<label for="template-contactform-date">Select the Available Date? <small>*</small></label>
+													<input type="text" value="" class="form-control required" id="template-contactform-date" name="template-contactform-date">
+												</div>
+
+												<div class="col-12 form-group">
+													<label>Does your Company hire Remotely?</label>
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" value="" id="template-contactform-hired-yes" name="template-contactform-hired-yes">
+														<label class="form-check-label" for="template-contactform-hired-yes">
+															Yes we are hire.
+														</label>
+													</div>
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" value="" id="template-contactform-hired-onsite" name="template-contactform-hired-onsite">
+														<label class="form-check-label" for="template-contactform-hired-onsite">
+															Yes we are hire only in site.
+														</label>
+													</div>
+
+													<div class="form-check">
+														<input class="form-check-input" type="checkbox" value="" id="template-contactform-hired-no" name="template-contactform-hired-no">
+														<label class="form-check-label" for="template-contactform-hired-no">
+															No, we dont hire.
+														</label>
+													</div>
+
+													<div class="form-check d-flex align-items-center">
+														<input class="form-check-input" type="checkbox" value="" id="template-contactform-hired-other" name="template-contactform-hired-other">
+														<input type="text" id="template-contactform-other" name="template-contactform-other" value="" class="form-control ms-2 w-auto" placeholder="Others">
+													</div>
+												</div>
+
+												<div class="w-100"></div>
+
+												<div class="col-12 form-group">
+													<label for="template-contactform-message">Message</label>
+													<textarea class="form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
+												</div>
+
+												<div class="col-12 form-group d-none">
+													<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="form-control">
+												</div>
+
+												<div class="col-12 my-4">
+													<button class="button bg-white text-dark h-op-08 rounded-pill m-0" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit"><i class="bi-calendar2-week"></i> Schedule an Event</button>
+												</div>
+											</div>
+
+											<input type="hidden" name="prefix" value="template-contactform-">
+
+										</form>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

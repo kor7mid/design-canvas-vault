@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today.">
+
+	<!-- Font Imports -->
+	<!-- <link rel="stylesheet" href="https://use.typekit.net/duf7ikw.css"> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Marcellus&DM+Sans:wght@400;500;600;700;800&family=Cookie&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="../shared/style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="../shared/css/font-icons.css">
+
+	<!-- Plugins/Components CSS -->
+	<link rel="stylesheet" href="../shared/css/swiper.css">
+
+	<!-- Saas Page Module Specific Stylesheet -->
+	<link rel="stylesheet" href="saas-page/saas-page.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../shared/css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Swiper Page Module | Canvas</title>
+
+	<style>
+		#swiper-tab .swiper-slide {
+			font-size: 70px;
+			text-align: center;
+			line-height: 50vh;
+			font-weight: 900;
+		}
+		.swiper-pagination-progress {
+			position: absolute;
+			left: 0;
+			bottom: 0px;
+			width: 100%;
+			height: auto;
+			border-radius: 0;
+			opacity: 1;
+			margin: 0px;
+			background-color: transparent;
+		}
+		.swiper-pagination-progress .swiper-pagination-bar {
+			position: absolute;
+			bottom: 0;
+			border-radius: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			height: 3px;
+			margin: 0px;
+			background-color: red;
+		}
+		.swiper-pagination-progress .swiper-pagination-bar,
+		.swiper-pagination-progress .swiper-pagination span:hover {
+			--cnvs-slider-arrow-color: red ;
+		}
+
+		.swiper-pagination-progress .swiper-pagination-bar-active {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 2;
+			width: 0%;
+			height: 3px;
+			border-radius: 0;
+			margin: 0px;
+			background-color: #111111;
+		}
+		.active .swiper-pagination-progress .swiper-pagination-bar-active {
+			animation-name: countingBar;
+			animation-duration: 6s;
+			animation-timing-function: ease-in;
+			animation-iteration-count: 1;
+			animation-direction: alternate;
+			animation-fill-mode: forwards;
+		}
+		@keyframes countingBar {
+			0% {
+				width: 0;
+			}
+			100% {
+				width: 100%;
+			}
+		}
+		#swiper-tab .swiper-wrapper {
+			padding-bottom: 30px;
+		}
+
+		.swiper-links-container {
+			list-style-type: none;
+		}
+
+		.swiper-tab-link {
+			position: relative;
+		}
+
+		.swiper-tab-link.active {
+			background-color: #AAA !important;
+		}
+	</style>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html">
+								<img class="logo-default" srcset="../images/logo.png, ../images/logo@2x.png 2x" src="../images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-dark" srcset="../images/logo-dark.png, ../images/logo-dark@2x.png 2x" src="../images/logo-dark@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+							<ul class="one-page-menu menu-container" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
+								<li class="menu-item">
+									<a href="#" class="menu-link" data-href="#wrapper"><div>Home</div></a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link" data-href="#section-services"><div>Services</div></a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link" data-href="#section-clients"><div>Clients</div></a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link" data-href="#section-testimonial"><div>Testimonial</div></a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link" data-href="#section-blog"><div>Blog</div></a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link" data-href="#section-contact"><div>Contact</div></a>
+								</li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+				<div class="container mb-6">
+					<div class="row">
+						<div class="col-md-6">
+							<ul class="swiper-links-container">
+								<li class="swiper-tab-link mb-4 p-4 bg-light active">
+									Tab - 1
+									<div class="swiper-pagination-progress">
+										<span class="swiper-pagination-bar"></span><span class="swiper-pagination-bar-active"></span>
+									</div>
+								</li>
+								<li class="swiper-tab-link mb-4 p-4 bg-light">
+									Tab - 2
+									<div class="swiper-pagination-progress">
+										<span class="swiper-pagination-bar"></span><span class="swiper-pagination-bar-active"></span>
+									</div>
+								</li>
+								<li class="swiper-tab-link mb-4 p-4 bg-light">
+									Tab - 3
+									<div class="swiper-pagination-progress">
+										<span class="swiper-pagination-bar"></span><span class="swiper-pagination-bar-active"></span>
+									</div>
+								</li>
+							</ul>
+							<!-- <div class="swiper-pagination swiper-tab-pagination"></div> -->
+						</div>
+						<div class="col-md-6">
+							<div id="swiper-tab" class="swiper_wrapper h-auto">
+								<div class="swiper swiper-tab-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide bg-danger">Content - 1</div>
+										<div class="swiper-slide bg-success">Content - 2</div>
+										<div class="swiper-slide bg-info">Content - 3</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="../shared/js/plugins.min.js"></script>
+	<script src="../shared/js/functions.bundle.js"></script>
+
+	<script>
+		window.addEventListener( 'load', function() {
+			var SwiperTabsContainer = new Swiper('.swiper-tab-container', {
+				loop: true,
+				slidesPerView: 1,
+				autoHeight: true,
+				autoplay: {
+					delay: 6000,
+					disableOnInteraction: false,
+					autoplayDisableOnInteraction: false
+				},
+				effect: 'fade',
+				fadeEffect: {
+					crossFade: true
+				},
+				longSwipes: true,
+    			autoplayDisableOnInteraction:true,
+				on: {
+					activeIndexChange: function(swiper) {
+						var index = swiper.realIndex;
+						jQuery('.swiper-tab-link').removeClass('active');
+						jQuery('.swiper-tab-link').eq(index).addClass('active');
+					}
+				}
+			});
+
+			jQuery('.swiper-tab-link').on('click', function() {
+				var index = jQuery(this).index();
+				SwiperTabsContainer.slideToLoop(index);
+				jQuery('.swiper-tab-link').removeClass('active');
+				jQuery(this).addClass('active');
+			});
+		});
+	</script>
+
+</body>
+</html>

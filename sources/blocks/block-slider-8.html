@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sticky Scroll | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.list-group-item {
+        position: absolute;
+        top: 0;
+        left: 0;
+		background-color: #fff !important;
+        color: #212529;
+        border: 0;
+        width: 100%;
+        padding: 40px;
+        margin: 0;
+    }
+
+	.list-group-item:nth-child(1) {
+		z-index: 1;
+	}
+
+	.list-group-item .text-anim {
+		transform: translateY(-20px);
+		--text-anim-duration: .3s;
+		transition-property: opacity, transform;
+		transition-duration: var(--text-anim-duration);
+		transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		transition-delay: var(--text-anim-delay , 0s);
+	}
+
+    .list-group-item.active .text-anim {
+        opacity: 1;
+		transform: translateY(0px);
+		background-color: #FFF;
+    }
+
+    .list-group-content > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+		align-items: center;
+    }
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap overflow-visible">
+
+				<div class="vh-100"></div>
+
+                <!-- Hero Section
+                ============================================= -->
+                <div class="container">
+                    <div class="row g-0 justify-content-between">
+                        <div class="col-md-4 position-sticky vh-50" style="top: 238px;">
+                            <!-- Sticky Image Target -->
+                            <div id="list-example" class="position-relative one-page-menu" data-active-class="active" data-parent=".list-group-item">
+                                <!-- List Item 1 -->
+                                <div class="list-group-item active bg-white text-dark" href="#list-item-1" data-href="#list-item-1">
+									<p class="mb-2 ls-4 text-black-50"><strong class="text-black">1</strong> / 3</p>
+									<h1 class="display-3 text-anim fw-bold">Blocks</h1>
+									<p class="text-anim" style="--text-anim-delay: .1s;">Get Started with Canvas quickly using the premade Section Blocks. Just Copy, Paste and Assemble.</p>
+
+								</div>
+
+                                <!-- List Item 2 -->
+                                <div class="list-group-item bg-white text-dark" href="#list-item-2" data-href="#list-item-2">
+									<p class="mb-2 ls-4 text-black-50"><strong class="text-black">2</strong> / 3</p>
+									<h1 class="display-3 text-anim fw-bold">Demos</h1>
+									<p class="text-anim" style="--text-anim-delay: .1s;">Our Template Package includes a Total of 160+ Ready-to-Use Websites including Niche Demos.</p>
+								</div>
+
+                                <!-- List Item 3 -->
+                                <div class="list-group-item bg-white text-dark" href="#list-item-3" data-href="#list-item-3">
+									<p class="mb-2 ls-4 text-black-50"><strong class="text-black">3</strong> / 3</p>
+									<h1 class="display-3 text-anim fw-bold">Homepages</h1>
+									<p class="text-anim" style="--text-anim-delay: .1s;">Canvas is a Powerful, Responsive & Raw Multi-Purpose Multi-Page & One-Page HTML5 Template based on Latest Bootstrap 5 Framework.</p>
+								</div>
+                            </div>
+                        </div>
+
+                        <!-- List Item Content -->
+                        <div class="col-md-7 list-group-content">
+                            <!-- List Item Content 1 -->
+                            <div id="list-item-1" class="d-flex align-items-center text-center min-vh-100 page-section">
+                                <img class="mb-4" src="../images/intro/blocks.jpg" alt="..">
+                            </div>
+
+                            <!-- List Item Content 2 -->
+                            <div id="list-item-2" class="d-flex align-items-center text-center min-vh-100 page-section">
+                                <img class="mb-4" src="../images/intro/latest/niche-demos.jpg" alt="..">
+                            </div>
+
+                            <!-- List Item Content 3 -->
+                            <div id="list-item-3" class="d-flex align-items-center text-center min-vh-100 page-section">
+                                <img class="mb-4" src="../images/intro/blocks/2.png" alt="..">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+				<div class="clear w-100"></div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

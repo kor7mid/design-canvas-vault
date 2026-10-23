@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Event Schedule | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.nav-pills .nav-link {
+			--bs-bg-opacity: .075;
+			margin-top: 14px;
+  			background-color: rgba(47, 145, 98, var(--bs-bg-opacity)) !important;
+		}
+
+		.nav-pills .nav-link.active {
+			--bs-bg-opacity: 1;
+		}
+
+		.nav-pills .nav-link *,
+		.event-title a {
+			color: #111;
+		}
+
+		.nav-pills .nav-link.active * {
+			color: #FFF;
+		}
+
+		.nav-pills .nav-link:first-child {
+			margin-top: 0;
+		}
+
+		.event-title a:hover {
+			text-decoration: underline !important;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+				<div class="container">
+
+					<div class="row justify-content-between">
+						<div class="col-lg-3 mb-5 mb-lg-0">
+							 <div class="nav nav-pills flex-column" id="side-tab" role="tablist" aria-orientation="vertical">
+								<a class="nav-link active p-3 p-lg-4" id="side-tab-1-tab" data-bs-toggle="tab" href="#side-tab-1" role="tab" aria-controls="side-tab-1" aria-selected="true">
+									<span class="mb-0 text-uppercase ls-1 fw-bold op-07">Day 1</span>
+									<h3 class="mb-0">14th Oct, 2022</h3>
+								</a>
+								<a class="nav-link p-3 p-lg-4" id="side-tab-2-tab" data-bs-toggle="tab" href="#side-tab-2" role="tab" aria-controls="side-tab-2" aria-selected="false">
+									<span class="mb-0 text-uppercase ls-1 fw-bold op-07">Day 2</span>
+									<h3 class="mb-0">15th Oct, 2022</h3>
+								</a>
+								<a class="nav-link p-3 p-lg-4" id="side-tab-3-tab" data-bs-toggle="tab" href="#side-tab-3" role="tab" aria-controls="side-tab-3" aria-selected="false">
+									<h4 class="mb-0 text-uppercase ls-1 fw-bold op-07">Day 3</h4>
+									<h3 class="mb-0">16th Oct, 2022</h3>
+								</a>
+							</div>
+						</div>
+						<div class="col-lg-8">
+							<div class="tab-content" id="side-tab-tabContent">
+
+								<!-- Tab Pane 1 -->
+								<div class="tab-pane fade show active" id="side-tab-1" role="tabpanel" aria-labelledby="side-tab-1-tab">
+									<div class="row mb-1 mb-xl-3">
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h4 class="mb-0">10:00am – 11:00am</h4>
+										</div>
+										<div class="col-sm-8">
+											<h3 class="mb-0 event-title"><a href="#">7 Tips To Build A Website Legally</a></h3>
+										</div>
+									</div>
+
+									<div class="line my-5"></div>
+
+									<div class="row mb-1 mb-xl-3">
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h4 class="mb-0">11:30am – 12:30pm</h4>
+											<div class="badge bg-warning mt-3">Privacy &amp; Security</div> <br>
+										</div>
+										<div class="col-sm-8">
+											<h3 class="mb-0 event-title"><a href="#">GDPR: How to deal with privacy on the web</a></h3>
+											<p class="mt-3">Intrinsicly incubate next-generation architectures via corporate core competencies. Assertively productivate optimal e-markets vis-a-vis intermandated information. Competently.</p>
+											<div class="hstack align-items-center">
+												<img src="../demos/forum/images/users/1.jpg" class="rounded-circle" width="48" alt="Gordon Norman">
+												<div class="ms-3">
+													<h5 class="fw-semibold mb-0"><a href="#" class="text-dark">Gordon Norman</a></h5>
+													<small class="text-smaller op-08">Google</small>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="line my-5"></div>
+
+									<div class="row mb-1 mb-xl-3">
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h4 class="mb-0">12:45pm – 1:30pm</h4>
+											<div class="badge bg-warning mt-3">Development</div> <br>
+										</div>
+										<div class="col-sm-8">
+											<h3 class="mb-0 event-title"><a href="#">Modern development in WordPress</a></h3>
+											<p class="mt-3">Intrinsicly incubate next-generation architectures via corporate core competencies. Assertively productivate optimal e-markets vis-a-vis intermandated information. Competently.</p>
+											<div class="hstack align-items-center">
+												<img src="../demos/forum/images/users/2.jpg" class="rounded-circle" width="48" alt="Gordon Norman">
+												<div class="ms-3">
+													<h5 class="fw-semibold mb-0">Ricky Hams</h5>
+													<small class="text-smaller op-08">Google</small>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="line my-5"></div>
+
+									<div class="row align-items-center">
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h4 class="mb-0">1:30pm – 2:00pm</h4>
+										</div>
+										<div class="col-sm-8 bg-light p-4 rounded text-center">
+											<h3 class="mb-0">Lunch Break</h3>
+										</div>
+									</div>
+
+									<div class="line my-5"></div>
+
+									<div class="row mb-1 mb-xl-3">
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h4 class="mb-0">2:10pm – 3:30pm</h4>
+											<div class="badge bg-warning mt-3">Design</div> <br>
+										</div>
+										<div class="col-sm-8">
+											<h3 class="mb-0 event-title"><a href="#">Remote Design: The Async Advantage</a></h3>
+											<p class="mt-3">Intrinsicly incubate next-generation architectures via corporate core competencies. Assertively productivate optimal e-markets vis-a-vis intermandated information. Competently.</p>
+											<div class="row">
+												<div class="col hstack align-items-center">
+													<img src="../demos/forum/images/users/3.jpg" class="rounded-circle" width="48" alt="Gordon Norman">
+													<div class="ms-3">
+														<h5 class="fw-semibold mb-0">Eric Rolex</h5>
+														<small class="text-smaller op-08">Google</small>
+													</div>
+												</div>
+
+												<div class="col hstack align-items-center">
+													<img src="../demos/forum/images/users/4.jpg" class="rounded-circle" width="48" alt="Gordon Norman">
+													<div class="ms-3">
+														<h5 class="fw-semibold mb-0">Eric Rolex</h5>
+														<small class="text-smaller op-08">Google</small>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<!-- Tab Pane 2 -->
+								<div class="tab-pane fade" id="side-tab-2" role="tabpanel" aria-labelledby="side-tab-2-tab">
+									<div class="row mb-1 mb-xl-3">
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h4 class="mb-0">10:00am – 11:00am</h4>
+											<div class="badge bg-warning mt-3">Development</div>
+										</div>
+										<div class="col-sm-8">
+											<h3 class="mb-0 event-title"><a href="#">Fastest way of creating Gutenberg blocks with minimal JavaScript knowledge</a></h3>
+										</div>
+									</div>
+
+									<div class="line my-5"></div>
+
+									<div class="row mb-1 mb-xl-3">
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h4 class="mb-0">11:30am – 12:30pm</h4>
+											<div class="badge bg-warning mt-3">Content</div>
+										</div>
+										<div class="col-sm-8">
+											<h3 class="mb-0 event-title"><a href="#">Stories in WordPress – Content Creators Delight!</a></h3>
+											<p class="mt-3">Intrinsicly incubate next-generation architectures via corporate core competencies. Assertively productivate optimal e-markets vis-a-vis intermandated information. Competently.</p>
+											<div class="hstack align-items-center">
+												<img src="../demos/forum/images/users/1.jpg" class="rounded-circle" width="48" alt="Gordon Norman">
+												<div class="ms-3">
+													<h5 class="fw-semibold mb-0"><a href="#" class="text-dark">Gordon Norman</a></h5>
+													<small class="text-smaller op-08">Google</small>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="line my-5"></div>
+
+									<div class="row mb-1 mb-xl-3">
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h4 class="mb-0">12:45pm – 1:30pm</h4>
+											<div class="badge bg-warning mt-3">Development</div> <br>
+										</div>
+										<div class="col-sm-8">
+											<h3 class="mb-0 event-title"><a href="#">WordCamp as a Leadership Camp! How organizing or volunteering in a WordCamp brings out the leader in us?</a></h3>
+											<p class="mt-3">Intrinsicly incubate next-generation architectures via corporate core competencies. Assertively productivate optimal e-markets vis-a-vis intermandated information. Competently.</p>
+											<div class="hstack align-items-center">
+												<img src="../demos/forum/images/users/2.jpg" class="rounded-circle" width="48" alt="Gordon Norman">
+												<div class="ms-3">
+													<h5 class="fw-semibold mb-0">Ricky Hams</h5>
+													<small class="text-smaller op-08">Google</small>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="line my-5"></div>
+
+									<div class="row align-items-center">
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h4 class="mb-0">1:30pm – 2:00pm</h4>
+										</div>
+										<div class="col-sm-8 bg-light p-4 rounded text-center">
+											<h3 class="mb-0">Lunch Break</h3>
+										</div>
+									</div>
+
+									<div class="line my-5"></div>
+
+									<div class="row mb-1 mb-xl-3">
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h4 class="mb-0">2:10pm – 3:30pm</h4>
+											<div class="badge bg-warning mt-3">Design</div> <br>
+										</div>
+										<div class="col-sm-8">
+											<h3 class="mb-0 event-title"><a href="#">Remote Design: The Async Advantage</a></h3>
+											<p class="mt-3">Intrinsicly incubate next-generation architectures via corporate core competencies. Assertively productivate optimal e-markets vis-a-vis intermandated information. Competently.</p>
+											<div class="row">
+												<div class="col hstack align-items-center">
+													<img src="../demos/forum/images/users/3.jpg" class="rounded-circle" width="48" alt="Gordon Norman">
+													<div class="ms-3">
+														<h5 class="fw-semibold mb-0">Eric Rolex</h5>
+														<small class="text-smaller op-08">Google</small>
+													</div>
+												</div>
+
+												<div class="col hstack align-items-center">
+													<img src="../demos/forum/images/users/4.jpg" class="rounded-circle" width="48" alt="Gordon Norman">
+													<div class="ms-3">
+														<h5 class="fw-semibold mb-0">Eric Rolex</h5>
+														<small class="text-smaller op-08">Google</small>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<!-- Tab Pane 3 -->
+								<div class="tab-pane fade" id="side-tab-3" role="tabpanel" aria-labelledby="side-tab-3-tab">
+									<div class="row mb-1 mb-xl-3">
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h4 class="mb-0">10:00am – 11:00am</h4>
+											<div class="badge bg-warning mt-3">Development</div>
+										</div>
+										<div class="col-sm-8">
+											<h3 class="mb-0 event-title"><a href="#">Building for the Block Editor (Gutenberg)</a></h3>
+										</div>
+									</div>
+
+									<div class="line my-5"></div>
+
+									<div class="row mb-1 mb-xl-3">
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h4 class="mb-0">11:30am – 12:30pm</h4>
+											<div class="badge bg-warning mt-3">Design</div>
+										</div>
+										<div class="col-sm-8">
+											<h3 class="mb-0 event-title"><a href="#">Know more about UI/UX</a></h3>
+											<p class="mt-3">Intrinsicly incubate next-generation architectures via corporate core competencies. Assertively productivate optimal e-markets vis-a-vis intermandated information. Competently.</p>
+											<div class="hstack align-items-center">
+												<img src="../demos/forum/images/users/1.jpg" class="rounded-circle" width="48" alt="Gordon Norman">
+												<div class="ms-3">
+													<h5 class="fw-semibold mb-0"><a href="#" class="text-dark">Gordon Norman</a></h5>
+													<small class="text-smaller op-08">Google</small>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="line my-5"></div>
+
+									<div class="row mb-1 mb-xl-3">
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h4 class="mb-0">12:45pm – 1:30pm</h4>
+											<div class="badge bg-warning mt-3">Development</div> <br>
+										</div>
+										<div class="col-sm-8">
+											<h3 class="mb-0 event-title"><a href="#">WordCamp as a Leadership Camp! How organizing or volunteering in a WordCamp brings out the leader in us?</a></h3>
+											<p class="mt-3">Intrinsicly incubate next-generation architectures via corporate core competencies. Assertively productivate optimal e-markets vis-a-vis intermandated information. Competently.</p>
+											<div class="hstack align-items-center">
+												<img src="../demos/forum/images/users/2.jpg" class="rounded-circle" width="48" alt="Gordon Norman">
+												<div class="ms-3">
+													<h5 class="fw-semibold mb-0">Ricky Hams</h5>
+													<small class="text-smaller op-08">Google</small>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="line my-5"></div>
+
+									<div class="row align-items-center">
+										<div class="col-sm-4 mb-3 mb-sm-0">
+											<h4 class="mb-0">6:30pm onwards</h4>
+										</div>
+										<div class="col-sm-8 bg-light p-4 rounded text-center">
+											<h3 class="mb-0">After Party</h3>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

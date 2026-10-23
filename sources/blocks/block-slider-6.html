@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slider Pagination Bar | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.swiper-pagination {
+			bottom: 40px !important;
+			--cnvs-swiper-bar-color: var(--cnvs-contrast-300);
+			--cnvs-swiper-bar-active-color: var(--cnvs-contrast-900);
+			--cnvs-swiper-bar-title-color: var(--cnvs-contrast-800);
+			--cnvs-swiper-bar-width: 140px;
+			--cnvs-swiper-bar-height: 4px;
+			--cnvs-swiper-bar-gap: 25px;
+			--cnvs-swiper-autoplay-speed: 5000ms;
+		}
+
+		.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
+			margin-right: var(--cnvs-swiper-bar-gap);
+			background: transparent !important;
+		}
+
+		.swiper-pagination span.swiper-pagination-bullet-active, .swiper-pagination span:hover {
+			background-color: transparent !important;
+		}
+
+		.swiper-pagination span {
+			position: relative;
+			width: var(--cnvs-swiper-bar-width);
+			height: auto;
+			text-align: left;
+			border-radius: 3px;
+			opacity: 1;
+			border: 0;
+		}
+		.swiper-pagination span.slider-name {
+			font-size: 15px;
+			line-height: 40px;
+			font-weight: 400;
+			color: var(--cnvs-swiper-bar-title-color);
+			text-transform: capitalize;
+			background: transparent !important;
+		}
+		.swiper-pagination span.slider-bar {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			height: var(--cnvs-swiper-bar-height);
+			background-color: var(--cnvs-swiper-bar-color);
+			overflow: hidden;
+			border-radius: 3px;
+		}
+		.swiper-pagination span.slider-bar-active {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 2;
+			width: 0%;
+			border-radius: 3px;
+			height: var(--cnvs-swiper-bar-height);
+			background-color: var(--cnvs-swiper-bar-active-color) !important;
+		}
+
+		.swiper-pagination span:hover span.slider-bar {
+			background-color: var(--cnvs-swiper-bar-color) !important;
+		}
+
+		.swiper-pagination-bullet-active {
+			background-color: transparent;
+		}
+		.swiper-pagination-bullet-active span.slider-bar-active {
+			animation-name: swiperBarAnim;
+			animation-duration: var(--cnvs-swiper-autoplay-speed);
+			animation-timing-function: ease-in;
+			animation-iteration-count: 1;
+			animation-direction: alternate;
+			animation-fill-mode: forwards;
+		}
+
+		@keyframes swiperBarAnim {
+			0% {
+				width: 0%;
+			}
+			100% {
+				width: 100%;
+			}
+		}
+
+		.swiper-slide-active .swiper-slide-bg {
+			-webkit-animation: kenburns-top 14s ease-out both;
+	        animation: kenburns-top 14s ease-out both;
+		}
+
+		@keyframes kenburns-top {
+			0% {
+				-webkit-transform: scale(1);
+						transform: scale(1);
+				-webkit-transform-origin: 50% 50%;
+						transform-origin: 50% 50%;
+			}
+			100% {
+				-webkit-transform: scale(1.15);
+						transform: scale(1.15);
+				-webkit-transform-origin: top;
+						transform-origin: top;
+			}
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<!-- Hero Section
+				============================================= -->
+				<div class="slider-element swiper_wrapper dark min-vh-100 customjs">
+
+					<div class="swiper swiper-parent">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="container">
+									<div class="slider-caption">
+										<h2 data-animate="fadeInUp">1. Pizza</h2>
+										<p data-animate="fadeInUp" data-delay="200">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.</p>
+									</div>
+								</div>
+								<div class="swiper-slide-bg" style="background-image: url('../demos/restaurant/images/slider/1.jpg');"></div>
+							</div>
+							<div class="swiper-slide">
+								<div class="container">
+									<div class="slider-caption">
+										<h2 data-animate="fadeInUp">2. Burger</h2>
+										<p data-animate="fadeInUp" data-delay="200">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.</p>
+									</div>
+								</div>
+								<div class="swiper-slide-bg" style="background-image: url('../demos/burger/images/hero.jpg');"></div>
+							</div>
+							<div class="swiper-slide">
+								<div class="container">
+									<div class="slider-caption slider-caption-center">
+										<h2 data-animate="fadeInUp">3. Sandwich</h2>
+										<p data-animate="fadeInUp" data-delay="200">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.</p>
+									</div>
+								</div>
+								<div class="swiper-slide-bg" style="background-image: url('../demos/recipes/images/slider/1/bg.jpg');"></div>
+							</div>
+						</div>
+						<!-- If we need pagination -->
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

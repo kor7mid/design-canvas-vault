@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Currency Converter | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.curr-box {
+			border: 1px solid var(--cnvs-contrast-500);
+			border-radius: 10px;
+			padding: 8px 0;
+		}
+
+		.curr-box .form-control {
+			--cnvs-input-btn-border-width: 0;
+			--cnvs-form-control-radius: 0;
+			--cnvs-input-focus-box-shadow: none;
+		}
+
+		.curr-change-btn i {
+			display: inline-block;
+			width: 44px;
+			height: 44px;
+			line-height: 40px;
+			text-align: center;
+			border-radius: 50%;
+			margin-bottom: 10px;
+			color: var(--cnvs-contrast-700);
+			border: 2px solid var(--cnvs-line-color);
+			transform: rotate(90deg);
+			transition: transform .3s ease;
+			cursor: pointer;
+		}
+
+		.curr-change-btn .rotate-btn {
+			transform: rotate(270deg);
+		}
+
+		.form-select {
+			--bs-border-width: 0;
+			--bs-btn-bg: var(--bs-body-bg);
+		}
+
+		.form-select:focus {
+			box-shadow: none;
+		}
+
+		/* Chrome, Safari, Edge, Opera */
+		.curr-box input[type=number]::-webkit-outer-spin-button,
+		.curr-box input[type=number]::-webkit-inner-spin-button {
+			-webkit-appearance: none;
+			margin: 0;
+		}
+
+		/* Firefox */
+		.curr-box input[type=number] {
+			-moz-appearance: textfield;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+				<div class="container">
+
+					<div class="row justify-content-center">
+						<div class="col-lg-5 col-md-10">
+							<div class="card my-5 shadow-sm">
+								<div class="card-body p-5">
+									<div class="text-center mb-5">
+										<h3 class="fs-3 mb-1">Currency Converter</h3>
+										<p class="text-muted text-medium fw-300">Take less than 10-mins to Transfer</p>
+									</div>
+
+									<div class="row">
+										<div class="col-12 mb-5">
+											<label class="form-label">You Send Exactly:</label>
+											<div class="curr-box row">
+												<div class="col">
+													<input type="number" placeholder="0.00" class="curr-input-pay form-control form-control-lg">
+												</div>
+												<div class="col-auto">
+													<select class="curr-item-pay form-select form-select-lg">
+														<option value="AED">🇳🇱 AED</option>
+														<option value="ARS">🇦🇷 ARS</option>
+														<option value="AUD">🇦🇺 AUD</option>
+														<option value="BGN">🇧🇩 BGN</option>
+														<option value="BRL">🇧🇷 BRL</option>
+														<option value="BSD">🇧🇸 BSD</option>
+														<option value="CAD">🇨🇦 CAD</option>
+														<option value="CHF">🇨🇭 CHF</option>
+														<option value="CLP">🇨🇱 CLP</option>
+														<option value="CNY">🇨🇳 CNY</option>
+														<option value="COP">🇨🇴 COP</option>
+														<option value="CZK">🇨🇿 CZK</option>
+														<option value="DKK">🇩🇰 DKK</option>
+														<option value="DOP">🇩🇴 DOP</option>
+														<option value="EGP">🇪🇬 EGP</option>
+														<option value="EUR">🇪🇺 EUR</option>
+														<option value="FJD">🇫🇯 FJD</option>
+														<option value="GTQ">🇬🇹 GTQ</option>
+														<option value="HKD">🇭🇰 HKD</option>
+														<option value="HRK">🇭🇷 HRK</option>
+														<option value="HUF">🇭🇺 HUF</option>
+														<option value="IDR">🇮🇩 IDR</option>
+														<option value="ILS">🇮🇱 ILS</option>
+														<option value="INR">🇮🇳 INR</option>
+														<option value="ISK">🇮🇸 ISK</option>
+														<option value="JPY">🇯🇵 JPY</option>
+														<option value="KRW">🇰🇷 KRW</option>
+														<option value="KZT">🇰🇿 KZT</option>
+														<option value="MXN">🇲🇽 MXN</option>
+														<option value="MYR">🇲🇾 MYR</option>
+														<option value="NOK">🇳🇴 NOK</option>
+														<option value="NZD">🇳🇿 NZD</option>
+														<option value="PAB">🇵🇦 PAB</option>
+														<option value="PEN">🇵🇪 PEN</option>
+														<option value="PHP">🇵🇭 PHP</option>
+														<option value="PKR">🇵🇰 PKR</option>
+														<option value="PLN">🇵🇱 PLN</option>
+														<option value="PYG">🇵🇾 PYG</option>
+														<option value="RON">🇷🇴 RON</option>
+														<option value="RUB">🇷🇺 RUB</option>
+														<option value="SAR">🇸🇦 SAR</option>
+														<option value="SEK">🇸🇪 SEK</option>
+														<option value="SGD">🇸🇬 SGD</option>
+														<option value="THB">🇹🇭 THB</option>
+														<option value="TRY">🇹🇷 TRY</option>
+														<option value="TWD">🇹🇼 TWD</option>
+														<option value="UAH">🇺🇦 UAH</option>
+														<option value="USD" selected>🇺🇸 USD</option>
+														<option value="UYU">🇺🇾 UYU</option>
+														<option value="VND">🇻🇳 VND</option>
+														<option value="ZAR">🇿🇦 ZAR</option>
+													</select>
+												</div>
+											</div>
+										</div>
+
+										<div class="curr-change-box col-12 mb-5 text-center">
+											<span class="curr-change-btn"><i class="fa fa-arrow-right-arrow-left"></i></span>
+											<p class="curr-rate-box mb-0">0.00</p>
+										</div>
+
+										<div class="col-12 mb-5">
+											<label class="form-label">Recipients Gets:</label>
+											<div class="curr-box row">
+												<div class="col">
+													<input type="number" placeholder="0" class="curr-input-receive form-control form-control-lg">
+												</div>
+												<div class="col-auto">
+													<select class="curr-item-receive form-select form-select-lg">
+														<option value="AED">🇳🇱 AED</option>
+														<option value="ARS">🇦🇷 ARS</option>
+														<option value="AUD">🇦🇺 AUD</option>
+														<option value="BGN">🇧🇩 BGN</option>
+														<option value="BRL">🇧🇷 BRL</option>
+														<option value="BSD">🇧🇸 BSD</option>
+														<option value="CAD">🇨🇦 CAD</option>
+														<option value="CHF">🇨🇭 CHF</option>
+														<option value="CLP">🇨🇱 CLP</option>
+														<option value="CNY">🇨🇳 CNY</option>
+														<option value="COP">🇨🇴 COP</option>
+														<option value="CZK">🇨🇿 CZK</option>
+														<option value="DKK">🇩🇰 DKK</option>
+														<option value="DOP">🇩🇴 DOP</option>
+														<option value="EGP">🇪🇬 EGP</option>
+														<option value="EUR">🇪🇺 EUR</option>
+														<option value="FJD">🇫🇯 FJD</option>
+														<option value="GTQ">🇬🇹 GTQ</option>
+														<option value="HKD">🇭🇰 HKD</option>
+														<option value="HRK">🇭🇷 HRK</option>
+														<option value="HUF">🇭🇺 HUF</option>
+														<option value="IDR">🇮🇩 IDR</option>
+														<option value="ILS">🇮🇱 ILS</option>
+														<option value="INR">🇮🇳 INR</option>
+														<option value="ISK">🇮🇸 ISK</option>
+														<option value="JPY">🇯🇵 JPY</option>
+														<option value="KRW">🇰🇷 KRW</option>
+														<option value="KZT">🇰🇿 KZT</option>
+														<option value="MXN">🇲🇽 MXN</option>
+														<option value="MYR">🇲🇾 MYR</option>
+														<option value="NOK">🇳🇴 NOK</option>
+														<option value="NZD">🇳🇿 NZD</option>
+														<option value="PAB">🇵🇦 PAB</option>
+														<option value="PEN">🇵🇪 PEN</option>
+														<option value="PHP">🇵🇭 PHP</option>
+														<option value="PKR">🇵🇰 PKR</option>
+														<option value="PLN">🇵🇱 PLN</option>
+														<option value="PYG">🇵🇾 PYG</option>
+														<option value="RON">🇷🇴 RON</option>
+														<option value="RUB">🇷🇺 RUB</option>
+														<option value="SAR">🇸🇦 SAR</option>
+														<option value="SEK">🇸🇪 SEK</option>
+														<option value="SGD" selected>🇸🇬 SGD</option>
+														<option value="THB">🇹🇭 THB</option>
+														<option value="TRY">🇹🇷 TRY</option>
+														<option value="TWD">🇹🇼 TWD</option>
+														<option value="UAH">🇺🇦 UAH</option>
+														<option value="USD">🇺🇸 USD</option>
+														<option value="UYU">🇺🇾 UYU</option>
+														<option value="VND">🇻🇳 VND</option>
+														<option value="ZAR">🇿🇦 ZAR</option>
+													</select>
+												</div>
+											</div>
+										</div>
+
+										<div class="col-12 text-center">
+											<button type="submit" href="#" class="button button-dark button-large button-black m-0 rounded-pill w-100 py-3">Exchange</button>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

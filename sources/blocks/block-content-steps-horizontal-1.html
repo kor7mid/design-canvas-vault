@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Steps Horizontal Background | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+@media (min-width: 768px) {
+			.feature-box-border-horizontal .feature-box { position: relative; }
+
+			.feature-box-border-horizontal .feature-box:not(.noborder) .fbox-icon::before,
+			.feature-box-border-horizontal.border-hover-animate .feature-box:not(.noborder) .fbox-icon::after {
+				content: "";
+				position: absolute;
+				top: 31px;
+			    left: calc(50% + 32px);
+			    width: calc(100% - 64px);
+				height: 2px;
+				border: 1px solid #EEE;
+				z-index: 0;
+			}
+
+			.feature-box-border-horizontal.border-dashed .feature-box:not(.noborder) .fbox-icon::before,
+			.feature-box-border-horizontal.border-dashed.border-hover-animate .feature-box:not(.noborder) .fbox-icon::after {
+				border-style: dashed;
+			}
+
+			.feature-box-border-horizontal.border-hover-animate .feature-box:not(.noborder) .fbox-icon::after {
+				display: block;
+				border-color: #222;
+				width: 0;
+				transform-origin: top left;
+				transition: width .3s ease-in-out;
+			}
+
+			/* .feature-box-border-horizontal .feature-box:not(.noborder):nth-child(1) .fbox-icon::before { background-color: #222; } */
+
+			.feature-box-border-horizontal.border-hover-animate .feature-box:not(.noborder):hover .fbox-icon::after {  width: calc(100% - 64px); }
+
+
+			.feature-box-border-horizontal .fbox-icon i,
+			.feature-box-border-horizontal .fbox-border.fbox-light .fbox-icon i {
+				line-height: 60px;
+				font-size: 24px;
+				z-index: 1;
+				text-align: center;
+				box-shadow: 0 0 0px 10px #FFF;
+			}
+
+			.feature-box-border-horizontal .feature-box.flex-column:not(.noborder) .fbox-icon::before,
+			.feature-box-border-horizontal.border-hover-animate .feature-box.flex-column:not(.noborder) .fbox-icon::after {
+				left: calc(0% + 88px);
+			}
+		}
+
+		.dark .feature-box-border-horizontal .feature-box:not(.noborder) .fbox-icon::before,
+		.dark .feature-box-border-horizontal.border-hover-animate .feature-box:not(.noborder) .fbox-icon::after {
+			border-color: rgba(255,255,255,0.1);
+		}
+
+		.dark .feature-box-border-horizontal.border-hover-animate .feature-box:not(.noborder) .fbox-icon::after {
+			border-color: rgba(255,255,255,0.6);
+		}
+
+		.dark .feature-box-border-horizontal .fbox-icon i,
+		.dark .feature-box-border-horizontal .fbox-border.fbox-light .fbox-icon i {
+			box-shadow: 0 0 0px 8px #0E2A47;
+			background-color: #0b1e31;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<div class="section dark rounded-5 px-5" style="background: #0E2A47 url('../previews/preview/svg-bg/shiny.svg') no-repeat center center; background-size: cover; padding-top: 100px;padding-bottom: 100px;">
+						<div class="row mb-5">
+							<div class="col-md-6">
+								<h2 class="display-4 fw-medium">Simple Steps How to use Canvas.</h2>
+							</div>
+						</div>
+						<div class="row feature-box-border-horizontal border-0 border-dashed col-mb-50 justify-content-center">
+							<div class="col-md-4">
+								<div class="feature-box flex-column">
+									<div class="fbox-icon mb-5">
+										<a href="#"><i class="bg-danger">1</i></a>
+									</div>
+									<div class="fbox-content">
+										<h3 class="text-transform-none text-larger mb-2">Choose your Plan</h3>
+										<p class="lead text-white-50">Lorem ipsum dolor adipisicing elit.</p>
+										<a href="#" class="button button-small bg-danger button-rounded border-width-1 ms-0 mt-4">Get Started <i class="uil uil-angle-right-b me-0"></i></a>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="feature-box flex-column">
+									<div class="fbox-icon mb-5">
+										<a href="#"><i>2</i></a>
+									</div>
+									<div class="fbox-content">
+										<h3 class="text-transform-none text-larger mb-2">Select your Demo</h3>
+										<p class="lead text-white-50">Synergistically matrix tactical sources.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<div class="feature-box flex-column noborder">
+									<div class="fbox-icon mb-5">
+										<a href="#"><i>3</i></a>
+									</div>
+									<div class="fbox-content">
+										<h3 class="text-transform-none text-larger mb-2">Finish your Project</h3>
+										<p class="lead text-white-50">Distinctively drive best practices.</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

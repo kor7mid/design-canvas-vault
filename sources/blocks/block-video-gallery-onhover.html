@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video On-Hover | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+@-webkit-keyframes scaleIn {
+			to {
+				transform: scale(1.3, 1.3);
+			}
+			}
+			@keyframes scaleIn {
+			to {
+				transform: scale(1.3, 1.3);
+			}
+		}
+		.scaleIn {
+			-webkit-animation-name: scaleIn;
+			animation-name: scaleIn;
+		}
+
+		@-webkit-keyframes scaleOut {
+			from {
+				transform: scale(1.3, 1.3);
+			}
+			}
+			@keyframes scaleOut {
+			from {
+				transform: scale(1.3, 1.3);
+			}
+		}
+		.scaleOut {
+			-webkit-animation-name: scaleOut;
+			animation-name: scaleOut;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+				<div class="container">
+
+					<!-- Portfolio Items
+					============================================= -->
+					<div id="portfolio" class="portfolio row gutter-40">
+
+						<article class="portfolio-item col-lg-4 col-md-6">
+							<!-- Grid Inner: Start -->
+							<div class="grid-inner">
+								<!-- Image: Start -->
+								<div class="portfolio-image rounded videoplay-on-hover">
+									<div class="video-wrap">
+										<video poster="one-page/images/videos/2.jpg" class="d-block scroll-detect" preload="auto" loop muted playsinline>
+											<source src='one-page/images/videos/2.webm' type='video/webm'>
+											<source src='one-page/images/videos/2.mp4' type='video/mp4'>
+										</video>
+									</div>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content justify-content-start align-items-end dark px-0 py-3 fadeIn animated " data-hover-animate="fadeOut" data-hover-animate-out="fadeIn" data-hover-speed="350">
+											<div class="overlay-trigger-icon icon-lg text-white h-auto me-0"><i class="bi-play-circle-fill" style="vertical-align: 2px;"></i></div><small class="text-white text-opacity-75 font-monospace">07:33</small>
+										</div>
+									</div>
+								</div>
+								<!-- Image: End -->
+								<!-- Decription: Start -->
+								<div class="portfolio-desc">
+									<h3><a href="#">Beauty Cosmetics</a></h3>
+								</div>
+								<!-- Description: End -->
+							</div>
+							<!-- Grid Inner: End -->
+						</article>
+
+						<article class="portfolio-item col-lg-4 col-md-6">
+							<!-- Grid Inner: Start -->
+							<div class="grid-inner">
+								<!-- Image: Start -->
+								<div class="portfolio-image rounded videoplay-on-hover">
+									<div class="video-wrap">
+										<video poster="one-page/images/videos/3.jpg" class="d-block scroll-detect" preload="auto" loop muted playsinline>
+											<source src='one-page/images/videos/3.webm' type='video/webm'>
+											<source src='one-page/images/videos/3.mp4' type='video/mp4'>
+										</video>
+									</div>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content justify-content-start align-items-end dark px-0 py-3 fadeIn animated " data-hover-animate="fadeOut" data-hover-animate-out="fadeIn" data-hover-speed="350">
+											<div class="overlay-trigger-icon icon-lg text-white h-auto me-0"><i class="bi-play-circle-fill" style="vertical-align: 2px;"></i></div><small class="text-white text-opacity-75 font-monospace">02:35</small>
+										</div>
+									</div>
+								</div>
+								<!-- Image: End -->
+								<!-- Decription: Start -->
+								<div class="portfolio-desc">
+									<h3><a href="#">Facial Cream</a></h3>
+								</div>
+								<!-- Description: End -->
+							</div>
+							<!-- Grid Inner: End -->
+						</article>
+
+						<article class="portfolio-item col-lg-4 col-md-6">
+							<!-- Grid Inner: Start -->
+							<div class="grid-inner">
+								<!-- Image: Start -->
+								<div class="portfolio-image rounded videoplay-on-hover">
+									<div class="video-wrap">
+										<video poster="../demos/skincare/images/slider/1.jpg" class="d-block scroll-detect" preload="auto" loop muted playsinline>
+											<source src='../demos/skincare/images/slider/1.mp4' type='video/mp4'>
+										</video>
+									</div>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content justify-content-start align-items-end dark px-0 py-3 fadeIn animated " data-hover-animate="fadeOut" data-hover-animate-out="fadeIn" data-hover-speed="350">
+											<div class="overlay-trigger-icon icon-lg text-white h-auto me-0"><i class="bi-play-circle-fill" style="vertical-align: 2px;"></i></div><small class="text-white text-opacity-75 font-monospace">04:42</small>
+										</div>
+									</div>
+								</div>
+								<!-- Image: End -->
+								<!-- Decription: Start -->
+								<div class="portfolio-desc">
+									<h3><a href="#">Skin-Care Moisture</a></h3>
+								</div>
+								<!-- Description: End -->
+							</div>
+							<!-- Grid Inner: End -->
+						</article>
+
+						<article class="portfolio-item col-lg-4 col-md-6">
+							<!-- Grid Inner: Start -->
+							<div class="grid-inner">
+								<!-- Image: Start -->
+								<div class="portfolio-image rounded videoplay-on-hover">
+									<div class="video-wrap">
+										<video poster="../demos/car/images/videos/1.jpg" class="d-block scroll-detect" preload="auto" loop muted playsinline>
+											<source src='../demos/car/images/videos/1.mp4' type='video/mp4'>
+										</video>
+									</div>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content justify-content-start align-items-end dark px-0 py-3 fadeIn animated " data-hover-animate="fadeOut" data-hover-animate-out="fadeIn" data-hover-speed="350">
+											<div class="overlay-trigger-icon icon-lg text-white h-auto me-0"><i class="bi-play-circle-fill" style="vertical-align: 2px;"></i></div><small class="text-white text-opacity-75 font-monospace">14:54</small>
+										</div>
+									</div>
+								</div>
+								<!-- Image: End -->
+								<!-- Decription: Start -->
+								<div class="portfolio-desc">
+									<h3><a href="#">Charcole Face Lotion</a></h3>
+								</div>
+								<!-- Description: End -->
+							</div>
+							<!-- Grid Inner: End -->
+						</article>
+
+						<article class="portfolio-item col-lg-4 col-md-6">
+							<!-- Grid Inner: Start -->
+							<div class="grid-inner">
+								<!-- Image: Start -->
+								<div class="portfolio-image rounded videoplay-on-hover">
+									<div class="video-wrap">
+										<video poster="../demos/travel/images/videos/1.jpg" class="d-block scroll-detect" preload="auto" loop muted playsinline>
+											<source src='../demos/travel/images/videos/1.mp4' type='video/mp4'>
+										</video>
+									</div>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content justify-content-start align-items-end dark px-0 py-3 fadeIn animated " data-hover-animate="fadeOut" data-hover-animate-out="fadeIn" data-hover-speed="350">
+											<div class="overlay-trigger-icon icon-lg text-white h-auto me-0"><i class="bi-play-circle-fill" style="vertical-align: 2px;"></i></div><small class="text-white text-opacity-75 font-monospace">03:22</small>
+										</div>
+									</div>
+								</div>
+								<!-- Image: End -->
+								<!-- Decription: Start -->
+								<div class="portfolio-desc">
+									<h3><a href="#">After-Party Perfume</a></h3>
+								</div>
+								<!-- Description: End -->
+							</div>
+							<!-- Grid Inner: End -->
+						</article>
+
+						<article class="portfolio-item col-lg-4 col-md-6">
+							<!-- Grid Inner: Start -->
+							<div class="grid-inner">
+								<!-- Image: Start -->
+								<div class="portfolio-image rounded videoplay-on-hover">
+									<div class="video-wrap">
+										<video poster="../demos/construction/images/videos/1.jpg" class="d-block scroll-detect" preload="auto" loop muted playsinline>
+											<source src='../demos/construction/images/videos/1.webm' type='video/webm'>
+											<source src='../demos/construction/images/videos/1.mp4' type='video/mp4'>
+										</video>
+									</div>
+									<div class="bg-overlay">
+										<div class="bg-overlay-content justify-content-start align-items-end dark px-0 py-3 fadeIn animated " data-hover-animate="fadeOut" data-hover-animate-out="fadeIn" data-hover-speed="350">
+											<div class="overlay-trigger-icon icon-lg text-white h-auto me-0"><i class="bi-play-circle-fill" style="vertical-align: 2px;"></i></div><small class="text-white text-opacity-75 font-monospace">08:14</small>
+										</div>
+									</div>
+								</div>
+								<!-- Image: End -->
+								<!-- Decription: Start -->
+								<div class="portfolio-desc">
+									<h3><a href="#">Rover Beauty Care</a></h3>
+								</div>
+								<!-- Description: End -->
+							</div>
+							<!-- Grid Inner: End -->
+						</article>
+						<!-- Portfolio Item: End -->
+
+					</div><!-- #portfolio end -->
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

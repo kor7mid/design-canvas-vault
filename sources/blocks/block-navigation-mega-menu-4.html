@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mega Menu 4 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+@media (min-width: 992px) {
+			.block-mega-menu-4 .mega-menu-content {
+				--bg-light-2: #fbf9f1;
+				background: #FFF;
+				background: linear-gradient(to right, #FFF 66.666667%, var(--bg-light-2) 66.666667%, var(--bg-light-2) 100%);
+			}
+
+			.block-mega-menu-4 .bg-light-2 {
+				background-color: var(--bg-light-2) !important;
+			}
+
+			.block-mega-menu-4 .mega-menu-column {
+				max-height: calc(100vh - 101px);
+				overflow: auto;
+			}
+
+			.block-mega-menu-4 .hover-opacity .feature-box {
+				transition: opacity .2s ease;
+				will-change: opacity;
+			}
+
+			.block-mega-menu-4 .hover-opacity:hover .feature-box:not(:hover) {
+				opacity: .3;
+			}
+
+			.block-mega-menu-4 .mega-menu-column .feature-box::before {
+				content: "";
+				opacity: 0;
+				position: absolute;
+				background-color: #52ADA2;
+				width: 100%;
+				top: -20px;
+				left: -20px;
+				border-radius: 2px;
+				height: calc(100% + 40px);
+				width: calc(100% + 40px);
+				transform: scale(.875);
+				transition: transform .2s linear;
+			}
+
+			.block-mega-menu-4 .mega-menu-column .feature-box:hover::before {
+				opacity: .06;
+				transform: scale(0.95);
+			}
+		}
+
+		.block-mega-menu-4 .mega-menu-column .feature-box .fbox-content { padding-right: 0; }
+
+		.block-mega-menu-4 .mega-menu-column .feature-box > i {
+			line-height: 1.25;
+			font-size: 18px;
+		}
+
+		.block-mega-menu-4 .mega-menu-column .feature-box h5 { transition: color .15s linear; }
+
+		/* Color Primary */
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-primary > i,
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-primary:hover h5 {
+			color: var(--bs-primary);
+		}
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-primary::before {
+			background-color: var(--bs-primary);
+		}
+
+		/* Color Info */
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-info > i,
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-info:hover h5 {
+			color: var(--bs-info);
+		}
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-info::before {
+			background-color: var(--bs-info);
+		}
+
+		/* Color warning */
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-warning > i,
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-warning:hover h5 {
+			color: var(--bs-warning);
+		}
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-warning::before {
+			background-color: var(--bs-warning);
+		}
+
+		/* Color danger */
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-danger > i,
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-danger:hover h5 {
+			color: var(--bs-danger);
+		}
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-danger::before {
+			background-color: var(--bs-danger);
+		}
+
+		/* Color success */
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-success > i,
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-success:hover h5 {
+			color: var(--bs-success);
+		}
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-success::before {
+			background-color: var(--bs-success);
+		}
+
+		/* Color orange */
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-orange > i,
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-orange:hover h5 {
+			color: var(--bs-orange);
+		}
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-orange::before {
+			background-color: var(--bs-orange);
+		}
+
+		/* Color pink */
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-pink > i,
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-pink:hover h5 {
+			color: var(--bs-pink);
+		}
+		.block-mega-menu-4 .mega-menu-column .feature-box.card-pink::before {
+			background-color: var(--bs-pink);
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Header
+		============================================= -->
+		<header id="header">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html">
+								<img class="logo-default" srcset="../images/logo.png, ../images/logo@2x.png 2x" src="../images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-dark" srcset="../images/logo-dark.png, ../images/logo-dark@2x.png 2x" src="../images/logo-dark@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu with-arrows block-mega-menu-4">
+
+							<ul class="menu-container">
+								<li class="menu-item">
+									<a class="menu-link" href="demo-seo.html">
+										<div>Home</div>
+									</a>
+								</li>
+
+								<!-- Mega Menu -->
+								<li class="menu-item mega-menu mega-menu-full">
+									<div class="menu-link">
+										<div>Mega Menu</div>
+									</div>
+									<div class="mega-menu-content mega-menu-style-2">
+										<div class="container">
+											<div class="row g-0">
+												<div class="mega-menu-column col-lg-8 py-4 py-lg-5">
+													<div class="row">
+														<div class="col-xl-8 hover-opacity">
+															<h5 class="border-bottom text-uppercase fw-semibold ls-1 pb-3">Our Features</h5>
+															<div class="row pt-3">
+																<div class="col-md-6">
+																	<div class="row g-0">
+																		<div class="col-12 mb-5">
+																			<a href="#" class="feature-box mx-0 card-primary">
+																				<i class="bi-layers mb-0 h4"></i>
+																				<div class="fbox-content">
+																					<h5 class="mb-1 fw-medium">Mutlipurpose Templates</h5>
+																					<p class="mb-0 fw-normal text-smaller text-black-50">The Best Selling Multi-Purpose & Powerful Bootstrap 4 based Template.</p>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="col-12 mb-5">
+																			<a href="#" class="feature-box mx-0 card-danger">
+																				<i class="bi-phone mb-0 h4"></i>
+																				<div class="fbox-content">
+																					<h5 class="mb-1 fw-medium">100% Responsive</h5>
+																					<p class="mb-0 fw-normal text-smaller text-black-50">Canvas layouts automatically adjust and adapt to any device screen size, whether it is.</p>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="mb-5 col-12">
+																			<a href="#" class="feature-box mx-0 card-info">
+																				<i class="bi-zoom-in mb-0 h4"></i>
+																				<div class="fbox-content">
+																					<h5 class="mb-1 fw-medium">SEO Friendly</h5>
+																					<p class="mb-0 fw-normal text-smaller text-black-50">Any search engines can crawl each page on the website efficiently and effectively.</p>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="mb-5 mb-xl-0 col-12">
+																			<a href="#" class="feature-box mx-0 card-warning">
+																				<i class="bi-layers mb-0 h4"></i>
+																				<div class="fbox-content">
+																					<h5 class="mb-1 fw-medium fw-grid">Niche Demos</h5>
+																					<p class="mb-0 fw-normal text-smaller text-black-50">50+ Structured Premium Demos for Every Category.</p>
+																				</div>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+																<div class="col-md-6">
+																	<div class="row">
+																		<div class="mb-5 col-12">
+																			<a href="#" class="feature-box mx-0 card-orange">
+																				<i class="bi-gear-wide mb-0 h4"></i>
+																				<div class="fbox-content">
+																					<h5 class="mb-1 fw-medium">100% Customizable</h5>
+																					<p class="mb-0 fw-normal text-smaller text-black-50">100% Customizable.You can customize whatever layout you want.</p>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="mb-5 col-12">
+																			<a href="#" class="feature-box mx-0 card-success">
+																				<i class="bi-list-ul mb-0 h4"></i>
+																				<div class="fbox-content">
+																					<h5 class="mb-1 fw-medium">Unlimited Headers Styles</h5>
+																					<p class="mb-0 fw-normal text-smaller text-black-50">Flexible Header Styles. Arrange your header the way you want. Even in different devices too.</p>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="mb-5 col-12">
+																			<a href="#" class="feature-box mx-0 card-pink">
+																				<i class="bi-cloud-arrow-down mb-0 h4"></i>
+																				<div class="fbox-content">
+																					<h5 class="mb-1 fw-medium">Lifetime Free Updates</h5>
+																					<p class="mb-0 fw-normal text-smaller text-black-50">Purchase just one time and update it's Lifetime. There is no charges for Update.</p>
+																				</div>
+																			</a>
+																		</div>
+																		<div class="mb-5 mb-xl-0 col-12">
+																			<a href="#" class="feature-box mx-0">
+																				<i class="bi-lightbulb h4 mb-0 position-relative text-dark"></i>
+																				<div class="fbox-content">
+																					<h5 class="mb-2 fw-medium d-inline-block border-bottom border-dark">View all Features <i class="bi-caret-right-fill position-relative" style="font-size: 0.75rem;"></i></h5>
+																				</div>
+																			</a>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+														<div class="col-xl-4 hover-opacity">
+															<h5 class="border-bottom text-uppercase fw-semibold ls-1 pb-3">Forms Options</h5>
+															<div class="row pt-3">
+																<div class="mb-5 col-12">
+																	<a href="forms.html" class="feature-box mx-0">
+																		<div class="fbox-content px-0">
+																			<h5 class="mb-1 fw-medium">Any Form, Any Field, Any Size</h5>
+																			<p class="mb-0 fw-normal text-smaller text-black-50">Add any Field to your Custom Form. It's inbuilt Forms Processor will handle the rest.</p>
+																		</div>
+																	</a>
+																</div>
+
+																<div class="mb-5 col-12">
+																	<a href="forms.html" class="feature-box mx-0">
+																		<div class="fbox-content px-0">
+																			<h5 class="mb-1 fw-medium">Email Templates</h5>
+																			<p class="mb-0 fw-normal text-smaller text-black-50">Canvas supports Email Templates which makes your Form Responses.</p>
+																		</div>
+																	</a>
+																</div>
+
+																<div class="mb-5 col-12">
+																	<a href="forms.html" class="feature-box mx-0">
+																		<div class="fbox-content px-0">
+																			<h5 class="mb-1 fw-medium">reCaptcha & Bot Protection</h5>
+																			<p class="mb-0 fw-normal text-smaller text-black-50">All the Forms are supported by Bot Protection and Optional reCaptcha Protection</p>
+																		</div>
+																	</a>
+																</div>
+
+																<div class="mx-0 mb-0 col-12">
+																	<a href="forms.html" class="feature-box mx-0">
+																		<div class="fbox-content px-0">
+																			<h5 class="mb-1 fw-medium">Auto-Responder & Personalization</h5>
+																			<p class="mb-0 fw-normal text-smaller text-black-50">Send Auto-Responders to your Form Submitters with Automatic Personalization.</p>
+																		</div>
+																	</a>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+
+												<div class="mega-menu-column sub-menu-container col-lg-4 bg-light-2 py-4 py-lg-5 px-xl-5 px-lg-4">
+													<h5 class="border-bottom text-uppercase fw-semibold ls-1 pb-3">Latest Posts</h5>
+													<div class="posts-sm row pt-3">
+														<div class="entry col-12">
+															<div class="grid-inner row align-items-center g-0">
+																<div class="col-auto">
+																	<div class="entry-image">
+																		<a href="demo-blog.html"><img src="../demos/news/images/posts/travel/small/1.jpg" alt="Image"></a>
+																	</div>
+																</div>
+																<div class="col ps-3">
+																	<div class="entry-title">
+																		<h4 class="fw-medium"><a class="text-dark" href="demo-blog.html">Rules not to Follow about Travel</a></h4>
+																	</div>
+																	<div class="entry-meta">
+																		<ul>
+																			<li><i class="bi-person text-smaller text-dark position-relative" style="top: -1px"></i><a href="demo-blog.html">Jim Séchen</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="col-12"><div class="line line-sm"></div></div>
+
+														<div class="entry col-12">
+															<div class="grid-inner row align-items-center g-0">
+																<div class="col-auto">
+																	<div class="entry-image">
+																		<a href="demo-blog.html"><img src="../demos/news/images/posts/travel/small/2.jpg" alt="Image"></a>
+																	</div>
+																</div>
+																<div class="col ps-3">
+																	<div class="entry-title">
+																		<h4 class="fw-medium"><a class="text-dark" href="demo-blog.html">Can You Pass The Travel Test?</a></h4>
+																	</div>
+																	<div class="entry-meta">
+																		<ul>
+																			<li><i class="bi-person text-smaller text-dark position-relative" style="top: -1px"></i><a href="demo-blog.html">Alex Doe</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="col-12"><div class="line line-sm"></div></div>
+
+														<div class="entry col-12">
+															<div class="grid-inner row align-items-center g-0">
+																<div class="col-auto">
+																	<div class="entry-image">
+																		<a href="demo-blog.html"><img src="../demos/news/images/posts/travel/small/4.jpg" alt="Image"></a>
+																	</div>
+																</div>
+																<div class="col ps-3">
+																	<div class="entry-title">
+																		<h4 class="fw-medium"><a class="text-dark" href="demo-blog.html">Cheaper/Faster Travel than You Ever Imagined</a></h4>
+																	</div>
+																	<div class="entry-meta">
+																		<ul>
+																			<li><i class="bi-person text-smaller text-dark position-relative" style="top: -1px"></i><a href="demo-blog.html">Joss Sticks</a></li>
+																		</ul>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div class="col-12"><div class="line line-sm"></div></div>
+
+														<div class="col-12">
+															<a href="demo-blog.html">
+																<h5 class="mb-0 fw-medium d-inline-block border-bottom border-dark">View all Posts <i class="bi-caret-right-fill position-relative" style="font-size: 0.75rem;"></i></h5>
+															</a>
+														</div>
+													</div>
+												</div>
+
+											</div>
+										</div>
+									</div>
+								</li>
+
+								<li class="menu-item"><a class="menu-link" href="demo-seo-faqs.html">
+										<div>FAQs</div>
+									</a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-seo-contact.html">
+										<div>Contact</div>
+									</a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content" class="include-header">
+			<div class="content-wrap dark bg-dark py-0">
+				<div class="row justify-content-center align-items-center text-center min-vh-100">
+					<h1 class="col-12 display-3 mb-0">Content <br>...</h1>
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

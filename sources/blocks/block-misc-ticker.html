@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ticker | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+@-webkit-keyframes ticker {
+		  0% {
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			visibility: visible;
+		  }
+
+		  100% {
+			-webkit-transform: translate3d(-100%, 0, 0);
+			transform: translate3d(-100%, 0, 0);
+		  }
+		}
+
+		@keyframes ticker {
+		  0% {
+			-webkit-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+			visibility: visible;
+		  }
+
+		  100% {
+			-webkit-transform: translate3d(-100%, 0, 0);
+			transform: translate3d(-100%, 0, 0);
+		  }
+		}
+
+		.ticker-wrap {
+			--ticker-duration: 50s;
+
+			width: 100%;
+			overflow: hidden;
+			padding-left: 100%;
+			box-sizing: content-box;
+		}
+
+		.ticker-wrap .ticker {
+			display: inline-block;
+			white-space: nowrap;
+			padding-right: 100%;
+			box-sizing: content-box;
+			-webkit-animation: ticker var(--ticker-duration) linear infinite;
+			animation: ticker var(--ticker-duration) linear infinite;
+		}
+
+		.ticker-wrap .ticker-item {
+			display: inline-block;
+			padding: 0 2rem;
+			font-size: 1.5rem;
+
+		}
+
+		.ticker-wrap.pause-on-hover .ticker:hover {
+			animation-play-state: paused;
+		}
+
+		a.ticker-item:hover {
+			text-decoration: underline !important;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<div class="section py-6 my-0">
+					<h1 class="text-center mb-5 font-secondary fw-bold">Default Ticker</h1>
+					<div class="ticker-wrap">
+						<div class="ticker">
+							<div class="ticker-item text-dark">But I must.</div>
+							<div class="ticker-item text-dark">Professionally morph 24/7 collaboration and idea-sharing through robust infrastructures.</div>
+							<div class="ticker-item text-dark">Efficiently generate backend imperatives.</div>
+							<div class="ticker-item text-dark">Distinctively enable extensive vortals rather than.</div>
+							<div class="ticker-item text-dark">Proactively cultivate innovative internal or "organic".</div>
+							<div class="ticker-item text-dark">Progressively promote customer.</div>
+							<div class="ticker-item text-dark">Professionally morph 24/7 collaboration and idea-sharing through robust infrastructures.</div>
+							<div class="ticker-item text-dark">Efficiently generate backend imperatives.</div>
+							<div class="ticker-item text-dark">Distinctively enable extensive vortals rather than.</div>
+							<div class="ticker-item text-dark">Proactively cultivate innovative internal or "organic".</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section py-6 my-0" style="background-color: #BCC2D7;">
+					<h1 class="text-center mb-5 font-secondary fw-bold">Ticker with Link</h1>
+					<div class="ticker-wrap">
+						<div class="ticker">
+							<a href="#" class="ticker-item text-dark">Furniture Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Real Estate Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">SEO Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Landing Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Construction Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Travel Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Medical Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Hosting Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">App Landing Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Shop Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">News/Magazine Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">CoWorking Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Finance Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Therapy Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Covid Care Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Forums/Community Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Blog Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Yoga Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Freelancer Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Cleaner Niche Demo</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="section py-6 my-0" style="background-color: #EDF4EA;">
+					<h1 class="text-center mb-5 font-secondary fw-bold">Ticker Pause on Hover</h1>
+					<div class="ticker-wrap pause-on-hover">
+						<div class="ticker">
+							<a href="#" class="ticker-item text-dark">Furniture Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Real Estate Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">SEO Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Landing Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Construction Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Travel Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Medical Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Hosting Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">App Landing Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Shop Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">News/Magazine Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">CoWorking Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Finance Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Therapy Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Covid Care Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Forums/Community Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Blog Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Yoga Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Freelancer Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Cleaner Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Beauty Kit Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Store Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Hostel Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Crowd-Funding Niche Demo</a>
+							<a href="#" class="ticker-item text-dark">Burger Niche Demo</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="section bg-dark dark py-6 my-0">
+					<h1 class="text-center mb-5 font-secondary fw-bold">Ticker on Dark BG</h1>
+					<div class="ticker-wrap">
+						<div class="ticker">
+							<div class="ticker-item">Progressively promote customer.</div>
+							<div class="ticker-item">Professionally morph 24/7 collaboration and idea-sharing through robust infrastructures.</div>
+							<div class="ticker-item">Efficiently generate backend imperatives.</div>
+							<div class="ticker-item">Distinctively enable extensive vortals rather than.</div>
+							<div class="ticker-item">Proactively cultivate innovative internal or "organic".</div>
+							<div class="ticker-item">Progressively promote customer.</div>
+							<div class="ticker-item">Professionally morph 24/7 collaboration and idea-sharing through robust infrastructures.</div>
+							<div class="ticker-item">Efficiently generate backend imperatives.</div>
+							<div class="ticker-item">Distinctively enable extensive vortals rather than.</div>
+							<div class="ticker-item">Proactively cultivate innovative internal or "organic".</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section py-6 my-0" style="background-color: #B5D3CE;">
+					<div class="text-center mb-5">
+						<h1 class="mb-2">Ticker Speed</h1>
+						<small class="text-center">--ticker-duration: 20s</small>
+					</div>
+					<div class="ticker-wrap" style="--ticker-duration: 20s;">
+						<div class="ticker">
+							<div class="ticker-item text-dark">Progressively promote customer.</div>
+							<div class="ticker-item text-dark">Professionally morph 24/7 collaboration and idea-sharing through robust infrastructures.</div>
+							<div class="ticker-item text-dark">Efficiently generate backend imperatives.</div>
+							<div class="ticker-item text-dark">Distinctively enable extensive vortals rather than.</div>
+							<div class="ticker-item text-dark">Proactively cultivate innovative internal or "organic".</div>
+							<div class="ticker-item text-dark">Progressively promote customer.</div>
+							<div class="ticker-item text-dark">Professionally morph 24/7 collaboration and idea-sharing through robust infrastructures.</div>
+							<div class="ticker-item text-dark">Efficiently generate backend imperatives.</div>
+							<div class="ticker-item text-dark">Distinctively enable extensive vortals rather than.</div>
+							<div class="ticker-item text-dark">Proactively cultivate innovative internal or "organic".</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

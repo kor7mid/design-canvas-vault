@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Social Icons Toggle | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.si-box {
+			display: flex;
+			display: -ms-flexbox;
+		}
+
+		.si-checkbox {
+			position: relative;
+			width: 40px; /* Social Icons Size */
+			height: 40px; /* Social Icons Size */
+			outline: none;
+			background-color: #EEE;
+			-webkit-appearance: none;
+			cursor: pointer;
+		}
+
+		.si-checkbox::before {
+			content: "\e9d1";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			font-size: 1.25rem;
+			font-family: "lined-icons";
+		}
+
+		.si-checkbox:checked::before { content: "\ea11"; }
+
+		.social-menus {
+			position: relative;
+			display: flex;
+			display: -ms-flexbox;
+			overflow: hidden;
+			width: 0;
+			transition: width .2s, height .2s;
+		}
+
+		.si-checkbox:checked ~ .social-menus {
+			width: 200px; /* Social Icons width x quantity (eg: 40x5) */
+		}
+
+		/* Vertical */
+		.flex-column .social-menus {
+			-ms-flex-direction: column;
+			flex-direction: column;
+			width: auto;
+			height: 0;
+		}
+
+		.flex-column .si-checkbox:checked ~ .social-menus {
+			height: 200px;/* Social Icons height x quantity (eg: 40x5) */
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<div class="row">
+						<div class="col-md-6">
+							<h3>Horizontal</h3>
+							<div class="si-box">
+								<input type="checkbox" name="" class="si-checkbox">
+								<div class="social-menus">
+									<a href="#" class="social-icon m-0 rounded-0 border-transparent text-white bg-facebook">
+										<i class="fa-brands fa-facebook-f"></i>
+										<i class="fa-brands fa-facebook-f"></i>
+									</a>
+									<a href="#" class="social-icon m-0 rounded-0 border-transparent text-white bg-x-twitter">
+										<i class="fa-brands fa-x-twitter"></i>
+										<i class="fa-brands fa-x-twitter"></i>
+									</a>
+									<a href="#" class="social-icon m-0 rounded-0 border-transparent text-white bg-pinterest">
+										<i class="fa-brands fa-pinterest-p"></i>
+										<i class="fa-brands fa-pinterest-p"></i>
+									</a>
+									<a href="#" class="social-icon m-0 rounded-0 border-transparent text-white bg-rss">
+										<i class="fa-solid fa-rss"></i>
+										<i class="fa-solid fa-rss"></i>
+									</a>
+									<a href="#" class="social-icon m-0 rounded-0 border-transparent text-white bg-call">
+										<i class="fa-solid fa-phone"></i>
+										<i class="fa-solid fa-phone"></i>
+									</a>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-md-6">
+							<h3>Vertical</h3>
+							<div class="si-box flex-column">
+								<input type="checkbox" name="" class="si-checkbox">
+								<div class="social-menus">
+									<a href="#" class="social-icon m-0 rounded-0 border-transparent text-white bg-facebook">
+										<i class="fa-brands fa-facebook-f"></i>
+										<i class="fa-brands fa-facebook-f"></i>
+									</a>
+									<a href="#" class="social-icon m-0 rounded-0 border-transparent text-white bg-x-twitter">
+										<i class="fa-brands fa-x-twitter"></i>
+										<i class="fa-brands fa-x-twitter"></i>
+									</a>
+									<a href="#" class="social-icon m-0 rounded-0 border-transparent text-white bg-pinterest">
+										<i class="fa-brands fa-pinterest-p"></i>
+										<i class="fa-brands fa-pinterest-p"></i>
+									</a>
+									<a href="#" class="social-icon m-0 rounded-0 border-transparent text-white bg-rss">
+										<i class="fa-solid fa-rss"></i>
+										<i class="fa-solid fa-rss"></i>
+									</a>
+									<a href="#" class="social-icon m-0 rounded-0 border-transparent text-white bg-call">
+										<i class="fa-solid fa-phone"></i>
+										<i class="fa-solid fa-phone"></i>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

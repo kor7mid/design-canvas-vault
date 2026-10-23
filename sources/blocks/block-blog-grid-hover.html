@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog Grid Hover | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+/* Image Hover */
+		.hover-reveal {
+			position: fixed;
+			width: 230px;
+			height: 150px;
+			top: 0;
+			left: 0;
+			pointer-events: none;
+			opacity: 0;
+		}
+
+		.hover-reveal__inner,
+		.hover-reveal__img {
+			width: 100%;
+			height: 100%;
+			position: relative;
+		}
+
+		.hover-reveal__img {
+			background-size: cover;
+			background-position: 50% 50%;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<!-- Posts
+					============================================= -->
+					<div id="posts" class="post-grid row gutter-50">
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="../images/blog/grid/17.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single.html">This is a Standard post with a Preview Image</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 10th Feb 2021</li>
+										<li><a href="blog-single.html#comments"><i class="uil uil-comments-alt"></i> 13</a></li>
+										<li><a href="#"><i class="uil uil-camera"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur!</p>
+									<a href="blog-single.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="../images/blog/grid/10.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single-full.html">This is a Standard post with a Vimeo Video</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 16th Feb 2021</li>
+										<li><a href="blog-single-full.html#comments"><i class="uil uil-comments-alt"></i> 19</a></li>
+										<li><a href="#"><i class="uil uil-film"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>Asperiores, tenetur, blanditiis, quaerat odit ex exercitationem consectetur pariatur quibusdam veritatis quisquam laboriosam esse beatae hic perferendis velit deserunt!</p>
+									<a href="blog-single-full.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="../images/blog/grid/20.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single-small.html">This is a Standard post with a Slider Gallery</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 24th Feb 2021</li>
+										<li><a href="blog-single-small.html#comments"><i class="uil uil-comments-alt"></i> 21</a></li>
+										<li><a href="#"><i class="uil uil-images"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur!</p>
+									<a href="blog-single-small.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="../images/blog/grid/2.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single.html">This is an Embedded SoundCloud Post</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 28th Apr 2021</li>
+										<li><a href="blog-single.html#comments"><i class="uil uil-comments-alt"></i> 16</a></li>
+										<li><a href="#"><i class="uil uil-music"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur!</p>
+									<a href="blog-single.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="../images/blog/grid/3.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single-full.html">This is a Standard post with a Youtube Video</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 30th Apr 2021</li>
+										<li><a href="blog-single-full.html#comments"><i class="uil uil-comments-alt"></i> 34</a></li>
+										<li><a href="#"><i class="uil uil-film"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur!</p>
+									<a href="blog-single-full.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="../images/blog/grid/12.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single.html">This is a Standard post with Fade Gallery</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 3rd Mar 2021</li>
+										<li><a href="blog-single.html#comments"><i class="uil uil-comments-alt"></i> 21</a></li>
+										<li><a href="#"><i class="uil uil-images"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur!</p>
+									<a href="blog-single.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="../images/blog/grid/13.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single.html">This is a Standard post with another Preview Image</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 5th May 2021</li>
+										<li><a href="blog-single.html#comments"><i class="uil uil-comments-alt"></i> 6</a></li>
+										<li><a href="#"><i class="uil uil-camera"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur!</p>
+									<a href="blog-single.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-lg-3 col-md-4 col-sm-6 col-12 img-hover-block" data-img="../images/blog/grid/21.jpg">
+							<div class="grid-inner">
+								<div class="entry-title">
+									<h2><a href="blog-single-full.html">This is a Standard post with a Dailymotion Video</a></h2>
+								</div>
+								<div class="entry-meta">
+									<ul>
+										<li><i class="uil uil-schedule"></i> 11th May 2021</li>
+										<li><a href="blog-single-full.html#comments"><i class="uil uil-comments-alt"></i> 9</a></li>
+										<li><a href="#"><i class="uil uil-film"></i></a></li>
+									</ul>
+								</div>
+								<div class="entry-content">
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ratione, voluptatem, dolorem animi nisi autem blanditiis enim culpa reiciendis et explicabo tenetur!</p>
+									<a href="blog-single-full.html" class="more-link">Read More</a>
+								</div>
+							</div>
+						</div>
+
+					</div><!-- #posts end -->
+
+					<!-- Pagination
+					============================================= -->
+					<ul class="pagination mt-5 pagination-circle justify-content-center">
+						<li class="page-item disabled"><a class="page-link" href="#"><i class="uil uil-angle-left-b"></i></a></li>
+						<li class="page-item active"><a class="page-link" href="#">1</a></li>
+						<li class="page-item"><a class="page-link" href="#">2</a></li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item"><a class="page-link" href="#">4</a></li>
+						<li class="page-item"><a class="page-link" href="#">5</a></li>
+						<li class="page-item"><a class="page-link" href="#"><i class="uil uil-angle-right-b"></i></a></li>
+					</ul>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

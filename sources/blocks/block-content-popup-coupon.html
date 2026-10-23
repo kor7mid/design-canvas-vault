@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Popup Coupon | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  
+</head>
+<body class="stretched ">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<div class="d-flex align-items-center justify-content-center min-vh-100">
+					<a href="#block-modal-coupon" data-lightbox="inline" class="button button-xlarge rounded-pill bg-primary text-transform-none ls-0 px-6 py-3">View Offers!</a>
+				</div>
+
+				<div class="modal-on-load" data-target="#block-modal-coupon"></div>
+
+				<!-- Modal -->
+				<div class="modal1 mfp-hide" id="block-modal-coupon">
+					<div class="modal-dialog modal-dialog-centered mx-auto" style="max-width:640px;">
+						<div class="modal-content bg-white p-4 p-md-5 rounded text-center">
+							<h3>Coupon Code!</h3>
+							<p>Progressively engage diverse partnerships whereas flexible materials. Synergistically deploy distributed "outside the box" wireless paradigms.</p>
+
+							<!-- Target -->
+							<h1 id="coupon-code" class="text-uppercase ls-1 text-success fw-bolder ls-1 h1 mb-4">Canvas2023</h1>
+
+							<div>
+								<span class="op-06">Offers will end:</span><i class="bi-clock ms-2"></i><div class="countdown countdown-inline ms-1" data-year="2024" data-month="10" data-format="dH"></div>
+
+								<div class="progress my-2 w-75 mx-auto" style="height: 8px;">
+									<div class="progress-bar progress-bar-animated progress-bar-striped w-75" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+								</div>
+							</div>
+
+							<!-- Trigger -->
+							<div><button class="btn btn-outline-dark px-4 btn-copy mt-4" data-clipboard-target="#coupon-code">Copy Coupon Code</button></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

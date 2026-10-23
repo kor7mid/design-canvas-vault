@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Floating Button | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+#wrapper::after {
+			content: "";
+			opacity: 0;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			background-color: transparent;
+			transition: opacity 0.3s, background-color 0.2s ease;
+		}
+
+		.floating-btn-open #wrapper::after {
+			opacity: 1;
+			background-color: rgba(0, 0, 0, 0.75);
+		}
+
+		.floating-btn-wrap {
+			--cnvs-floating-btn-size: 4rem;
+			--cnvs-floating-btn-pos-right: var(--cnvs-floating-btn-size);
+			--cnvs-floating-btn-pos-bottom: var(--cnvs-floating-btn-size);
+			--cnvs-floating-btn-transition: .3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+			--cnvs-floating-btn-bg-color: var(--cnvs-themecolor);
+			--cnvs-floating-btn-icon-color: #FFF;
+			--cnvs-floating-btn-bg-active-color: var(--bs-dark);
+			--cnvs-floating-btn-box-width: 25rem;
+			--cnvs-floating-btn-box-padding: 2rem;
+			--cnvs-floating-btn-box-radius: .3rem;
+			--cnvs-floating-btn-box-bg: #FFF;
+			--cnvs-floating-btn-box-shadow: 0px 0px 13px 3px rgba(0,0,0,0.07);
+
+
+			position: fixed;
+			right: var(--cnvs-floating-btn-pos-right);
+			bottom: var(--cnvs-floating-btn-pos-bottom);
+			z-index: 199;
+		}
+
+		.floating-btn-wrap .floating-btn {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: var(--cnvs-floating-btn-size);
+			height: var(--cnvs-floating-btn-size);
+			border-radius: var(--cnvs-floating-btn-size);
+			background-color: var(--cnvs-floating-btn-bg-color);
+			color: var(--cnvs-floating-btn-icon-color);
+			cursor: pointer;
+			z-index: 3;
+			transform: translate(-50%, -50%);
+			transition: transform .3s ease;
+		}
+
+		.floating-btn-wrap .floating-btn:hover,
+		.floating-btn-open .floating-btn-wrap .floating-btn {
+			transform: translate(-50%, -50%) scale(1.1);
+			background-color: var(--cnvs-floating-btn-bg-active-color);
+		}
+
+		.floating-btn-wrap .floating-btn .floating-btn-icon {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			font-size: calc(var(--cnvs-floating-btn-size) * .5);
+			-webkit-transition: var(--cnvs-floating-btn-transition);
+			transition: var(--cnvs-floating-btn-transition);
+			-webkit-transition-property: opacity, -webkit-transform;
+			transition-property: opacity, transform;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			-webkit-backface-visibility: hidden;
+		}
+
+		.floating-btn-wrap .floating-btn .floating-btn-icon.btn-active,
+		.floating-btn-open .floating-btn-wrap .floating-btn .floating-btn-icon {
+			opacity: 0;
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+		}
+
+		.floating-btn-open .floating-btn-wrap .floating-btn .floating-btn-icon.btn-active {
+			opacity: 1;
+			-webkit-transform: translate(-50%, -50%) rotate(-45deg);
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+
+		.floating-btn-wrap .floating-btn-box {
+			opacity: 0;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			width: var(--cnvs-floating-btn-box-width);
+			background-color: var(--cnvs-floating-btn-box-bg);
+			border-radius: var(--cnvs-floating-btn-box-radius);
+			z-index: 1;
+			padding: var(--cnvs-floating-btn-box-padding);
+			-webkit-transform-origin: right bottom;
+			transform-origin: right bottom;
+			box-shadow: var(--cnvs-floating-btn-box-shadow);
+			-webkit-transform: scale(.01);
+			transform: scale(.01);
+			-webkit-transition: all var(--cnvs-floating-btn-transition);
+			transition: all var(--cnvs-floating-btn-transition);
+			-webkit-backface-visibility: hidden;
+		}
+
+		.floating-btn-open .floating-btn-wrap .floating-btn-box {
+			opacity: 1;
+			-webkit-transform: scale(1);
+			transform: scale(1);
+		}
+
+		.floating-btn-wrap + #gotoTop {
+			left: 40px;
+			right: auto;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container mw-sm">
+
+					<h2 class="fw-bold display-5 mb-5">Floating Popup Button</h2>
+
+					<p class="text-larger mb-0">Distinctively build an expanded array of methods of empowerment before magnetic infrastructures. Credibly promote ethical value whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence. Interactively develop functional innovation before stand-alone e-business. Monotonectally network corporate relationships without multimedia based infrastructures. <br><br>
+
+					Appropriately productize optimal growth strategies without functionalized bandwidth. Authoritatively engineer quality e-markets for professional ROI. Interactively engage e-business solutions through turnkey applications. Continually procrastinate global resources whereas cross-platform processes. Professionally supply long-term high-impact quality vectors without backend sources.<br><br>
+
+					Proactively incentivize real-time networks without wireless resources. Collaboratively revolutionize backward-compatible web-readiness vis-a-vis state of the art results. Proactively streamline client-centered services and best-of-breed leadership. Synergistically drive B2B action items before process-centric users. Proactively matrix enabled best practices whereas highly efficient internal or "organic" sources.<br><br>
+
+					Dramatically cultivate quality value with empowered quality vectors. Completely actualize covalent e-services via covalent total linkage. Credibly evolve cost effective e-business for quality quality vectors. Uniquely e-enable impactful partnerships for flexible metrics. Uniquely incubate B2B collaboration and idea-sharing whereas just in time synergy.<br><br>
+
+					Proactively plagiarize 2.0 quality vectors through premier testing procedures. Dramatically procrastinate bricks-and-clicks expertise whereas clicks-and-mortar systems. Rapidiously morph process-centric ROI rather than frictionless data. Dynamically incubate principle-centered e-markets via sustainable niche markets. Energistically re-engineer low-risk high-yield strategic theme areas whereas bricks-and-clicks imperatives.<br><br>
+
+					Energistically impact corporate action items with intuitive strategic theme areas. Monotonectally plagiarize real-time web-readiness rather than enterprise supply chains. Intrinsicly underwhelm long-term high-impact sources whereas quality portals. Globally scale intuitive best practices after sticky communities. Completely supply professional metrics rather.</p>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

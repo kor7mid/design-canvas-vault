@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vertical 2 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.feature-box-border-vertical .feature-box { position: relative; }
+
+		.feature-box-border-vertical .feature-box:not(.noborder)::before,
+		.feature-box-border-vertical .fbox-active.feature-box:not(.noborder)::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 35px;
+			width: 3px;
+			height: 100%;
+			background-color: var(--bs-gray-200);
+		}
+
+		.feature-box-border-vertical .fbox-icon i,
+		.feature-box-border-vertical .fbox-border.fbox-light .fbox-icon i {
+            position: relative;
+			z-index: 5;
+			text-align: center;
+            box-shadow: 0 0 0 6px #FFF;
+            background-color: #FFF !important;
+		}
+
+        .feature-box-border-vertical .fbox-active.feature-box .fbox-icon i,
+		.feature-box-border-vertical .fbox-active.feature-box .fbox-border.fbox-light .fbox-icon i,
+        .feature-box-border-vertical .fbox-active.feature-box:not(.noborder)::after {
+            background-color: var(--bs-primary) !important;
+            color:#FFF;
+        }
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<div class="row feature-box-border-vertical col-mb-50 justify-content-center align-items-center my-5">
+						<div class="col-md-6 feature-box fbox-active fbox-dark fbox-sm">
+							<div class="fbox-icon">
+								<i class="fa-solid fa-check"></i>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none mb-2">Order Confirmed</h3>
+								<p>Mumbai, MH, IND - Sep 11th, 9:05am</p>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col-md-6 feature-box fbox-active fbox-border fbox-light fbox-sm">
+							<div class="fbox-icon">
+								<i class="fa-solid fa-check border"></i>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none mb-2">Processing Order</h3>
+								<p>Mumbai, MH, IND - Sep 12th, 04:05pm</p>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col-md-6 feature-box fbox-active fbox-border fbox-light fbox-sm">
+							<div class="fbox-icon">
+								<i class="fa-solid fa-check border"></i>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none mb-2">Package Shipped</h3>
+								<p>Mumbai, MH, IND - Sep 12th, 09:33pm</p>
+                                <p class="mb-3">Completely mesh standardized expertise after synergistic architectures.</p>
+                                <a href="#" class="link-primary"><u>See more details</u></a>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col-md-6 feature-box fbox-border fbox-light fbox-sm">
+							<div class="fbox-icon">
+								<i class="fa-solid fa-check border"></i>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none mb-2">Package will Dispatched</h3>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="col-md-6 feature-box fbox-border fbox-light noborder fbox-sm">
+							<div class="fbox-icon">
+								<i class="fa-solid fa-check border"></i>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none mb-0">Out for Delivery</h3>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

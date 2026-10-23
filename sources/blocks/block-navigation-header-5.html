@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Header Layout 5 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+@media (min-width: 992px) {
+
+			.block-nav-header-5 .menu-item.menu-line {
+				width: 1px;
+				height: 30px;
+				background-color: #CCC;
+				margin: 0 10px !important;
+			}
+
+			.block-nav-header-5 .dark .menu-item.menu-line { background-color: rgba(255, 255, 255, 0.25); }
+
+			.block-nav-header-5 .menu-container > .menu-item > .sub-menu-container > .menu-item {
+				border-bottom: 1px solid #EEE;
+			}
+
+			.block-nav-header-5 .sub-menu-container .menu-link div > i.fa-solid fa-chevron-down::before {
+				content: "\e976";
+				font-family: "font-icons";
+			}
+
+			.block-nav-header-5 .mega-menu-small .mega-menu-content-width {
+				width: 47rem;
+			}
+
+			.block-nav-header-5 .menu-item.mega-menu { position: static; }
+
+		}
+
+		@media (max-width: 991.98px) {
+
+			.block-nav-header-5 .sub-menu-container .menu-item > .menu-link { color: #EEE; }
+
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Header
+		============================================= -->
+		<header id="header" class="header-size-sm border-0 block-nav-header-5" data-sticky-shrink="false">
+			<div class="container">
+				<div class="header-row">
+
+					<!-- Logo
+					============================================= -->
+					<div id="logo" class="ms-0 flex-shrink-0 me-3">
+						<a href="index.html">
+							<img class="logo-default" srcset="../images/logo.png, ../images/logo@2x.png 2x" src="../images/logo@2x.png" alt="Canvas Logo">
+							<img class="logo-dark" srcset="../images/logo-dark.png, ../images/logo-dark@2x.png 2x" src="../images/logo-dark@2x.png" alt="Canvas Logo">
+						</a>
+					</div><!-- #logo end -->
+
+					<div class="header-misc col-auto flex-sm-fill flex-shrink-1 mx-lg-3">
+						<div class="input-group">
+							<i class="input-group-text uil uil-search bg-white"></i>
+							<input type="text" class="form-control border" aria-label="Text input with dropdown button" placeholder="Search your Products">
+							<button class="btn btn-outline-secondary border dropdown-toggle d-none d-md-block" type="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories</button>
+							<div class="dropdown-menu">
+								<a class="dropdown-item" href="#">Electronics</a>
+								<a class="dropdown-item" href="#">Smartphones</a>
+								<a class="dropdown-item" href="#">Accessories</a>
+								<a class="dropdown-item" href="#">Cameras</a>
+								<a class="dropdown-item" href="#">Gaming</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="header-misc flex-shrink-0 order-lg-last mx-auto mx-lg-0 mb-4 mb-lg-0">
+						<div class="d-flex">
+							<i class="i-plain bi-person ms-0 me-1"></i>
+							<div class="he-text fw-normal text-dark-50">
+								<small class="text-uppercase ls-1 d-block">Sign In:</small>
+								<a href="#" class="text-dark fw-semibold">My Account</a>
+							</div>
+						</div>
+						<div class="ms-4 d-flex">
+							<i class="i-plain bi-bag ms-0 me-1"></i>
+							<div  id="top-cart" class="he-text fw-normal text-dark-50">
+								<small class="text-uppercase ls-1 d-block">Cart</small>
+								<a id="top-cart-trigger" href="#" target="_top" class="text-dark fw-semibold">$114.95 <i class="fa-solid fa-chevron-down text-smaller"></i></a>
+								<div class="top-cart-content">
+									<div class="top-cart-title">
+										<h4>Shopping Cart</h4>
+									</div>
+									<div class="top-cart-items">
+										<div class="top-cart-item">
+											<div class="top-cart-item-image">
+												<a href="#"><img src="../images/shop/small/1.jpg" alt="Blue Round-Neck Tshirt"></a>
+											</div>
+											<div class="top-cart-item-desc">
+												<div class="top-cart-item-desc-title">
+													<a href="#">Blue Round-Neck Tshirt with a Button</a>
+													<span class="top-cart-item-price d-block">$19.99</span>
+												</div>
+												<div class="top-cart-item-quantity">x 2</div>
+											</div>
+										</div>
+										<div class="top-cart-item">
+											<div class="top-cart-item-image">
+												<a href="#"><img src="../images/shop/small/6.jpg" alt="Light Blue Denim Dress"></a>
+											</div>
+											<div class="top-cart-item-desc">
+												<div class="top-cart-item-desc-title">
+													<a href="#">Light Blue Denim Dress</a>
+													<span class="top-cart-item-price d-block">$24.99</span>
+												</div>
+												<div class="top-cart-item-quantity">x 3</div>
+											</div>
+										</div>
+									</div>
+									<div class="top-cart-action">
+										<span class="top-checkout-price color fw-bold">$114.95</span>
+										<a href="#" class="btn btn-sm text-white bg-color m-0">View Cart</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<div id="header-wrap" class="border-top">
+				<div class="container">
+					<div class="header-row justify-content-between flex-row-reverse flex-lg-row">
+
+						<div class="header-misc">
+
+							<!-- Header Buttons
+							============================================= -->
+							<div class="header-buttons">
+								<a href="#" class="btn btn-sm btn-light">View Orders</a>
+							</div>
+
+						</div>
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+							<ul class="menu-container">
+								<li class="menu-item menu-categories"><a class="menu-link" href="#"><div>Categories <i class="bi-caret-down-fill d-none d-lg-inline-block"></i></div></a>
+									<ul class="sub-menu-container p-0">
+										<li class="menu-item mega-menu mega-menu-small"><a class="menu-link" href="#"><div><i class="bi-laptop"></i>Computers</div></a>
+											<div class="mega-menu-content mega-menu-style-2 p-3 mega-menu-content-width">
+												<div class="container">
+													<div class="row flex-wrap flex-lg-nowrap">
+														<ul class="mega-menu-column sub-menu-container border-start-0 col-lg-4">
+															<li class="mega-menu-title menu-item"><a class="menu-link" href="#"><div>Computers</div></a>
+																<ul class="sub-menu-container p-0">
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Macbooks</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>iMac</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Notebook</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>PC</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Laptop</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Screen Touch</div></a></li>
+																</ul>
+															</li>
+														</ul>
+														<ul class="mega-menu-column sub-menu-container border-start-0 col-lg-4">
+															<li class="mega-menu-title menu-item"><a class="menu-link" href="#"><div>Accessories</div></a>
+																<ul class="sub-menu-container p-0">
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Keyboards</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Mouse</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Hard Drives</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Power Banks</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Cases &amp; Covers</div></a></li>
+																</ul>
+															</li>
+														</ul>
+														<ul class="mega-menu-column sub-menu-container col-lg-4 text-center">
+															<li>
+																<img class="card-img-top h-100" src="../previews/preview/header-5/notebook.jpg" alt="image cap">
+																<h4 class="text-dark my-3 h6">Flat 30% Off on Notebook</h4>
+																<a href="#" class="btn btn-danger btn-sm">View Now</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="menu-item mega-menu mega-menu-small"><a class="menu-link" href="#"><div><i class="bi-phone"></i>Phones &amp; Tablets</div></a>
+											<div class="mega-menu-content mega-menu-style-2 p-3 mega-menu-content-width">
+												<div class="container">
+													<div class="row flex-wrap flex-md-nowrap">
+														<ul class="mega-menu-column sub-menu-container border-start-0 col-lg-4">
+															<li class="mega-menu-title menu-item"><a class="menu-link" href="#"><div>Smartphones</div></a>
+																<ul class="sub-menu-container p-0">
+																	<li class="menu-item"><a class="menu-link" href="#"><div>iphone</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Android Phones</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Windows Phone</div></a></li>
+																</ul>
+															</li>
+															<li class="mega-menu-title menu-item"><a class="menu-link" href="#"><div>Tablets</div></a>
+																<ul class="sub-menu-container p-0">
+																	<li class="menu-item"><a class="menu-link" href="#"><div>ipad</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Tablets</div></a></li>
+																</ul>
+															</li>
+														</ul>
+														<ul class="mega-menu-column sub-menu-container border-start-0 col-lg-4">
+															<li class="mega-menu-title menu-item"><a class="menu-link" href="#"><div>Accesories</div></a>
+																<ul class="sub-menu-container p-0">
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Covers &amp; Cases</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Headphones</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Bluetooth Keyboard</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Chargers</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Cables</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Wall Adapters</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Holders</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Car Stands</div></a></li>
+																</ul>
+															</li>
+														</ul>
+														<ul class="mega-menu-column sub-menu-container col-lg-4 text-center d-none d-lg-block">
+															<li>
+																<img class="card-img-top h-100" src="../previews/preview/header-5/ipad.jpg" alt="image cap">
+																<h4 class="text-dark my-3 h6">New Ipad Available</h4>
+																<a href="#" class="btn btn-danger btn-sm">Shop Now</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="menu-item mega-menu mega-menu-small"><a class="menu-link" href="#"><div><i class="bi-tv"></i>Televisions</div></a>
+											<div class="mega-menu-content mega-menu-style-2 p-3 mega-menu-content-width">
+												<div class="container">
+													<div class="row flex-wrap flex-md-nowrap">
+														<ul class="mega-menu-column sub-menu-container border-start-0 col-lg-4">
+															<li class="mega-menu-title menu-item"><a class="menu-link" href="#"><div>Home Appearance</div></a>
+																<ul class="sub-menu-container p-0">
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Televisions</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Home Theatre</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Homepods</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Alexa</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Google Assitants</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Fire Sticks</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>DVD Players</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Game Consoles</div></a></li>
+																</ul>
+															</li>
+														</ul>
+														<ul class="mega-menu-column sub-menu-container border-start-0 col-lg-4">
+															<li class="mega-menu-title menu-item"><a class="menu-link" href="#"><div>Accesories</div></a>
+																<ul class="sub-menu-container p-0">
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Remotes</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>AUX Cables</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Power Adapter</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>TV Stands</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Wall Mounts</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Power Cables</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Gaming CDs</div></a></li>
+																</ul>
+															</li>
+														</ul>
+														<ul class="mega-menu-column sub-menu-container col-lg-4 text-center d-none d-lg-block">
+															<li>
+																<img class="card-img-top h-100" src="../previews/preview/header-5/tv.jpg" alt="image cap">
+																<h4 class="text-dark my-3 h6">8K QLED TV</h4>
+																<a href="#" class="btn btn-danger btn-sm">View Now</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="menu-item mega-menu mega-menu-small"><a class="menu-link" href="#"><div><i class="bi-camera"></i>Cameras</div></a>
+											<div class="mega-menu-content mega-menu-style-2 p-3 mega-menu-content-width">
+												<div class="container">
+													<div class="row flex-wrap flex-md-nowrap">
+														<ul class="mega-menu-column sub-menu-container border-start-0 col-lg-4">
+															<li class="mega-menu-title menu-item"><a class="menu-link" href="#"><div>Cameras &amp; Accesories</div></a>
+																<ul class="sub-menu-container p-0">
+																	<li class="menu-item"><a class="menu-link" href="#"><div>DSLR Camera</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Lenses</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Cases</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Covers</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Protectors</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Batteries</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Chargers</div></a></li>
+																</ul>
+															</li>
+														</ul>
+														<ul class="mega-menu-column sub-menu-container border-start-0 col-lg-4">
+															<li class="mega-menu-title menu-item"><a class="menu-link" href="#"><div>Brands</div></a>
+																<ul class="sub-menu-container p-0">
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Nikon</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Canon</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Sony</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Fujifilm</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Sigma</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div>Panasonic</div></a></li>
+																	<li class="menu-item"><a class="menu-link" href="#"><div><u>View all</u></div></a></li>
+																</ul>
+															</li>
+														</ul>
+														<ul class="mega-menu-column sub-menu-container col-lg-4 text-center d-none d-lg-block">
+															<li>
+																<img class="card-img-top h-100" src="../previews/preview/header-5/camera.jpg" alt="image cap">
+																<h4 class="text-dark my-3 h6">NEW DSLR Camera</h4>
+																<a href="#" class="btn btn-danger btn-sm">View Now</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</li>
+										<li class="menu-item mega-menu mega-menu-small"><a class="menu-link" href="#"><div><i class="bi-headphones"></i>Gaming Consoles</div></a>
+											<div class="mega-menu-content mega-menu-style-2 p-3 mega-menu-content-width">
+												<div class="container">
+													<div class="row flex-wrap flex-md-nowrap">
+														<ul class="mega-menu-column sub-menu-container col-lg-3 col-6 text-center">
+															<li class="menu-item mega-menu-title mb-0">
+																<a class="menu-link" href="#">
+																	<img class="card-img-top mb-3" src="../previews/preview/header-5/ps5.jpg" alt="image cap">
+																	<div>PS5</div>
+																</a>
+															</li>
+														</ul>
+														<ul class="mega-menu-column sub-menu-container col-lg-3 col-6 text-center">
+															<li class="menu-item mega-menu-title mb-0">
+																<a class="menu-link" href="#">
+																	<img class="card-img-top mb-3" src="../previews/preview/header-5/xbox.jpg" alt="image cap">
+																	<div>XBOX</div>
+																</a>
+															</li>
+														</ul>
+														<ul class="mega-menu-column sub-menu-container col-lg-3 col-6 text-center">
+															<li class="menu-item mega-menu-title mb-0">
+																<a class="menu-link" href="#">
+																	<img class="card-img-top mb-3" src="../previews/preview/header-5/ps4.png" alt="image cap">
+																	<div>PS4</div>
+																</a>
+															</li>
+														</ul>
+														<ul class="mega-menu-column sub-menu-container col-lg-3 col-6 text-center">
+															<li class="menu-item mega-menu-title mb-0">
+																<a class="menu-link" href="#">
+																	<img class="card-img-top mb-3" src="../previews/preview/header-5/games.jpg" alt="image cap">
+																	<div>Games</div>
+																</a>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item menu-line"></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Shop</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Kids</div></a>
+									<ul class="sub-menu-container p-0">
+										<li class="menu-item"><a class="menu-link" href="#"><div><i class="bi-house"></i>Most Popular</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div><i class="bi-building"></i>Latest Items</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div><i class="bi-globe"></i>New Arrivals</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div><i class="fa-solid fa-paw"></i>View All</div></a></li>
+									</ul>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Team</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>FAQs</div></a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content" style="background-image: radial-gradient(circle at top right, rgb(35,58,72) 0%, rgb(35,58,72) 28%,rgb(67,110,103) 28%, rgb(67,110,103) 45%,rgb(108,149,133) 45%, rgb(108,149,133) 63%,rgb(185,198,165) 63%, rgb(185,198,165) 100%);">
+			<div class="content-wrap dark py-0">
+				<div class="row justify-content-center align-items-center text-center min-vh-100">
+					<h1 class="col-12 display-4 mb-0">eCommerce Header<br>...</h1>
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

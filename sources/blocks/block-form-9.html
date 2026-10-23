@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Layout 9 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.block-form-9 .form-control {
+            --cnvs-input-btn-padding-x: 1rem;
+            --cnvs-input-btn-padding-y: 0.875rem;
+            --cnvs-input-btn-border-width: 1px;
+            --cnvs-input-btn-border-color: var(--cnvs-contrast-1000);
+			--cnvs-input-btn-input-color: var(--cnvs-contrast-1000);
+			--cnvs-input-focus-color: var(--cnvs-input-btn-input-color);
+            --cnvs-form-control-radius: 0.875rem;
+		}
+
+        .block-form-9 label {
+            --cnvs-input-label-mb: 0.75rem;
+        }
+
+        .block-form-9 form .btn {
+            --bs-btn-padding-y: 0.875rem;
+            --bs-btn-border-radius: 0.875rem;
+        }
+
+        .block-form-9 .form-select {
+            padding: 0.875rem 1rem;
+            border-color: var(--cnvs-contrast-1000);
+            border-radius: 0.875rem;
+        }
+</style>
+</head>
+<body class="stretched block-form-9">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap bg-dark bg-opacity-25">
+
+				<div class="container mw-lg">
+
+					<div class="row justify-content-between g-3 gx-lg-6">
+						<div class="col-md-6">
+							<img src="../previews/preview/form-9.jpg" alt=".." class="w-100 h-100 object-cover" style="border-radius: 20px;">
+						</div>
+						<div class="col-md-6">
+							<div class="card bg-contrast-0 border-0" style="border-radius: 20px;">
+								<div class="card-body p-5">
+
+									<div class="form-widget">
+
+										<div class="form-result"></div>
+
+										<form class="mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
+
+											<div class="form-process">
+												<div class="css3-spinner">
+													<div class="css3-spinner-scaler"></div>
+												</div>
+											</div>
+
+											<div class="row">
+												<div class="col-12 mb-4 pb-2">
+													<label for="template-contactform-name">Name<small>*</small></label>
+													<input type="text" id="template-contactform-name" name="template-contactform-name" value="" placeholder="Enter your full name..." class="form-control required">
+												</div>
+
+												<div class="col-12 mb-4 pb-2">
+													<label for="template-contactform-email">Email<small>*</small></label>
+													<input type="email" id="template-contactform-email" name="template-contactform-email" value="" placeholder="Enter your email address..." class="required email form-control">
+												</div>
+
+												<div class="col-12 mb-4 pb-2">
+													<label for="template-contactform-phone">Phone<small>*</small></label>
+													<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" placeholder="Enter your contact number..." class="form-control required">
+												</div>
+
+                                                <div class="col-12 mb-4 pb-2">
+                                                    <label for="template-contactform-services">Services<small>*</small></label>
+                                                    <div class="row row-cols-lg-2 flex-fill g-3">
+                                                        <div>
+                                                            <input type="checkbox" class="btn-check" id="template-contactform-services-web" autocomplete="off">
+                                                            <label class="btn btn-outline-dark w-100 mb-0" for="template-contactform-services-web">Web Design</label>
+                                                        </div>
+
+                                                        <div>
+                                                            <input type="checkbox" class="btn-check" id="template-contactform-services-app" autocomplete="off">
+                                                            <label class="btn btn-outline-dark w-100 mb-0" for="template-contactform-services-app">App Development</label>
+                                                        </div>
+
+                                                        <div>
+                                                            <input type="checkbox" class="btn-check" id="template-contactform-ecommerce" autocomplete="off">
+                                                            <label class="btn btn-outline-dark w-100 mb-0" for="template-contactform-ecommerce">E-commerce</label>
+                                                        </div>
+
+                                                        <div>
+                                                            <input type="checkbox" class="btn-check" id="template-contactform-seo" autocomplete="off">
+                                                            <label class="btn btn-outline-dark w-100 mb-0" for="template-contactform-seo">SEO</label>
+                                                        </div>
+
+                                                        <div>
+                                                            <input type="checkbox" class="btn-check" id="template-contactform-digital Marketing" autocomplete="off">
+                                                            <label class="btn btn-outline-dark w-100 mb-0" for="template-contactform-digital Marketing">Digital Marketing</label>
+                                                        </div>
+
+                                                        <div>
+                                                            <input type="checkbox" class="btn-check" id="template-contactform-branding" autocomplete="off">
+                                                            <label class="btn btn-outline-dark w-100 mb-0" for="template-contactform-branding">Branding</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+												<div class="col-12 mb-4 pb-2">
+                                                    <label for="template-contactform-budget">Budget<small>*</small></label>
+                                                    <select id="template-contactform-budget" name="template-contactform-budget" class="form-select required">
+                                                        <option value="" disabled selected>Select One</option>
+                                                        <option value="Below 5K">Below 5k</option>
+                                                        <option value="5k - 10K">5k - 10K</option>
+                                                        <option value="10K - 20K">10K - 20K</option>
+                                                        <option value="10K+">10K+</option>
+                                                    </select>
+                                                </div>
+
+												<div class="col-12 mb-4 pb-2">
+													<label for="template-contactform-message">Message<small>*</small></label>
+													<textarea class="form-control required" id="template-contactform-message" name="template-contactform-message" placeholder="Write your message here..." rows="5" cols="30"></textarea>
+												</div>
+
+												<div class="col-12 mb-4 pb-2 d-none">
+													<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="form-control">
+												</div>
+
+												<div class="col-12">
+													<button class="button button-large button-dark rounded-6 m-0" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Submit</button>
+												</div>
+											</div>
+
+											<input type="hidden" name="prefix" value="template-contactform-">
+
+										</form>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

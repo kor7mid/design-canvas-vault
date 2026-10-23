@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mega Menu 5 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.primary-menu:not(.on-click) .menu-item.mega-menu-small > .mega-menu-content .mega-menu-column {
+			padding: 20px 0;
+		}
+
+		.primary-menu:not(.on-click) .menu-item.mega-menu-small > .mega-menu-content .feature-box .bi-arrow-right {
+			opacity: 0;
+			transition: all .3s ease;
+		}
+
+		.primary-menu:not(.on-click) .menu-item > .mega-menu-content .feature-box:hover .bi-arrow-right {
+			opacity: 1;
+			transform: translateX(10px);
+		}
+
+		@media (min-width: 992px) {
+
+			.primary-menu .menu-item.mega-menu-small > .mega-menu-content {
+				width: 660px;
+				left: auto;
+				right: 0;
+				border: 0;
+				border-radius: 8px;
+				box-shadow: 0px 10px 70px rgb(0 0 0 / 15%);
+				margin-top: -15px !important;
+				overflow: hidden;
+			}
+
+			.primary-menu:not(.on-click) .menu-item.mega-menu-small > .mega-menu-content .mega-menu-column {
+				padding: 30px;
+			}
+
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Header
+		============================================= -->
+		<header id="header">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html">
+								<img class="logo-default" srcset="../images/logo.png, ../images/logo@2x.png 2x" src="../images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-dark" srcset="../images/logo-dark.png, ../images/logo-dark@2x.png 2x" src="../images/logo-dark@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu with-arrows block-mega-menu-4">
+
+							<ul class="menu-container">
+								<li class="menu-item">
+									<a class="menu-link" href="demo-seo.html">
+										<div>Home</div>
+									</a>
+								</li>
+
+								<!-- Mega Menu -->
+								<li class="menu-item mega-menu mega-menu-small">
+									<a class="menu-link" href="#"><div>Extras</div></a>
+									<div class="mega-menu-content">
+										<div class="row mx-0">
+											<ul class="sub-menu-container mega-menu-column col">
+												<div class="row gy-4 gy-lg-5">
+													<div class="col-11">
+														<a href="#" class="feature-box mx-0">
+															<i class="bi-layers square square-xs p-4 bg-danger d-flex justify-content-center align-items-center bg-opacity-10 text-danger rounded-5 me-3"></i>
+															<div class="fbox-content">
+																<h5 class="mb-0 fw-medium">Mutlipurpose Templates</h5>
+																<p class="mb-0 fw-normal text-smaller text-black-50">The Best Selling HTML5 Template.</p>
+															</div>
+															<i class="bi-arrow-right align-self-center text-danger"></i>
+														</a>
+													</div>
+													<div class="col-11">
+														<a href="#" class="feature-box mx-0">
+															<i class="bi-phone square square-xs p-4 bg-primary d-flex justify-content-center align-items-center bg-opacity-10 text-primary rounded-5 me-3"></i>
+															<div class="fbox-content">
+																<h5 class="mb-0 fw-medium">100% Responsive</h5>
+																<p class="mb-0 fw-normal text-smaller text-black-50">The Best Selling HTML5 Template.</p>
+															</div>
+															<i class="bi-arrow-right align-self-center text-primary"></i>
+														</a>
+													</div>
+													<div class="col-11">
+														<a href="#" class="feature-box mx-0">
+															<i class="bi-zoom-in square square-xs p-4 bg-warning d-flex justify-content-center align-items-center bg-opacity-10 text-warning rounded-5 me-3"></i>
+															<div class="fbox-content">
+																<h5 class="mb-0 fw-medium">SEO Friendly</h5>
+																<p class="mb-0 fw-normal text-smaller text-black-50">The Best Selling HTML5 Template.</p>
+															</div>
+															<i class="bi-arrow-right align-self-center text-warning"></i>
+														</a>
+													</div>
+													<div class="col-12">
+														<a href="#" class="button w-100 text-center m-0 rounded bg-color bg-opacity-10 color">View All Features</a>
+													</div>
+												</div>
+											</ul>
+											<ul class="sub-menu-container mega-menu-column col-lg-4 bg-light px-4">
+												<div class="menu-item mega-menu-title">
+													<a class="menu-link fw-semibold" href="#"><div>Browse Categories</div></a>
+													<ul class="sub-menu-container">
+														<li class="menu-item">
+															<a class="menu-link" href="index-parallax.html"><div>Cloths</div></a>
+														</li>
+														<li class="menu-item">
+															<a class="menu-link" href="index-app-showcase.html"><div>Furnitures</div></a>
+														</li>
+														<li class="menu-item">
+															<a class="menu-link" href="index-boxed.html"><div>Bottomwears</div></a>
+														</li>
+														<li class="menu-item">
+															<a class="menu-link" href="index-boxed.html"><div>Accessories</div></a>
+														</li>
+														<li class="menu-item">
+															<a class="menu-link" href="index-boxed.html"><div>Footwears</div></a>
+														</li>
+														<li class="menu-item">
+															<a class="menu-link" href="index-boxed.html"><div>Wallets</div></a>
+														</li>
+														<li class="menu-item">
+															<a class="menu-link" href="index-boxed.html"><div>Sunglasses</div></a>
+														</li>
+													</ul>
+												</div>
+											</ul>
+										</div>
+									</div>
+								</li>
+
+								<li class="menu-item"><a class="menu-link" href="demo-seo-faqs.html">
+										<div>FAQs</div>
+								</a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-seo-contact.html">
+										<div>Contact</div>
+								</a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content" class="include-header">
+			<div class="content-wrap dark bg-dark py-0">
+				<div class="row justify-content-center align-items-center text-center min-vh-100">
+					<h1 class="col-12 display-3 mb-0">Content <br>...</h1>
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

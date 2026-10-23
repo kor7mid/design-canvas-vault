@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Create Writer Portfolio &amp; eBooks Websites with Canvas Template. Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&family=Lato:ital,wght@0,400;0,700;1,400;1,700&family=Parisienne&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="../shared/style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="../shared/css/font-icons.css">
+
+	<!-- Niche Demos -->
+	<link rel="stylesheet" href="one-page/onepage.css">
+	<link rel="stylesheet" href="../demos/writer/writer.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../shared/css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Log in - Writer | Canvas</title>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<div class="section move-bg min-vh-100 w-100 position-absolute m-0 p-0" style="background: url('../demos/writer/images/login.jpg') center center no-repeat; background-size: cover;"></div>
+
+				<div class="section bg-transparent min-vh-100 d-flex m-0 p-0">
+					<div class="vertical-middle">
+						<div class="container-fluid py-5 py-lg-0 mx-auto">
+
+							<div class="text-center">
+								<a href="index.html"><img src="../demos/writer/images/logo@2x.png" height="70" alt="Canvas Logo"></a>
+							</div>
+
+							<div class="card mx-auto dark rounded border border-dark shadow-lg" style="max-width: 540px; background-color: rgba(30,30,30,0.9)">
+								<div class="card-body mx-auto py-5" style="max-width: 70%;">
+
+									<a href="#" class="button button-large button-rounded w-100 bg-facebook text-transform-none fw-normal ls-0 text-center m-0"><i class="fa-brands fa-facebook-f"></i> Log in with Facebook</a>
+
+									<div class="divider divider-center"><span class="position-relative" style="top: -2px">OR</span></div>
+
+									<form id="login-form" name="login-form" class="mb-0 row" action="#" method="post">
+
+										<div class="col-12">
+											<input type="text" id="login-form-username" name="login-form-username" value="" class="form-control not-dark" placeholder="Username">
+										</div>
+
+										<div class="col-12 mt-4">
+											<input type="password" id="login-form-password" name="login-form-password" value="" class="form-control not-dark" placeholder="Password">
+										</div>
+
+										<div class="col-12 text-end">
+											<a href="#" class="text-dark fw-light mt-2">Forgot Password?</a>
+										</div>
+
+										<div class="col-12 mt-4">
+											<button class="button button-rounded w-100 m-0" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+										</div>
+									</form>
+								</div>
+								<div class="card-footer py-4 text-center">
+									<p class="mb-0">Don't have an account? <a href="#"><u>Sign up</u></a></p>
+								</div>
+							</div>
+
+							<div class="text-center dark mt-3"><small>Copyrights &copy; All Rights Reserved by Canvas Inc.</small></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section>
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="../shared/js/plugins.min.js"></script>
+	<script src="../shared/js/functions.bundle.js"></script>
+
+	<!-- Hover 3D -->
+	<script src="../demos/writer/js/hover3d.js"></script>
+
+	<script>
+		jQuery(document).ready( function(){
+			if( !jQuery('body').hasClass('device-touch') ) {
+				var lFollowX = 0,
+					lFollowY = 0,
+					x = 0,
+					y = 0,
+					friction = 1 / 30;
+
+				function moveBackground() {
+					x += (lFollowX - x) * friction;
+					y += (lFollowY - y) * friction;
+
+					translate = 'translate(' + x + 'px, ' + y + 'px) scale(1.1)';
+
+					jQuery('.move-bg').css({
+						'-webit-transform': translate,
+						'-moz-transform': translate,
+						'transform': translate
+					});
+
+					window.requestAnimationFrame(moveBackground);
+				}
+
+				jQuery(window).on('mousemove click', function(e) {
+					var lMouseX = Math.max(-100, Math.min(100, jQuery(window).width() / 2 - e.clientX));
+					var lMouseY = Math.max(-100, Math.min(100, jQuery(window).height() / 2 - e.clientY));
+					lFollowX = (10 * lMouseX) / 100; // 100 : 12 = lMouxeX : lFollow
+					lFollowY = (10 * lMouseY) / 100;
+				});
+
+				moveBackground();
+			}
+		});
+	</script>
+
+</body>
+</html>

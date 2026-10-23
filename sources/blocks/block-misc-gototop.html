@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GotoTop Animation on scroll | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+#gotoTop {
+			--cnvs-gotoTop-stroke-color: var(--cnvs-themecolor);
+			--cnvs-gotoTop-stroke-width: 4px;
+			--cnvs-gotoTop-scroll: 260;
+			background-color: transparent !important;
+		}
+
+		#gotoTop::before {
+			/* font-icons.css */
+			content: "\F286";
+			font-family: 'bootstrap-icons';
+
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: calc(32px + calc(var(--cnvs-gotoTop-stroke-width) * .5));
+			height: calc(32px + calc(var(--cnvs-gotoTop-stroke-width) * .5));
+			line-height: calc(32px - 1px);
+			font-size: 1rem;
+			color: #222;
+			transform: translate(-50%, -50%);
+			border: 2px solid rgba(0,0,0,0.1);
+			border-radius: 50%;
+			z-index: -1;
+		}
+
+		#gotoTop circle {
+			stroke: var(--cnvs-gotoTop-stroke-color);
+			stroke-width: var(--cnvs-gotoTop-stroke-width);
+			transform: rotate(-90deg);
+			transform-origin: center;
+			stroke-dashoffset: var(--cnvs-gotoTop-scroll);
+			stroke-dasharray: 255 255;
+			z-index: 1;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container py-md-4 mw-sm">
+					<h2 class="mb-2 fs-1 fw-bold">Goto Top Animation.</h2>
+					<p class="lead mb-5">Scroll page for Action.</p>
+					<p>Copontificate vertical methods of empowerment rather than sustainable solutions. Seamlessly iterate world-class alignments through distributed vortals. Phosfluorescently disintermediate timely ROI vis-a-vis value-added functionalities. Energistically conceptualize cross-platform "outside the box" thinking via future-proof interfaces. Seamlessly expedite cross-platform quality vectors before emerging ideas. <br><br>
+
+					Dramatically promote customized imperatives vis-a-vis impactful strategic theme areas. Globally implement progressive products through extensible e-services. Appropriately maximize backward-compatible vortals before high standards in customer service. Interactively conceptualize cost effective alignments with emerging collaboration and idea-sharing. Credibly drive vertical testing procedures and interdependent services. <br><br>
+
+					Quickly leverage other's clicks-and-mortar e-tailers through extensible technologies. Intrinsicly underwhelm magnetic ROI with frictionless channels. Conveniently maximize client-centered solutions with sticky systems. Rapidiously plagiarize visionary services vis-a-vis an expanded array of infrastructures. Appropriately mesh user friendly infomediaries after robust infrastructures. <br><br>
+
+					Credibly evisculate market-driven results rather than bricks-and-clicks data. Dramatically procrastinate goal-oriented relationships rather than interdependent information. Competently productivate interoperable technologies before pandemic experiences. Globally disintermediate B2C best practices for backward-compatible bandwidth. Uniquely grow pandemic portals before compelling models. <br><br>
+
+					Progressively plagiarize visionary mindshare via extensible meta-services. Assertively negotiate fully researched partnerships whereas state of the art platforms. Proactively myocardinate client-focused intellectual capital whereas innovative leadership. Efficiently implement synergistic platforms through leading-edge expertise. Synergistically myocardinate interoperable testing procedures and 24/7 initiatives. <br><br>
+
+					Objectively repurpose one-to-one mindshare via functional e-markets. Appropriately orchestrate wireless core competencies after wireless resources. Seamlessly benchmark front-end models and unique infrastructures. Quickly pursue worldwide ideas rather than market-driven communities. Progressively streamline bricks-and-clicks innovation via exceptional solutions.</p>
+
+					<figure>
+						<img src="../demos/blog/images/single/hero-full.jpg" alt="..." class="align-wide-xl">
+						<figcaption class="text-center op-05 fst-italic mt-2 small mb-4">Image Caption</figcaption>
+					</figure>
+
+					<p class="mb-0">Assertively transform strategic technology and synergistic collaboration and idea-sharing. Enthusiastically facilitate alternative e-business whereas alternative communities. Seamlessly revolutionize cost effective catalysts for change via equity invested experiences. Completely optimize compelling internal or "organic". <br><br>
+
+					Collaboratively pontificate vertical methods of empowerment rather than sustainable solutions. Seamlessly iterate world-class alignments through distributed vortals. Phosfluorescently disintermediate timely ROI vis-a-vis value-added functionalities. Energistically conceptualize cross-platform "outside the box" thinking via future-proof interfaces. Seamlessly expedite cross-platform quality vectors before emerging ideas. <br><br>
+
+					Dramatically promote customized imperatives vis-a-vis impactful strategic theme areas. Globally implement progressive products through extensible e-services. Appropriately maximize backward-compatible vortals before high standards in customer service. Interactively conceptualize cost effective alignments with emerging collaboration and idea-sharing. Credibly drive vertical testing procedures and interdependent services. <br><br>
+
+					Quickly leverage other's clicks-and-mortar e-tailers through extensible technologies. Intrinsicly underwhelm magnetic ROI with frictionless channels. Conveniently maximize client-centered solutions with sticky systems. Rapidiously plagiarize visionary services vis-a-vis an expanded array of infrastructures. Appropriately mesh user friendly infomediaries after robust infrastructures. <br><br>
+
+					Credibly evisculate market-driven results rather than bricks-and-clicks data. Dramatically procrastinate goal-oriented relationships rather than interdependent information. Competently productivate interoperable technologies before pandemic experiences. Globally disintermediate B2C best practices for backward-compatible bandwidth. Uniquely grow pandemic portals before compelling models. <br><br>
+
+					Progressively plagiarize visionary mindshare via extensible meta-services. Assertively negotiate fully researched partnerships whereas state of the art platforms. Proactively myocardinate client-focused intellectual capital whereas innovative leadership. Efficiently implement synergistic platforms through leading-edge expertise. Synergistically myocardinate interoperable testing procedures and 24/7 initiatives. <br><br>
+
+					Objectively repurpose one-to-one mindshare via functional e-markets. Appropriately orchestrate wireless core competencies after wireless resources. Seamlessly benchmark front-end models and unique infrastructures. Quickly pursue worldwide ideas rather than market-driven communities. Progressively streamline bricks-and-clicks innovation via exceptional solutions. <br><br>
+
+					Assertively transform strategic technology and synergistic collaboration and idea-sharing. Enthusiastically facilitate alternative e-business whereas alternative communities. Seamlessly revolutionize cost effective catalysts for change via equity invested experiences. Completely optimize compelling internal or "organic".</p>
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

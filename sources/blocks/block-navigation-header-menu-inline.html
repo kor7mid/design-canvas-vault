@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Header Dropdown Inline | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+@media (min-width: 992px) {
+			.primary-menu.primary-menu-inline:not(.on-click) .menu-item:not(.mega-menu) .sub-menu-container,
+			.primary-menu.primary-menu-inline:not(.on-click) .mega-menu-content {
+				margin-top: -15px;
+			}
+
+			.primary-menu.primary-menu-inline:not(.on-click) .menu-item:hover > .sub-menu-container,
+			.primary-menu.primary-menu-inline:not(.on-click) .menu-item:hover > .mega-menu-content {
+				margin-top: 0px;
+			}
+
+			.primary-menu-inline .mega-menu-column > .menu-item > .menu-link {
+				padding: 18px 20px;
+				letter-spacing: 1px;
+				font-size: 0.75rem;
+			}
+
+			.primary-menu-inline .sub-menu-container.mega-menu-column {
+				border-left: 0;
+			}
+
+			.primary-menu-inline .sub-menu-container:not(.mega-menu-column) .menu-item > .menu-link {
+				text-transform: none;
+				letter-spacing: 0;
+				font-weight: 500 !important;
+				font-size: 0.875rem;
+			}
+
+			.primary-menu-inline .sub-menu-container .menu-item:hover > .menu-link {
+			    padding-left: 20px;
+			}
+
+			.primary-menu-inline .mega-menu-content .sub-menu-container.mega-menu-dropdown {
+				top: 100% !important;
+			    left: 0;
+			    padding: 0;
+			}
+
+			.is-expanded-menu .mega-menu:not(.mega-menu-small) .mega-menu-column {
+				padding-top: 0;
+				padding-bottom: 0;
+			}
+
+			.is-expanded-menu .sub-menu-container .menu-link div > i.sub-menu-indicator {
+				position: relative;
+				display: inline-block;
+				margin-left: 1px;
+				margin-top: -1px;
+				transform: rotate(0deg);
+				vertical-align: middle;
+			}
+		}
+</style>
+</head>
+<body class="stretched bg-light">
+  <div id="wrapper">
+    <!-- Header
+		============================================= -->
+		<header id="header" class="header-size-md">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<div class="header-misc ms-auto">
+
+							<!-- Top Search
+							============================================= -->
+							<div id="top-search" class="header-misc-icon">
+								<a href="#" id="top-search-trigger"><i class="uil uil-search"></i><i class="bi-x-lg"></i></a>
+							</div><!-- #top-search end -->
+
+						</div>
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu primary-menu-inline with-arrows block-mega-menu-3">
+							<ul class="menu-container">
+								<li class="menu-item">
+									<a class="menu-link" href="demo-seo.html">
+										<div>Menu</div>
+									</a>
+								</li>
+								<li class="menu-item mega-menu mega-menu-full">
+									<a href="#" class="menu-link"><div>Women</div></a>
+									<div class="mega-menu-content">
+										<div class="container">
+											<div class="row">
+												<ul class="sub-menu-container mega-menu-column col-lg-auto">
+													<li class="menu-item">
+														<a class="menu-link" href="#"><div>Apparel</div></a>
+														<ul class="sub-menu-container mega-menu-dropdown">
+															<li class="menu-item">
+																<a class="menu-link" href="#"><div>Long Dress</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="#"><div>Jackets</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="#"><div>Tees</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="#"><div>Shorts</div></a>
+															</li>
+															<li class="menu-item">
+																<a class="menu-link" href="#"><div>Sleepwear</div></a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+												<ul class="sub-menu-container mega-menu-column col-lg-auto">
+													<li class="menu-item">
+														<a class="menu-link" href="#"><div>Footwear</div></a>
+													</li>
+												</ul>
+												<ul class="sub-menu-container mega-menu-column col-lg-auto">
+													<li class="menu-item">
+														<a class="menu-link" href="#"><div>Sunglasses</div></a>
+													</li>
+												</ul>
+												<ul class="sub-menu-container mega-menu-column col-lg-auto">
+													<li class="menu-item">
+														<a class="menu-link" href="#"><div>Accesories</div></a>
+													</li>
+												</ul>
+												<ul class="sub-menu-container mega-menu-column col-lg-auto">
+													<li class="menu-item">
+														<a class="menu-link" href="#"><div>Bags</div></a>
+													</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="demo-seo-faqs.html">
+									<div>Contact</div>
+								</a></li>
+							</ul>
+						</nav><!-- #primary-menu end -->
+
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.."
+								autocomplete="off">
+						</form>
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content" class="bg-light">
+			<div class="content-wrap">
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

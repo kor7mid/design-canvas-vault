@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Header Layout | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+@media (min-width: 992px) {
+
+			.block-nav-header .bg-white-light {
+				background-color: #E5E3CE;
+				border-bottom-right-radius: 0.5rem !important;
+				border-bottom-left-radius: 0.5rem !important;
+			}
+
+			.block-nav-header #top-bar.transparent-topbar {
+				z-index: 399;
+				border-bottom: 0;
+				background: transparent !important;
+			}
+
+			.block-nav-header .transparent-topbar + .transparent-header + #content {
+				margin-top: -146px; /*  #header(height) + #top-bar(height) */
+			}
+
+		}
+
+		.block-nav-header .top-links li:hover {
+			background-color: rgba(0,0,0,0.15);
+		}
+
+		.block-nav-header #top-social li,
+		.block-nav-header .top-links-item {
+			border-left-color: rgba(0,0,0,0.1);
+		}
+</style>
+</head>
+<body class="stretched block-nav-header">
+  <div id="wrapper">
+    <!-- Top Bar
+		============================================= -->
+		<div id="top-bar" class="transparent-topbar">
+			<div class="container">
+
+				<div class="row justify-content-end g-0">
+					<div class="col-xl-7 col-lg-9 bg-white-light">
+						<div class="row justify-content-between align-items-center px-3">
+
+							<div class="col-12 col-md-auto">
+
+								<!-- Top Links
+										============================================= -->
+								<div class="top-links">
+									<ul class="top-links-container">
+										<li class="top-links-item"><a href="demo-travel.html">Home</a></li>
+										<li class="top-links-item"><a href="faqs.html">FAQs</a></li>
+										<li class="top-links-item"><a href="#">USD</a>
+											<ul class="top-links-sub-menu">
+												<li class="top-links-item"><a href="#">EUR</a></li>
+												<li class="top-links-item"><a href="#">AUD</a></li>
+												<li class="top-links-item"><a href="#">GBP</a></li>
+											</ul>
+										</li>
+									</ul>
+								</div><!-- .top-links end -->
+
+							</div>
+
+							<div class="col-12 col-md-auto">
+
+								<!-- Top Social
+										============================================= -->
+								<ul id="top-social">
+									<li><a href="#" class="h-bg-facebook"><span class="ts-icon"><i class="fa-brands fa-facebook-f"></i></span><span class="ts-text">Facebook</span></a></li>
+									<li><a href="#" class="h-bg-x-twitter"><span class="ts-icon"><i class="fa-brands fa-x-twitter"></i></span><span class="ts-text">Twitter</span></a></li>
+									<li><a href="#" class="h-bg-pinterest"><span class="ts-icon"><i class="fa-brands fa-pinterest-p"></i></span><span class="ts-text">Pinterest</span></a></li>
+									<li><a href="#" class="h-bg-instagram"><span class="ts-icon"><i class="fa-brands fa-instagram"></i></span><span class="ts-text">Instagram</span></a></li>
+								</ul><!-- #top-social end -->
+
+							</div>
+
+							<div class="col-12 col-md-auto d-flex justify-content-center">
+								<h5 class="mb-0 py-2 fw-medium">Mon to Fri: 10:00 – 19:00</h5>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div><!-- #top-bar end -->
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="transparent-header dark">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html">
+								<img class="logo-default" srcset="../images/logo.png, ../images/logo@2x.png 2x" src="../images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-dark" srcset="../images/logo-dark.png, ../images/logo-dark@2x.png 2x" src="../images/logo-dark@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc">
+
+							<!-- Top Search
+							============================================= -->
+							<div id="top-search" class="header-misc-icon">
+								<a href="#" id="top-search-trigger"><i class="uil uil-search"></i><i class="bi-x-lg"></i></a>
+							</div><!-- #top-search end -->
+
+						</div>
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu with-arrows">
+							<ul class="menu-container">
+								<li class="menu-item">
+									<a class="menu-link" href="demo-seo.html">
+										<div>Home</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<div>About</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="demo-seo-faqs.html">
+										<div>FAQs</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="demo-seo-contact.html">
+										<div>Contact</div>
+									</a>
+								</li>
+							</ul>
+						</nav><!-- #primary-menu end -->
+
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content" style="background-image: radial-gradient(circle at top right, rgb(35,58,72) 0%, rgb(35,58,72) 28%,rgb(67,110,103) 28%, rgb(67,110,103) 45%,rgb(108,149,133) 45%, rgb(108,149,133) 63%,rgb(185,198,165) 63%, rgb(185,198,165) 100%);">
+			<div class="content-wrap dark py-0">
+				<div class="row justify-content-center align-items-center text-center min-vh-100">
+					<h1 class="col-12 display-3 mb-0">Content <br>...</h1>
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

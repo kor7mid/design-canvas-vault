@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Morph Menu | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+@media (min-width: 992px) {
+			.morph-marker {
+				--cnvs-morph-height: 3px;
+				--cnvs-morph-duration: .3s;
+				position: absolute;
+				display: block;
+				background: var(--cnvs-themecolor);
+				height: var(--cnvs-morph-height);
+				border-radius: var(--bs-border-radius);
+				transition: all var(--cnvs-morph-duration);
+			}
+
+			.morph-bg .morph-marker {
+				--cnvs-morph-height: 100%;
+				opacity: .1;
+				bottom: 0 !important;
+			}
+
+			.morph-bg .menu-link {
+				position: relative;
+				--cnvs-primary-menu-padding-y: 11px;
+				--cnvs-primary-menu-hover-color: var(--cnvs-primary-menu-color);
+				z-index: 1;
+			}
+		}
+</style>
+</head>
+<body class="stretched block-nav-header">
+  <div id="wrapper">
+    <div class="vh-25"></div>
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="header-size-md">
+			<div id="header-wrap" class="border-bottom-0">
+				<div class="container position-relative">
+					<div class="header-row justify-content-center">
+
+						<!-- Primary Navigation icon in mobile
+						============================================= -->
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+							<ul class="menu-container">
+								<li class="menu-item current">
+									<a class="menu-link" href="#"><div>Home</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#"><div>Features</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#"><div>Pages &amp; Templates</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#"><div>Portfolio</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#"><div>Shop</div></a>
+								</li>
+								<li class="menu-item mega-menu">
+									<a class="menu-link" href="#"><div>Shortcodes</div></a>
+								</li>
+								<div class="morph-marker"></div>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+
+				<div class="clear w-100 vh-25"></div>
+
+				<div class="container position-relative">
+					<div class="header-row justify-content-center">
+
+						<!-- Primary Navigation icon in mobile
+						============================================= -->
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu morph-bg">
+
+							<ul class="menu-container">
+								<li class="menu-item current">
+									<a class="menu-link" href="#"><div>Home</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#"><div>Features</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#"><div>Pages &amp; Templates</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#"><div>Portfolio</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#"><div>Shop</div></a>
+								</li>
+								<li class="menu-item mega-menu">
+									<a class="menu-link" href="#"><div>Shortcodes</div></a>
+								</li>
+								<div class="morph-marker"></div>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

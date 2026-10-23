@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="../shared/style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="../shared/css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../shared/css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Menu Dropdowns | Canvas</title>
+
+    <style>
+        .is-expanded-menu #header {
+            --cnvs-primary-menu-submenu-bg: var(--cnvs-contrast-900);
+            --cnvs-primary-menu-submenu-color: var(--cnvs-contrast-100);
+            --cnvs-primary-menu-submenu-border: 1px solid var(--cnvs-contrast-900);
+            --cnvs-primary-menu-submenu-hover-font-weight: 400;
+            --cnvs-primary-menu-submenu-top-border: var(--cnvs-primary-menu-submenu-border);
+            --cnvs-primary-menu-submenu-font-size: .8rem;
+        }
+
+        .is-expanded-menu .sub-menu-container.mega-menu-dropdown {
+            border-radius: 5px;
+            --cnvs-primary-menu-submenu-bg: var(--cnvs-contrast-1000);
+
+        }
+
+        .is-expanded-menu .mega-menu-content .mega-menu-content .col {
+            padding: 1rem 1.75rem;
+        }
+
+        .is-expanded-menu .sub-menu-container.menu-size-lg .menu-item:not(.mega-menu-title) > .menu-link {
+            padding-top: 16px !important;
+            padding-bottom: 16px !important;
+            --cnvs-primary-menu-submenu-font-size: 1.5rem;
+            --cnvs-primary-menu-icon-size: 1.25rem;
+        }
+
+        .is-expanded-menu .sub-menu-container.mega-menu-dropdown .menu-item:not(.mega-menu-title) > .menu-link {
+            padding-top: 8px !important;
+            padding-bottom: 8px !important;
+            --cnvs-primary-menu-submenu-font-size: .925rem;
+        }
+
+
+    </style>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+        <header id="header">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-center">
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu with-arrows">
+
+							<ul class="menu-container">
+								<li class="menu-item">
+									<a class="menu-link" href="#"><div>Home</div></a>
+                                </li>
+
+                                <li class="menu-item mega-menu mega-menu-full">
+									<a class="menu-link" href="#"><div>Dropdowns</div></a>
+									<div class="mega-menu-content mega-menu-style-2 py-lg-4">
+										<div class="container mw-md">
+											<div class="row">
+												<ul class="sub-menu-container mega-menu-column col-3 border-start-0 menu-size-lg">
+                                                    <li class="menu-item mega-menu-title">
+														<a class="menu-link text-contrast-600 mb-lg-3 text-smaller" href="#"><div>Explore Devices</div></a>
+                                                        <ul class="sub-menu-container">
+                                                            <li class="menu-item">
+                                                                <a class="menu-link" href="#"><div><i class="me-3 bi-laptop"></i>Mac</div></a>
+                                                                <ul class="sub-menu-container mega-menu-dropdown"  style="--cnvs-primary-menu-submenu-font-size: .925rem !important">
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>Explore All Mac</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item-divider"></li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>MacBook Air</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>MacBook Pro</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iMac</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>Mac mini</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>Mac Studio</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>Mac Pro</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>Displays</div></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+
+                                                            <li class="menu-item">
+                                                                <a class="menu-link" href="#"><div><i class="me-3 bi-phone"></i>iPhones</div></a>
+                                                                <ul class="sub-menu-container mega-menu-dropdown"  style="--cnvs-primary-menu-submenu-font-size: .925rem">
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>Explore All iPhones</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item-divider"></li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iPhone 14 Pro</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iPhone 14</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iPhone 13 Pro</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iPhone 13</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iPhone 12</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iPhone SE</div></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+
+                                                            <li class="menu-item">
+                                                                <a class="menu-link" href="#"><div><i class="me-3 bi-tablet"></i>iPads</div></a>
+                                                                <ul class="sub-menu-container mega-menu-dropdown"  style="--cnvs-primary-menu-submenu-font-size: .925rem">
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>Explore All iPads</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item-divider"></li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iPad Pro</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iPad 8</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iPad Mini</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iPad Pencil</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iPad Keyboard</div></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+
+                                                            <li class="menu-item">
+                                                                <a class="menu-link" href="#"><div><i class="me-3 bi-smartwatch"></i>iWatches</div></a>
+                                                                <ul class="sub-menu-container mega-menu-dropdown"  style="--cnvs-primary-menu-submenu-font-size: .925rem">
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>Explore All iWatches</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item-divider"></li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iWatch Ultra Pro</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iWatch Series 8</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iWatch Series 7</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iWatch SE</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>iWatch Straps</div></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+
+                                                            <li class="menu-item">
+                                                                <a class="menu-link" href="#"><div><i class="me-3 bi-earbuds"></i>Airpods</div></a>
+                                                                <ul class="sub-menu-container mega-menu-dropdown"  style="--cnvs-primary-menu-submenu-font-size: .925rem">
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>Explore All Airpods</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item-divider"></li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>Airpod 3rd Gen Pro</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>Airpod 3rd Gen</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>Airpod 2nd Gen Pro</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>Airpod 2nd Gen</div></a>
+                                                                    </li>
+                                                                    <li class="menu-item">
+                                                                        <a class="menu-link" href="#"><div>Airpod Max</div></a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+
+                                                <ul class="sub-menu-container mega-menu-column col-3 border-start-0">
+                                                    <li class="menu-item mega-menu-title">
+														<a class="menu-link text-contrast-600 mb-lg-3 text-smaller" href="#"><div>Shop Accessories</div></a>
+                                                        <ul class="sub-menu-container">
+                                                            <li class="menu-item">
+                                                                <a class="menu-link" href="#"><div>Mac Acessories</div></a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a class="menu-link" href="#"><div>iPhone Covers</div></a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a class="menu-link" href="#"><div>iWatch Straps</div></a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a class="menu-link" href="#"><div>Local Stores</div></a>
+                                                            </li>
+                                                            <li class="menu-item">
+                                                                <a class="menu-link" href="#"><div>Supports</div></a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+											</div>
+										</div>
+									</div>
+								</li>
+
+                                <li class="menu-item">
+									<a class="menu-link" href="#"><div>Blog</div></a>
+                                </li>
+
+                                <li class="menu-item">
+									<a class="menu-link" href="#"><div>Contact</div></a>
+                                </li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+                <div class="container text-center">
+                    <a class="m-2 btn btn-outline-dark" href="menu-dropdowns-shadow.html">Shadow</a>
+                    <a class="m-2 btn btn-outline-dark" href="menu-dropdowns-rounded.html">Rounded</a>
+                    <a class="m-2 btn btn-outline-dark" href="menu-dropdowns-dark.html">Dark</a>
+                    <a class="m-2 btn btn-outline-dark" href="menu-dropdowns-flat.html">Flat</a>
+                    <a class="m-2 btn btn-outline-dark" href="menu-dropdowns-colors.html">Colors</a>
+                    <a class="m-2 btn btn-outline-dark" href="menu-dropdowns-blur.html">Blur</a>
+                    <a class="m-2 btn btn-outline-dark disabled" href="menu-dropdowns-fullwidth.html">Full-Width</a>
+                    <a class="m-2 btn btn-outline-dark" href="menu-dropdowns-other-arrows.html">Diff. Arrows</a>
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="../shared/js/plugins.min.js"></script>
+	<script src="../shared/js/functions.bundle.js"></script>
+
+</body>
+</html>

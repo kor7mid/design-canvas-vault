@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu Opacity On-hover | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+@media (min-width: 992px) {  /* Remove Media query to enable in responsive */
+
+			.opacity-on-hover .menu-container > .menu-item > .menu-link {
+                transition: color .3s ease;
+                color: #111 !important;
+            }
+
+            .opacity-on-hover .menu-container:hover > .menu-item:not(:hover):not(.current) > .menu-link { color: #D5D5D5 !important; }
+
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Header
+		============================================= -->
+		<header id="header">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-lg-center">
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu opacity-on-hover">
+
+							<ul class="menu-container">
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<div>Home</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<div>About</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<div>Shop</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<div>Price</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<div>Contact</div>
+									</a>
+								</li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+        <h4 class="text-center mt-6 pt-6 fw-normal op-08">Fade-Out Link on Hover</h4>
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

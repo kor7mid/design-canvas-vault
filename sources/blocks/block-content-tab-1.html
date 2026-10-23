@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tab 1 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.block-tab-1.nav-pills .nav-link {
+			margin-bottom: 10px;
+			border-radius: 4px;
+		}
+		.block-tab-1.nav-pills .nav-link.active {
+			background-color: rgba(220, 53, 69, 8%);
+			margin-bottom: 20px;
+			padding: 25px;
+		}
+
+		.block-tab-1.nav-pills .nav-link h4 {
+			font-size: 18px;
+			line-height: 22px;
+			margin-bottom: 6px;
+		}
+		.block-tab-1.nav-pills .nav-link p {
+			display: none;
+			visibility: hidden;
+			font-size: 14px;
+			margin-bottom: 0;
+			color: #666;
+		}
+
+		.block-tab-1.nav-pills .nav-link.active p {
+			display: block;
+			visibility: visible;
+		}
+
+		@media (max-width: 767.98px) {
+			.block-tab-1.nav-pills .nav-link p {
+				display: block;
+				visibility: visible;
+			}
+
+			.block-tab-1.nav-pills .nav-link,
+			.block-tab-1.nav-pills .nav-link.active {
+				padding: 20px;
+				margin-bottom: 8px;
+			}
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container mw-md">
+
+					<div class="row justify-content-center mb-5">
+						<div class="col-xl-6 col-lg-8 text-center">
+							<h3 class="h1 fw-bold mb-3">Side Tab</h3>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-md-4">
+							<div class="nav flex-column block-tab-1 nav-pills" id="canvas-tabs-tab" role="tablist" aria-orientation="vertical">
+								<a class="nav-link active" id="canvas-tabs-home-tab" data-bs-toggle="pill" href="#canvas-tabs-home" role="tab" aria-controls="canvas-tabs-home" aria-selected="true">
+									<h4>Niche Demos</h4>
+									<p>45+ Structured Premium Demos for Every Category.</p>
+								</a>
+								<a class="nav-link" id="canvas-tabs-profile-tab" data-bs-toggle="pill" href="#canvas-tabs-profile" role="tab" aria-controls="canvas-tabs-profile" aria-selected="false">
+									<h4>One-Page Demos</h4>
+									<p>65+ One-Page Demos for a Quick & Effective Landing Page.</p>
+								</a>
+								<a class="nav-link" id="canvas-tabs-messages-tab" data-bs-toggle="pill" href="#canvas-tabs-messages" role="tab" aria-controls="canvas-tabs-messages" aria-selected="false">
+									<h4>Multi-Page Layouts</h4>
+									<p>Classic Demos with a Lot of Homepages Options.</p>
+								</a>
+								<a class="nav-link" id="canvas-tabs-settings-tab" data-bs-toggle="pill" href="#canvas-tabs-settings" role="tab" aria-controls="canvas-tabs-settings" aria-selected="false">
+									<h4>Revolution Slider Templates</h4>
+									<p>140+ Premium Templates to Kickstart your Hero/Slider Section.</p>
+								</a>
+								<a href="https://www.youtube.com/watch?v=P3Huse9K6Xs" class="btn btn-danger fw-semibold py-2 my-3" data-lightbox="iframe"><i class="bi-play-circle-fill me-1" style="position: relative; top: 1px; margin-right: 5px;"></i> Watch Intro Video</a>
+							</div>
+						</div>
+						<div class="col-md-8">
+							<div class="tab-content" id="canvas-tabs-tabContent">
+								<div class="tab-pane fade show active text-center" id="canvas-tabs-home" role="tabpanel" aria-labelledby="canvas-tabs-home-tab">
+									<img src="../images/intro/new/niche.jpg" alt="Niche">
+									<a href="intro.html#section-niche" data-scrollto="intro.html#section-niche" data-offset="120" class="more-link text-danger border-danger mt-3">Browse Demos <i class="uil uil-angle-right-b"></i></a>
+								</div>
+								<div class="tab-pane fade text-center" id="canvas-tabs-profile" role="tabpanel" aria-labelledby="canvas-tabs-profile-tab">
+									<img src="../images/intro/new/onepages.jpg" alt="Niche">
+									<a href="intro.html##section-onepage" data-scrollto="intro.html##section-onepage" data-offset="120" class="more-link text-danger border-danger mt-3">Browse OnePages <i class="uil uil-angle-right-b"></i></a>
+								</div>
+								<div class="tab-pane fade text-center" id="canvas-tabs-messages" role="tabpanel" aria-labelledby="canvas-tabs-messages-tab">
+									<img src="../images/intro/new/multipages.jpg" alt="Niche">
+									<a href="intro.html##section-multipage" data-scrollto="intro.html##section-multipage" data-offset="120" class="more-link text-danger border-danger mt-3">Browse Multi-Pages <i class="uil uil-angle-right-b"></i></a>
+								</div>
+								<div class="tab-pane fade text-center" id="canvas-tabs-settings" role="tabpanel" aria-labelledby="canvas-tabs-settings-tab">
+									<img src="../images/intro/new/rev-slider.jpg" alt="Niche">
+									<a href="intro.html##section-hero" data-scrollto="intro.html##section-hero" data-offset="120" class="more-link text-danger border-danger mt-3">Browse Sliders <i class="uil uil-angle-right-b"></i></a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

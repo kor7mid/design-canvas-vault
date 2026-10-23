@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Create Crowdfunding &amp; Donations Websites with Canvas Template. Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="../../shared/style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="../../shared/css/font-icons.css">
+
+	<!-- Plugins/Components CSS -->
+	<link rel="stylesheet" href="../../shared/css/swiper.css">
+	<link rel="stylesheet" href="include/rs-plugin/css/settings.css" media="screen">
+	<link rel="stylesheet" href="include/rs-plugin/css/layers.css">
+	<link rel="stylesheet" href="include/rs-plugin/css/navigation.css">
+
+	<!-- Niche Demos -->
+	<link rel="stylesheet" href="../../demos/crowdfunding/crowdfunding.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../../shared/css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Crowd-Funding Demo | Canvas</title>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Login/Register Modal -->
+		<div class="modal-register mfp-hide" id="modal-register">
+			<div class="card mx-auto" style="max-width: 400px;">
+				<div class="card-header py-3 bg-transparent text-center">
+					<h3 class="mb-0 fw-normal">Hello, Welcome Back</h3>
+				</div>
+				<div class="card-body mx-auto p-5">
+
+					<form id="login-form" name="login-form" class="mb-0 row" action="#" method="post">
+
+						<div class="col-12">
+							<input type="text" id="login-form-username" name="login-form-username" value="" class="form-control not-dark" placeholder="Username">
+						</div>
+
+						<div class="col-12 mt-4">
+							<input type="password" id="login-form-password" name="login-form-password" value="" class="form-control not-dark" placeholder="Password">
+						</div>
+
+						<div class="col-12 text-end mt-2">
+							<a href="#" class="text-dark fw-light text-smaller">Forgot Password?</a>
+						</div>
+
+						<div class="col-12 mt-4">
+							<button class="button w-100 m-0" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+						</div>
+					</form>
+				</div>
+				<div class="card-footer py-4 text-center">
+					<p class="mb-0">Don't have an account? <a href="#"><u>Sign up</u></a></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="transparent-header" data-sticky-shrink="false">
+			<div id="header-wrap" class="border-default">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="demo-crowdfunding.html">
+								<img class="logo-default" srcset="../../demos/ecommerce/images/logo.png, ../../demos/ecommerce/images/logo@2x.png 2x" src="../../demos/ecommerce/images/logo@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc">
+							<!-- Top Search
+							============================================= -->
+							<div id="top-search" class="header-misc-icon">
+								<a href="#" id="top-search-trigger"><i class="uil uil-search"></i><i class="bi-x-lg"></i></a>
+							</div><!-- #top-search end -->
+
+							<a href="#modal-register" data-lightbox="inline" class="button button-small fw-semibold button-border button-rounded ls-0 fw-medium text-transform-none">Start A Campaign</a>
+						</div>
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+							<ul class="menu-container">
+								<li class="current menu-item"><a class="menu-link" href="demo-crowdfunding.html"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="demo-crowdfunding-lists.html"><div>Explore</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div><i class="bi-person fw-semibold"></i>Login</div></a>
+									<ul class="p-3 text-muted sub-menu-container">
+										<li>Not Registered Yet? Genuine Clients, 100% Trust Assurance and Lowest Fees on the Market. <a href="#modal-register" data-lightbox="inline" class="d-block mt-2"><u>Login/Register</u> <i class="bi-arrow-right"></i></a></li>
+									</ul>
+								</li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						</form>
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Slider
+		============================================= -->
+		<section id="slider" class="slider-element min-vh-100 include-header" style="background: url('../../demos/crowdfunding/images/hero.svg') no-repeat center bottom / cover;">
+			<div class="slider-inner">
+
+				<div class="vertical-middle">
+					<div class="container py-5">
+						<div class="row">
+							<div class="col-lg-6 col-md-8">
+								<div class="slider-title">
+									<h1 class="fw-semibold">Best Crowd-Funding Website for your Startup.</h1>
+									<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A earum quod facilis praesentium quaerat fuga voluptatum aliquam vitae, voluptate asperiores!</p>
+								</div>
+								<a href="#modal-register" data-lightbox="inline" class="button button-large fw-semibold button-rounded ls-0 text-transform-none ms-0">Start A Campaign</a>
+								<a href="#modal-register" data-lightbox="inline" class="button button-large fw-semibold button-border button-rounded ls-0 text-transform-none">Sign In</a><br>
+								<a href="#">How It Works <i class="bi-caret-right-fill position-relative" style="top: 2px"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<img src="../../demos/crowdfunding/images/hero-img.svg" alt="Parallax Image" class="slider-img parallax" data-start="margin-top: 0px;" data-400="margin-top: 50px;">
+
+			</div>
+		</section><!-- #Slider End -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap p-0">
+
+				<div class="section bg-transparent mb-0 pb-0 border-0">
+					<div class="container bg-color-light border-0 rounded-3 p-4 p-md-5">
+						<div class="row justify-content-between align-items-center mb-4">
+							<div class="col-lg-7 col-sm-7">
+								<div class="heading-block border-bottom-0 mb-3">
+									<h2>How People investing works</h2>
+								</div>
+								<p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste reprehenderit fugiat quisquam nesciunt. Dicta quis, rem consequuntur est beatae qui.</p>
+							</div>
+							<div class="col-lg-3 col-sm-5 mt-4 mt-sm-0">
+								<div class="bg-white text-center px-5 py-3 border">
+									<div class="counter counter-large color fw-bold"><span data-from="0" data-to="86" data-refresh-interval="10" data-speed="1500"></span>%</div>
+									<div class="line my-2"></div>
+									<h5 class="fw-normal mb-1">Funded Campaign</h5>
+								</div>
+							</div>
+						</div>
+						<div class="clear"></div>
+						<div class="row justify-content-around">
+							<div class="col-lg-3 col-md-4 mt-5">
+								<div class="feature-text">
+									<div class="fbox-text color">1.</div>
+									<h3>Register Your Account.</h3>
+								</div>
+								<p>Credibly maximize highly efficient data through alignments.</p>
+							</div>
+							<div class="col-lg-3 col-md-4 mt-5">
+								<div class="feature-text">
+									<div class="fbox-text color">2.</div>
+									<h3>Choose your Investor.</h3>
+								</div>
+								<p>Professionally develop intermandated resources through.</p>
+							</div>
+							<div class="col-lg-3 col-md-4 mt-5">
+								<div class="feature-text">
+									<div class="fbox-text color">3.</div>
+									<h3>Fund the Innovation.</h3>
+								</div>
+								<p>Highly efficient data through multifunctional alignments.</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="section border-0 bg-transparent mb-1">
+					<div class="container">
+						<div class="row justify-content-between align-items-end mb-5">
+							<div class="col-md-7">
+								<div class="heading-block border-bottom-0 mb-3">
+									<h2>Ready to Fund? Explore Projects</h2>
+								</div>
+								<p class="text-muted mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste reprehenderit fugiat quisquam nesciunt. Dicta quis, rem consequuntur est beatae qui.</p>
+							</div>
+							<div class="col-md-5 d-flex flex-row justify-content-md-end mt-4 mt-md-0">
+								<div class="dropdown">
+									<a class="dropdown-toggle button button-border button-rounded ls-0 fw-semibold text-transform-none btn" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									All Projects
+									</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">+ Tech &amp; Innovations</a>
+										<a class="dropdown-item" href="#">+ Art</a>
+										<a class="dropdown-item" href="#">+ Travel</a>
+										<a class="dropdown-item" href="#">+ Music</a>
+										<a class="dropdown-item" href="#">+ Gadgets</a>
+										<a class="dropdown-item" href="#">+ Fashion</a>
+									</div>
+								</div>
+								<div class="dropdown">
+									<a class="dropdown-toggle button button-border button-rounded ls-0 fw-semibold text-transform-none btn" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+									Most Funded
+									</a>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#">Recent Projects</a>
+										<a class="dropdown-item" href="#">Popular Projects</a>
+										<a class="dropdown-item" href="#">Ending Soon</a>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="row">
+
+							<!-- Item 1 -->
+							<div class="col-lg-4 col-sm-6 mb-4">
+								<div class="i-products">
+									<div class="products-image">
+										<a href="demo-crowdfunding-single.html">
+											<img src="../../demos/crowdfunding/images/items/1.jpg" alt="Image 1">
+											<span class="badge">Gadgets</span>
+										</a>
+									</div>
+									<div class="products-desc">
+										<h3><a href="demo-crowdfunding-single.html">iDrone 2019</a></h3>
+										<p>Holisticly conceptualize transparent niche markets whereas top-line web services. Monotonectally parallel task cross-unit platforms rather than.</p>
+										<div class="skill-progress mb-3" data-percent="73" style="--cnvs-progress-height: 0.25rem;">
+											<div class="skill-progress-title d-flex justify-content-between mb-2">
+												<span class="counter"><span data-from="0" data-to="73" data-refresh-interval="10" data-speed="1200"></span><strong>%</strong> Funded</span>
+												<span class="counter"><span data-from="0" data-to="20" data-refresh-interval="3" data-speed="1200"></span> Days Left</span>
+											</div>
+											<div class="skill-progress-bar">
+												<div class="skill-progress-percent bg-color"></div>
+											</div>
+										</div>
+										<div class="products-hoverlays">
+											<span class="products-location"><i class="bi-geo-alt-fill"></i> Melbourne, Australia</span>
+											<ul class="list-group-flush my-3 mb-0">
+												<li class="list-group-item"><strong>$12,32,000</strong> Pledged</li>
+												<li class="list-group-item"><strong>123</strong> Partcipants</li>
+												<li class="list-group-item"><strong>345</strong> Contributions</li>
+												<li class="list-group-item"><strong>20</strong> days remaining</li>
+											</ul>
+											<div class="product-user d-flex align-items-center mt-4">
+												<img src="../../demos/crowdfunding/images/investors/1.jpg" alt="">
+												<a href="demo-crowdfunding-single.html">By Jackson Pot </a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Item 2 -->
+							<div class="col-lg-4 col-sm-6 mb-4">
+								<div class="i-products">
+									<div class="products-image">
+										<a href="demo-crowdfunding-single.html">
+											<img src="../../demos/crowdfunding/images/items/2.jpg" alt="Image 2">
+											<span class="badge">Lights</span>
+										</a>
+									</div>
+									<div class="products-desc">
+										<h3><a href="demo-crowdfunding-single.html">Bluetooth Lights</a></h3>
+										<p>Appropriately monetize diverse leadership skills vis-a-vis unique core competencies. Enthusiastically transition future-proof models.</p>
+										<div class="skill-progress mb-3" data-percent="85" style="--cnvs-progress-height: 0.25rem;">
+											<div class="skill-progress-title d-flex justify-content-between mb-2">
+												<span class="counter"><span data-from="0" data-to="85" data-refresh-interval="10" data-speed="2000"></span><strong>%</strong> Funded</span>
+												<span class="counter"><span data-from="0" data-to="11" data-refresh-interval="3" data-speed="1200"></span> Days Left</span>
+											</div>
+											<div class="skill-progress-bar">
+												<div class="skill-progress-percent bg-color"></div>
+											</div>
+										</div>
+										<div class="products-hoverlays">
+											<span class="products-location"><i class="bi-geo-alt-fill"></i> Singapore</span>
+											<ul class="list-group-flush my-3 mb-0">
+												<li class="list-group-item"><strong>$12,32,000</strong> Pledged</li>
+												<li class="list-group-item"><strong>123</strong> Partcipants</li>
+												<li class="list-group-item"><strong>345</strong> Contributions</li>
+												<li class="list-group-item"><strong>11</strong> days remaining</li>
+											</ul>
+											<div class="product-user d-flex align-items-center mt-4">
+												<img src="../../demos/crowdfunding/images/investors/2.jpg" alt="">
+												<a href="demo-crowdfunding-single.html">By Hanson Deck</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Item 3 -->
+							<div class="col-lg-4 col-sm-6 mb-4">
+								<div class="i-products">
+									<div class="products-image">
+										<a href="demo-crowdfunding-single.html">
+											<img src="../../demos/crowdfunding/images/items/3.jpg" alt="Image 3">
+											<span class="badge">Travel</span>
+										</a>
+									</div>
+									<div class="products-desc">
+										<h3><a href="demo-crowdfunding-single.html">Electric Bike</a></h3>
+										<p>Authoritatively drive distributed platforms whereas quality methods of empowerment. Conveniently deploy error-free portals vis-a-vis internal.</p>
+										<div class="skill-progress mb-3" data-percent="89" style="--cnvs-progress-height: 0.25rem;">
+											<div class="skill-progress-title d-flex justify-content-between mb-2">
+												<span class="counter"><span data-from="0" data-to="89" data-refresh-interval="10" data-speed="2000"></span><strong>%</strong> Funded</span>
+												<span class="counter"><span data-from="0" data-to="19" data-refresh-interval="3" data-speed="1200"></span> Days Left</span>
+											</div>
+											<div class="skill-progress-bar">
+												<div class="skill-progress-percent bg-color"></div>
+											</div>
+										</div>
+										<div class="products-hoverlays">
+											<span class="products-location"><i class="bi-geo-alt-fill"></i> Dubai, UAE</span>
+											<ul class="list-group-flush my-3 mb-0">
+												<li class="list-group-item"><strong>$12,32,000</strong> Pledged</li>
+												<li class="list-group-item"><strong>123</strong> Partcipants</li>
+												<li class="list-group-item"><strong>345</strong> Contributions</li>
+												<li class="list-group-item"><strong>19</strong> days remaining</li>
+											</ul>
+											<div class="product-user d-flex align-items-center mt-4">
+												<img src="../../demos/crowdfunding/images/investors/3.jpg" alt="">
+												<a href="demo-crowdfunding-single.html">By Eleanor Fant</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Item 4 -->
+							<div class="col-lg-4 col-sm-6 mb-4">
+								<div class="i-products">
+									<div class="products-image">
+										<a href="demo-crowdfunding-single.html">
+											<img src="../../demos/crowdfunding/images/items/4.jpg" alt="Image 4">
+											<span class="badge">Fashion</span>
+										</a>
+									</div>
+									<div class="products-desc">
+										<h3><a href="demo-crowdfunding-single.html">Waterproof Shoe</a></h3>
+										<p>Quickly enhance e-business partnerships whereas pandemic strategic theme areas. Progressively fashion exceptional ROI after viral opportunities.</p>
+										<div class="skill-progress mb-3" data-percent="92" style="--cnvs-progress-height: 0.25rem;">
+											<div class="skill-progress-title d-flex justify-content-between mb-2">
+												<span class="counter"><span data-from="0" data-to="92" data-refresh-interval="10" data-speed="2000"></span><strong>%</strong> Funded</span>
+												<span class="counter"><span data-from="0" data-to="16" data-refresh-interval="3" data-speed="1200"></span> Days Left</span>
+											</div>
+											<div class="skill-progress-bar">
+												<div class="skill-progress-percent bg-color"></div>
+											</div>
+										</div>
+										<div class="products-hoverlays">
+											<span class="products-location"><i class="bi-geo-alt-fill"></i> Singapore</span>
+											<ul class="list-group-flush my-3 mb-0">
+												<li class="list-group-item"><strong>$12,32,000</strong> Pledged</li>
+												<li class="list-group-item"><strong>123</strong> Partcipants</li>
+												<li class="list-group-item"><strong>345</strong> Contributions</li>
+												<li class="list-group-item"><strong>16</strong> days remaining</li>
+											</ul>
+											<div class="product-user d-flex align-items-center mt-4">
+												<img src="../../demos/crowdfunding/images/investors/4.jpg" alt="">
+												<a href="demo-crowdfunding-single.html">By Giles Posture</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Item 5 -->
+							<div class="col-lg-4 col-sm-6 mb-4">
+								<div class="i-products">
+									<div class="products-image">
+										<a href="demo-crowdfunding-single.html">
+											<img src="../../demos/crowdfunding/images/items/5.jpg" alt="Image 5">
+											<span class="badge">Music</span>
+										</a>
+									</div>
+									<div class="products-desc">
+										<h3><a href="demo-crowdfunding-single.html">Wooden Guiter</a></h3>
+										<p>Continually whiteboard standardized outsourcing before mission-critical deliverables. Compellingly e-enable integrated action items fully tested.</p>
+										<div class="skill-progress mb-3" data-percent="100" style="--cnvs-progress-height: 0.25rem;">
+											<div class="skill-progress-title d-flex justify-content-between mb-2">
+												<span class="counter"><span data-from="0" data-to="100" data-refresh-interval="10" data-speed="2000"></span><strong>%</strong> Funded</span>
+												<span class="counter"><span data-from="0" data-to="7" data-refresh-interval="3" data-speed="1200"></span> Days Left</span>
+											</div>
+											<div class="skill-progress-bar">
+												<div class="skill-progress-percent bg-color"></div>
+											</div>
+										</div>
+										<div class="products-hoverlays">
+											<span class="products-location"><i class="bi-geo-alt-fill"></i> Mumbai, India</span>
+											<ul class="list-group-flush my-3 mb-0">
+												<li class="list-group-item"><strong>$12,32,000</strong> Pledged</li>
+												<li class="list-group-item"><strong>123</strong> Partcipants</li>
+												<li class="list-group-item"><strong>345</strong> Contributions</li>
+												<li class="list-group-item"><strong>7</strong> days remaining</li>
+											</ul>
+											<div class="product-user d-flex align-items-center mt-4">
+												<img src="../../demos/crowdfunding/images/investors/5.jpg" alt="">
+												<a href="demo-crowdfunding-single.html">By Alan Fresco</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- Item 6 -->
+							<div class="col-lg-4 col-sm-6 mb-4">
+								<div class="i-products">
+									<div class="products-image">
+										<a href="demo-crowdfunding-single.html">
+											<img src="../../demos/crowdfunding/images/items/6.jpg" alt="Image 6">
+											<span class="badge">Travel</span>
+										</a>
+									</div>
+									<div class="products-desc">
+										<h3><a href="demo-crowdfunding-single.html">Travel Blanket</a></h3>
+										<p>Assertively foster an expanded array of meta-services via corporate ideas. Quickly simplify virtual results and client-based.</p>
+										<div class="skill-progress mb-3" data-percent="80" style="--cnvs-progress-height: 0.25rem;">
+											<div class="skill-progress-title d-flex justify-content-between mb-2">
+												<span class="counter"><span data-from="0" data-to="73" data-refresh-interval="10" data-speed="2000"></span><strong>%</strong> Funded</span>
+												<span class="counter"><span data-from="0" data-to="28" data-refresh-interval="3" data-speed="1200"></span> Days Left</span>
+											</div>
+											<div class="skill-progress-bar">
+												<div class="skill-progress-percent bg-color"></div>
+											</div>
+										</div>
+										<div class="products-hoverlays">
+											<span class="products-location"><i class="bi-geo-alt-fill"></i> Bali, Indonesia</span>
+											<ul class="list-group-flush my-3 mb-0">
+												<li class="list-group-item"><strong>$12,32,000</strong> Pledged</li>
+												<li class="list-group-item"><strong>123</strong> Partcipants</li>
+												<li class="list-group-item"><strong>345</strong> Contributions</li>
+												<li class="list-group-item"><strong>28</strong> days remaining</li>
+											</ul>
+											<div class="product-user d-flex align-items-center mt-4">
+												<img src="../../demos/crowdfunding/images/investors/6.jpg" alt="">
+												<a href="demo-crowdfunding-single.html">By Hilary Ouse</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section m-0">
+
+					<div class="container">
+
+						<h3 class="text-center mb-5">Join completely utilize transparent users.</h3>
+
+						<div class="row g-0 align-items-center p-4 bg-white rounded overflow-hidden flex-md-row shadow-sm position-relative mx-auto" style="max-width: 1000px">
+							<div class="col p-4 d-flex flex-column text-center">
+								<h3 class="mb-0">Alan Fresco</h3>
+								<p class="text-black-50">Amazon Inc.</p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, voluptas adipisci fugiat, nostrum aspernatur quos libero possimus velit impedit cumque.</p>
+								<img src="../../demos/business/images/clients/amazon.svg" alt="">
+							</div>
+							<div class="col-auto">
+								<img src="../../demos/crowdfunding/images/credit.jpg" alt="" width="400">
+							</div>
+						</div>
+
+						<div class="row justify-content-center align-items-center text-center mx-auto mt-5" style="max-width: 1000px">
+							<div class="col"><img src="../../demos/crowdfunding/images/sponsors/amazon.svg" alt="" width="100"></div>
+							<div class="col"><img src="../../demos/crowdfunding/images/sponsors/cnn.svg" alt="" width="100"></div>
+							<div class="col"><img src="../../demos/crowdfunding/images/sponsors/google.svg" alt="" width="100"></div>
+							<div class="col"><img src="../../demos/crowdfunding/images/sponsors/linkedin.svg" alt="" width="100"></div>
+						</div>
+						<div class="row justify-content-center align-items-center text-center mx-auto mt-3" style="max-width: 1000px">
+							<div class="col"><img src="../../demos/crowdfunding/images/sponsors/netflix.svg" alt="" width="100"></div>
+							<div class="col"><img src="../../demos/crowdfunding/images/sponsors/slack.svg" alt="" width="100"></div>
+							<div class="col"><img src="../../demos/crowdfunding/images/sponsors/vimeo.svg" alt="" width="100"></div>
+							<div class="col"><img src="../../demos/crowdfunding/images/sponsors/jetblue.svg" alt="" width="100"></div>
+							<div class="col"><img src="../../demos/crowdfunding/images/sponsors/github.svg" alt="" width="100"></div>
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="section bg-transparent p-0 m-0">
+
+					<div class="row g-0">
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/1.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/2.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/3.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/4.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/5.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/6.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/7.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/8.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/9.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/10.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/11.jpg" alt="Investor Image"></a></div>
+					</div>
+					<div class="row g-0">
+						<div class="col d-none d-md-flex"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/23.jpg" alt="Investor Image"></a></div>
+						<div class="col-md-10 d-md-flex justify-content-between align-items-center px-5 py-4 py-md-0">
+							<div class="mb-3 mb-md-0">
+								<h3 class="mb-0 color">Join with of Our Investors.</h3>
+								<p class="mb-0 text-muted fw-normal">Dramatically enable one-to-one solutions excellent.</p>
+							</div>
+							<a href="#modal-register" data-lightbox="inline" class="button button-large fw-semibold button-rounded ls-0 text-transform-none m-0">Become an Investor</a>
+						</div>
+						<div class="col d-none d-md-flex"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/24.jpg" alt="Investor Image"></a></div>
+					</div>
+					<div class="row g-0">
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/12.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/13.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/14.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/15.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/16.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/17.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/18.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/19.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/20.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/21.jpg" alt="Investor Image"></a></div>
+						<div class="col"><a href="#"><img class="op-ts op-1 h-op-06" src="../../demos/crowdfunding/images/investors/22.jpg" alt="Investor Image"></a></div>
+					</div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark" style="background-color: #373D52">
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap pb-4">
+
+					<div class="row">
+
+						<div class="col-lg-2 col-md-2 col-6">
+							<div class="widget">
+
+								<h4 class="ls-0 mb-4 text-transform-none">Features</h4>
+
+								<ul class="list-unstyled iconlist ms-0">
+									<li class="mb-2"><a href="#">Help Center</a></li>
+									<li class="mb-2"><a href="#">Paid with Moblie</a></li>
+									<li class="mb-2"><a href="#">Status</a></li>
+									<li class="mb-2"><a href="#">Changelog</a></li>
+									<li class="mb-2"><a href="#">Contact Support</a></li>
+								</ul>
+
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-6">
+							<div class="widget">
+
+								<h4 class="ls-0 mb-4 text-transform-none">Support</h4>
+
+								<ul class="list-unstyled iconlist ms-0">
+									<li class="mb-2"><a href="#">Home</a></li>
+									<li class="mb-2"><a href="#">About</a></li>
+									<li class="mb-2"><a href="#">FAQs</a></li>
+									<li class="mb-2"><a href="#">Support</a></li>
+									<li class="mb-2"><a href="#">Contact</a></li>
+								</ul>
+
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-6">
+							<div class="widget">
+
+								<h4 class="ls-0 mb-4 text-transform-none">Trending</h4>
+
+								<ul class="list-unstyled iconlist ms-0">
+									<li class="mb-2"><a href="#">Shop</a></li>
+									<li class="mb-2"><a href="#">Portfolio</a></li>
+									<li class="mb-2"><a href="#">Blog</a></li>
+									<li class="mb-2"><a href="#">Events</a></li>
+									<li class="mb-2"><a href="#">Forums</a></li>
+								</ul>
+
+							</div>
+						</div>
+						<div class="col-lg-2 col-md-2 col-6">
+							<div class="widget">
+
+								<h4 class="ls-0 mb-4 text-transform-none">Get to Know us</h4>
+
+								<ul class="list-unstyled iconlist ms-0">
+									<li class="mb-2"><a href="#">Corporate</a></li>
+									<li class="mb-2"><a href="#">Agency</a></li>
+									<li class="mb-2"><a href="#">eCommerce</a></li>
+									<li class="mb-2"><a href="#">Personal</a></li>
+									<li class="mb-2"><a href="#">OnePage</a></li>
+								</ul>
+
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-4 text-md-end">
+							<div class="widget">
+
+								<img src="../../demos/ecommerce/images/logo-footer.png" alt="" height="60" class="mb-3">
+
+								<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards with a Retina &amp; Responsive Approach. Browse the amazing Features this template offers.</p>
+
+								<div class="d-flex justify-content-md-end">
+									<a href="#" class="social-icon si-small text-light border-0 bg-facebook" title="Facebook">
+										<i class="fa-brands fa-facebook-f"></i>
+										<i class="fa-brands fa-facebook-f"></i>
+									</a>
+
+									<a href="#" class="social-icon si-small text-light border-0 bg-instagram" title="instagram">
+										<i class="bi-instagram"></i>
+										<i class="bi-instagram"></i>
+									</a>
+
+									<a href="#" class="social-icon si-small text-light border-0 bg-paypal" title="Paypal">
+										<i class="fa-brands fa-paypal"></i>
+										<i class="fa-brands fa-paypal"></i>
+									</a>
+
+									<a href="#" class="social-icon si-small text-light border-0 bg-wikipedia" title="Apple Pay">
+										<i class="fa-brands fa-apple-pay"></i>
+										<i class="fa-brands fa-apple-pay"></i>
+									</a>
+								</div>
+
+							</div>
+						</div>
+
+					</div>
+
+					<hr>
+					<div class="subscribe-widget d-flex align-items-center col justify-content-center py-2" data-loader="button">
+						<h4 class="me-3 mb-0">Refer a startup, get 1,500</h4>
+						<div class="widget-subscribe-form-result"></div>
+						<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
+							<div class="input-group">
+								<input type="email" name="widget-subscribe-form-email" class="form-control required not-dark" placeholder="Enter Your Email Address..">
+								<button type="submit" class="btn button fw-semibold ls-0 text-transform-none m-0">Subscribe</button>
+							</div>
+						</form>
+					</div>
+					<hr>
+
+					<p class="fw-light text-white-50 mt-4">Proactively grow leveraged functionalities without bricks-and-clicks outsourcing. Dramatically facilitate user-centric users rather than strategic web services. Interactively disintermediate innovative supply chains without error-free supply chains. Dynamically promote mission-critical e-markets for market-driven solutions. Synergistically target functional imperatives and functionalized alignments.<br><br>
+
+					Proactively create holistic opportunities whereas effective technologies. Globally syndicate timely internal or "organic" sources via leading-edge niches. Conveniently parallel task global outsourcing whereas cutting-edge ROI. Appropriately unleash proactive deliverables before viral ROI. Efficiently recaptiualize distinctive processes rather than ubiquitous vortals.<br><br>
+
+					Progressively iterate cooperative leadership through installed base processes. Progressively optimize magnetic e-tailers with corporate data. Seamlessly leverage existing backward-compatible networks vis-a-vis out-of-the-box mindshare. Efficiently formulate visionary intellectual capital before corporate e-markets. Enthusiastically streamline.</p>
+
+				</div><!-- .footer-widgets-wrap end -->
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+				<div class="container">
+
+					<div class="row justify-content-between align-items-center">
+						<div class="col-md-6">
+							Copyrights &copy; 2023 All Rights Reserved by Canvas Inc.
+						</div>
+
+						<div class="col-md-6 d-md-flex flex-md-column align-items-md-end mt-4 mt-md-0">
+							<div class="copyrights-menu copyright-links">
+								<a href="#">About</a>/<a href="#">Features</a>/<a href="#">FAQs</a>/<a href="#">Contact</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div><!-- #copyrights end -->
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="bi-arrow-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="../../shared/js/plugins.min.js"></script>
+	<script src="../../shared/js/functions.bundle.js"></script>
+
+	<!-- Parallax Script
+	============================================= -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+	<script>!SEMICOLON.Mobile.any() && skrollr.init({forceHeight: false});</script>
+
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.form-control {
+            /* border-width: 2px; */
+        }
+
+        label {
+            font-size: .925rem;
+            font-weight: 500;
+            font-family: var(--cnvs-primary-font);
+            text-transform: none;
+            letter-spacing: 0;
+            color: #777;
+            margin-bottom: 4px;
+        }
+
+		.form-control::-moz-placeholder {
+            opacity: .4;
+            font-weight: 400;
+        }
+            .form-control::placeholder {
+            opacity: .4;
+            font-weight: 400;
+        }
+
+        .form-control:active,
+        .form-control:focus {
+            border: 1px solid var(--bs-primary);
+            box-shadow: 0px 0px 0px 1px var(--bs-primary);
+        }
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<div class="row align-items-stretch justify-content-between block-contact-1 g-0">
+
+					<div class="col-md-6">
+						<div class="h-100 min-vh-md-100 d-flex flex-column justify-content-center align-items-center p-5 bg-primary dark">
+                            <h2 class="mb-1 fw-semibold text-white text-capitalize">Login to access our dashboard</h2>
+                            <p class=" text-white-50 mb-5">Get in Touch with Us. Our Team will reply your query within 24hrs.</p>
+                            <img src="../previews/preview/form-3/1.svg" alt="..">
+						</div>
+					</div>
+
+					<div class="col-md-6 p-5 px-lg-6 d-flex flex-column align-self-center">
+                        <div class="row justify-content-center">
+                            <div class="col-xl-6">
+                                <h2 class="mb-1 fw-bold">Welcome Back</h2>
+                                <p class="op-07 mb-5">Please enter your details to complete.</p>
+                                <form id="login-form" name="login-form" class="mb-0 row" action="#" method="post">
+                                    <div class="col-12 form-group">
+                                        <label for="login-form-username">Email Address:</label>
+                                        <input type="text" id="login-form-username" class="form-control" placeholder="Enter your Email">
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="col-12 form-group">
+                                        <label for="login-form-password">Password:</label>
+                                        <div class="input-group">
+                                            <input id="login-form-password" type="password" class="form-control" placeholder="******">
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="col-12 d-flex justify-content-between align-items-center form-group">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                            <label class="form-check-label m-0 position-relative" style="top: -2px" for="inlineCheckbox2">Remember me</label>
+                                        </div>
+                                        <a href="#" class="text-smaller fw-medium link-primary">Forgot Password?</a>
+                                    </div>
+                                    <div class="clear"></div>
+                                    <div class="col-12">
+                                        <button class="btn rounded btn-primary w-100 py-2" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-outline-dark rounded w-100 mt-3 py-2 border-default" id="login-form-submit" name="login-form-submit" value="login"><img src="../previews/preview/google-login.png" alt="canvas login" width="15" height="15" style="position: relative; bottom: 2px;"> Login with Google</button>
+                                    </div>
+                                    <div class="col-12 text-center mt-4">
+                                        <span class="op-06">Don't have an Account?</span> <a href="#" class="link-primary"><u>Sign Up</u></a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

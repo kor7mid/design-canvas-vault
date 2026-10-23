@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OTP Form | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.form-otp-border .form-control {
+			--cnvs-input-btn-border-width:     3px;
+			--cnvs-input-btn-border-color:     var(--bs-gray-300);
+			--cnvs-input-focus-border-color: var(--bs-gray-700);
+		}
+</style>
+</head>
+<body class="stretched block-form-otp">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+				<div class="container">
+					<div class="row justify-content-center align-items-center g-5">
+						<div class="col-xl-4 col-md-6">
+							<div class="card shadow-sm rounded-4">
+								<div class="card-body p-4 text-center">
+									<h4 class="mb-3">Please Enter the One Time Password to verify your Account</h4>
+									<p class="mb-4 text-danger">A code has been sent to<small>******68903</small></p>
+									<div class="form-otp d-flex flex-row justify-content-center mb-4">
+										<input class="mx-2 text-center form-control rounded" type="text" id="form-otp-first" maxlength="1">
+										<input class="mx-2 text-center form-control rounded" type="text" id="form-otp-second" maxlength="1">
+										<input class="mx-2 text-center form-control rounded" type="text" id="form-otp-third" maxlength="1">
+										<input class="mx-2 text-center form-control rounded" type="text" id="form-otp-fourth" maxlength="1">
+										<input class="mx-2 text-center form-control rounded" type="text" id="form-otp-fifth" maxlength="1">
+										<input class="mx-2 text-center form-control rounded" type="text" id="form-otp-sixth" maxlength="1">
+									</div>
+									<button name="submit" type="submit" id="form-otp-submit" tabindex="5" value="Submit" class="btn btn-danger w-100 py-2">Submit</button>
+
+									<div id="expireOTP" class="countdown countdown-inline customjs mt-3"></div>
+									<div class="expiry-text-wrap mt-3 d-none">Didn't receive OTP? <a href="#" id="btn-resend">Send Again</a></div>
+								</div>
+							</div>
+						</div>
+
+						<div class="col-xl-4 col-md-6">
+							<div class="card shadow-sm rounded-4">
+								<div class="card-body p-4 text-center">
+									<div class="form-widget">
+
+										<div class="form-result"></div>
+
+										<form class="mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
+
+											<div class="form-process">
+												<div class="css3-spinner">
+													<div class="css3-spinner-scaler"></div>
+												</div>
+											</div>
+
+											<h4 class="mb-3">One Time Password sent Successfully to your Email Address.</h4>
+											<p class="mb-4 text-danger">A code has been sent to<small>******canvas@gmail.com</small></p>
+											<div class="form-otp form-otp-border d-flex flex-row justify-content-center mb-4">
+												<input class="mx-2 text-center form-control border-form-control required" name="otp-border-form-first" type="text" id="otp-boder-form-first" maxlength="1">
+												<input class="mx-2 text-center form-control border-form-control required" name="otp-border-form-second" type="text" id="otp-boder-form-second" maxlength="1">
+												<input class="mx-2 text-center form-control border-form-control required" name="otp-border-form-third" type="text" id="otp-boder-form-third" maxlength="1">
+												<input class="mx-2 text-center form-control border-form-control required" name="otp-border-form-fourth" type="text" id="otp-boder-form-fourth" maxlength="1">
+											</div>
+											<input type="text" id="otp-border-form-botcheck" name="otp-border-form-botcheck" value="" class=" d-none form-control">
+											<button name="submit" type="submit" id="otp-border-form-submit" tabindex="5" value="Submit" class="btn btn-danger w-100 py-2">Verify Now</button>
+											<input type="hidden" name="prefix" value="otp-border-form-">
+
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

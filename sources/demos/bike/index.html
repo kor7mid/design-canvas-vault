@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Create Bike Rental Websites with Canvas Template. Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,400&family=Istok+Web:wght@400;700&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="../../shared/style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="../../shared/css/font-icons.css">
+	<link rel="stylesheet" href="one-page/css/et-line.css">
+
+	<!-- Plugins/Components CSS -->
+	<link rel="stylesheet" href="../../shared/css/components/ion.rangeslider.css">
+
+	<!-- Niche Demos -->
+	<link rel="stylesheet" href="../../demos/bike/bike.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../../shared/css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Bike Rent Demo | Canvas</title>
+
+</head>
+
+<body class="stretched">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Modal -->
+		<div class="modal1 mfp-hide" id="modal-register">
+			<div class="card mx-auto" style="max-width: 540px;">
+				<div class="card-header py-3 bg-transparent text-center">
+					<h3 class="mb-0 fw-normal">Hello, Welcome Back</h3>
+				</div>
+				<div class="card-body mx-auto py-5" style="max-width: 70%;">
+
+					<a href="#" class="button button-large button-rounded w-100 bg-facebook text-transform-none fw-normal ls-0 text-center m-0"><i class="fa-brands fa-facebook-f"></i> Log in with Facebook</a>
+
+					<div class="divider divider-center"><span class="position-relative" style="top: -2px">OR</span></div>
+
+					<form id="login-form" name="login-form" class="mb-0 row gy-3" action="#" method="post">
+						<div class="col-12">
+							<input type="text" id="login-form-username" name="login-form-username" value="" class="form-control not-dark" placeholder="Username">
+						</div>
+
+						<div class="col-12 mt-4">
+							<input type="password" id="login-form-password" name="login-form-password" value="" class="form-control not-dark" placeholder="Password">
+						</div>
+
+						<div class="col-12 text-end">
+							<a href="#" class="text-dark fw-light mt-2">Forgot Password?</a>
+						</div>
+
+						<div class="col-12 mt-4">
+							<button class="button button-rounded w-100 m-0" id="login-form-submit" name="login-form-submit" value="login">Login</button>
+						</div>
+					</form>
+				</div>
+				<div class="card-footer py-4 text-center">
+					<p class="mb-0">Don't have an account? <a href="#"><u>Sign up</u></a></p>
+				</div>
+			</div>
+		</div>
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="border-bottom header-size-custom" data-sticky-shrink="false">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-lg-between">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="me-lg-0">
+							<a href="index.html">
+								<img class="logo-default" srcset="../../demos/business/images/logo.png, ../../demos/business/images/logo@2x.png 2x" src="../../demos/business/images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-dark" srcset="../../demos/business/images/logo-dark.png, ../../demos/business/images/logo-dark@2x.png 2x" src="../../demos/business/images/logo-dark@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<nav class="primary-menu">
+
+							<ul class="menu-container not-dark one-page-menu">
+								<li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="#" data-href="#section-price"><div>Price</div></a></li>
+								<li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="#"><div>About</div></a></li>
+								<li class="menu-item"><a class="menu-link ls-1 text-uppercase" href="#"><div>Contact</div></a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+						<nav class="primary-menu">
+
+							<ul class="menu-container not-dark">
+								<li class="menu-item"><a class="menu-link color ls-1 text-uppercase" href="#modal-register" data-lightbox="inline"><div><i class="bi-box-arrow-in-right"></i>Login</div></a></li>
+							</ul>
+
+						</nav>
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<div class="section section-curve mt-0" style="background: var(--cnvs-color-light) url('../../demos/bike/images/hero-bike.png') right 70% / cover; height: 750px;">
+
+					<div class="container text-center">
+						<div class="heading-block mt-4 border-bottom-0">
+							<h1 class="text-transform-none fw-semibold" style="font-size: 44px; letter-spacing: -1px">Rent Your Bike Now</h1>
+							<small class="mb-5 h6 lead">Revolutionizing your Commute Everyday in an Eco-Friendly Way.</small>
+						</div>
+
+						<a href="#modal-register" data-lightbox="inline" class="button ls-1 text-uppercase fw-bold button-large button-rounded button-shadow">Sign Up Now</a>
+						<a href="#" class="button ls-1 text-uppercase fw-bold button-large button-rounded button-border">Free Test Drive</a>
+					</div>
+
+				</div>
+
+				<div class="container">
+					<div class="card border-0 mx-auto rounded ytb-card" style="box-shadow: 0 32px 46px 2px rgba(0,0,0,0.12);">
+						<div id="ytb-video" class="yt-bg-player card-img-top rounded-top" data-quality="hd1080" data-volume="80" data-autoplay="false" data-container="self" data-video="https://youtu.be/SF0DLn3hEnc">
+							<div class="ytb-poster rounded-top" style="background: url('../../demos/bike/images/video-poster.jpg') center center / cover; position: absolute; left: 0; top: 0; width: 100%; height: 100%;">
+							</div>
+							<a href="#" id="ytb-video-button" class="play-icon"><i class="bi-play"></i><i class="bi-pause"></i></a>
+						</div>
+						<div class="card-body p-5">
+							<div class="row justify-content-between align-items-center">
+								<div class="col-md-6">
+									<div class="heading-block border-bottom-0 mb-0">
+										<small class="text-black-50 text-uppercase ls-3 fw-semibold">Electric Bike</small>
+										<h2 class="text-transform-none fw-semibold ls-0 mb-2">Free Test Drive</h2>
+										<p class="mb-1">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+									</div>
+								</div>
+								<div class="col-md-5 mt-3 mt-md-0">
+									<div class="subscribe-widget" data-loader="button">
+										<div class="widget-subscribe-form-result"></div>
+										<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
+											<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control not-dark required email" placeholder="Enter your Email Address..">
+											<div class="form-check py-3">
+												<input type="checkbox" class="form-check-input" id="subscribe-news">
+												<label class="form-check-label text-transform-none ls-0 fw-normal" for="subscribe-news">Get New Updates &amp; Announcements</label>
+											</div>
+											<button class="button button-shadow button-rounded m-0 text-transform-none ls-0 w-100" type="submit">Subscribe</button>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="row mt-5 align-items-center mx-auto mb-6" style="max-width: 840px">
+						<div class="col-md-3 mb-2 mb-md-0">
+							<h3 class="mb-0">Partners:</h3>
+						</div>
+						<div class="col-md-9">
+							<div id="oc-images" class="owl-carousel image-carousel carousel-widget" data-margin="50" data-nav="true" data-pagi="false" data-items-xs="2" data-items-md="3" data-items-xl="4" data-loop="true" data-autoplay="3500">
+								<div class="oc-item"><a href="#"><img src="../../demos/bike/images/clients/1.png" alt="clients"></a></div>
+								<div class="oc-item"><a href="#"><img src="../../demos/bike/images/clients/2.png" alt="clients"></a></div>
+								<div class="oc-item"><a href="#"><img src="../../demos/bike/images/clients/3.png" alt="clients"></a></div>
+								<div class="oc-item"><a href="#"><img src="../../demos/bike/images/clients/4.png" alt="clients"></a></div>
+								<div class="oc-item"><a href="#"><img src="../../demos/bike/images/clients/5.png" alt="clients"></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section bg-transparent mt-6 mb-0">
+					<div class="container">
+						<div class="heading-block mx-auto text-center" style="max-width: 600px">
+							<small class="text-black-50 text-uppercase ls-3 fw-semibold">Our Service</small>
+							<h2 class="text-capitalize fw-semibold ls-0 mb-1" style="font-size: 36px">How do you Get Bike</h2>
+							<p>Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+						</div>
+						<div class="clear"></div>
+						<div class="row showcase-section align-items-center justify-content-between">
+							<div class="col-lg-3 col-md-5">
+								<ul class="mb-0">
+									<li class="showcase-feature showcase-feature-active" data-target="#target-1">
+										<h3>Choose Your Location.</h3>
+	  									<p>Credibly conceptualize backward-compatible interna visionary.</p>
+									</li>
+									<li class="showcase-feature" data-target="#target-2">
+										<h3>Choose Your Bike.</h3>
+	  									<p>Assertively engineer standardized interactive meta-services.</p>
+									</li>
+									<li class="showcase-feature" data-target="#target-3">
+										<h3>Get Confirmation Email.</h3>
+	  									<p>Holisticly customize fully synergistic e-business continually.</p>
+									</li>
+									<li class="showcase-feature" data-target="#target-4">
+										<h3 class="text-uppercase">Start Riding.</h3>
+	  									<p>Interactively without backward-compatible enable.</p>
+									</li>
+								</ul>
+							</div>
+
+							<div class="col-lg-8 col-md-7">
+								<div id="target-1" class="showcase-target showcase-target-active">
+									<a href="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.8401081858365!2d144.95373095091972!3d-37.81721397965242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d4c2b349649%3A0xb6899234e561db11!2sEnvato!5e0!3m2!1sen!2s!4v1526558559407" data-lightbox="iframe">
+										<img src="../../demos/bike/images/mockups/1.jpg" alt="Image">
+									</a>
+								</div>
+								<div id="target-2" class="showcase-target">
+									<img class="rounded" src="../../demos/bike/images/mockups/2.jpg" alt="Image">
+								</div>
+								<div id="target-3" class="showcase-target">
+									<img class="rounded" src="../../demos/bike/images/mockups/3.jpg" alt="Image">
+								</div>
+								<div id="target-4" class="showcase-target">
+									<div class="rounded" style="background: url('../../demos/bike/images/mockups/4.jpg') bottom center no-repeat; background-size: cover; min-height: 500px;">
+										<div class="row dark m-0">
+											<div class="col-lg-5 rounded py-5 px-4" style="background-color: rgba(0,0,0,0.5);">
+												<h2 class="display-5 mb-0">Ride Away.</h2>
+												<hr>
+												<p class="lead d-none d-md-block mb-0">In Style. With Confidence. Eco-Friendly Way.</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section bg1 mt-4" style="padding: 120px 0;">
+					<div class="container">
+						<div class="heading-block mx-auto text-center" style="max-width: 600px">
+							<small class="text-black-50 text-uppercase ls-3 fw-semibold">Available Bikes</small>
+							<h2 class="text-capitalize fw-semibold mb-2" style="font-size: 36px; letter-spacing: -1px">Check Out Our Bikes</h2>
+							<p>Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+						</div>
+						<div class="row justify-content-between">
+							<div class="col-lg-6">
+								<div class="media row">
+								  <img class="col-sm-5 p-5 p-sm-0 pe-sm-3" src="../../demos/bike/images/bikes/1.png" alt="Generic placeholder image" width="230">
+								  <div class="col-sm-7 media-body">
+								  	<h3 class="mb-3">Trek Bike</h3>
+								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+								    <a href="#" class="button button-shadow button-rounded fw-normal ls-0 m-0 text-transform-none">View More</a>
+								  </div>
+								</div>
+							</div>
+
+							<div class="col-lg-6 mt-5 mt-lg-0">
+								<div class="media row">
+								  <img class="col-sm-5 p-5 p-sm-0 pe-sm-3" src="../../demos/bike/images/bikes/2.png" alt="Generic placeholder image" width="230">
+								  <div class="col-sm-7 media-body">
+								    <h3 class="mb-3">Islabikes Luath Pro Series</h3>
+								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+								    <a href="#" class="button button-shadow button-rounded fw-normal ls-0 m-0 text-transform-none">View More</a>
+								  </div>
+								</div>
+							</div>
+
+							<div class="col-lg-6 mt-5">
+								<div class="media row">
+								  <img class="col-sm-5 p-5 p-sm-0 pe-sm-3" src="../../demos/bike/images/bikes/3.png" alt="Generic placeholder image" width="230">
+								  <div class="col-sm-7 media-body">
+								    <h3 class="mb-3">Syracuse Bicycle</h3>
+								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+								    <a href="#" class="button button-shadow button-rounded fw-normal ls-0 m-0 text-transform-none">View More</a>
+								  </div>
+								</div>
+							</div>
+
+							<div class="col-lg-6 mt-5">
+								<div class="media row">
+								  <img class="col-sm-5 p-5 p-sm-0 pe-sm-3" src="../../demos/bike/images/bikes/4.png" alt="Generic placeholder image" width="230">
+								  <div class="col-sm-7 media-body">
+								    <h3 class="mb-3">Wi-Bike Range</h3>
+								    <p class="mb-3 text-black-50">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.</p>
+								    <a href="#" class="button button-shadow button-rounded fw-normal ls-0 m-0 text-transform-none">View More</a>
+								  </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section bg-transparent" style="padding: 80px 0">
+					<div class="container">
+						<div class="heading-block mx-auto border-bottom-0 text-center" style="max-width: 600px">
+							<i class="icon-et-bike d-block h1 mb-4 text-black"></i>
+							<small class="text-black-50 text-uppercase ls-3 fw-semibold">What We Have Done</small>
+							<h2 class="text-transform-none fw-semibold mb-2" style="font-size: 36px; letter-spacing: -1px"><span class="counter counter-inherit text-dark inline-block">More than <code class="color"><span data-from="0" data-to="8465" data-refresh-interval="10" data-speed="1100"></span></code>+</span> Bikes are already Rented in <span>11</span> Countries.</h2>
+							<p class="lead">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+						</div>
+						<div class="skill-progress pt-4 mx-auto" data-percent="80" style="--cnvs-progress-height: 0.25rem; max-width: 600px;">
+							<div class="skill-progress-bar">
+								<div class="skill-progress-percent">
+									<div class="skill-progress-indicator">
+										<div class="counter counter-inherit counter-instant"><span data-from="0" data-to="8465" data-refresh-interval="10" data-speed="1100" data-comma="true">0</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div id="section-price" class="section pricing" style="background: url('../../demos/bike/images/bg.png') repeat-y center top; padding: 100px 0;">
+					<div class="container">
+						<div class="row justify-content-between">
+							<div class="col-md-7">
+								<div class="heading-block border-bottom-0">
+									<small class="text-black-50 text-uppercase ls-3 fw-semibold">Pricing Table</small>
+									<h2 class="text-capitalize fw-semibold mb-2" style="font-size: 36px; letter-spacing: -1px">Bike Rental Prices</h2>
+									<p class="lead">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed voluptate vero esse ea hic quod veniam quam accusamus laboriosam ipsam provident voluptatibus iste earum facilis voluptatum, ducimus quis quae blanditiis temporibus minima libero! Doloribus sapiente voluptatibus cupiditate autem debitis id.</p>
+								</div>
+								<div class="row">
+									<div class="col-6">
+										<!-- Bikes Slider -->
+										<input class="range-slider-bikes">
+										<label class="mt-2" for="">Select Number of Bikes</label>
+									</div>
+									<div class="col-6">
+										<!-- Days Slider -->
+										<input class="range-slider-days">
+										<label class="mt-2" for="">Select Number of Days</label>
+									</div>
+								</div>
+								<div class="row mt-4 mt-md-5">
+									<div class="col-sm-6">
+										<h4 class="fw-semibold mb-3">Free Plan:</h4>
+										<ul class="ms-3 mb-2">
+											<li class="mb-2">1Hr Free Trail.</li>
+											<li class="mb-2">Used Bikes.</li>
+											<li class="mb-2">No Electric Bikes.</li>
+											<li class="mb-2">Money Back Guarantee.</li>
+										</ul>
+									</div>
+									<div class="col-sm-6 mt-4 mt-sm-0">
+										<h4 class="fw-semibold mb-3">Pro Plans:</h4>
+										<ul class="ms-3 mb-2">
+											<li class="mb-2">Door - Door Service.</li>
+											<li class="mb-2">Choose any Bike.</li>
+											<li class="mb-2">Electric Bikes Included.</li>
+											<li class="mb-2">Monthly Discounts Available.</li>
+											<li class="mb-2">Money Back Guarantee.</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-5 mt-4 mt-md-0 sticky-sidebar-wrap">
+								<div class="card text-center border-0 shadow sticky-sidebar py-4">
+									<div class="card-body py-4">
+										<h3 class="card-title fw-normal mb-0">Your Plan</h3>
+										<!-- Price Value -->
+										<div class="pricing-price fw-bold py-3"></div>
+										<p class="card-text pricing-sub text-muted">$2/Days Per Bikes</p>
+									</div>
+									<div class="line my-1"></div>
+									<div class="card-body py-4">
+										<ul class="list-unstyled ms-0" style="opacity: .8">
+											<li class="mb-2">All New Bikes</li>
+											<li class="mb-2">Door - Door Service</li>
+											<li class="mb-2">Provide One Helmet/Bike</li>
+											<li>Credit Cards Accepted</li>
+										</ul>
+										<a href="#" class="button button-rounded button-large ls-0 fw-normal ms-0 mb-2 text-transform-none">Rent Now</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section bg-transparent">
+					<div class="container">
+
+						<div class="heading-block mx-auto border-bottom-0 text-center" style="max-width: 600px">
+							<small class="text-black-50 text-uppercase ls-3 fw-semibold">Accessories</small>
+							<h2 class="text-capitalize fw-semibold mb-2" style="font-size: 36px; letter-spacing: -1px">Looking for more Addons?</h2>
+							<p class="mb-3">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+							<div class="text-center"><div class="button ls-0 button-rounded button-border text-transform-none fw-normal ">View More</div></div>
+						</div>
+
+						<div class="row">
+
+							<div class="col-lg-3 col-sm-6">
+								<a href="#" class="portfolio-item border d-block bg1">
+									<div class="portfolio-image">
+										<img src="../../demos/bike/images/items/1.png" alt="Image">
+									</div>
+									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
+										<h3 class="mb-0 text-dark">Bike Helmet</h3>
+										<h6 class="text-dark">&dollar; 5.99/Day</h6>
+									</div>
+								</a>
+							</div>
+
+							<div class="col-lg-3 col-sm-6 mt-4 mt-sm-0">
+								<a href="#" class="portfolio-item border d-block">
+									<div class="portfolio-image">
+										<img src="../../demos/bike/images/items/2.png" alt="Image">
+									</div>
+									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
+										<h3 class="mb-0 text-dark">Leather Gloves</h3>
+										<h6 class="text-dark">&dollar; 2.19/Day</h6>
+									</div>
+								</a>
+							</div>
+
+							<div class="col-lg-3 col-sm-6 mt-4 mt-lg-0">
+								<a href="#" class="portfolio-item border d-block bg1">
+									<div class="portfolio-image">
+										<img src="../../demos/bike/images/items/3.png" alt="Image">
+									</div>
+									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
+										<h3 class="mb-0 text-dark">Water Bottles</h3>
+										<h6 class="text-dark">&dollar; 3.99/Day</h6>
+									</div>
+								</a>
+							</div>
+
+							<div class="col-lg-3 col-sm-6 mt-4 mt-lg-0">
+								<a href="#" class="portfolio-item border d-block">
+									<div class="portfolio-image">
+										<img src="../../demos/bike/images/items/4.png" alt="Image">
+									</div>
+									<div class="portfolio-desc d-flex align-items-center justify-content-between position-absolute w-100" style="bottom: 0; padding: 0 20px 15px;">
+										<h3 class="mb-0 text-dark">Bottle Holder</h3>
+										<h6 class="text-dark">&dollar; 1.99/Day</h6>
+									</div>
+								</a>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="section bg-transparent">
+					<div class="container">
+						<div class="row align-items-center justify-content-between">
+							<div class="col-lg-6">
+								<div class="heading-block border-bottom-0 mb-0">
+									<small class="text-black-50 text-uppercase ls-3 fw-semibold">Contact Us</small>
+									<h2 class="text-capitalize fw-semibold mb-2" style="font-size: 44px; letter-spacing: -1px">Still Can't Decide?!</h2>
+									<p class="lead">Energistically syndicate team building synergy after efficient human capital. Assertively underwhelm sticky solutions.</p>
+								</div>
+							</div>
+
+							<div class="col-lg-6 d-inline-block d-sm-inline-flex justify-content-start justify-content-lg-end">
+								<div class="button button-xlarge ls-0 button-rounded button-border text-transform-none fw-normal ">Start Renting</div>
+								<div class="button button-xlarge ls-0 button-rounded button-shadow text-transform-none fw-normal ">Contact Us</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap">
+
+					<div class="row">
+						<div class="col-6 col-lg-4">
+							<img class="mb-2" src="../../demos/bike/images/logo-foo.png" alt="Image" width="123">
+							<small class="d-block mb-4 text-muted">&copy; 2023-2021</small>
+							<div class="row my-4">
+								<div class="col-md-6">
+									<div class="counter counter-small text-light fw-normal"><span class="h4" data-from="50" data-to="8465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+									<h5 class="m-0 text-muted">Total Rented</h5>
+								</div>
+
+								<div class="col-md-6">
+									<div class="counter counter-small text-light fw-normal"><span class="h4" data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+									<h5 class="m-0 text-muted">Clients Served</h5>
+								</div>
+							</div>
+							<div class="clear"></div>
+							<div>
+								<a href="#" class="social-icon me-2 rounded-circle si-small border-0 bg-facebook">
+									<i class="fa-brands fa-facebook-f"></i>
+									<i class="fa-brands fa-facebook-f"></i>
+								</a>
+								<a href="#" class="social-icon me-2 rounded-circle si-small border-0 bg-x-twitter">
+									<i class="fa-brands fa-x-twitter"></i>
+									<i class="fa-brands fa-x-twitter"></i>
+								</a>
+								<a href="#" class="social-icon me-2 rounded-circle si-small border-0 bg-youtube">
+									<i class="fa-brands fa-youtube"></i>
+									<i class="fa-brands fa-youtube"></i>
+								</a>
+								<a href="#" class="social-icon me-2 rounded-circle si-small border-0 bg-appstore">
+									<i class="fa-brands fa-apple"></i>
+									<i class="fa-brands fa-apple"></i>
+								</a>
+							</div>
+						</div>
+						<div class="col-6 col-lg-3">
+							<h4>Features</h4>
+							<ul class="list-unstyled mb-0 text-small">
+								<li class="mb-2"><a class="text-muted" href="#">Cool stuff</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Random feature</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Team feature</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Stuff for developers</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Another one</a></li>
+								<li><a class="text-muted" href="#">Last time</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-lg-3 mt-5 mt-lg-0">
+							<h4>Resources</h4>
+							<ul class="list-unstyled mb-0 text-small">
+								<li class="mb-2"><a class="text-muted" href="#">Resource</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Resource name</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Another resource</a></li>
+								<li><a class="text-muted" href="#">Final resource</a></li>
+							</ul>
+						</div>
+						<div class="col-6 col-lg-2 mt-5 mt-lg-0">
+							<h4>About</h4>
+							<ul class="list-unstyled mb-0 text-small">
+								<li class="mb-2"><a class="text-muted" href="#">Team</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Locations</a></li>
+								<li class="mb-2"><a class="text-muted" href="#">Privacy</a></li>
+								<li><a class="text-muted" href="#">Terms</a></li>
+							</ul>
+						</div>
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+
+				<div class="container">
+
+					<div class="row align-items-center justify-content-between">
+						<div class="col-md-6">
+							Copyrights &copy; 2023 All Rights Reserved by Canvas Inc.<br>
+							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+						</div>
+
+						<div class="col-md-6 d-flex justify-content-md-end mt-4 mt-md-0">
+							<div class="copyrights-menu copyright-links mb-0">
+								<a href="#">Home</a>/<a href="#">About Us</a>/<a href="#">Price</a>/<a href="#">Contact</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div><!-- #copyrights end -->
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="../../shared/js/plugins.min.js"></script>
+	<script src="../../shared/js/functions.bundle.js"></script>
+	<script src="../../shared/js/components/rangeslider.min.js"></script>
+
+	<script>
+		jQuery('#ytb-video').on('click', function(e){
+			e.preventDefault();
+
+			if( jQuery(this).hasClass('video-played') ) {
+				jQuery('#ytb-video').YTPPause();
+			} else {
+				jQuery('#ytb-video').YTPPlay();
+				jQuery('.ytb-poster').stop(true,true).fadeTo( "slow", 0 );
+			}
+
+			jQuery(this).toggleClass('video-played');
+		});
+
+		function showcaseSection( element ){
+			var otherElements = element.parents('.showcase-section').find('.showcase-feature'),
+				elementTarget = jQuery( element.attr('data-target') ),
+				otherTargets = element.parents('.showcase-section').find('.showcase-target');
+
+			otherElements.removeClass('showcase-feature-active');
+			element.addClass('showcase-feature-active');
+			otherTargets.removeClass('showcase-target-active');
+			elementTarget.addClass('showcase-target-active');
+		}
+
+		jQuery('.showcase-feature').hover( function(){
+			showcaseSection( jQuery(this) );
+		});
+
+		jQuery(document).ready( function() {
+			var pricingBikes = 1,
+				days = 1,
+				elementbikes = jQuery(".range-slider-bikes"),
+				elementDays = jQuery(".range-slider-days");
+
+			elementbikes.ionRangeSlider({
+				grid: false,
+				step: 1,
+				min: 1,
+				from:1,
+				max: 5,
+				postfix: ' Bike(s)',
+				onStart: function(data){
+					pricingBikes = data.from;
+				}
+			});
+
+			elementbikes.on( 'change', function(){
+				pricingBikes = jQuery(this).prop('value');
+				calculatePrice( pricingBikes, days );
+			});
+
+			elementDays.ionRangeSlider({
+				grid: false,
+				step: 1,
+				min: 1,
+				from: 4,
+				max: 30,
+				postfix: ' Days',
+				onStart: function(data){
+					days = data.from;
+					console.log(data);
+				}
+			});
+
+			elementDays.on( 'onStart change', function(){
+				days = jQuery(this).prop('value');
+				calculatePrice( pricingBikes, days );
+			});
+
+			calculatePrice( pricingBikes, days );
+
+			function calculatePrice( bikes, days ) {
+				var pricingValue = ( Number(bikes) * 1 ) * ( Number(days) * 2 );
+				jQuery('.pricing-price').html( '$'+pricingValue );
+			}
+		});
+	</script>
+
+</body>
+</html>

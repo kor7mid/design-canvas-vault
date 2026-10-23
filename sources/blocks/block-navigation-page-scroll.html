@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>One Page - Dots | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,400&family=Poppins:wght@300;400;500;600;700&family=PT+Serif:ital,wght@1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p,
+	body {
+		font-family: 'Inter', sans-serif !important;
+	}
+
+	.section {
+		background-color: #f4fbf9;
+	}
+
+	@media (min-width: 992px) {
+		#page-menu.dots-menu {
+			background: #fff;
+			box-shadow: 0px 0px 10px 0px rgb(0 0 0 / 15%);
+			border-radius: 7px;
+			-webkit-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+			width: 30px;
+			overflow: hidden;
+		}
+
+		#page-menu.dots-menu:hover {
+			width: 150px;
+		}
+
+		.dots-menu .page-menu-item {
+			margin: 13px 0;
+		}
+
+		.page-menu-nav .page-menu-container {
+			-ms-flex-align: flex-end;
+			align-items: flex-end;
+			-ms-flex-pack: flex-end;
+			padding: 10px;
+			-webkit-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+		}
+
+		#page-menu.dots-menu:hover .page-menu-nav .page-menu-container {
+			padding: 10px 20px;
+		}
+
+		.dots-menu .page-menu-item > a div {
+			right: 15px !important;
+			background-color: transparent;
+			color: #888;
+			text-shadow: none;
+			text-transform: none;
+			letter-spacing: 0;
+			font-size: 15px;
+			pointer-events: auto;
+		}
+
+		#page-menu.dots-menu:hover .page-menu-item > a div {
+			opacity: 1;
+			transition: opacity .2s .1s ease;
+		}
+
+		#page-menu.dots-menu .page-menu-item.current > a div,
+		#page-menu.dots-menu .page-menu-item:hover > a div {
+			color: #1ABC9D;
+			font-weight: 500;
+		}
+
+		.dots-menu .page-menu-item div::after {
+			content: none;
+		}
+
+
+		/* .pos-left */
+		#page-menu.dots-menu.pos-left {
+			right: auto;
+			left: 25px;
+		}
+
+		.dots-menu.pos-left .page-menu-nav .page-menu-container {
+			 -ms-flex-align: flex-start;
+			align-items: flex-start;
+			-ms-flex-pack: flex-start;
+		}
+
+		#page-menu.dots-menu.pos-left .page-menu-item > a div {
+			position: relative !important;
+			right: 0 !important;
+			margin-left: 12px;
+		}
+	}
+</style>
+</head>
+<body class="stretched block-sticky-section">
+  <div id="wrapper">
+    <!-- Header
+		============================================= -->
+		<header id="header" class="d-none">
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap py-0">
+
+				<div id="page-menu" class="dots-menu pos-left">
+					<div id="page-menu-wrap">
+						<div class="page-menu-row">
+
+							<nav class="page-menu-nav">
+								<ul class="page-menu-container one-page-menu" data-easing="easeInOutExpo" data-offset="0">
+									<li class="page-menu-item"><a href="#" data-href="#section-1"><div>Section 1</div></a></li>
+									<li class="page-menu-item"><a href="#" data-href="#section-2"><div>Section 2</div></a></li>
+									<li class="page-menu-item"><a href="#" data-href="#section-3"><div>Section 3</div></a></li>
+									<li class="page-menu-item"><a href="#" data-href="#section-4"><div>Section 4</div></a></li>
+									<li class="page-menu-item"><a href="#" data-href="#section-5"><div>Section 5</div></a></li>
+									<li class="page-menu-item"><a href="#" data-href="#section-6"><div>Section 6</div></a></li>
+									<li class="page-menu-item"><a href="#" data-href="#section-7"><div>Section 7</div></a></li>
+									<li class="page-menu-item"><a href="#" data-href="#section-8"><div>Section 8</div></a></li>
+								</ul>
+							</nav>
+
+							<div id="page-menu-trigger"><i class="bi-list"></i></div>
+
+						</div>
+					</div>
+				</div><!-- #page-menu end -->
+
+				<div id="section-1" class="page-section section my-0">
+					<div class="container">
+						<h1>Section 1</h1>
+						<p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias hic non ab blanditiis excepturi repellat doloremque rem aliquam veniam voluptatem similique placeat perferendis, quidem deleniti impedit adipisci fuga beatae, facilis voluptatum repellendus temporibus eos ipsum vitae. Magnam, exercitationem, cumque enim saepe illo dignissimos eveniet, id aliquam deserunt iste, distinctio minus. Est commodi dignissimos quaerat quae aspernatur, id aperiam accusantium ad qui voluptatibus ipsa recusandae cumque eius quis explicabo inventore incidunt magni in. Alias optio architecto pariatur non sunt asperiores minus nisi excepturi eaque suscipit praesentium maiores nemo ratione, repellat mollitia aut numquam quod iusto atque a, iure earum officiis quia! Magnam alias repellat officia aspernatur suscipit distinctio eius rem a quam perferendis nam est recusandae, itaque, aut perspiciatis porro eveniet aliquid debitis numquam sint voluptas provident! Quidem nobis suscipit temporibus ipsum, unde rerum aspernatur possimus quia mollitia deleniti voluptatem illo accusantium atque ab asperiores ut provident maxime, modi quam obcaecati dicta omnis nam. Sed reprehenderit deserunt, quam, magnam cupiditate beatae voluptatem nulla amet consectetur velit aliquam, esse accusamus laborum. Rem, reprehenderit consectetur. Quisquam perferendis similique facilis, ducimus aliquid tenetur in est, minima iure fugiat quasi illo laudantium beatae at soluta consequatur consectetur inventore adipisci obcaecati. Voluptatem porro, saepe ducimus.</p>
+					</div>
+				</div>
+
+
+				<div id="section-2" class="page-section section bg-white my-0">
+					<div class="container">
+						<h1>Section 2</h1>
+						<p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias hic non ab blanditiis excepturi repellat doloremque rem aliquam veniam voluptatem similique placeat perferendis, quidem deleniti impedit adipisci fuga beatae, facilis voluptatum repellendus temporibus eos ipsum vitae. Magnam, exercitationem, cumque enim saepe illo dignissimos eveniet, id aliquam deserunt iste, distinctio minus. Est commodi dignissimos quaerat quae aspernatur, id aperiam accusantium ad qui voluptatibus ipsa recusandae cumque eius quis explicabo inventore incidunt magni in. Alias optio architecto pariatur non sunt asperiores minus nisi excepturi eaque suscipit praesentium maiores nemo ratione, repellat mollitia aut numquam quod iusto atque a, iure earum officiis quia! Magnam alias repellat officia aspernatur suscipit distinctio eius rem a quam perferendis nam est recusandae, itaque, aut perspiciatis porro eveniet aliquid debitis numquam sint voluptas provident! Quidem nobis suscipit temporibus ipsum, unde rerum aspernatur possimus quia mollitia deleniti voluptatem illo accusantium atque ab asperiores ut provident maxime, modi quam obcaecati dicta omnis nam. Sed reprehenderit deserunt, quam, magnam cupiditate beatae voluptatem nulla amet consectetur velit aliquam, esse accusamus laborum. Rem, reprehenderit consectetur. Quisquam perferendis similique facilis, ducimus aliquid tenetur in est, minima iure fugiat quasi illo laudantium beatae at soluta consequatur consectetur inventore adipisci obcaecati. Voluptatem porro, saepe ducimus.</p>
+					</div>
+
+				</div>
+
+
+				<div id="section-3" class="page-section section my-0">
+					<div class="container">
+						<h1>Section 3</h1>
+						<p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias hic non ab blanditiis excepturi repellat doloremque rem aliquam veniam voluptatem similique placeat perferendis, quidem deleniti impedit adipisci fuga beatae, facilis voluptatum repellendus temporibus eos ipsum vitae. Magnam, exercitationem, cumque enim saepe illo dignissimos eveniet, id aliquam deserunt iste, distinctio minus. Est commodi dignissimos quaerat quae aspernatur, id aperiam accusantium ad qui voluptatibus ipsa recusandae cumque eius quis explicabo inventore incidunt magni in. Alias optio architecto pariatur non sunt asperiores minus nisi excepturi eaque suscipit praesentium maiores nemo ratione, repellat mollitia aut numquam quod iusto atque a, iure earum officiis quia! Magnam alias repellat officia aspernatur suscipit distinctio eius rem a quam perferendis nam est recusandae, itaque, aut perspiciatis porro eveniet aliquid debitis numquam sint voluptas provident! Quidem nobis suscipit temporibus ipsum, unde rerum aspernatur possimus quia mollitia deleniti voluptatem illo accusantium atque ab asperiores ut provident maxime, modi quam obcaecati dicta omnis nam. Sed reprehenderit deserunt, quam, magnam cupiditate beatae voluptatem nulla amet consectetur velit aliquam, esse accusamus laborum. Rem, reprehenderit consectetur. Quisquam perferendis similique facilis, ducimus aliquid tenetur in est, minima iure fugiat quasi illo laudantium beatae at soluta consequatur consectetur inventore adipisci obcaecati. Voluptatem porro, saepe ducimus.</p>
+					</div>
+				</div>
+
+				<div id="section-3" class="page-section section bg-white my-0">
+					<div class="container">
+						<h1>Section 3</h1>
+						<p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias hic non ab blanditiis excepturi repellat doloremque rem aliquam veniam voluptatem similique placeat perferendis, quidem deleniti impedit adipisci fuga beatae, facilis voluptatum repellendus temporibus eos ipsum vitae. Magnam, exercitationem, cumque enim saepe illo dignissimos eveniet, id aliquam deserunt iste, distinctio minus. Est commodi dignissimos quaerat quae aspernatur, id aperiam accusantium ad qui voluptatibus ipsa recusandae cumque eius quis explicabo inventore incidunt magni in. Alias optio architecto pariatur non sunt asperiores minus nisi excepturi eaque suscipit praesentium maiores nemo ratione, repellat mollitia aut numquam quod iusto atque a, iure earum officiis quia! Magnam alias repellat officia aspernatur suscipit distinctio eius rem a quam perferendis nam est recusandae, itaque, aut perspiciatis porro eveniet aliquid debitis numquam sint voluptas provident! Quidem nobis suscipit temporibus ipsum, unde rerum aspernatur possimus quia mollitia deleniti voluptatem illo accusantium atque ab asperiores ut provident maxime, modi quam obcaecati dicta omnis nam. Sed reprehenderit deserunt, quam, magnam cupiditate beatae voluptatem nulla amet consectetur velit aliquam, esse accusamus laborum. Rem, reprehenderit consectetur. Quisquam perferendis similique facilis, ducimus aliquid tenetur in est, minima iure fugiat quasi illo laudantium beatae at soluta consequatur consectetur inventore adipisci obcaecati. Voluptatem porro, saepe ducimus.</p>
+					</div>
+				</div>
+
+				<div id="section-4" class="page-section section my-0">
+					<div class="container">
+						<h1>Section 4</h1>
+						<p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias hic non ab blanditiis excepturi repellat doloremque rem aliquam veniam voluptatem similique placeat perferendis, quidem deleniti impedit adipisci fuga beatae, facilis voluptatum repellendus temporibus eos ipsum vitae. Magnam, exercitationem, cumque enim saepe illo dignissimos eveniet, id aliquam deserunt iste, distinctio minus. Est commodi dignissimos quaerat quae aspernatur, id aperiam accusantium ad qui voluptatibus ipsa recusandae cumque eius quis explicabo inventore incidunt magni in. Alias optio architecto pariatur non sunt asperiores minus nisi excepturi eaque suscipit praesentium maiores nemo ratione, repellat mollitia aut numquam quod iusto atque a, iure earum officiis quia! Magnam alias repellat officia aspernatur suscipit distinctio eius rem a quam perferendis nam est recusandae, itaque, aut perspiciatis porro eveniet aliquid debitis numquam sint voluptas provident! Quidem nobis suscipit temporibus ipsum, unde rerum aspernatur possimus quia mollitia deleniti voluptatem illo accusantium atque ab asperiores ut provident maxime, modi quam obcaecati dicta omnis nam. Sed reprehenderit deserunt, quam, magnam cupiditate beatae voluptatem nulla amet consectetur velit aliquam, esse accusamus laborum. Rem, reprehenderit consectetur. Quisquam perferendis similique facilis, ducimus aliquid tenetur in est, minima iure fugiat quasi illo laudantium beatae at soluta consequatur consectetur inventore adipisci obcaecati. Voluptatem porro, saepe ducimus.</p>
+					</div>
+				</div>
+
+				<div id="section-5" class="page-section section bg-white my-0">
+					<div class="container">
+						<h1>Section 5</h1>
+						<p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias hic non ab blanditiis excepturi repellat doloremque rem aliquam veniam voluptatem similique placeat perferendis, quidem deleniti impedit adipisci fuga beatae, facilis voluptatum repellendus temporibus eos ipsum vitae. Magnam, exercitationem, cumque enim saepe illo dignissimos eveniet, id aliquam deserunt iste, distinctio minus. Est commodi dignissimos quaerat quae aspernatur, id aperiam accusantium ad qui voluptatibus ipsa recusandae cumque eius quis explicabo inventore incidunt magni in. Alias optio architecto pariatur non sunt asperiores minus nisi excepturi eaque suscipit praesentium maiores nemo ratione, repellat mollitia aut numquam quod iusto atque a, iure earum officiis quia! Magnam alias repellat officia aspernatur suscipit distinctio eius rem a quam perferendis nam est recusandae, itaque, aut perspiciatis porro eveniet aliquid debitis numquam sint voluptas provident! Quidem nobis suscipit temporibus ipsum, unde rerum aspernatur possimus quia mollitia deleniti voluptatem illo accusantium atque ab asperiores ut provident maxime, modi quam obcaecati dicta omnis nam. Sed reprehenderit deserunt, quam, magnam cupiditate beatae voluptatem nulla amet consectetur velit aliquam, esse accusamus laborum. Rem, reprehenderit consectetur. Quisquam perferendis similique facilis, ducimus aliquid tenetur in est, minima iure fugiat quasi illo laudantium beatae at soluta consequatur consectetur inventore adipisci obcaecati. Voluptatem porro, saepe ducimus.</p>
+					</div>
+				</div>
+
+				<div id="section-6" class="page-section section my-0">
+					<div class="container">
+						<h1>Section 6</h1>
+						<p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias hic non ab blanditiis excepturi repellat doloremque rem aliquam veniam voluptatem similique placeat perferendis, quidem deleniti impedit adipisci fuga beatae, facilis voluptatum repellendus temporibus eos ipsum vitae. Magnam, exercitationem, cumque enim saepe illo dignissimos eveniet, id aliquam deserunt iste, distinctio minus. Est commodi dignissimos quaerat quae aspernatur, id aperiam accusantium ad qui voluptatibus ipsa recusandae cumque eius quis explicabo inventore incidunt magni in. Alias optio architecto pariatur non sunt asperiores minus nisi excepturi eaque suscipit praesentium maiores nemo ratione, repellat mollitia aut numquam quod iusto atque a, iure earum officiis quia! Magnam alias repellat officia aspernatur suscipit distinctio eius rem a quam perferendis nam est recusandae, itaque, aut perspiciatis porro eveniet aliquid debitis numquam sint voluptas provident! Quidem nobis suscipit temporibus ipsum, unde rerum aspernatur possimus quia mollitia deleniti voluptatem illo accusantium atque ab asperiores ut provident maxime, modi quam obcaecati dicta omnis nam. Sed reprehenderit deserunt, quam, magnam cupiditate beatae voluptatem nulla amet consectetur velit aliquam, esse accusamus laborum. Rem, reprehenderit consectetur. Quisquam perferendis similique facilis, ducimus aliquid tenetur in est, minima iure fugiat quasi illo laudantium beatae at soluta consequatur consectetur inventore adipisci obcaecati. Voluptatem porro, saepe ducimus.</p>
+					</div>
+				</div>
+
+				<div id="section-7" class="page-section section bg-white my-0">
+					<div class="container">
+						<h1>Section 7</h1>
+						<p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias hic non ab blanditiis excepturi repellat doloremque rem aliquam veniam voluptatem similique placeat perferendis, quidem deleniti impedit adipisci fuga beatae, facilis voluptatum repellendus temporibus eos ipsum vitae. Magnam, exercitationem, cumque enim saepe illo dignissimos eveniet, id aliquam deserunt iste, distinctio minus. Est commodi dignissimos quaerat quae aspernatur, id aperiam accusantium ad qui voluptatibus ipsa recusandae cumque eius quis explicabo inventore incidunt magni in. Alias optio architecto pariatur non sunt asperiores minus nisi excepturi eaque suscipit praesentium maiores nemo ratione, repellat mollitia aut numquam quod iusto atque a, iure earum officiis quia! Magnam alias repellat officia aspernatur suscipit distinctio eius rem a quam perferendis nam est recusandae, itaque, aut perspiciatis porro eveniet aliquid debitis numquam sint voluptas provident! Quidem nobis suscipit temporibus ipsum, unde rerum aspernatur possimus quia mollitia deleniti voluptatem illo accusantium atque ab asperiores ut provident maxime, modi quam obcaecati dicta omnis nam. Sed reprehenderit deserunt, quam, magnam cupiditate beatae voluptatem nulla amet consectetur velit aliquam, esse accusamus laborum. Rem, reprehenderit consectetur. Quisquam perferendis similique facilis, ducimus aliquid tenetur in est, minima iure fugiat quasi illo laudantium beatae at soluta consequatur consectetur inventore adipisci obcaecati. Voluptatem porro, saepe ducimus.</p>
+					</div>
+				</div>
+
+				<div id="section-8" class="page-section section my-0">
+					<div class="container">
+						<h1>Section 8</h1>
+						<p class="lead mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A molestias hic non ab blanditiis excepturi repellat doloremque rem aliquam veniam voluptatem similique placeat perferendis, quidem deleniti impedit adipisci fuga beatae, facilis voluptatum repellendus temporibus eos ipsum vitae. Magnam, exercitationem, cumque enim saepe illo dignissimos eveniet, id aliquam deserunt iste, distinctio minus. Est commodi dignissimos quaerat quae aspernatur, id aperiam accusantium ad qui voluptatibus ipsa recusandae cumque eius quis explicabo inventore incidunt magni in. Alias optio architecto pariatur non sunt asperiores minus nisi excepturi eaque suscipit praesentium maiores nemo ratione, repellat mollitia aut numquam quod iusto atque a, iure earum officiis quia! Magnam alias repellat officia aspernatur suscipit distinctio eius rem a quam perferendis nam est recusandae, itaque, aut perspiciatis porro eveniet aliquid debitis numquam sint voluptas provident! Quidem nobis suscipit temporibus ipsum, unde rerum aspernatur possimus quia mollitia deleniti voluptatem illo accusantium atque ab asperiores ut provident maxime, modi quam obcaecati dicta omnis nam. Sed reprehenderit deserunt, quam, magnam cupiditate beatae voluptatem nulla amet consectetur velit aliquam, esse accusamus laborum. Rem, reprehenderit consectetur. Quisquam perferendis similique facilis, ducimus aliquid tenetur in est, minima iure fugiat quasi illo laudantium beatae at soluta consequatur consectetur inventore adipisci obcaecati. Voluptatem porro, saepe ducimus.</p>
+					</div>
+				</div>
+
+			</div>
+
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="dark">
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap">
+
+					<div class="row col-mb-50">
+						<div class="col-lg-8">
+
+							<div class="row col-mb-50">
+								<div class="col-md-4">
+
+									<div class="widget">
+
+										<img src="../images/footer-widget-logo@2x.png" alt="Image" class="footer-logo" width="123" height="22">
+
+										<p>We believe in <strong>Simple</strong>, <strong>Creative</strong> &amp; <strong>Flexible</strong> Design Standards.</p>
+
+										<div style="background: url('../images/world-map.png') no-repeat center center; background-size: 100%;">
+											<address>
+												<strong>Headquarters:</strong><br>
+												795 Folsom Ave, Suite 600<br>
+												San Francisco, CA 94107<br>
+											</address>
+											<abbr title="Phone Number"><strong>Phone:</strong></abbr> (1) 8547 632521<br>
+											<abbr title="Fax"><strong>Fax:</strong></abbr> (1) 11 4752 1433<br>
+											<abbr title="Email Address"><strong>Email:</strong></abbr> info@canvas.com
+										</div>
+
+									</div>
+
+								</div>
+
+								<div class="col-md-4">
+
+									<div class="widget widget_links">
+
+										<h4>Blogroll</h4>
+
+										<ul>
+											<li><a href="https://codex.wordpress.org/">Documentation</a></li>
+											<li><a href="https://wordpress.org/support/forum/requests-and-feedback">Feedback</a></li>
+											<li><a href="https://wordpress.org/extend/plugins/">Plugins</a></li>
+											<li><a href="https://wordpress.org/support/">Support Forums</a></li>
+											<li><a href="https://wordpress.org/extend/themes/">Themes</a></li>
+											<li><a href="https://wordpress.org/news/">Canvas Blog</a></li>
+											<li><a href="https://planet.wordpress.org/">Canvas Planet</a></li>
+										</ul>
+
+									</div>
+
+								</div>
+
+								<div class="col-md-4">
+
+									<div class="widget">
+										<h4>Recent Posts</h4>
+
+										<div class="posts-sm row col-mb-30" id="post-list-footer">
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2021</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2021</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+
+											<div class="entry col-12">
+												<div class="grid-inner row">
+													<div class="col">
+														<div class="entry-title">
+															<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
+														</div>
+														<div class="entry-meta">
+															<ul>
+																<li>10th July 2021</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
+
+						</div>
+
+						<div class="col-lg-4">
+
+							<div class="row col-mb-50">
+								<div class="col-md-4 col-lg-12">
+									<div class="widget">
+
+										<div class="row col-mb-30">
+											<div class="col-lg-6">
+												<div class="counter counter-small"><span data-from="50" data-to="15065421" data-refresh-interval="80" data-speed="3000" data-comma="true"></span></div>
+												<h5 class="mb-0">Total Downloads</h5>
+											</div>
+
+											<div class="col-lg-6">
+												<div class="counter counter-small"><span data-from="100" data-to="18465" data-refresh-interval="50" data-speed="2000" data-comma="true"></span></div>
+												<h5 class="mb-0">Clients</h5>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+								<div class="col-md-5 col-lg-12">
+									<div class="widget subscribe-widget">
+										<h5><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+										<div class="widget-subscribe-form-result"></div>
+										<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
+											<div class="input-group mx-auto">
+												<div class="input-group-text"><i class="bi-envelope-plus"></i></div>
+												<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email">
+												<button class="btn btn-success" type="submit">Subscribe</button>
+											</div>
+										</form>
+									</div>
+								</div>
+
+								<div class="col-md-3 col-lg-12">
+									<div class="widget">
+
+										<div class="row col-mb-30">
+											<div class="col-6 col-md-12 col-lg-6 d-flex align-items-center">
+												<a href="#" class="social-icon text-white border-transparent bg-facebook me-2 mb-0 float-none">
+													<i class="fa-brands fa-facebook-f"></i>
+													<i class="fa-brands fa-facebook-f"></i>
+												</a>
+												<a href="#" class="ms-1"><small class="d-block"><strong>Like Us</strong><br>on Facebook</small></a>
+											</div>
+											<div class="col-6 col-md-12 col-lg-6 d-flex align-items-center">
+												<a href="#" class="social-icon text-white border-transparent bg-rss me-2 mb-0 float-none">
+													<i class="fa-solid fa-rss"></i>
+													<i class="fa-solid fa-rss"></i>
+												</a>
+												<a href="#" class="ms-1"><small class="d-block"><strong>Subscribe</strong><br>to RSS Feeds</small></a>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights">
+				<div class="container">
+
+					<div class="row col-mb-30">
+
+						<div class="col-md-6 text-center text-md-start">
+							Copyrights &copy; 2023 All Rights Reserved by Canvas Inc.<br>
+							<div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+						</div>
+
+						<div class="col-md-6 text-center text-md-end">
+							<div class="d-flex justify-content-center justify-content-md-end">
+								<a href="#" class="social-icon si-small border-transparent h-bg-facebook">
+									<i class="fa-brands fa-facebook-f"></i>
+									<i class="fa-brands fa-facebook-f"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-x-twitter">
+									<i class="fa-brands fa-x-twitter"></i>
+									<i class="fa-brands fa-x-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-google">
+									<i class="fa-brands fa-google"></i>
+									<i class="fa-brands fa-google"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-pinterest">
+									<i class="fa-brands fa-pinterest-p"></i>
+									<i class="fa-brands fa-pinterest-p"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-vimeo">
+									<i class="fa-brands fa-vimeo-v"></i>
+									<i class="fa-brands fa-vimeo-v"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-github">
+									<i class="fa-brands fa-github"></i>
+									<i class="fa-brands fa-github"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-yahoo">
+									<i class="fa-brands fa-yahoo"></i>
+									<i class="fa-brands fa-yahoo"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-linkedin">
+									<i class="fa-brands fa-linkedin"></i>
+									<i class="fa-brands fa-linkedin"></i>
+								</a>
+							</div>
+
+							<div class="clear"></div>
+
+							<i class="bi-envelope"></i> info@canvas.com <span class="middot">&middot;</span> <i class="fa-solid fa-phone"></i> +1-11-6541-6369 <span class="middot">&middot;</span> <i class="bi-skype"></i> CanvasOnSkype
+						</div>
+
+					</div>
+
+				</div>
+			</div><!-- #copyrights end -->
+		</footer><!-- #footer end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

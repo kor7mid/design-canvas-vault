@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hero 8 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=inter:wght@300;400;700;900&family=Grand+Hotel&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.block-hero-8 h1,
+		.block-hero-8 h2,
+		.block-hero-8 h3,
+		.block-hero-8 h4,
+		.block-hero-8 h5,
+		.block-hero-8 h6 { font-family: Inter, serif; }
+
+		.block-hero-8 .font-secondary { font-family: 'Grand Hotel', cursive; }
+
+		.block-hero-8 .image-text {
+			background: url("../previews/preview/hero-8.jpg") center;
+			background-size: contain;
+			background-clip: text;
+			-webkit-background-clip: text;
+			color: transparent;
+			font-size: 44px;
+			font-weight: 900;
+		}
+
+		@media (min-width: 992px) {
+			.block-hero-8 .text-n-right {
+				--offset:  -15%;
+				position: relative;
+				z-index: 9;
+				margin-left: var(--offset);
+				-webkit-transform: translateX(var(--offset));
+				transform: translateX(var(--offset));
+				padding: 25px 30px;
+				background-color: #FFF;
+			}
+			.block-hero-8 .image-text {
+				font-size: 4.8vw;
+			}
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Hero Section
+		============================================= -->
+		<section id="slider" class="slider-element min-vh-100 block-hero-8 py-0" style="background-image:radial-gradient(circle at top right, #efe9e2 0%, #efe9e2 15%,transparent 15%, transparent 100%);">
+			<div class="">
+
+				<div class="row min-vh-100 align-items-center justify-content-center">
+					<!-- Image -->
+					<div class="col-lg-6 min-vh-100" style="background: url('../previews/preview/hero-8.jpg') no-repeat center center / cover"></div>
+					<!-- Text -->
+					<div class="col-lg-6 p-5 p-md-6">
+						<h4 class="font-secondary mb-4 ls-1 h1">- Juliet Fresco</h4>
+						<div class="text-n-right"><h3 class="image-text text-uppercase ms-3 mb-0">Photographer  &amp; Designer.</h3></div>
+						<h4 class="mt-4 fw-light">Efficiently transform transparent sources before value-added schemas. Dynamically pontificate.</h4>
+						<div class="d-flex flex-row align-items-center">
+							<a href="#" class="button button-large text-white py-3 px-5 text-capitalize ls-0 shadow-sm ms-0 mt-2 me-4" style="background-image: url('../previews/preview/hero-8.jpg'); background-size: cover"><i class="bi-camera"></i> About Myself</a>
+
+							<div class="d-flex flex-wrap">
+								<a href="#" class="social-icon si-small border-light h-bg-instagram" title="Instagram">
+									<i class="bi-instagram"></i>
+									<i class="bi-instagram"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-light h-bg-dribbble" title="Dribbble">
+									<i class="fa-brands fa-dribbble"></i>
+									<i class="fa-brands fa-dribbble"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-light h-bg-whatsapp" title="Behance">
+									<i class="fa-brands fa-whatsapp"></i>
+									<i class="fa-brands fa-whatsapp"></i>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+
+		<!-- Content
+		============================================= -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

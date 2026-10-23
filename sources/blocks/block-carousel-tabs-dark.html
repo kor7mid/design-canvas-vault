@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carousel Tabs Dark | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+#carousel-tabs-dark.tabs,
+		#carousel-tabs-dark .tab-content {
+			--cnvs-tab-padding-width: 0;
+			--bs-nav-link-padding-y: .75rem;
+			--bs-nav-link-font-size: .9125rem;
+			--bs-nav-link-font-weight:	400;
+			--bs-nav-tabs-border-width: 0;
+			--bs-nav-link-color: var(--cnvs-contrast-1000);
+			--bs-nav-link-hover-color: var(--cnvs-contrast-900);
+			--bs-nav-tabs-link-active-bg: rgba(var(--bs-danger-rgb), 1);
+			--bs-nav-tabs-link-active-color: var(--bs-light);
+			--cnvs-tabs-bg-color:rgba(var(--cnvs-contrast-rgb), 0.04);
+		}
+
+		#carousel-tabs-dark .nav-link:not(.active) {
+			background-color: rgba(var(--cnvs-contrast-rgb), 0.04);
+		}
+
+		#carousel-tabs-dark .nav-link {
+			border-radius: var(--bs-border-radius);
+			font-weight: 500;
+		}
+
+		#carousel-tabs-dark .nav-link.active {
+			font-weight: 600;
+		}
+
+		.carousel-blur-left::before,
+		.carousel-blur-right::after {
+			--cnvs-carousel-blur-size: 80px;
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: auto;
+			width: var(--cnvs-carousel-blur-size);
+			height: 100%;
+			z-index: 1;
+			background: linear-gradient(to right, var(--cnvs-body-bg) 50%, transparent);
+		}
+
+		.carousel-blur-right::after {
+			left: auto;
+			right: 0;
+			background: linear-gradient(to left, var(--cnvs-body-bg) 50%, transparent);
+		}
+</style>
+</head>
+<body class="stretched dark">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap min-vh-100">
+
+				<div class="container mw-md pt-6">
+
+					<div id="carousel-tabs-dark" class="owl-carousel owl-nav-hover-fixed carousel-widget nav tabs nav-tabs mb-3 carousel-blur-right nav-fill" data-pagi="false" data-nav="false" role="tablist">
+
+						<div class="nav-item">
+							<button class="nav-link active" id="canvas-marketing-tab" data-bs-toggle="pill" data-bs-target="#marketing" type="button" role="tab" aria-controls="canvas-marketing" aria-selected="true">Marketing</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-design-tab" data-bs-toggle="pill" data-bs-target="#design" type="button" role="tab" aria-controls="canvas-design" aria-selected="false">Design</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-development-tab" data-bs-toggle="pill" data-bs-target="#development" type="button" role="tab" aria-controls="canvas-development" aria-selected="false">Development</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-brands-tab" data-bs-toggle="pill" data-bs-target="#brands" type="button" role="tab" aria-controls="canvas-brands" aria-selected="false">Brands</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-seo-tab" data-bs-toggle="pill" data-bs-target="#seo" type="button" role="tab" aria-controls="canvas-seo" aria-selected="false">SEO</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-ecommerce-tab" data-bs-toggle="pill" data-bs-target="#ecommerce" type="button" role="tab" aria-controls="canvas-ecommerce" aria-selected="false">E-Commerce</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-uiux-tab" data-bs-toggle="pill" data-bs-target="#uiux" type="button" role="tab" aria-controls="canvas-uiux" aria-selected="false">UI/UX</button>
+						</div>
+
+						<div class="nav-item">
+							<button class="nav-link" id="canvas-events-tab" data-bs-toggle="pill" data-bs-target="#events" type="button" role="tab" aria-controls="canvas-events" aria-selected="false">Events</button>
+						</div>
+
+					</div>
+
+					<div id="canvas-TabContent" class="tab-content mt-3 bg-secondary rounded-6 py-4 px-5" style="--bs-bg-opacity: 0.06">
+						<div class="tab-pane fade show active" id="marketing" role="tabpanel" aria-labelledby="canvas-marketing-tab"
+							tabindex="0">
+							<h2 class="mb-4">Marketing</h2>
+							<p class="mb-0">Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua,
+								retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica.
+								Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry
+								richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american
+								apparel, butcher voluptate nisi qui.</p>
+						</div>
+						<div class="tab-pane fade" id="design" role="tabpanel" aria-labelledby="canvas-design-tab" tabindex="0">
+							<h2 class="mb-4">Design</h2>
+							<p class="mb-0">Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid. Exercitation
+								+1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table
+								craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts
+								ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit.
+								Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio
+								cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson
+								biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed
+								echo park.</p>
+						</div>
+						<div class="tab-pane fade" id="development" role="tabpanel" aria-labelledby="canvas-development-tab" tabindex="0">
+							<h2 class="mb-4">Development</h2>
+							<p class="mb-0">Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro
+								fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer,
+								iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony.
+								Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles
+								pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven't heard of
+								them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+						</div>
+						<div class="tab-pane fade" id="brands" role="tabpanel" aria-labelledby="pills-brands-tab" tabindex="0">
+							<h2 class="mb-4">Brands</h2>
+							<p class="mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore beatae ea fugiat est pariatur in quas aut dicta quis optio laudantium harum rem eaque quisquam totam, unde excepturi vero nemo nesciunt voluptatum, similique corporis eligendi officiis repellat. Sapiente facilis libero sint. Expedita sapiente adipisci non ipsam aut eligendi officia quisquam voluptatem minima neque optio dignissimos officiis error a inventore magni, obcaecati ducimus delectus architecto soluta magnam libero beatae! Doloremque inventore hic dignissimos maiores, saepe esse. Iusto provident quidem nihil nemo libero velit praesentium alias cum, temporibus possimus neque sed ut est, quaerat inventore, facilis fugiat quia molestias sit? Eos, impedit.</p>
+						</div>
+						<div class="tab-pane fade" id="seo" role="tabpanel" aria-labelledby="pills-seo-tab" tabindex="0">
+							<h2 class="mb-4">SEO</h2>
+							<p class="mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore beatae ea fugiat est pariatur in quas aut dicta quis optio laudantium harum rem eaque quisquam totam, unde excepturi vero nemo nesciunt voluptatum, similique corporis eligendi officiis repellat. Sapiente facilis libero sint. Expedita sapiente adipisci non ipsam aut eligendi officia quisquam voluptatem minima neque optio dignissimos officiis error a inventore magni, obcaecati ducimus delectus architecto soluta magnam libero beatae! Doloremque inventore hic dignissimos maiores, saepe esse. Iusto provident quidem nihil nemo libero velit praesentium alias cum, temporibus possimus neque sed ut est, quaerat inventore, facilis fugiat quia molestias sit? Eos, impedit.</p>
+						</div>
+						<div class="tab-pane fade" id="ecommerce" role="tabpanel" aria-labelledby="pills-ecommerce-tab" tabindex="0">
+							<h2 class="mb-4">Ecommerce</h2>
+							<p class="mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore beatae ea fugiat est pariatur in quas aut dicta quis optio laudantium harum rem eaque quisquam totam, unde excepturi vero nemo nesciunt voluptatum, similique corporis eligendi officiis repellat. Sapiente facilis libero sint. Expedita sapiente adipisci non ipsam aut eligendi officia quisquam voluptatem minima neque optio dignissimos officiis error a inventore magni, obcaecati ducimus delectus architecto soluta magnam libero beatae! Doloremque inventore hic dignissimos maiores, saepe esse. Iusto provident quidem nihil nemo libero velit praesentium alias cum, temporibus possimus neque sed ut est, quaerat inventore, facilis fugiat quia molestias sit? Eos, impedit.</p>
+						</div>
+						<div class="tab-pane fade" id="uiux" role="tabpanel" aria-labelledby="pills-uiux-tab" tabindex="0">
+							<h2 class="mb-4">UIUX</h2>
+							<p class="mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore beatae ea fugiat est pariatur in quas aut dicta quis optio laudantium harum rem eaque quisquam totam, unde excepturi vero nemo nesciunt voluptatum, similique corporis eligendi officiis repellat. Sapiente facilis libero sint. Expedita sapiente adipisci non ipsam aut eligendi officia quisquam voluptatem minima neque optio dignissimos officiis error a inventore magni, obcaecati ducimus delectus architecto soluta magnam libero beatae! Doloremque inventore hic dignissimos maiores, saepe esse. Iusto provident quidem nihil nemo libero velit praesentium alias cum, temporibus possimus neque sed ut est, quaerat inventore, facilis fugiat quia molestias sit? Eos, impedit.</p>
+						</div>
+						<div class="tab-pane fade" id="events" role="tabpanel" aria-labelledby="pills-events-tab" tabindex="0">
+							<h2 class="mb-4">Events</h2>
+							<p class="mb-0">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore beatae ea fugiat est pariatur in quas aut dicta quis optio laudantium harum rem eaque quisquam totam, unde excepturi vero nemo nesciunt voluptatum, similique corporis eligendi officiis repellat. Sapiente facilis libero sint. Expedita sapiente adipisci non ipsam aut eligendi officia quisquam voluptatem minima neque optio dignissimos officiis error a inventore magni, obcaecati ducimus delectus architecto soluta magnam libero beatae! Doloremque inventore hic dignissimos maiores, saepe esse. Iusto provident quidem nihil nemo libero velit praesentium alias cum, temporibus possimus neque sed ut est, quaerat inventore, facilis fugiat quia molestias sit? Eos, impedit.</p>
+						</div>
+					</div>
+
+					<div class="text-center mt-5">
+						<a href="block-carousel-tabs.html" class="btn btn-light">Light Mode</a>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

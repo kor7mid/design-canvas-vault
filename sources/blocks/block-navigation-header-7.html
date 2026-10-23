@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navigation Header 7 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+:root {
+			--cnvs-primary-font: 'abril-display', serif;
+			--cnvs-body-font: 'tenon', sans-serif;
+			--cnvs-body-color: #FFF7EC;
+			--cnvs-color: #AEBE89;
+			--cnvs-color2: #E8EECF;
+			--cnvs-themecolor: #304109;
+			--cnvs-themecolor-rgb: 48, 65, 9;
+			--cnvs-text-color: var(--cnvs-themecolor);
+		}
+
+		.font-primary {
+			font-family: var(--cnvs-primary-font) !important;
+		}
+
+		.top-primary-menu .menu-container > .menu-item > .menu-link {
+			color: var(--cnvs-text-color);
+			font-weight: 400;
+			font-size: .9325rem;
+			font-family: var(--cnvs-body-font) !important;
+		}
+
+		#wrapper,
+		#header,
+		#header-wrap,
+		.sub-menu-container,
+		.mega-menu-content,
+		#header:not(.sticky-header) .mobile-menu-off-canvas .menu-container,
+		.sticky-header #header-wrap,
+		.top-cart-content,
+		.content-wrap {
+			background-color: var(--cnvs-body-color);
+		}
+
+		.main-primary-menu .menu-container > .menu-item > .menu-link {
+			font-weight: 500;
+			font-size: 1.125rem;
+		}
+
+		.sub-menu-container .menu-item > .menu-link {
+			font-size: 1rem;
+			color: var(--cnvs-themecolor);
+		}
+
+		.main-primary-menu .menu-container > .menu-item:hover > .menu-link {
+			opacity: .8;
+		}
+
+		#header-wrap .primary-menu-trigger::after {
+			content: "MENU";
+			position: absolute;
+			left: 32px;
+			letter-spacing: 1px;
+			text-transform: uppercase;
+			font-weight: 500;
+			font-size: 1rem;
+			color:var(--cnvs-text-color);
+		}
+
+		.menu-item .sub-menu-trigger {
+			color: var(--cnvs-themecolor);
+		}
+
+		@media (min-width: 992px) {
+
+			.top-primary-menu .menu-container > .menu-item > .menu-link {
+				padding-top: 30px;
+				padding-bottom: 30px;
+			}
+
+			.top-primary-menu .menu-container > .menu-item > .menu-link div {
+				position: relative;
+			}
+
+			.top-primary-menu .menu-container > .menu-item > .menu-link div::after {
+				content: "";
+				position: absolute;
+				bottom: -3px;
+				left: 0;
+				height: 1px;
+				width: 100%;
+				background: currentColor;
+				transition: transform .3s;
+				transform-origin: 100% 50%;
+				transform: scaleX(0);
+			}
+
+			.top-primary-menu .menu-container > .menu-item:hover > .menu-link div::after,
+			.top-primary-menu .menu-container > .menu-item.current > .menu-link div::after {
+				transform: scaleX(1);
+				transform-origin: 0% 50%;
+			}
+
+			.main-primary-menu .sub-menu-container .menu-item:hover > .menu-link {
+				background-color: var(--cnvs-color2);
+				color: var(--cnvs-themecolor);
+			}
+
+			.sub-menu-container .menu-item > .menu-link {
+				padding: 12px 24px !important;
+			}
+
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Top Bar
+		============================================= -->
+		<div id="top-bar" class="py-3 border-0" style="background: var(--cnvs-color2);">
+			<div class="container text-center color">
+				<div style="font-size: .9375rem;">Get 20% off* your First Order &amp; Free Shipping Upto $99</div>
+			</div>
+		</div>
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="header-size-sm border-bottom-0" data-sticky-shrink="false">
+			<div class="container">
+				<div class="header-row justify-content-lg-between">
+
+					<nav class="primary-menu top-primary-menu col-lg-5 order-last order-lg-first mobile-menu-off-canvas">
+
+						<ul class="menu-container">
+							<li class="menu-item current"><a class="menu-link" href="#"><div>Home</div></a></li>
+							<li class="menu-item"><a class="menu-link" href="#"><div>About</div></a></li>
+							<li class="menu-item"><a class="menu-link" href="#"><div>Reviews</div></a></li>
+							<li class="menu-item"><a class="menu-link" href="#"><div>FAQs</div></a></li>
+							<li class="menu-item"><a class="menu-link" href="#"><div>Licence</div></a></li>
+						</ul>
+
+					</nav><!-- #primary-menu end -->
+
+					<!-- Logo
+					============================================= -->
+					<div id="logo" class="mx-lg-auto col-lg-2 justify-content-center">
+						<a class="color" style="letter-spacing: -1px; font-style: italic;" href="index.html">canvas.</a>
+					</div><!-- #logo end -->
+
+					<div class="col-lg-5 d-flex justify-content-end">
+						<div class="header-misc">
+
+							<div class="primary-menu-trigger" data-target=".top-primary-menu">
+								<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+							</div>
+
+							<!-- Top Account
+							============================================= -->
+							<div class="header-misc-icon me-4">
+								<a href="#"><i class="bi-person-circle"></i></a>
+							</div><!-- #top-search end -->
+
+							<!-- Top Cart
+							============================================= -->
+							<div id="top-cart" class="header-misc-icon me-4">
+								<a href="#" id="top-cart-trigger"><i class="bi-basket"></i></a>
+								<div class="top-cart-content">
+									<div class="top-cart-title">
+										<h4 class="fw-normal">Shopping Cart</h4>
+									</div>
+									<div class="top-cart-items py-4">
+										<p class="mb-0">Ohh! Your Basket is empty.</p>
+									</div>
+									<div class="top-cart-action">
+										<a href="#" class="button button-small m-0">Go to Shop</a>
+										<span class="top-checkout-price">$0.00</span>
+									</div>
+								</div>
+							</div><!-- #top-cart end -->
+
+							<!-- Top Search
+							============================================= -->
+							<div id="top-search" class="header-misc-icon">
+								<a href="#" id="top-search-trigger"><i class="uil uil-search"></i><i class="bi-x-lg"></i></a>
+							</div><!-- #top-search end -->
+
+						</div>
+					</div>
+
+					<form class="top-search-form" action="search.html" method="get">
+						<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+					</form>
+
+				</div>
+			</div>
+
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<div class="primary-menu-trigger justify-content-start" data-target=".main-primary-menu">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu main-primary-menu w-100 with-arrows">
+
+							<ul class="menu-container justify-content-between">
+								<li class="menu-item"><a class="menu-link" href="#"><div>New Collections</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Shop for Men</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Shop for Kids</div></a>
+									<ul class="sub-menu-container">
+										<li class="menu-item"><a class="menu-link" href="#"><div>Most Popular</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Latest Items</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>New Arrivals</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>View All</div></a></li>
+									</ul>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Upto 40% Sale</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Accessories Items</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Our Farmhouse</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Contact</div></a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap bg-color dark py-0">
+				<div class="row justify-content-center align-items-center text-center min-vh-100">
+					<h1 class="col-12 display-4 mb-0 fst-italic">eCommerce Header<br>...</h1>
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

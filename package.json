@@ -1,0 +1,36 @@
+{
+  "name": "design-canvas-vault",
+  "version": "1.0.0",
+  "description": "850+ curated Canvas templates, 75 business demo design systems, visual lookbook, Studio GUI, and multi-stack code generation for AI and developers.",
+  "main": "scripts/vault-cli.js",
+  "bin": {
+    "vault": "./scripts/vault-cli.js",
+    "design-canvas-vault": "./scripts/vault-cli.js"
+  },
+  "scripts": {
+    "start": "node scripts/vault-cli.js studio",
+    "studio": "node scripts/vault-cli.js studio",
+    "build": "node scripts/build-vault.js",
+    "sync": "node scripts/vault-cli.js sync",
+    "search": "node scripts/vault-cli.js search",
+    "inspect": "node scripts/vault-cli.js inspect",
+    "extract": "node scripts/vault-cli.js extract",
+    "tokens": "node scripts/vault-cli.js tokens",
+    "contribute": "node scripts/vault-cli.js contribute",
+    "doctor": "node scripts/vault-cli.js doctor"
+  },
+  "keywords": [
+    "canvas",
+    "design-system",
+    "ui-blocks",
+    "templates",
+    "tailwind",
+    "react",
+    "react-native",
+    "zed-skill",
+    "lookbook",
+    "vault-studio"
+  ],
+  "author": "kor7mid",
+  "license": "MIT"
+}

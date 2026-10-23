@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alert Float | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.sticky-float-bottom {
+			position: -webkit-sticky !important;
+    		position: sticky !important;
+    		top: calc(100vh - 134px); /* 100vh - alert-height() - 30px */
+		}
+
+		@media (min-width: 992px) {
+			.sticky-float-bottom {
+	    		top: calc(100vh - 94px); /* 100vh - alert-height() - 30px */
+			}
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Header
+		============================================= -->
+		<header id="header" class="no-sticky">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-between">
+
+						<h3 class="mb-0">Header</h3>
+
+						<!-- Primary Navigation icon in mobile
+						============================================= -->
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+							<ul class="menu-container justify-content-center">
+								<li class="menu-item current">
+									<a class="menu-link" href="#">
+										<div>Menu 1</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="#">
+										<div>Menu 2</div>
+									</a>
+								</li>
+							</ul>
+						</nav><!-- #primary-menu end -->
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header>
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap overflow-visible bg-dark pb-0">
+
+				<div class="container alert alert-success sticky-float-bottom" data-animate="fadeInUp faster">
+					<div class="row justify-content-between align-items-center">
+						<div class="col-lg-auto">
+							<strong><i class="bi-boxes"></i> Good News!</strong> Back to the future of Awesome Templates: Introducing Our <a href="#" class="alert-link"><u>Canvas</u></a> Template.
+						</div>
+						<div class="col-lg-auto mt-3 mt-lg-0">
+							<a href="#" class="btn btn-success">Shop Now</a>
+							<button type="button" class="btn btn-close btn-sm float-lg-none text-dark ms-md-3" data-bs-dismiss="alert" aria-hidden="true"></button>
+						</div>
+					</div>
+				</div>
+
+				<div class="row justify-content-center align-items-center text-center dark">
+					<div class="col-12">
+						<h1 class="display-3">Content <br><span class="text-white-50">...</span></h1>
+						<a href="block-content-alert.html" class="btn btn-sm btn-light me-2">Default</a>
+						<a href="block-content-alert-sticky.html" class="btn btn-sm btn-light me-2">Sticky</a>
+						<a href="block-content-alert-float.html" class="btn btn-sm btn-light me-2">Float</a>
+						<a href="block-content-alert-top.html" class="btn btn-sm btn-light me-2">Top</a>
+						<a href="block-content-alert-bottom-fixed.html" class="btn btn-sm btn-light me-2">Bottom Fixed</a>
+							<a href="block-content-alert-custom-width.html" class="btn btn-sm btn-light">Custom Width</a>
+					</div>
+				</div>
+
+				<div class="min-vh-100"></div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

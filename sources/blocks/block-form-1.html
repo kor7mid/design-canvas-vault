@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animated Label | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.block-form-1 .form-group {
+			position: relative;
+			margin-bottom: 1rem;
+		}
+
+		.block-form-1 .form-group label:not(.error) {
+			position: absolute;
+			top: 50%;
+			left: 10px;
+			margin-bottom: 0; /* Override default `<label>` margin */
+			color: #BBB;
+			padding: 0 4px;
+			transform: translateY(-50%);
+			transition: all 200ms ease;
+			cursor: text;
+			text-transform: none;
+			letter-spacing: 0;
+			font-weight: 500;
+		}
+
+		.block-form-1 .form-group input:focus + label:not(.error),
+		.block-form-1 .form-group input.focus-visible + label:not(.error),
+		.block-form-1 .form-group input:visited + label:not(.error),
+		.block-form-1 .form-group input:not(:placeholder-shown) + label:not(.error) {
+		  font-size: 70%;
+		  transform: translate3d(0, -50%, 0);
+		  top: 0;
+		  color: #999;
+		  background-color: #FFF;
+		}
+
+		.block-form-1 .form-group input::-webkit-input-placeholder {
+			opacity: 0;
+		}
+		.block-form-1 .form-group input:-ms-input-placeholder {
+			opacity: 0;
+		}
+		.block-form-1 .form-group input::-moz-placeholder {
+			opacity: 0;
+		}
+
+		.block-form-1 .form-control.border-form-control {
+			--cnvs-input-btn-padding-x : 0;
+		}
+
+		.block-form-1 .form-control.border-form-control + label:not(.error) {
+			left: 0;
+			color: #BBb !important;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+				<div class="container">
+
+					<div class="row justify-content-around">
+
+						<div class="col-md-4">
+
+							<form name="login-form" class="row g-0 form-signin block-form-1" action="#" method="post" autocomplete="off">
+
+								<div class="col-12 text-center">
+									<h3>Animated Label</h3>
+								</div>
+
+								<div class="col-12 form-group">
+									<input type="text" id="form-username" class="form-control" placeholder="Username">
+									<label for="form-username">Username:</label>
+								</div>
+
+								<div class="col-12 form-group">
+									<input type="password" id="form-password" autocomplete="new-password" class="form-control" placeholder="Username">
+									<label for="form-password">Password:</label>
+								</div>
+
+								<div class="col-12 form-group text-center">
+									<button class="btn btn-primary w-100 mb-3">Login</button>
+									<h6 class="fw-medium">Don't have an account? <a href="#"><u>Sign Up</u></a></h6>
+								</div>
+
+							</form>
+
+						</div>
+
+
+						<div class="col-md-4">
+
+							<form name="login-form" class="row g-0 form-signin block-form-1" action="#" method="post" autocomplete="off">
+
+								<div class="col-12 text-center">
+									<h3>Line Animated Label</h3>
+								</div>
+
+								<div class="col-12 form-group">
+									<input type="text" id="border-form-username" class="form-control border-form-control px-1 rounded-0" placeholder="Username">
+									<label for="border-form-username">Username:</label>
+								</div>
+
+								<div class="col-12 form-group">
+									<input type="password" id="border-form-password" autocomplete="new-password" class="form-control border-form-control px-1 rounded-0" placeholder="Username">
+									<label for="border-form-password">Password:</label>
+								</div>
+
+								<div class="col-12 form-group text-center">
+									<button class="btn btn-primary w-100 mb-3">Login</button>
+									<h6 class="fw-medium">Don't have an account? <a href="#"><u>Sign Up</u></a></h6>
+								</div>
+
+							</form>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

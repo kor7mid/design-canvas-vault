@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Create Speaker &amp; Bluetooth Devices Websites with Canvas Template. Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today.">
+
+	<!-- Font Imports -->
+	<link rel="stylesheet" href="https://use.typekit.net/gmv6nzn.css">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="../../shared/style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="../../shared/css/font-icons.css">
+
+	<!-- Plugins/Components CSS -->
+	<link rel="stylesheet" href="../../shared/css/swiper.css">
+
+	<!-- Niche Demos -->
+	<link rel="stylesheet" href="../../demos/speaker/speaker.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../../shared/css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Demo Speaker | Canvas</title>
+
+</head>
+
+<body class="stretched scroll-detect">
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Modal -->
+		<div class="modal d-none animated fadeInUpSmall faster" id="speakerModal" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered ms-md-4 me-md-auto align-items-end" style="max-width: 48rem;">
+				<div class="modal-content shadow border-0 overflow-hidden" style="border-radius: 20px;">
+					<div class="card border-0">
+						<div class="row justify-content-between g-0">
+							<div class="col-sm-5" style="background: url('../../demos/speaker/images/modal.jpg') no-repeat center center / cover; min-height: 200px;"></div>
+							<div class="col-sm-6">
+								<div class="card-body p-5">
+									<p class="mb-2 color small">Get 20% off* your first Order</p>
+									<h3 class="card-title lh-sm mb-3">Bring your Music at your home</h3>
+									<p class="fw-normal text-smaller op-06">Professionally evolve intermandated e-business rather than bricks-and-clicks markets.</p>
+									<div class="subscribe-widget" data-loader="button">
+										<div class="widget-subscribe-form-result"></div>
+										<form id="widget-subscribe-form-modal" action="include/subscribe.php" method="post" class="mb-0">
+											<div class="input-group">
+												<input type="email" id="widget-subscribe-form-modal-email" name="widget-subscribe-form-modal-email" class="form-control required email" placeholder="Enter your Email Address">
+												<button class="btn btn-dark h-bg-color border-0" type="submit"><i class="bi-arrow-right"></i></button>
+											</div>
+										</form>
+									</div>
+									<button type="button" class="btn-close p-3 position-absolute top-0 end-0" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="header-size-sm" data-sticky-shrink="false">
+			<div id="header-wrap" class="border-bottom-0">
+				<div class="container">
+					<div class="header-row justify-content-lg-between">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="me-lg-0">
+							<a href="index.html">canvas<span class="color">.</span></a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc">
+
+							<!-- Top Cart
+							============================================= -->
+							<div id="top-cart" class="header-misc-icon me-3">
+								<a href="#" id="top-cart-trigger"><i class="bi-basket3"></i></a>
+								<div class="top-cart-content">
+									<div class="top-cart-title">
+										<h4 class="fw-normal">Shopping Cart</h4>
+									</div>
+									<div class="top-cart-items py-4">
+										<p class="mb-0">Ohh! Your Basket is empty.</p>
+									</div>
+									<div class="top-cart-action">
+										<a href="#" class="button button-small bg-color color bg-opacity-10 m-0">Go to Shop</a>
+										<span class="top-checkout-price">$0.00</span>
+									</div>
+								</div>
+							</div><!-- #top-cart end -->
+
+							<!-- Top Account
+							============================================= -->
+							<div class="header-misc-icon top-account">
+								<a href="#" data-bs-toggle="dropdown" data-bs-offset="0,20" data-bs-auto-close="true" aria-haspopup="true" aria-expanded="false"><i class="bi-person-circle"></i></a>
+								<div class="dropdown-menu dropdown-menu-end px-2 m-0">
+									<a class="dropdown-item py-2 fw-medium h-bg-tranparent font-primary" href="#"><i class="bi-bag-check me-2"></i>Your Orders</a>
+									<a class="dropdown-item py-2 fw-medium h-bg-tranparent font-primary" href="#"><i class="bi-person me-2"></i>Your Profile</a>
+									<a class="dropdown-item py-2 fw-medium h-bg-tranparent font-primary" href="#"><i class="bi-box-arrow-right me-2"></i>Log Out</a>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<nav class="primary-menu">
+
+							<ul class="menu-container">
+								<li class="menu-item current"><a class="menu-link" href="#"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Shop</div></a>
+									<ul class="sub-menu-container">
+										<li class="menu-item"><a class="menu-link" href="#"><div>Canvas Pod</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Canvas Pod Mini</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Canvas EarPod</div></a></li>
+									</ul>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Reviews</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Contact</div></a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						</form>
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+
+		<!-- Hero
+		============================================= -->
+		<section id="slider" class="slider-element py-5 mt-lg-5">
+
+			<div class="container">
+				<div class="row flex-sm-row-reverse justify-content-center justify-content-lg-between col-mb-80">
+					<div class="col-lg-6 col-8">
+						<div class="dotted-bg">
+							<img src="../../demos/speaker/images/hero.jpg" alt="Image 1" class="d-flex z-1 ms-auto w-100 position-relative" style="border-radius: 2rem;">
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<h3 class="color fs-5 mb-3">Make your place more Entertaining</h3>
+						<h1 class="display-3 text-stretch">Music Believes in Quality not in Quantity.</h1>
+						<p class="mb-5 text-larger font-primary me-3">Interactively seize bricks-and-clicks channels before empowered users. Uniquely maximize bleeding-edge outsourcing.</p>
+						<div class="d-flex align-items-center mb-6">
+							<a href="#" class="button button-xlarge bg-opacity-10 bg-color color ms-0 px-5 px-md-6 py-3 m-0">Shop Now</a>
+							<small class="ms-4 op-06 font-primary">Starting at $99 only.</small>
+						</div>
+
+						<div class="row col-mb-30">
+							<div class="col-6">
+								<div class="counter fw-normal text-dark"><span data-from="1" data-to="100" data-refresh-interval="10" data-speed="1000"></span>%</div>
+								<h4 class="fw-normal mb-0">Premium Quality</h4>
+								<span class="fw-light op-05">in all products</span>
+							</div>
+
+							<div class="col-6">
+								<div class="counter fw-normal text-dark"><span data-from="1" data-to="10" data-refresh-interval="4" data-speed="1000"></span></div>
+								<h4 class="fw-normal mb-0">Devices Connected</h4>
+								<span class="fw-light op-05">at a time</span>
+							</div>
+
+							<div class="col-6">
+								<div class="counter fw-normal text-dark"><span data-from="1" data-to="40" data-refresh-interval="10" data-speed="1000"></span>+</div>
+								<h4 class="fw-normal mb-0">Languages Included</h4>
+								<span class="fw-light op-05">in all products</span>
+							</div>
+
+							<div class="col-6">
+								<div class="counter fw-normal text-dark"><span data-from="1" data-to="99" data-refresh-interval="10" data-speed="1000"></span>%</div>
+								<h4 class="fw-normal mb-0">Accuracy Rate</h4>
+								<span class="fw-light op-05">in all fields</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap pb-0 pt-0 pt-lg-5">
+
+				<div class="section section-1-bg my-0">
+					<div class="container py-0 py-lg-6">
+						<div class="row justify-content-between col-mb-80">
+
+							<div class="col-lg-4">
+								<h2>Music Believes in Quality not in Quantity.</h2>
+								<p class="mb-5 text-larger font-primary me-3">Interactively seize bricks-and-clicks channels before empowered users. Uniquely maximize bleeding-edge outsourcing.</p>
+								<a href="#" class="button button-dark bg-dark bg-opacity-10 text-dark h-bg-color m-0 px-4 py-2">View More</a>
+							</div>
+
+							<div class="col-lg-8 mb-lg-6">
+								<div class="row g-5 justify-content-end">
+									<div class="col-sm-6 col-lg-5">
+										<i class="fs-2 mb-3 color bi-music-player-fill"></i>
+										<h4 class="fw-normal text-uppercase ls-2 mb-3">UHD Quality Sound <small class="fw-light h6 align-text-top op-05">&reg;</small></h4>
+										<p class="fw-light op-08">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, earum magnam ex tenetur veniam quas ad quasi qui enim id.</p>
+									</div>
+
+									<div class="col-sm-6 col-lg-5">
+										<i class="fs-2 mb-3 color bi-bluetooth"></i>
+										<h4 class="fw-normal text-uppercase ls-2 mb-3">Bluetooth Conectivity</h4>
+										<p class="fw-light op-08">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, earum magnam ex tenetur veniam quas ad quasi qui enim id.</p>
+									</div>
+
+									<div class="col-sm-6 col-lg-5">
+										<i class="fs-2 mb-3 color bi-mic-fill"></i>
+										<h4 class="fw-normal text-uppercase ls-2 mb-3">Voice Assistance</h4>
+										<p class="fw-light op-08">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, earum magnam ex tenetur veniam quas ad quasi qui enim id.</p>
+									</div>
+
+									<div class="col-sm-6 col-lg-5">
+										<i class="fs-2 mb-3 color bi-battery-charging"></i>
+										<h4 class="fw-normal text-uppercase ls-2 mb-3">36+ Hours Playback</h4>
+										<p class="fw-light op-08">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, earum magnam ex tenetur veniam quas ad quasi qui enim id.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section py-0 mt-0 slider-element swiper_wrapper bg-dark dark customjs noice-effect">
+
+					<div class="swiper swiper-parent">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="row g-0 align-items-stretch">
+									<div class="col-md-6 swiper-slide-info my-6 d-flex justify-content-center flex-column">
+										<div class="px-4 px-sm-5 px-lg-6 position-relative">
+											<div class="dotted-bg pos-left" style="--cnvs-dotted-opacity: .3; --cnvs-dotted-top: 10px; --cnvs-dotted-left: 30px; --cnvs-dotted-size: 90px;"></div>
+											<div class="z-1 position-relative">
+												<h2 class="display-5">Room Feeling Sound</h2>
+												<p class="op-09 fw-light mb-5">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.</p>
+												<ul class="list-unstyled fw-light mb-0">
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> 360 Degree Audio</li>
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> Boundary-pushing computational audio</li>
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> Dolby Digital Sound</li>
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> Designed to fit anywhere in the house</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="swiper-slide-bg" style="background-image: url('../../demos/speaker/images/slides/1.jpg');"></div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="row g-0 align-items-stretch">
+									<div class="col-md-6 swiper-slide-info my-6 d-flex justify-content-center flex-column">
+										<div class="px-4 px-sm-5 px-lg-6 position-relative">
+											<div class="dotted-bg pos-left" style="--cnvs-dotted-opacity: .3; --cnvs-dotted-top: 10px; --cnvs-dotted-left: 30px; --cnvs-dotted-size: 90px;"></div>
+											<div class="z-1 position-relative">
+												<h2 class="display-5">Multiple Connections</h2>
+												<p class="op-09 fw-light mb-5">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.</p>
+												<ul class="list-unstyled fw-light mb-0">
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> Connect with any Bluetooth Device</li>
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> Mobile, iPad, Laptop, TV etc</li>
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> Voice Command Assistance</li>
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> Designed to fit anywhere in the house</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="swiper-slide-bg" style="background-image: url('../../demos/speaker/images/slides/2.jpg');"></div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="row g-0 align-items-stretch">
+									<div class="col-md-6 swiper-slide-info my-6 d-flex justify-content-center flex-column">
+										<div class="px-4 px-sm-5 px-lg-6 position-relative">
+											<div class="dotted-bg pos-left" style="--cnvs-dotted-opacity: .3; --cnvs-dotted-top: 10px; --cnvs-dotted-left: 30px; --cnvs-dotted-size: 90px;"></div>
+											<div class="z-1 position-relative">
+												<h2 class="display-5">A Voice Assistant.</h2>
+												<p class="op-09 fw-light mb-5">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.</p>
+												<ul class="list-unstyled fw-light mb-0">
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> Control from your Mobile</li>
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> Private & Secure</li>
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> Simulate Updates</li>
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> Premium Quality</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="swiper-slide-bg" style="background-image: url('../../demos/speaker/images/slides/3.jpg');"></div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide">
+								<div class="row g-0 align-items-stretch">
+									<div class="col-md-6 swiper-slide-info my-6 d-flex justify-content-center flex-column">
+										<div class="px-4 px-sm-5 px-lg-6 position-relative">
+											<div class="dotted-bg pos-left" style="--cnvs-dotted-opacity: .3; --cnvs-dotted-top: 10px; --cnvs-dotted-left: 30px; --cnvs-dotted-size: 90px;"></div>
+											<div class="z-1 position-relative">
+												<h2 class="display-5">Extended Speakers</h2>
+												<p class="op-09 fw-light mb-5">Create just what you need for your Perfect Website. Choose from a wide range of Elements &amp; simply put them on our Canvas.</p>
+												<ul class="list-unstyled fw-light mb-0">
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> Powerful Extended Sound</li>
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> USB-C Fast Charging</li>
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> 4 Different Colors</li>
+													<li class="mt-2"><i class="bi-check-circle-fill me-2 color"></i> Mini Size Available</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-6">
+										<div class="swiper-slide-bg" style="background-image: url('../../demos/speaker/images/slides/4.jpg');"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="row g-0 justify-content-end align-items-end swiper-thumb-wrap">
+						<div class="col-md-6">
+							<div class="swiper-button-next text-white"></div>
+      						<div class="swiper-button-prev text-white"></div>
+							<div class="swiper-thumb">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img src="../../demos/speaker/images/slides/thumbs/1.jpg" alt="...">
+									</div>
+									<div class="swiper-slide">
+										<img src="../../demos/speaker/images/slides/thumbs/2.jpg" alt="...">
+									</div>
+									<div class="swiper-slide">
+										<img src="../../demos/speaker/images/slides/thumbs/3.jpg" alt="...">
+									</div>
+									<div class="swiper-slide">
+										<img src="../../demos/speaker/images/slides/thumbs/4.jpg" alt="...">
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section bg-transparent mt-0 py-0 py-lg-6">
+					<div class="container mw-md">
+						<div class="row text-center justify-content-center mb-lg-6">
+							<div class="col-lg-8">
+								<h2 class="display-4 font-body fw-medium">Knows how to work Automatically.</h2>
+								<div class="d-flex justify-content-center my-4">
+									<img src="../../demos/speaker/images/apps/spotify.png" class="mx-2" alt="..." width="40" height="40">
+									<img src="../../demos/speaker/images/apps/apple-music.png" class="mx-2" alt="..." width="40" height="40">
+									<img src="../../demos/speaker/images/apps/ytm.png" class="mx-2" alt="..." width="40" height="40">
+								</div>
+								<p class="text-larger font-primary fw-light me-3 text-black">Interactively seize bricks-and-clicks channels before empowered users. Uniquely maximize bleeding-edge outsourcing.</p>
+							</div>
+						</div>
+
+						<div class="row mw-md align-items-center">
+							<div class="col-5"><img src="../../demos/speaker/images/section-2/1.jpg" alt=".."></div>
+							<div class="col-4"><img src="../../demos/speaker/images/section-2/2-1.svg" alt=".."></div>
+							<div class="col-3 position-relative">
+								<img src="../../demos/speaker/images/section-2/3.png" alt="..">
+								<div class="circle-wave position-absolute pos-x-center pos-y-center"><i class="bi-bluetooth"></i></div>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="row mt-5 mt-md-6 justify-content-center">
+							<div class="col-lg-6">
+								<div class="row">
+									<div class="col-5">
+										<img src="../../demos/speaker/images/hero-2.jpg" class="rounded mx-auto d-block" alt="...">
+									</div>
+									<div class="col col-lg-7">
+										<h4 class="fw-medium font-body mb-2 h5">UHD Quality Sound <small class="fw-light h6 align-text-top op-05">&reg;</small></h4>
+										<p class="mb-2 fw-light op-07">Holisticly leverage existing premier innovation.</p>
+										<a href="#" class="read-more h-color h-op-08"><i class="bi-soundwave transform-ts"></i> Watch Demo</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section bg-transparent mt-0 py-0 py-lg-5">
+					<div class="container mw-md">
+
+						<div class="row justify-content-center text-center mb-lg-5">
+							<div class="col-lg-6">
+								<h2 class="display-4 font-body fw-medium">Our Gallery</h2>
+								<p class="text-larger font-primary fw-light text-black">Interactively seize bricks-and-clicks channels before empowered users.</p>
+							</div>
+						</div>
+
+						<div class="clear"></div>
+
+						<div class="row gutter-30 align-items-stretch speaker-gallery">
+							<div class="col-lg-3 col-md-4">
+								<div class="position-relative h-md-100">
+									<img src="../../demos/speaker/images/gallery/bedroom.jpg" alt="..." class="rounded-6">
+									<div class="bg-overlay">
+										<div class="bg-overlay-content fs-4 text-white">
+											<u>#bedroom</u>
+										</div>
+										<div class="bg-overlay-bg dark rounded-6 op-03"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-4 col-6">
+								<div class="position-relative h-md-100">
+									<img src="../../demos/speaker/images/gallery/kitchen.jpg" alt="..." class="rounded-6">
+									<div class="bg-overlay">
+										<div class="bg-overlay-content fs-4 text-white">
+											<u>#kitchen</u>
+										</div>
+										<div class="bg-overlay-bg dark rounded-6 op-03"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-4 col-6">
+								<div class="position-relative h-md-100">
+									<img src="../../demos/speaker/images/gallery/anytime.jpg" alt="..." class="rounded-6">
+									<div class="bg-overlay">
+										<div class="bg-overlay-content fs-4 text-white">
+											<u>#assistance</u>
+										</div>
+										<div class="bg-overlay-bg dark rounded-6 op-03"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-md-6 col-6">
+								<div class="position-relative h-md-100">
+									<img src="../../demos/speaker/images/gallery/outdoor.jpg" alt="..." class="rounded-6">
+									<div class="bg-overlay">
+										<div class="bg-overlay-content fs-4 text-white">
+											<u>#outdoor</u>
+										</div>
+										<div class="bg-overlay-bg dark rounded-6 op-03"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-6">
+								<div class="position-relative h-md-100">
+									<img src="../../demos/speaker/images/gallery/workspace.jpg" alt="..." class="rounded-6">
+									<div class="bg-overlay">
+										<div class="bg-overlay-content fs-4 text-white">
+											<u>#workspace</u>
+										</div>
+										<div class="bg-overlay-bg dark rounded-6 op-03"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-6">
+								<div class="position-relative h-md-100">
+									<img src="../../demos/speaker/images/gallery/workout.jpg" alt="..." class="rounded-6">
+									<div class="bg-overlay">
+										<div class="bg-overlay-content fs-4 text-white">
+											<u>#workout</u>
+										</div>
+										<div class="bg-overlay-bg dark rounded-6 op-03"></div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-4 col-md-6 col-6">
+								<div class="position-relative h-md-100">
+									<img src="../../demos/speaker/images/gallery/mood.jpg" alt="..." class="rounded-6">
+									<div class="bg-overlay">
+										<div class="bg-overlay-content fs-4 text-white">
+											<u>#freetime</u>
+										</div>
+										<div class="bg-overlay-bg dark rounded-6 op-03"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section bg-transparent my-0 my-lg-5 py-0 py-lg-5">
+					<div class="container">
+
+						<div class="row justify-content-between col-mb-50">
+							<div class="col-lg-3">
+								<h4 class="color mb-2 fw-normal">Our Latest News</h4>
+								<h2 class="display-5 font-body fw-medium">Blog Posts</h2>
+								<p class="font-primary fw-light text-black">Interactively seize bricks-and-clicks channels before empowered users.</p>
+								<a href="#" class="button button-dark bg-dark bg-opacity-10 text-dark h-bg-color m-0 px-4 py-2">View all Posts</a>
+							</div>
+
+							<div class="col-lg-8">
+								<div class="dotted-bg" style="--cnvs-dotted-opacity: .5; --cnvs-dotted-top: -10px; --cnvs-dotted-size: 150px; "></div>
+								<div class="row">
+									<div class="col-sm-6 col-md-4 entry">
+										<div class="entry-image">
+											<img src="../../demos/speaker/images/blog/1.jpg" alt="...">
+										</div>
+										<div class="entry-meta mb-2 fw-normal">
+											<ul>
+												<li><a href="#">Mar 11, 2021</a></li>
+											</ul>
+										</div>
+										<div class="entry-title title-sm mb-3">
+											<h3 class="text-transform-none ls-0 fw-medium font-body"><a href="#">Canvas Music expands availability; adds new workouts and guided Meditation</a></h3>
+										</div>
+										<a href="#" class="read-more stretched-link h-color h-op-08">Read More <i class="bi-arrow-up-right transform-ts"></i></a>
+									</div>
+
+									<div class="col-sm-6 col-md-4 entry">
+										<div class="entry-image">
+											<img src="../../demos/speaker/images/blog/2.jpg" alt="...">
+										</div>
+										<div class="entry-meta mb-2 fw-normal">
+											<ul>
+												<li><a href="#">Apr 13, 2021</a></li>
+											</ul>
+										</div>
+										<div class="entry-title title-sm mb-3">
+											<h3 class="text-transform-none ls-0 fw-medium font-body"><a href="#">Announces Spatial Audio with Dolby Atmos and Lossless Audio</a></h3>
+										</div>
+										<a href="#" class="read-more stretched-link h-color h-op-08">Read More <i class="bi-arrow-up-right transform-ts"></i></a>
+									</div>
+									<div class="col-sm-6 col-md-4 entry">
+										<div class="entry-image">
+											<img src="../../demos/speaker/images/blog/3.jpg" alt="...">
+										</div>
+										<div class="entry-meta mb-2 fw-normal">
+											<ul>
+												<li><a href="#">Dec 03, 2021</a></li>
+											</ul>
+										</div>
+										<div class="entry-title title-sm mb-3">
+											<h3 class="text-transform-none ls-0 fw-medium font-body"><a href="#">5 Standout Features of Bluetooth Speakers</a></h3>
+										</div>
+										<a href="#" class="read-more stretched-link h-color h-op-08">Read More <i class="bi-arrow-up-right transform-ts"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section bg-white my-0 my-lg-5 py-0">
+					<div class="container py-5 rounded-6" style="background: url('../../demos/speaker/images/section-4.jpg') no-repeat 25% 100% / cover;">
+						<div class="row justify-content-end align-items-md-center min-vh-60 mw-md">
+							<div class="col-md-7 col-lg-5">
+								<p class="mb-2 color">Get 20% off* your first Order</p>
+								<h3 class="display-6 lh-sm mb-5">Bring your Music at your home</h3>
+								<div class="subscribe-widget" data-loader="button">
+									<div class="widget-subscribe-form-result"></div>
+									<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
+										<div class="input-group input-group-lg">
+											<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email" placeholder="Enter your Email Address">
+											<button class="btn btn-dark h-bg-color border-0" type="submit"><i class="bi-arrow-right"></i></button>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="bg-white border-0">
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap">
+
+					<div class="row justify-content-center text-center col-mb-50">
+						<div class="col-lg-5 col-md-10">
+							<h2>Follow Us if you want to know how magical <span>sound</span> really is.</h2>
+
+							<div class="d-flex justify-content-center">
+								<a href="#" class="social-icon si-small text-light bg-color bg-opacity-10 color h-bg-facebook border-0">
+									<i class="fa-brands fa-facebook-f"></i>
+									<i class="fa-brands fa-facebook-f"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small text-light bg-color bg-opacity-10 color h-bg-x-twitter border-0">
+									<i class="fa-brands fa-x-twitter"></i>
+									<i class="fa-brands fa-x-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small text-light bg-color bg-opacity-10 color h-bg-pinterest border-0">
+									<i class="fa-brands fa-pinterest-p"></i>
+									<i class="fa-brands fa-pinterest-p"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small text-light bg-color bg-opacity-10 color h-bg-instagram border-0">
+									<i class="bi-instagram"></i>
+									<i class="bi-instagram"></i>
+								</a>
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="clear line border-color op-03 border-width-2"></div>
+
+					<div class="row col-mb-50">
+
+						<div class="col-lg-3 col-6">
+
+							<div class="widget widget_links">
+
+								<h4 class="text-transform-none ls-0 fw-medium fs-5 font-body">How we Work</h4>
+
+								<ul>
+									<li><a href="#">Documentation</a></li>
+									<li><a href="#">Feedback</a></li>
+									<li><a href="#">Plugins</a></li>
+									<li><a href="#">Support Forums</a></li>
+									<li><a href="#">Themes</a></li>
+									<li><a href="#">Canvas Blog</a></li>
+								</ul>
+
+							</div>
+
+						</div>
+
+						<div class="col-lg-3 col-6">
+
+							<div class="widget widget_links">
+
+								<h4 class="text-transform-none ls-0 fw-medium fs-5 font-body">About Us</h4>
+
+								<ul>
+									<li><a href="#">Feedback</a></li>
+									<li><a href="#">Documentation</a></li>
+									<li><a href="#">Plugins</a></li>
+									<li><a href="#">Support Forums</a></li>
+									<li><a href="#">Themes</a></li>
+									<li><a href="#">Contact Us</a></li>
+								</ul>
+
+							</div>
+
+						</div>
+
+						<div class="col-lg-3 col-6">
+
+							<div class="widget widget_links">
+
+								<h4 class="text-transform-none ls-0 fw-medium fs-5 font-body">How we do</h4>
+
+								<ul>
+									<li><a href="#">Plugins</a></li>
+									<li><a href="#">Support Forums</a></li>
+									<li><a href="#">Themes</a></li>
+									<li><a href="#">Canvas Blog</a></li>
+									<li><a href="#">Contact Us</a></li>
+								</ul>
+
+							</div>
+
+						</div>
+
+						<div class="col-lg-3 col-sm-6">
+
+							<div class="widget">
+
+								<h4 class="text-transform-none ls-0 fw-medium fs-5 font-body">Need Help?</h4>
+
+								<ul class="list-unstyled">
+									<li class="mb-2"><a class="text-dark" href="#"><i class="me-3 color bi-telephone-fill"></i>+0 (11) 222 333</a></li>
+									<li class="mb-2"><a class="text-dark" href="#"><i class="me-3 color bi-envelope-fill"></i>no-reply@canvas.com</a></li>
+									<li class="mb-2"><i class="me-3 color bi-calendar-week-fill"></i>Mon- Sat | 09:00 - 16:00</li>
+									<li><i class="me-3 color bi-calendar-x-fill"></i>Sunday Closed</li>
+								</ul>
+
+							</div>
+
+						</div>
+
+					</div>
+
+					<div class="row justify-content-center mt-5">
+						<div class="col-auto">
+							<div class="card border-color op-04">
+								<div class="card-body py-3 px-4">
+									<small class="">&copy; 2023 All Rights Reserved by Canvas Inc.</small>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" data-mobile="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none"><circle cx="50" cy="50" r="40"></circle></svg></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="../../shared/js/plugins.min.js"></script>
+	<script src="../../shared/js/functions.bundle.js"></script>
+
+	<script>
+		window.addEventListener( 'load', function() {
+			var swiperThumb = new Swiper(".swiper-thumb", {
+				spaceBetween: 10,
+				slidesPerView: 4,
+				allowTouchMove: true,
+				freeMode: true,
+				watchSlidesProgress: true,
+			});
+
+			var swiperContainer = new Swiper(".swiper", {
+				spaceBetween: 10,
+				allowTouchMove: true,
+				navigation: {
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
+				},
+				thumbs: {
+					swiper: swiperThumb,
+				},
+			});
+		});
+
+		window.onload = function() {
+			var container = document.getElementById("speakerModal");
+			var modal = new bootstrap.Modal(container);
+			modal.show();
+		};
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custom Cursor | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+@media (min-width: 992px) {
+
+			body.block-misc-canvas-cursor,
+			html.block-misc-canvas-cursor,
+			.block-misc-canvas-cursor a { cursor: none; }
+
+			.block-misc-canvas-cursor {
+				--cursor-bg: #111;
+				--cursor-scale: 0.8;
+				--cursor-size: 20px;
+			}
+
+			/* Cursor Styling */
+			.block-misc-canvas-cursor .canvas-cursor {
+				position: absolute;
+				width: 8px;
+				height: 8px;
+				border-radius: 100%;
+				z-index: 1;
+				transition: transform .5s ease, opacity .2s ease;
+				user-select: none;
+				pointer-events: none;
+				transform: scale(var(--cursor-scale));
+				background-color: var(--cursor-bg);
+			}
+
+			.block-misc-canvas-cursor .canvas-cursor::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: block;
+				background-image: url('../previews/preview/cursor.svg');
+				background-position: center center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				border-radius: 100%;
+				opacity: 0;
+			}
+
+			.block-misc-canvas-cursor .canvas-cursor.cursor-active {
+				opacity: 1;
+				transform: scale(12);
+			}
+
+			.block-misc-canvas-cursor .canvas-cursor.cursor-active::before {
+				opacity: 1;
+			}
+
+			.block-misc-canvas-cursor .canvas-cursor-follower {
+				position: absolute;
+				width: var(--cursor-size);
+				height: var(--cursor-size);
+				background-color: var(--cursor-bg);
+				opacity: .2;
+				border-radius: 100%;
+				z-index: 1;
+				transition: transform .6s ease, opacity .4s ease;
+				user-select: none;
+				pointer-events: none;
+				transform: translate(14px, 14px);
+			}
+
+			.block-misc-canvas-cursor .canvas-cursor-follower.cursor-active {
+				opacity: 0.3;
+				transform: scale(0);
+
+			}
+
+			.block-misc-canvas-cursor .dark .canvas-cursor,
+			.block-misc-canvas-cursor .dark .canvas-cursor-follower { --cursor-bg: #FFF; }
+
+		}
+</style>
+</head>
+<body class="stretched block-misc-canvas-cursor">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container mw-sm">
+					<h3 class="text-center">Custom Cursor</h3>
+					<a href="#" class="canvas-cursor-hover">
+						<div class="card bg-dark text-white overflow-hidden h-translate-y h-shadow all-ts">
+							<img src="../demos/music/images/slider/1.jpg" alt="...">
+							<div class="card-img-overlay dark d-flex flex-column justify-content-end p-5">
+								<h3 class="card-title">Card title</h3>
+								<p class="card-text text-white-50">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

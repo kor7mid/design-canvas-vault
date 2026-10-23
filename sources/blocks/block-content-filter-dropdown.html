@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Filter Dropdown | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  <link rel="stylesheet" href="../shared/css/components/radio-checkbox.css">
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+/* dropdown-filter */
+		#dropdown-filter .button {
+			min-width: 170px;
+			background-color: var(--bs-gray-100);
+			text-align: center;
+		}
+
+		#dropdown-filter .dropdown-menu {
+			width: 100%;
+		}
+
+		#dropdown-filter .dropdown-item {
+			padding: 0 !important;
+			background-color: inherit !important;
+			color:#111;
+		}
+
+		#dropdown-filter .dropdown-item.active,
+		#dropdown-filter .dropdown-item:active,
+		#dropdown-filter .dropdown-item:hover {
+			background-color: var(--bs-gray-200) !important;
+		}
+
+		#dropdown-filter .dropdown-item span {
+			display: block;
+			padding: 10px 20px;
+			border-bottom: 1px solid var(--bs-gray-200);
+			font-size: .925rem;
+			text-align: center;
+		}
+
+		#dropdown-filter .dropdown-toggle::after {
+			content: "\F282";
+			font-family: "bootstrap-icons";
+			border: 0;
+			vertical-align: middle;
+			margin: 0 0 0 6px;
+		}
+</style>
+</head>
+<body class="stretched block-portfolio-single-grid">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<div class="grid-filter-wrap justify-content-center mb-5">
+
+						<div id="dropdown-filter" class="dropdown border-0">
+							<a id="grid-filter-btn" class="button m-0 bg-color text-white dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								Dropdown Filter
+							</a>
+
+							<ul class="dropdown-menu custom-filter py-0 border-default rounded-0" data-container="#dropdown-filter-content">
+								<li><a href="#" class="dropdown-item" data-filter="*"><span>All Animals</span></a></li>
+								<li><a href="#" class="dropdown-item" data-filter=".pf-birds"><span>Birds</span></a></li>
+								<li><a href="#" class="dropdown-item" data-filter=".pf-wild"><span>Wild</span></a></li>
+								<li><a href="#" class="dropdown-item" data-filter=".pf-tigers"><span>Tigers</span></a></li>
+								<li><a href="#" class="dropdown-item" data-filter=".pf-lions"><span>Lions</span></a></li>
+								<li><a href="#" class="dropdown-item" data-filter=".pf-pets"><span>Pets</span></a></li>
+								<li><a href="#" class="dropdown-item" data-filter=".pf-dogs"><span>Dogs</span></a></li>
+							</ul>
+						</div>
+
+					</div>
+
+					<!-- Portfolio Single Image
+					============================================= -->
+					<div id="dropdown-filter-content" class="masonry-thumbs grid-container row row-cols-3 masonry-gap-xl" data-lightbox="gallery" style="--bs-gutter-x: 30px;--bs-gutter-y: var(--bs-gutter-x);">
+						<a href="../previews/preview/filter-dropdown/1.jpg" data-lightbox="gallery-item" class="col pf-birds"><img class="rounded" src="../previews/preview/filter-dropdown/1.jpg" alt="Image"></a>
+						<a href="../previews/preview/filter-dropdown/2.jpg" data-lightbox="gallery-item" class="col pf-tigers pf-wild"><img class="rounded" src="../previews/preview/filter-dropdown/2.jpg" alt="Image"></a>
+						<a href="../previews/preview/filter-dropdown/3.jpg" data-lightbox="gallery-item" class="col pf-dogs pf-pets"><img class="rounded" src="../previews/preview/filter-dropdown/3.jpg" alt="Image"></a>
+						<a href="../previews/preview/filter-dropdown/4.jpg" data-lightbox="gallery-item" class="col pf-birds pf-wild"><img class="rounded" src="../previews/preview/filter-dropdown/4.jpg" alt="Image"></a>
+						<a href="../previews/preview/filter-dropdown/5.jpg" data-lightbox="gallery-item" class="col pf-lions pf-wild"><img class="rounded" src="../previews/preview/filter-dropdown/5.jpg" alt="Image"></a>
+						<a href="../previews/preview/filter-dropdown/6.jpg" data-lightbox="gallery-item" class="col pf-birds"><img class="rounded" src="../previews/preview/filter-dropdown/6.jpg" alt="Image"></a>
+						<a href="../previews/preview/filter-dropdown/7.jpg" data-lightbox="gallery-item" class="col pf-lions pf-wild"><img class="rounded" src="../previews/preview/filter-dropdown/7.jpg" alt="Image"></a>
+						<a href="../previews/preview/filter-dropdown/8.jpg" data-lightbox="gallery-item" class="col pf-dogs pf-pets"><img class="rounded" src="../previews/preview/filter-dropdown/8.jpg" alt="Image"></a>
+						<a href="../previews/preview/filter-dropdown/9.jpg" data-lightbox="gallery-item" class="col pf-pets"><img class="rounded" src="../previews/preview/filter-dropdown/9.jpg" alt="Image"></a>
+					</div><!-- .portfolio-single-image end -->
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

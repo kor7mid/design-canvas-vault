@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dropdown Search | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@400;500&family=Lato:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.block-misc-search .top-search-form-2 {
+			opacity: 1;
+			background-color: #EEE;
+			top: 100%;
+			height: 0%;
+			transform: scaleY(0);
+			transform-origin: top center;
+			transition: transform .3s ease-in-out,height .3s ease-in-out;
+		}
+
+		.block-misc-search.top-search-open .top-search-form {
+			transform: scaleY(1);
+			height: 100%;
+		}
+
+		.top-search-form input {
+			color: #FFF !important;
+		}
+
+		.block-misc-search .top-search-form-2 input::-moz-placeholder {
+			letter-spacing: 0;
+			font-weight: 400;
+			font-size: 1.5rem;
+			text-transform: none;
+		}
+		.block-misc-search .top-search-form-2 input:-ms-input-placeholder {
+			letter-spacing: 0;
+			font-weight: 400;
+			font-size: 1.5rem;
+			text-transform: none;
+		}
+		.block-misc-search .top-search-form-2 input::-webkit-input-placeholder {
+			letter-spacing: 0;
+			font-weight: 400;
+			font-size: 1.5rem;
+			text-transform: none;
+		}
+
+		.block-misc-search .dark.top-search-form-2 input::-moz-placeholder {
+			color: rgba(255,255,255,0.8) !important;
+		}
+		.block-misc-search .dark.top-search-form-2 input:-ms-input-placeholder {
+			color: rgba(255,255,255,0.8) !important;
+		}
+		.block-misc-search .dark.top-search-form-2 input::-webkit-input-placeholder {
+			color: rgba(255,255,255,0.8) !important;
+		}
+</style>
+</head>
+<body class="stretched block-misc-search">
+  <div id="wrapper">
+    <header id="header" class="">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html">
+								<img class="logo-default" srcset="../images/logo.png, ../images/logo@2x.png 2x" src="../images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-dark" srcset="../images/logo-dark.png, ../images/logo-dark@2x.png 2x" src="../images/logo-dark@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc">
+
+							<!-- Top Search
+							============================================= -->
+							<div id="top-search" class="header-misc-icon top-search-2">
+								<a href="#" id="top-search-trigger"><i class="uil uil-search"></i><i class="bi-x-lg"></i></a>
+							</div><!-- #top-search end -->
+
+						</div>
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu with-arrows">
+							<ul class="menu-container">
+								<li class="menu-item">
+									<a class="menu-link" href="demo-seo.html">
+										<div>Home</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<div>About</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="demo-seo-faqs.html">
+										<div>FAQs</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="demo-seo-contact.html">
+										<div>Contact</div>
+									</a>
+								</li>
+							</ul>
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+				<form class="top-search-form top-search-form-2 bg-color dark" action="search.html" method="get">
+					<input type="search" name="q" class="form-control container p-3 ls-0 fw-semibold" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+				</form>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

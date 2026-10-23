@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hero 11 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.block-hero-11 h1,
+		.block-hero-11 h2,
+		.block-hero-11 h3,
+		.block-hero-11 h4,
+		.block-hero-11 h5,
+		.block-hero-11 h6 { font-family: Playfair Display, serif !important; color: #045d63 }
+
+		body.block-hero-11,
+		.block-hero-11 p { font-family: Roboto, sans-serif !important; }
+
+		/* <a href="https://www.jqueryscript.net/animation/">Animation</a> */
+		@-webkit-keyframes
+			pulsate {  0% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				opacity: 0.8;
+			}
+			 45% {
+				-webkit-transform: scale(1.75);
+				transform: scale(1.75);
+				opacity: 0;
+			}
+		}
+		@keyframes
+			pulsate {  0% {
+				-webkit-transform: scale(1);
+				transform: scale(1);
+				opacity: 0.8;
+			}
+				45% {
+				-webkit-transform: scale(1.75);
+				transform: scale(1.75);
+				opacity: 0;
+			}
+		}
+
+		/* Hotspot */
+		.block-hero-11 .hotspot-img {
+			background-size: cover;
+			background-position: center center;
+			position: relative;
+		}
+
+		.block-hero-11 .hotspot-img .img-responsive { max-width: 100%; }
+
+		.block-hero-11 .hotspot-img .hot-spot {
+			position: absolute;
+			width: 26px;
+			height: 26px;
+			top: 5px;
+			left: 5px;
+			text-align: center;
+			background-color: #000;
+			color: #FFF;
+			border-radius: 100%;
+			cursor: pointer;
+			font-size: 12px;
+			line-height: 26px;
+			transition: all .3s ease;
+		}
+
+		.block-hero-11 .hotspot-img .hot-spot .circle {
+			z-index: 2;
+			position: relative;
+		}
+
+		.block-hero-11 .hotspot-img .hot-spot .circle i {
+			-webkit-transition: -webkit-transform .25s ease-out;
+			transition: transform .25s ease-out;
+		}
+
+		.block-hero-11 .hotspot-img .hot-spot.hotspot-tooltip-open .circle i,
+		.block-hero-11 .hotspot-img .hot-spot:not(.hotspot-on-click):hover .circle i {
+			-webkit-transform: rotate(45deg);
+			transform: rotate(45deg);
+		}
+
+		.block-hero-11 .hotspot-img .hot-spot .circle:after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 39%;
+			left: 39%;
+			width: 30px;
+			height: 30px;
+			margin: -1em auto auto -1em;
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+			border-radius: 50%;
+			border: 10px solid #000;
+			opacity: 0;
+			-webkit-animation: pulsate 3s ease-out infinite;
+			animation: pulsate 3s ease-out infinite;
+		}
+
+		.block-hero-11 .hotspot-img .hot-spot .tooltip {
+			display: none;
+			background-color: rgba(255, 255, 255, 0.96);
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			font-size: 14px;
+			opacity: 1.0;
+			left: 0;
+			padding: 15px;
+			position: absolute;
+			top: 35px;
+			width: 280px;
+			z-index: 999;
+			box-shadow: 0 30px 102px rgba(0,0,0,0.33), 0 20px 51px rgba(0,0,0,0.18);
+		}
+
+		.block-hero-11 .hotspot-img .hot-spot .tooltip.ontop {
+			top: auto;
+			bottom: 35px;
+		}
+
+		.block-hero-11 .hotspot-img .hot-spot .tooltip .img-row {
+			margin-bottom: 10px;
+			display: block;
+		}
+		.block-hero-11 .hotspot-img .hot-spot .tooltip h4 { margin-bottom: 0; }
+
+		.block-hero-11 .hotspot-img .hot-spot .tooltip p {
+			font-size: 13px;
+			line-height: 1.3rem !important;
+			margin-bottom: 10px;
+			color: #666 !important;
+		}
+
+		.block-hero-11 .hotspot-img .hot-spot .tooltip p:last-child { margin-bottom: 0; }
+
+		@media (max-width: 991px) {
+			.block-hero-11 .hotspot-img .hot-spot .tooltip {
+				width: 200px;
+				left: 30px;
+				top: 35px;
+			}
+
+			.block-hero-11 .hotspot-img .hot-spot .tooltip .img-row {
+				display: none;
+			}
+		}
+
+		@media (min-width: 992px) {
+
+			.block-hero-11 .slider-element > .container {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				height: 100%;
+			}
+		}
+</style>
+</head>
+<body class="stretched block-hero-11">
+  <div id="wrapper">
+    <!-- Hero Section
+		============================================= -->
+		<section id="slider" class="slider-element overflow-visible">
+
+			<div class="container text-center z-1 py-5">
+				<div class="row w-100 g-0">
+					<!-- Text -->
+					<div class="col-12 my-5">
+						<h1 class="display-2 fw-bold font-primary mb-4">Decor Your Home</h1>
+						<a href="#" class="button button-xlarge button-border text-transform-none ls-0 m-0 button-dark fw-normal">View All Products</a>
+					</div>
+				</div>
+			</div>
+
+			<div id="hotspot-img-onhover" class="hotspot-img responsive-hotspot-wrap">
+				<img src="../previews/preview/hero-11/bg.jpg" alt="Image" class="img-responsive">
+				<div class="hot-spot" data-x="200" data-y="100">
+					<div class="circle"><i class="uil uil-plus fw-semibold"></i></div>
+					<div class="tooltip text-center p-3 bg-white">
+						<img src="../previews/preview/hero-11/hanging-lamp.jpg" alt="Image" class="mb-3">
+						<h4><a href="#" class="text-dark">Hanging Lamp</a></h4>
+						<p class="mt-2">Lorem ipsum dolor sit amet, ctetur adipisicing elit.</p>
+						<h4 class="mb-1">&dollar;30</h4>
+					</div>
+				</div>
+
+				<div class="hot-spot" data-x="950" data-y="560">
+					<div class="circle"><i class="uil uil-plus fw-semibold"></i></div>
+					<div class="tooltip text-center p-3 bg-white">
+						<img src="../previews/preview/hero-11/sofa.jpg" alt="Image" class="mb-3">
+						<h4><a href="#" class="text-dark">Grey Comfort Sofa</a></h4>
+						<p class="mt-2">Lorem ipsum dolor sit amet, ctetur adipisicing elit.</p>
+						<h4 class="mb-1">&dollar;99</h4>
+					</div>
+				</div>
+
+				<div class="hot-spot" data-x="950" data-y="960">
+					<div class="circle"><i class="uil uil-plus fw-semibold"></i></div>
+					<div class="tooltip ontop text-center p-3 bg-white">
+						<img src="../previews/preview/hero-11/table.jpg" alt="Image" class="mb-3">
+						<h4><a href="#" class="text-dark">White Tea Table</a></h4>
+						<p class="mt-2">Lorem ipsum dolor sit amet, ctetur adipisicing elit.</p>
+						<h4 class="mb-1">&dollar;59.99</h4>
+					</div>
+				</div>
+
+				<div class="hot-spot" data-x="1760" data-y="420">
+					<div class="circle"><i class="uil uil-plus fw-semibold"></i></div>
+					<div class="tooltip tooltip-top text-center p-3 bg-white">
+						<img src="../previews/preview/hero-11/table-lamp.jpg" alt="Image" class="mb-3">
+						<h4><a href="#" class="text-dark">Table Stand Lamp</a></h4>
+						<p class="mt-2">Lorem ipsum dolor sit amet, ctetur adipisicing elit.</p>
+						<h4 class="mb-1">&dollar;29</h4>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Content
+		============================================= -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Expand Cards | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.block-expand-categories h1,
+		.block-expand-categories h2,
+		.block-expand-categories h3 { font-family: Playfair Display, serif !important; }
+
+		.block-expand-categories .expand-category {
+			--height: 50vh;
+			--responsive-height: 60px;
+			--hover-flex: 10;
+
+			position: relative;
+			background-position: center center;
+			background-size: cover;
+			border-radius: 20px;
+			margin: 10px 0;
+			min-height: var(--responsive-height);
+			cursor: pointer;
+		}
+
+		.block-expand-categories .expand-category h4 {
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			text-align: center;
+			margin: 0;
+			transform: translateY(-50%);
+		}
+
+		/* Larger Device */
+		@media (min-width: 992px) {
+			.block-expand-categories .expand-category {
+				height: var(--height);
+				flex: 1;
+				margin: 0 10px;
+				transition: flex 1s ease;
+				-webkit-backface-visibility: hidden;
+				transform: translate3d(0,0,0);
+			}
+
+			.block-expand-categories:not(.on-click) .expand-category:hover,
+			.block-expand-categories.on-click .expand-category.active { flex: var(--hover-flex); }
+
+			.block-expand-categories .expand-category h4 {
+				opacity: 1;
+				top: auto;
+				bottom: 10px;
+				transform: none;
+				transition: opacity .4s ease;
+			}
+
+			.block-expand-categories:hover .expand-category:not(.active):not(:hover) h4,
+			.block-expand-categories.on-click .expand-category:not(.active) h4 { opacity: 0; }
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+				<div class="container">
+
+					<h2 class="text-center">On Hover</h2>
+					<div class="block-expand-categories flex-column flex-lg-row d-flex justify-content-center">
+						<div class="expand-category bg-light" style="background-image: url('../previews/preview/exp-cards/1.jpg');">
+							<h4><a href="#" class="text-light">Breakfast</a></h4>
+						</div>
+
+						<div class="expand-category bg-light" style="background-image: url('../previews/preview/exp-cards/2.jpg');">
+							<h4><a href="#" class="text-light">Lunch</a></h4>
+						</div>
+
+						<div class="expand-category bg-light" style="background-image: url('../previews/preview/exp-cards/3.jpg');">
+							<h4><a href="#" class="text-light">Dinner</a></h4>
+						</div>
+
+						<div class="expand-category bg-light" style="background-image: url('../previews/preview/exp-cards/4.jpg');">
+							<h4><a href="#" class="text-light">Desserts</a></h4>
+						</div>
+
+						<div class="expand-category bg-light" style="background-image: url('../previews/preview/exp-cards/5.jpg');">
+							<h4><a href="#" class="text-light">Vegan</a></h4>
+						</div>
+
+						<div class="expand-category bg-light" style="background-image: url('../previews/preview/exp-cards/6.jpg');">
+							<h4><a href="#" class="text-light">Seafood</a></h4>
+						</div>
+
+						<div class="expand-category bg-light" style="background-image: url('../previews/preview/exp-cards/7.jpg');">
+							<h4><a href="#" class="text-light">Beverages</a></h4>
+						</div>
+					</div>
+
+					<div class="line"></div>
+
+					<h2 class="text-center">On Click</h2>
+
+					<div class="block-expand-categories flex-column flex-lg-row d-flex justify-content-center on-click">
+						<div class="expand-category active bg-light" style="background-image: url('../previews/preview/exp-cards/1.jpg');">
+							<h4><a href="#" class="text-light">Breakfast</a></h4>
+						</div>
+
+						<div class="expand-category bg-light" style="background-image: url('../previews/preview/exp-cards/2.jpg');">
+							<h4><a href="#" class="text-light">Lunch</a></h4>
+						</div>
+
+						<div class="expand-category bg-light" style="background-image: url('../previews/preview/exp-cards/3.jpg');">
+							<h4><a href="#" class="text-light">Dinner</a></h4>
+						</div>
+
+						<div class="expand-category bg-light" style="background-image: url('../previews/preview/exp-cards/4.jpg');">
+							<h4><a href="#" class="text-light">Desserts</a></h4>
+						</div>
+
+						<div class="expand-category bg-light" style="background-image: url('../previews/preview/exp-cards/5.jpg');">
+							<h4><a href="#" class="text-light">Vegan</a></h4>
+						</div>
+
+						<div class="expand-category bg-light" style="background-image: url('../previews/preview/exp-cards/6.jpg');">
+							<h4><a href="#" class="text-light">Seafood</a></h4>
+						</div>
+
+						<div class="expand-category bg-light" style="background-image: url('../previews/preview/exp-cards/7.jpg');">
+							<h4><a href="#" class="text-light">Beverages</a></h4>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Misc Hotspot Popup | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.hotspot-link span {
+			--cnvs-hotspot-dot-size: 26px;
+			position: absolute;
+			top: auto;
+			left: auto;
+			width: var(--cnvs-hotspot-dot-size);
+			height: var(--cnvs-hotspot-dot-size);
+			text-align: center;
+			line-height: calc(var(--cnvs-hotspot-dot-size) - 6px);
+			background: #000;
+			border-radius: 50%;
+			border: 2px solid white;
+			color:white;
+			font-size: 1rem;
+			cursor: pointer;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container mw-md">
+					<h3 class="text-center">Hotspots</h3>
+					<div class="position-relative">
+						<img src="../previews/preview/hotspot.jpg" class="" alt="...">
+						<div class="hotspot-link">
+							<span class="animated infinite pulse" data-bs-toggle="modal" data-bs-target="#flowerPot" style="top: 58%; left: 14%;">+</span>
+							<span class="animated infinite pulse" data-bs-toggle="modal" data-bs-target="#monitor" style="top: 36%; left: 49%;">+</span>
+							<span class="animated infinite pulse" data-bs-toggle="modal" data-bs-target="#laptop" style="top: 42%; left: 79%;">+</span>
+							<span class="animated infinite pulse" data-bs-toggle="modal" data-bs-target="#phone" style="top: 72.5%; left: 26.5%;">+</span>
+							<span class="animated infinite pulse" data-bs-toggle="modal" data-bs-target="#table" style="top: 79%; left: 80%;">+</span>
+						</div>
+					</div>
+
+					<!-- Flower Pot -->
+					<div class="modal fadeIn animated faster" id="flowerPot" tabindex="-1" aria-labelledby="flowerPotLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header px-4">
+									<h5 class="modal-title fw-medium">Product 1</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body p-4">
+									<h3 class="mb-3">Flower Pot</h3>
+									<p>Cursus nascetur corporis sapien voluptatum rutrum mollit non arcu! Rutrum rem fringilla iure dis condimentum. Omnis aperiam reiciendis quo bibendum praesent.</p>
+									<a href="#" class="btn btn-dark">Add to Cart</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- Monitor -->
+					<div class="modal fadeIn animated faster" id="monitor" tabindex="-1" aria-labelledby="monitorLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header px-4">
+									<h5 class="modal-title fw-medium">Product 2</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body p-4">
+									<h3 class="mb-3">Premium 4K Monitor</h3>
+									<p>Modi habitasse hac metus, anim. Cupidatat dis purus accusantium, sapiente sapien iusto inventore erat. Molestiae, fames quidem harum aptent fusce, quia fames labore fusce minima cursus porttitor congue excepturi.</p>
+									<a href="#" class="btn btn-dark">Add to Cart</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- laptop -->
+					<div class="modal fadeIn animated faster" id="laptop" tabindex="-1" aria-labelledby="laptopLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header px-4">
+									<h5 class="modal-title fw-medium">Product 3</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body p-4">
+									<h3 class="mb-3">Apple Macbook Pro 16"</h3>
+									<p>Nesciunt nostrum pharetra cillum minima nostrud, numquam metus, iste quod fuga quisque? Mauris, sequi. Cras, eleifend. Eaque laoreet quae netus pulvinar, natoque quaerat conubia.</p>
+									<a href="#" class="btn btn-dark">Add to Cart</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- phone -->
+					<div class="modal fadeIn animated faster" id="phone" tabindex="-1" aria-labelledby="phoneLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header px-4">
+									<h5 class="modal-title fw-medium">Product 4</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body p-4">
+									<h3 class="mb-3">Apple iphone</h3>
+									<p>Lobortis tempor quod dignissim atque, asperiores aperiam elementum cupidatat facilisis aut cum? Nascetur! Sapien accumsan eos lorem mauris auctor mollis.</p>
+									<a href="#" class="btn btn-dark">Add to Cart</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!-- table -->
+					<div class="modal fadeIn animated faster" id="table" tabindex="-1" aria-labelledby="tableLabel" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered">
+							<div class="modal-content">
+								<div class="modal-header px-4">
+									<h5 class="modal-title fw-medium">Product 5</h5>
+									<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+								</div>
+								<div class="modal-body p-4">
+									<h3 class="mb-3">iKEA Wooden Table</h3>
+									<p>Nascetur eius ipsum molestias aperiam mollis! Rem impedit, distinctio, porro tortor hac distinctio a! Mattis temporibus euismod voluptatum, taciti, et nostrum. Dolor dolorum molestias minim.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

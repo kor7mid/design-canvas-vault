@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slider 1 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.block-slider-1 .search-form {
+			width: 120px;
+			transition: width .3s ease;
+		}
+		@media (min-width: 768px) {
+			.block-slider-1 .search-form {
+				width: 200px;
+				transition: width .3s ease;
+			}
+			.block-slider-1 .search-form:focus-within {
+				width: 300px;
+			}
+		}
+
+		#header.dark.block-slider-1 .search-form {
+			border-bottom-color: rgba(255, 255, 255, 0.6) !important;
+		}
+
+		.block-slider-1.dark .search-form input:focus::-moz-placeholder { color: #BBB; }
+		.block-slider-1.dark .search-form input:focus:-ms-input-placeholder { color: #BBB; }
+		.block-slider-1.dark .search-form input:focus::-webkit-input-placeholder { color: #BBB; }
+
+		.dark .search-form .form-control:not(.not-dark),
+		.dark .search-form i { color: #EEE; }
+
+		.block-slider-1 {
+			--t-color: #EEE;
+		}
+
+		.block-slider-1 .slide-number {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			opacity: 1;
+			top: 50%;
+			bottom: auto !important;
+			left: auto;
+			right: 20px;
+			color: var(--t-color);
+			text-shadow: none;
+			width: auto;
+			height: auto;
+			padding: 0;
+			writing-mode: vertical-rl;
+			transform: translateY(-50%);
+		}
+
+		.block-slider-1 .slide-number-current,
+		.block-slider-1 .slide-number-total {
+			position: relative;
+			top: auto;
+			bottom: auto;
+		}
+
+		.block-slider-1 .slide-number span {
+			position: relative;
+			height: 30px;
+			width: 1px;
+			background-color: var(--t-color);
+			margin: 30px 0;
+		}
+
+		.block-slider-1 .slider-arrow-left,
+		.block-slider-1 .slider-arrow-right {
+			display: flex;
+			align-items: center;
+			width: auto;
+			height: auto;
+			top: auto;
+			left: auto;
+			right: 110px;
+			bottom: 30px;
+			transform: translateY(0);
+			color: var(--t-color);
+			background-color: transparent !important;
+		}
+
+		.block-slider-1 .slider-arrow-left span,
+		.block-slider-1 .slider-arrow-right span {
+			margin: 0 10px;
+			text-transform: uppercase;
+			font-size: 14px;
+			letter-spacing: 1px;
+		}
+
+		.block-slider-1 .slider-arrow-left:hover,
+		.block-slider-1 .slider-arrow-right:hover {
+			background-color: transparent !important;
+		}
+
+		.block-slider-1 .slider-arrow-right {
+			right: 30px;
+		}
+
+		.block-slider-1 .slider-arrow-left i,
+		.block-slider-1 .slider-arrow-right i {
+			position: relative;
+			color: var(--t-color);
+			text-shadow: none;
+			font-size: 20px;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Header
+		============================================= -->
+		<header id="header" class="transparent-header block-slider-1" data-sticky-class="not-dark">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="me-lg-5">
+							<a href="index.html">
+								<img class="logo-default" srcset="../images/logo.png, ../images/logo@2x.png 2x" src="../images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-dark" srcset="../images/logo-dark.png, ../images/logo-dark@2x.png 2x" src="../images/logo-dark@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc ms-lg-auto">
+
+							<!-- Top Search
+							============================================= -->
+							<form class="input-group m-0 border-bottom me-4 search-form">
+								<input class="form-control border-0 bg-transparent ps-0" type="search" placeholder="Search.." aria-label="Search">
+								<a href="#" class="input-group-text border-0 bg-transparent pe-0"><i class="uil uil-search"></i></a>
+							</form>
+
+							<!-- Top Cart
+							============================================= -->
+							<div id="top-cart" class="header-misc-icon">
+								<a href="#" id="top-cart-trigger"><i class="uil uil-shopping-bag"></i><span class="top-cart-number">5</span></a>
+								<div class="top-cart-content">
+									<div class="top-cart-title">
+										<h4>Shopping Cart</h4>
+									</div>
+									<div class="top-cart-items">
+										<div class="top-cart-item">
+											<div class="top-cart-item-image">
+												<a href="#"><img src="../images/shop/small/1.jpg" alt="Blue Round-Neck Tshirt"></a>
+											</div>
+											<div class="top-cart-item-desc">
+												<div class="top-cart-item-desc-title">
+													<a href="#">Blue Round-Neck Tshirt with a Button</a>
+													<span class="top-cart-item-price d-block">$19.99</span>
+												</div>
+												<div class="top-cart-item-quantity">x 2</div>
+											</div>
+										</div>
+										<div class="top-cart-item">
+											<div class="top-cart-item-image">
+												<a href="#"><img src="../images/shop/small/6.jpg" alt="Light Blue Denim Dress"></a>
+											</div>
+											<div class="top-cart-item-desc">
+												<div class="top-cart-item-desc-title">
+													<a href="#">Light Blue Denim Dress</a>
+													<span class="top-cart-item-price d-block">$24.99</span>
+												</div>
+												<div class="top-cart-item-quantity">x 3</div>
+											</div>
+										</div>
+									</div>
+									<div class="top-cart-action">
+										<span class="top-checkout-price">$114.95</span>
+										<a href="#" class="button button-3d button-small m-0">View Cart</a>
+									</div>
+								</div>
+							</div><!-- #top-cart end -->
+
+						</div>
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+							<ul class="menu-container">
+								<li class="menu-item">
+									<a class="menu-link" href="index.html"><div>Home</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="index.html"><div>Men</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="index.html"><div>Women</div></a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="index.html"><div>Kids</div></a>
+								</li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Hero Section
+		============================================= -->
+		<section id="slider" class="slider-element include-header block-slider-1 swiper_wrapper overflow-visible min-vh-100" data-loop="true">
+			<div class="swiper swiper-parent">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide dark">
+						<div class="container">
+							<div class="slider-caption">
+								<p class="mb-4 text-white-50 text-smaller" data-animate="fadeInUpSmall">Shop for Men</p>
+								<h2 data-animate="fadeInUpSmall" data-delay="200">Your feet will never look the same again.</h2>
+								<div>
+									<a href="#" class="button button-border button-light button-rounded button-large ms-0 mt-4" data-animate="fadeInUpSmall" data-delay="400">Shop Now</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide-bg" style="background-image: url('../previews/preview/slider-1/1.jpg');"></div>
+					</div>
+
+					<!-- Slide 2 -->
+					<div class="swiper-slide dark">
+						<div class="container">
+							<div class="slider-caption slider-caption-right" style="max-width: 650px;">
+								<p class="mb-4 text-white-50 text-smaller" data-animate="fadeInUpSmall">Shop for Women</p>
+								<h2 data-animate="fadeInUpSmall" data-delay="200">You will be able to go anywhere.</h2>
+								<div>
+									<a href="#" class="button button-border button-light button-rounded button-large ms-0 mt-4" data-animate="fadeInUpSmall" data-delay="400">Shop Now</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide-bg" style="background-image: url('../previews/preview/slider-1/2.jpg');"></div>
+					</div>
+
+					<!-- Slide 2 -->
+					<div class="swiper-slide dark">
+						<div class="container">
+							<div class="slider-caption slider-caption-center">
+								<p class="mb-4 text-white-50 text-smaller" data-animate="fadeInUpSmall">Shop for Kids</p>
+								<h2 data-animate="fadeInUpSmall" data-delay="200">Bring power to your steps</h2>
+								<div>
+									<a href="#" class="button button-border button-light button-rounded button-large ms-0 mt-4" data-animate="fadeInUpSmall" data-delay="400">Shop Now</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide-bg" style="background-image: linear-gradient(rgba(0,0,0,.3), rgba(0,0,0,.5)), url('../previews/preview/slider-1/3.jpg');"></div>
+					</div>
+				</div>
+
+				<div class="slider-arrow-left"><i class="uil uil-angle-left-b"></i><span>Prev</span></div>
+				<div class="slider-arrow-right"><span>Next</span> <i class="uil uil-angle-right-b"></i></div>
+				<div class="slide-number font-secondary"><div class="slide-number-current"></div><span></span><div class="slide-number-total op-05"></div></div>
+			</div>
+
+			<div class="d-flex flex-row position-absolute z-10" style="top: auto; bottom: 40px; left: 40px;">
+				<a href="#" class="social-icon mx-1 bg-dark si-small h-bg-facebook" data-animate="bounceInLeft">
+					<i class="fa-brands fa-facebook-f"></i>
+					<i class="fa-brands fa-facebook-f"></i>
+				</a>
+
+				<a href="#" class="social-icon mx-1 bg-dark si-small h-bg-instagram" data-animate="bounceInLeft" data-delay="100">
+					<i class="bi-instagram"></i>
+					<i class="bi-instagram"></i>
+				</a>
+
+				<a href="#" class="social-icon mx-1 bg-dark si-small h-bg-x-twitter" data-animate="bounceInLeft" data-delay="200">
+					<i class="fa-brands fa-x-twitter"></i>
+					<i class="fa-brands fa-x-twitter"></i>
+				</a>
+			</div>
+		</section>
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+				<div class="row justify-content-center align-items-center text-center min-vh-100">
+					<div class="col-12 display-3">Content <br>...</div>
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

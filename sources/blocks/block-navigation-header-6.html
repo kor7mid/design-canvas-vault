@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navigation Header 6 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.primary-menu.style-3,
+		.button {
+			--cnvs-btn-color-hover: #EEE;
+			--cnvs-btn-padding-x: 1.125rem;
+    		--cnvs-btn-padding-y: 1rem;
+			--cnvs-btn-fontsize: 1rem;
+			--cnvs-btn-lineheight: 1;
+		}
+
+
+		@media (min-width: 992px) {
+
+			.menu-container > .menu-item:not(:first-child) {
+				margin-left: 1.75rem;
+			}
+
+			.style-3 .menu-container > .menu-item > .menu-link {
+				padding: var(--cnvs-btn-padding-y) var(--cnvs-btn-padding-x);
+				font-size: var(--cnvs-btn-fontsize);
+				line-height: var(--cnvs-btn-lineheight);
+				font-weight: 500;
+				border-radius: 0.5rem;
+			}
+
+
+			.style-3 .menu-container > .menu-item:hover > .menu-link,
+			.style-3 .menu-container > .menu-item.current > .menu-link,
+			.style-3 .menu-container > .menu-item.menu-item-open > .menu-link {
+				color: var(--cnvs-text-color);
+				background-color: var(--cnvs-btn-color-hover);
+				text-shadow: none;
+			}
+
+			.menu-container > .menu-item:not(.mega-menu) .sub-menu-container:not([class*='col']) {
+				margin-top: 20px;
+				border: 0;
+				border-radius: 0.5rem;
+			}
+
+			.sub-menu-container .menu-item > .menu-link {
+				font-size: .95rem;
+			}
+
+			.sub-menu-container .menu-item:hover > .menu-link {
+				font-weight: 400;
+				background-color: transparent;
+			}
+
+			.with-arrows .menu-container > .menu-item > .menu-link div > i.bi-caret-down-fill {
+				font-size: 1.125rem;
+				margin-left: 10px;
+				transition: transform .2s ease;
+			}
+
+			.with-arrows .menu-container > .menu-item.menu-item-open > .menu-link div > i.bi-caret-down-fill {
+				transform: rotate(-180deg);
+			}
+
+			.with-arrows .menu-container > .menu-item > .menu-link div > i.bi-caret-down-fill::before {
+				content: "\e7a7";
+			}
+
+		}
+</style>
+</head>
+<body class="stretched block-nav-header-4">
+  <div id="wrapper">
+    <!-- Header
+		============================================= -->
+		<header id="header" class="no-sticky">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html">
+								<img class="logo-default" srcset="../images/logo.png, ../images/logo@2x.png 2x" src="../images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-dark" srcset="../images/logo-dark.png, ../images/logo-dark@2x.png 2x" src="../images/logo-dark@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc">
+
+							<!-- Top Search
+							============================================= -->
+							<a href="#" class="button button-light text-dark m-0 rounded-5 ms-4 border-0"><i class="bi-person-circle me-1"></i> My Account</a>
+
+						</div>
+
+						<div class="primary-menu-trigger">
+							<png class="svg-trigger" viewBox="0 0 100 100">
+								<path
+									d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20">
+								</path>
+								<path d="m 30,50 h 40"></path>
+								<path
+									d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20">
+								</path>
+							</png>
+						</div>
+
+						<!-- Primary Navigation
+								============================================= -->
+						<nav class="primary-menu with-arrows on-click style-3  menu-spacing-margin">
+
+							<ul class="menu-container">
+								<li class="menu-item">
+									<a class="menu-link" href="demo-seo.html">
+										<div>Our Niche Demos</div>
+									</a>
+									<ul class="sub-menu-container">
+										<li class="menu-item"><a class="menu-link" href="intro.html#section-niche"><div>Corporate</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="intro.html#section-niche"><div>Portfolio</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="intro.html#section-niche"><div>Business</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="intro.html#section-niche"><div>Real Estate</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="intro.html#section-niche"><div>Medical</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="intro.html#section-niche"><div>Construction</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="intro.html#section-niche"><div>Freelancer</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="intro.html#section-niche"><div>Food</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="intro.html#section-niche"><div>Beauty</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="intro.html#section-niche"><div>CoWorking</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="intro.html#section-niche"><div>Travel</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="intro.html#section-niche"><div>eCommerce</div></a></li>
+									</ul>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<div>Help &amp; Support</div>
+									</a>
+									<ul class="sub-menu-container">
+										<li class="menu-item"><a class="menu-link" href="intro.html#section-niche"><div>Documentation</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="intro.html#section-niche"><div>Support Forum</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="intro.html#section-niche"><div>Walkthrough Videos</div></a></li>
+									</ul>
+								</li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap bg-light d-flex flex-column align-items-center justify-content-center" style="height: calc(100vh - 101px);">
+
+				<h3 class="mb-2 fs-2">Minimal Header</h3>
+				<a href="block-navigation-header-6-dark.html" class="btn btn-lg btn-dark">Click here for Dark Theme</a>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

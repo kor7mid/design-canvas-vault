@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Header Layout 3 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+@media (min-width: 992px) {
+
+			.block-nav-header-3.side-header.open-header #header-trigger {
+				--widget-width: 260px;
+				top: 0;
+				left: 0;
+				width: 60px;
+				height: 100%;
+				line-height: normal;
+				border-radius: 0;
+				align-items: center;
+				justify-content: center;
+				font-size: 24px;
+				color: #111;
+				background-color: #EEE;
+			}
+
+			.block-nav-header-3.side-header.open-header.side-header-open #header-trigger { left: var(--widget-width, 260px); }
+			.block-nav-header-3.side-header.side-header-right.open-header #header-trigger { right: 0; }
+			.block-nav-header-3.side-header.side-header-right.open-header.side-header-open #header-trigger { right: var(--widget-width, 260px); }
+		}
+
+		.block-nav-header-3 #header-trigger .svg-trigger { width: 40px; height: 40px; }
+
+		.block-nav-header-3.side-header-open #header-trigger .svg-trigger { transform: rotate(45deg); }
+
+		.block-nav-header-3.side-header-open #header-trigger .svg-trigger path:nth-child(1),
+		.block-nav-header-3.side-header-open #header-trigger .svg-trigger path:nth-child(3) { stroke-dashoffset: -64px; }
+
+		.block-nav-header-3.side-header-open #header-trigger .svg-trigger path:nth-child(2) { transform: rotate(90deg); }
+</style>
+</head>
+<body class="stretched side-header open-header push-wrapper block-nav-header-3">
+  <div id="wrapper">
+    <!-- Header
+		============================================= -->
+		<header id="header" class="border-end-0">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-between">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html">
+								<img class="logo-default" srcset="../images/logo-side.png, ../images/logo-side@2x.png 2x" src="../images/logo-side@2x.png" alt="Canvas Logo">
+								<img class="logo-dark" srcset="../images/logo-side-dark.png, ../images/logo-side-dark@2x.png 2x" src="../images/logo-side-dark@2x.png" alt="Canvas Logo">
+								<img class="logo-mobile" srcset="../images/logo.png, ../images/logo@2x.png 2x" src="../images/logo@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<div class="header-misc d-none d-sm-block">
+							<div class="d-flex my-lg-3">
+								<a href="#" class="social-icon si-small border-transparent h-bg-facebook">
+									<i class="fa-brands fa-facebook-f"></i>
+									<i class="fa-brands fa-facebook-f"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-x-twitter">
+									<i class="fa-brands fa-x-twitter"></i>
+									<i class="fa-brands fa-x-twitter"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-google">
+									<i class="fa-brands fa-google"></i>
+									<i class="fa-brands fa-google"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-pinterest">
+									<i class="fa-brands fa-pinterest-p"></i>
+									<i class="fa-brands fa-pinterest-p"></i>
+								</a>
+
+								<a href="#" class="social-icon si-small border-transparent h-bg-github">
+									<i class="fa-brands fa-github"></i>
+									<i class="fa-brands fa-github"></i>
+								</a>
+							</div>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu on-click">
+
+							<ul class="menu-container">
+								<li class="menu-item"><a class="menu-link" href="index.html"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Features</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Pages</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Portfolio</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Blog</div></a>
+									<ul class="sub-menu-container">
+										<li class="menu-item"><a class="menu-link" href="#"><div>Default</div></a>
+											<ul class="sub-menu-container">
+												<li class="menu-item"><a class="menu-link" href="blog.html"><div>Right Sidebar</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-left-sidebar.html"><div>Left Sidebar</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-both-sidebar.html"><div>Both Sidebar</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-full-width.html"><div>Full Width</div></a></li>
+											</ul>
+										</li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Timeline</div></a>
+											<ul class="sub-menu-container">
+												<li class="menu-item"><a class="menu-link" href="blog-timeline-right-sidebar.html"><div>Right Sidebar</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-timeline-left-sidebar.html"><div>Left Sidebar</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-timeline.html"><div>Full Width</div></a></li>
+											</ul>
+										</li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Masonry</div></a>
+											<ul class="sub-menu-container">
+												<li class="menu-item"><a class="menu-link" href="blog-masonry.html"><div>4 Columns</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-masonry-3.html"><div>3 Columns</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-masonry-2.html"><div>2 Columns</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-masonry-full.html"><div>100% Width</div></a></li>
+											</ul>
+										</li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Grid</div></a>
+											<ul class="sub-menu-container">
+												<li class="menu-item"><a class="menu-link" href="blog-grid.html"><div>4 Columns</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-grid-3.html"><div>3 Columns</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-grid-2.html"><div>2 Columns</div></a></li>
+											</ul>
+										</li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Small Thumbs</div></a>
+											<ul class="sub-menu-container">
+												<li class="menu-item"><a class="menu-link" href="blog-small-left-sidebar.html"><div>Left Sidebar</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-small.html"><div>Right Sidebar</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-small-both-sidebar.html"><div>Both Sidebar</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-small-full-width.html"><div>Full Width</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-small-alt.html"><div>Alternate Layout</div></a></li>
+											</ul>
+										</li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Item Splitting</div></a>
+											<ul class="sub-menu-container">
+												<li class="menu-item"><a class="menu-link" href="blog-grid.html"><div>Pagination</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-masonry.html"><div>Infinite Scroll</div></a></li>
+											</ul>
+										</li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Single</div></a>
+											<ul class="sub-menu-container">
+												<li class="menu-item"><a class="menu-link" href="blog-single.html"><div>Default Layout</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-single-left-sidebar.html"><div>Left Sidebar</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-single-full.html"><div>Full Width</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-single-small.html"><div>Small Image</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-single-split-right-sidebar.html"><div>Split Layout</div></a></li>
+											</ul>
+										</li>
+										<li class="menu-item"><a class="menu-link" href="#"><div>Comments Module</div></a>
+											<ul class="sub-menu-container">
+												<li class="menu-item"><a class="menu-link" href="blog-single-left-sidebar.html#comments"><div>Facebook Comments</div></a></li>
+												<li class="menu-item"><a class="menu-link" href="blog-single-small.html#comments"><div>Disqus Comments</div></a></li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li class="menu-item"><a class="menu-link" href="shop.html"><div>Shop</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Shortcodes</div></a>
+									<ul class="sub-menu-container">
+										<li class="menu-item"><a class="menu-link" href="animations.html"><div><i class="bi-magic"></i>Animations</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="buttons.html"><div><i class="bi-square"></i>Buttons</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="carousel.html"><div><i class="bi-arrow-left-right"></i>Carousel</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="charts.html"><div><i class="bi-graph-up-arrow"></i>Charts</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="clients.html"><div><i class="bi-grip-horizontal"></i>Clients</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="columns-grids.html"><div><i class="bi-grid-1x2"></i>Columns</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="counters.html"><div><i class="bi-clock-history"></i>Counters</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="dividers.html"><div><i class="bi-hr"></i>Dividers</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="featured-boxes.html"><div><i class="bi-lightbulb"></i>Icon Boxes</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="gallery.html"><div><i class="bi-images"></i>Galleries</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="headings-dropcaps.html"><div><i class="bi-type-h1"></i>Heading Styles</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="icon-lists.html"><div><i class="bi-list-stars"></i>Icon Lists</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="gradients.html"><div><i class="bi-droplet-half"></i>Gradients</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="lightbox.html"><div><i class="bi-pip"></i>Lightbox</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="lists-cards.html"><div><i class="bi-card-list"></i>Lists &amp; Cards</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="maps.html"><div><i class="bi-geo-fill"></i>Maps</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="media-embeds.html"><div><i class="bi-collection-play"></i>Media Embeds</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="modal-popovers.html"><div><i class="bi-subtract"></i>Modal Boxes</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="navigation.html"><div><i class="bi-list"></i>Navigations</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="pagination-progress.html"><div><i class="bi-123"></i>Pagination</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="pie-skills.html"><div><i class="bi-pie-chart"></i>Pies &amp; Skills</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="pricing.html"><div><i class="bi-currency-dollar"></i>Pricing Boxes</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="process-steps.html"><div><i class="bi-bar-chart-steps"></i>Process Steps</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="promo-boxes.html"><div><i class="bi-card-heading"></i>Promo Boxes</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="quotes-blockquotes.html"><div><i class="bi-blockquote-left"></i>Blockquotes</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="responsive.html"><div><i class="bi-display"></i>Responsive</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="sections.html"><div><i class="bi-window-desktop"></i>Sections</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="social-icons.html"><div><i class="bi-instagram"></i>Social Icons</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="style-boxes.html"><div><i class="bi-exclamation-circle"></i>Alert Boxes</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="styled-icons.html"><div><i class="bi-flower2"></i>Styled Icons</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="tables.html"><div><i class="bi-table"></i>Tables</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="tabs.html"><div><i class="bi-segmented-nav"></i>Tabs</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="testimonials-twitter.html"><div><i class="bi-chat-left-quote"></i>Testimonials</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="thumbnails-slider.html"><div><i class="bi-image"></i>Thumbnails</div></a></li>
+										<li class="menu-item"><a class="menu-link" href="toggles-accordions.html"><div><i class="bi-caret-down-square"></i>Toggles</div></a></li>
+									</ul>
+								</li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content" class="bg-dark dark">
+			<div class="content-wrap py-0">
+				<div class="row justify-content-center align-items-center text-center min-vh-100">
+					<h1 class="col-12 display-3 mb-0 mt-5">Content<br>...</h1>
+				</div>
+				<div class="row justify-content-center align-items-center text-center min-vh-100">
+					<h1 class="col-12 display-3 mb-0 mt-5">More Content<br>...</h1>
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

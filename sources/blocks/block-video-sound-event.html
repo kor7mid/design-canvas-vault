@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video Sound Event | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+#video-slider-mute {
+            position: absolute;
+            top: auto;
+            left: auto;
+            right: 20px;
+            bottom: 10px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--cnvs-contrast-0);
+            color: var(--cnvs-contrast-1000);
+            font-size: 1.25rem;
+            border: 0;
+        }
+
+        #video-slider-mute i {
+            position: relative;
+            left: 1px;
+        }
+
+        #video-slider-mute i:nth-of-type(2),
+        #video-slider-mute.video-muted i:nth-of-type(1) { display: none; }
+
+        #video-slider-mute.video-muted i:nth-of-type(2) { display: block; }
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+				<div class="container">
+
+					<div class="row justify-content-around align-items-center">
+						<div class="col-md-4">
+							<h2 class="display-5 fw-medium">Click Icon<br>Listen Music</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cum veritatis enim aliquid doloremque. Aut eaque excepturi voluptas nemo tempora.</p>
+						</div>
+
+						<div class="col-md-6 rounded-5">
+							<video id="slide-video" class="d-block w-100 h-100 rounded-5 shadow" poster="../images/videos/explore-poster.jpg" preload="auto" loop autoplay playsinline muted>
+                                <source src='../images/videos/explore.webm' type='video/webm'>
+                                <source src='../images/videos/explore.mp4' type='video/mp4'>
+                            </video>
+							<button type="button" id="video-slider-mute">
+                                <i class="bi-volume-mute-fill"></i><i class="bi-volume-up-fill"></i>
+                            </button>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

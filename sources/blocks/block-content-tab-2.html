@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tab 2 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+/* ----- Tab ----- */
+
+		.block-tab-2 .nav-tabs {
+			--bs-nav-tabs-border-width: 0px;
+			--bs-nav-link-color: #111;
+			--bs-nav-link-hover-color: var(--bs-danger);
+		}
+
+		.block-tab-2 .nav-tabs .nav-item .nav-link {
+			position: relative;
+			font-size: 15px;
+			font-weight: 400;
+			padding: 0 0 20px 0;
+		}
+
+		.block-tab-2 .nav-tabs .nav-item .nav-link i {
+			display: block;
+			font-size: 38px;
+			margin: 0 0 10px 0;
+		}
+
+		.block-tab-2 .nav-tabs .nav-item .nav-link.active {
+			top: 0;
+		}
+
+		.block-tab-2 .nav-tabs .nav-item .nav-link.active i {
+			color: var(--bs-danger);
+		}
+
+		.block-tab-2 .nav-tabs .nav-item .nav-link.active::after {
+			content: '';
+			position: absolute;
+			width: 6px;
+			height: 6px;
+			bottom: 0;
+			left: 50%;
+			margin-left: -3px;
+			border-radius: 50%;
+			background: var(--bs-danger);
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container mw-md">
+
+					<div class="block-tab-2">
+
+						<ul class="nav nav-tabs nav-fill mb-5" id="canvas-tab" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link active" id="canvas-tab-1" data-bs-toggle="pill" data-bs-target="#tab-1" type="button" role="tab" aria-controls="canvas-home" aria-selected="true"><i class="bi-key"></i>24x7 Available</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="canvas-tab-2" data-bs-toggle="pill" data-bs-target="#tab-2" type="button" role="tab" aria-controls="canvas-profile" aria-selected="false"><i class="bi-boxes"></i>Complete Solutions</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="canvas-tab-3" data-bs-toggle="pill" data-bs-target="#tab-3" type="button" role="tab" aria-controls="canvas-contact" aria-selected="false"><i class="bi-droplet"></i>Water Treatments</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" id="canvas-tab-4" data-bs-toggle="pill" data-bs-target="#tab-4" type="button" role="tab" aria-controls="canvas-about" aria-selected="false"><i class="bi-geo-alt"></i>Location Independant</button>
+							</li>
+						</ul>
+
+						<div class="tab-content">
+
+							<div class="tab-pane show active" role="tabpanel" aria-labelledby="tab-1-justify-tab" tabindex="0"
+								id="tab-1">
+								<div class="row col-mb-30 align-items-center">
+									<div class="col-md-7">
+										<img src="../demos/interior-design/images/story/1.jpg" alt="story-image">
+									</div>
+									<div class="col-md-5">
+										<h3>We help people to create new Website.</h3>
+										<p>Uniquely productize cross-unit action items with multifunctional imperatives. Quickly
+											communicate collaborative relationships rather than timely materials. Progressively foster
+											unique interfaces vis-a-vis backend e-services.</p>
+										<a href="#" class="button ms-0 button-rounded bg-danger">Read Canvas's story</a>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" role="tabpanel" aria-labelledby="tab-2-justify-tab" tabindex="0" id="tab-2">
+								<div class="row col-mb-30 flex-row-reverse align-items-center">
+									<div class="col-md-7">
+										<img src="../demos/interior-design/images/story/2.jpg" alt="story-image">
+									</div>
+									<div class="col-md-5">
+										<h3>Get better results tomorrow by reading this post.</h3>
+										<p>Progressively streamline future-proof networks rather than virtual channels. Intrinsicly
+											architect performance based products with B2C communities. Appropriately underwhelm
+											integrated information via superior platforms.</p>
+										<a href="#" class="button ms-0 button-rounded bg-danger">Read Canvas's story</a>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" role="tabpanel" aria-labelledby="tab-3-justify-tab" tabindex="0" id="tab-3">
+								<div class="row col-mb-30 align-items-center">
+									<div class="col-md-7">
+										<img src="../demos/interior-design/images/story/3.jpg" alt="story-image">
+									</div>
+									<div class="col-md-5">
+										<h3>TK’s recipe of the week: Guiness beef stew.</h3>
+										<p>Compellingly synthesize technically sound users without technically sound vortals.
+											Rapidiously redefine maintainable leadership with multifunctional strategic theme areas.
+											Appropriately plagiarize business ideas vis-a-vis.</p>
+										<a href="#" class="button ms-0 button-rounded bg-danger">Read Canvas's story</a>
+									</div>
+								</div>
+							</div>
+							<div class="tab-pane" role="tabpanel" aria-labelledby="tab-4-justify-tab" tabindex="0" id="tab-4">
+								<div class="row col-mb-30 flex-row-reverse align-items-center">
+									<div class="col-md-7">
+										<img src="../demos/interior-design/images/story/4.jpg" alt="story-image">
+									</div>
+									<div class="col-md-5">
+										<h3>We help people to create new Website.</h3>
+										<p>Dynamically exploit cross-platform sources vis-a-vis scalable paradigms. Efficiently
+											plagiarize multifunctional internal or "organic" sources before intuitive innovation.
+											Synergistically facilitate goal-oriented ROI vis-a-vis client-focused.</p>
+										<a href="#" class="button ms-0 button-rounded bg-danger">Read Canvas's story</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Profile Page | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.nav {
+            --bs-nav-link-color: var(--cnvs-contrast-600);
+            --bs-nav-pills-link-active-color: var(--cnvs-contrast-1000);
+            --bs-nav-pills-link-active-bg: var(--cnvs-contrast-200);
+            --bs-nav-link-font-weight: 500;
+        }
+
+        .nav-item:not(:last-child) {
+            margin-bottom: 14px;
+        }
+
+        .nav-item .nav-link {
+            display: inline-block;
+            width: auto;
+
+        }
+
+        .nav-item:hover .nav-link {
+            display: inline-block;
+            background-color: var(--cnvs-contrast-200);
+        }
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+				<div class="container mw-md">
+
+                    <h2>Settings</h2>
+
+                    <div class="line line-sm"></div>
+
+					<div class="row">
+                        <div class="col-md-3">
+                            <ul class="nav nav-pills flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link active" href="#"><i class="me-1 bi-person-circle"></i> Profile</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="me-1 bi-shield-lock-fill"></i> Password</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="me-1 bi-geo-alt-fill"></i> Address</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="me-1 bi-envelope-plus-fill"></i> Subscriptions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="me-1 bi-bell-fill"></i> Notifications</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><i class="me-1 bi-question-circle-fill"></i> Help</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link h-text-danger" href="#"> <i class="me-1 bi-door-open-fill"></i> Logout</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-md-9">
+                            <h4 class="mb-1">Update your Profile</h4>
+                            <p class="text-contrast-600">Holisticly parallel task clicks-and-mortar systems and market positioning.</p>
+
+                            <div class="line line-sm"></div>
+
+                            <div class="row">
+                                <label class="col-md-4" for="exampleFormControlName">
+                                    <h4 class="mb-1 d-block fw-medium fs-6">Full Name</h4>
+                                    <p class="text-contrast-600 mb-0">Update your Full Name here.</p>
+                                </label>
+
+                                <div class="col-md-8">
+                                    <input type="email" class="form-control" id="exampleFormControlName" placeholder="John Doe..">
+                                </div>
+
+                                <div class="line line-sm"></div>
+
+                                <label class="col-md-4" for="basic-url">
+                                    <h4 class="mb-1 d-block fw-medium fs-6">Username</h4>
+                                    <p class="text-contrast-600 mb-0">Edit your Username here.</p>
+                                </label>
+
+                                <div class="col-md-8">
+                                    <div class="input-group">
+                                        <span class="input-group-text" id="basic-addon3">@</span>
+                                        <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3 basic-addon4" placeholder="SemiColonWeb..">
+                                    </div>
+                                </div>
+
+                                <div class="line line-sm"></div>
+
+                                <label class="col-md-4">
+                                    <h4 class="mb-1 d-block fw-medium fs-6">Email Address</h4>
+                                    <p class="text-contrast-600 mb-0">You can't change your email address, after you added once.</p>
+                                </label>
+
+                                <div class="col-md-8">
+                                    <input class="form-control bg-light" type="text" aria-label="readonly input example" value="noreply@semicolonweb.com" readonly>
+                                </div>
+
+                                <div class="line line-sm"></div>
+
+                                <label class="col-md-4" for="ExampleTextarea">
+                                    <h4 class="mb-1 d-block fw-medium fs-6">Bio</h4>
+                                    <p class="text-contrast-600 mb-0">Tell us something about you, which is shown below your name.</p>
+                                </label>
+
+                                <div class="col-md-8">
+                                    <textarea class="form-control" placeholder="Tell us something about you.." id="ExampleTextarea"></textarea>
+                                </div>
+
+                                <div class="line line-sm"></div>
+
+                                <label class="col-md-4" for="basic-social-fb">
+                                    <h4 class="mb-1 d-block fw-medium fs-6">Social Links</h4>
+                                    <p class="text-contrast-600 mb-0">Your Others Social links.</p>
+                                </label>
+
+                                <div class="col-md-8">
+                                    <div class="input-group form-group">
+                                        <span class="input-group-text" id="basic-addon3">https://facebook.com/</span>
+                                        <input type="text" class="form-control" id="basic-social-fb" aria-describedby="basic-addon3 basic-addon4">
+                                    </div>
+
+                                    <div class="input-group form-group">
+                                        <span class="input-group-text" id="basic-addon3">https://instagram.com/</span>
+                                        <input type="text" class="form-control" id="basic-social-ig" aria-describedby="basic-addon3 basic-addon4">
+                                    </div>
+
+                                    <div class="input-group form-group">
+                                        <span class="input-group-text" id="basic-addon3">https://twitter.com/</span>
+                                        <input type="text" class="form-control" id="basic-social-tw" aria-describedby="basic-addon3 basic-addon4">
+                                    </div>
+                                </div>
+
+                                <div class="line line-sm"></div>
+
+                                <div class="col-md-4">
+                                    <h4 class="mb-1 d-block fw-medium fs-6">Notifiaction</h4>
+                                    <p class="text-contrast-600 mb-0">We'll send you Notification on every action.</p>
+                                </div>
+
+                                <div class="col-md-8">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckMobile" checked>
+                                        <label class="form-check-label" for="flexCheckMobile">
+                                            Mobile App
+                                        </label>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckWebsite" checked>
+                                        <label class="form-check-label" for="flexCheckWebsite">
+                                            Website
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="line line-sm"></div>
+
+                                <label class="col-md-4" for="flexCheckCheckednews">
+                                    <h4 class="mb-1 d-block fw-medium fs-6">Announcement</h4>
+                                    <p class="text-contrast-600 mb-0">We'll send you Notification on every action.</p>
+                                </label>
+
+                                <div class="col-md-8">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckCheckednews" checked>
+                                        <label class="form-check-label" for="flexCheckCheckednews">
+                                            Brands &amp; Newsletters
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="line line-sm"></div>
+
+                                <div class="col-12">
+                                    <button class="button button-large button-dark button-rounded button-black m-0" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Update Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

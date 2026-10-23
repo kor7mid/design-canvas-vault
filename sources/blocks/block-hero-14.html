@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hero 14 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+@media (min-width: 992px) {
+			.block-hero-14 .section-slider {
+				position: absolute;
+				top: 0;
+				right: 0;
+				min-width: 50%;
+			}
+		}
+
+		.block-hero-14 .mix-text { mix-blend-mode: difference; }
+		@supports not(mix-blend-mode: difference) {
+		  .block-hero-14 .mix-text {
+		    color: #222;
+		  }
+		}
+
+		.block-hero-14 .slide-number {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			opacity: 1;
+			bottom: 0;
+			left: auto;
+			right: 0;
+		    color: #222;
+		    background-color: #FFF;
+		    text-shadow: none;
+		    width: auto;
+		    height: 52px;
+		    padding: 0 20px;
+		}
+
+		.block-hero-14 .slide-number-current,
+		.block-hero-14 .slide-number-total {
+			position: relative;
+			top: auto;
+			bottom: auto;
+		}
+
+		.block-hero-14 .slide-number span {
+			position: relative;
+			width: 40px;
+			height: 1px;
+			background-color: #777;
+			margin: 0 10px;
+		}
+
+		.block-hero-14 .slider-arrow-left,
+		.block-hero-14 .slider-arrow-right {
+			display: inline-block;
+			top: auto;
+		    left: 0;
+		    bottom: 0;
+		    background: #FFF;
+		    transform: translateY(0);
+		    color: #333;
+		}
+
+		.block-hero-14 .slider-arrow-left:hover,
+		.block-hero-14 .slider-arrow-right:hover {
+			background-color: #FFF !important;
+		}
+
+		.block-hero-14 .slider-arrow-right {
+			margin-left: 40px;
+		}
+
+		.block-hero-14 .slider-arrow-left i,
+		.block-hero-14 .slider-arrow-right i {
+		    color: #333;
+		    text-shadow: none;
+		    font-size: 28px;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Hero Section
+		============================================= -->
+		<section id="slider" class="block-hero-14 slider-element overflow-visible">
+
+			<div class="container">
+
+				<div class="row min-vh-lg-100 align-items-center py-5 dark">
+					<!-- Text -->
+					<div class="col-lg-7 offset-lg-1">
+						<h3 class="font-secondary mb-4 ls-1 h3 mix-text">- Core Efficiency</h3>
+						<h3 class="text-uppercase m-0 display-3 fw-bold mix-text position-relative z-2 mb-4">Lets see how We do your Work.</h3>
+						<a href="#" class="button button-black bg-danger button-xlarge m-0">Explore Now</a>
+					</div>
+
+				</div>
+
+			</div>
+
+			<div class="section-slider">
+				<div class="swiper_wrapper overflow-visible min-vh-100" data-loop="true">
+
+					<div class="swiper swiper-parent">
+						<div class="swiper-wrapper">
+							<!-- Slide 1 -->
+							<div class="swiper-slide dark">
+								<div class="container">
+									<div class="slider-caption justify-content-end align-items-center" style="max-width: none;">
+										<h3 data-animate="fadeInUpSmall">Image Caption 1</h3>
+									</div>
+								</div>
+								<div class="swiper-slide-bg min-vh-100" style="background: url('../previews/preview/hero-14/1.jpg') center center; background-size: cover;"></div>
+							</div>
+
+							<!-- Slide 2 -->
+							<div class="swiper-slide dark">
+								<div class="container">
+									<div class="slider-caption justify-content-end align-items-center" style="max-width: none;">
+										<h3 data-animate="fadeInUpSmall">Image Caption 2</h3>
+									</div>
+								</div>
+								<div class="swiper-slide-bg min-vh-100" style="background-image: url('../previews/preview/hero-14/2.jpg'); background-position: center center; background-size: cover;"></div>
+							</div>
+
+							<!-- Slide 3 -->
+							<div class="swiper-slide dark">
+								<div class="container">
+									<div class="slider-caption justify-content-end align-items-center" style="max-width: none;">
+										<h3 data-animate="fadeInUpSmall">Image Caption 2</h3>
+									</div>
+								</div>
+								<div class="swiper-slide-bg min-vh-100" style="background-image: url('../previews/preview/hero-14/3.jpg'); background-position: center center; background-size: cover;"></div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="slider-arrow-left"><i class="uil uil-angle-left-b"></i></div>
+					<div class="slider-arrow-right"><i class="uil uil-angle-right-b"></i></div>
+					<div class="slide-number font-secondary"><div class="slide-number-current"></div><span></span><div class="slide-number-total op-05"></div></div>
+				</div>
+			</div>
+
+			<div class="d-flex flex-row position-absolute z-10 op-06" style="writing-mode: vertical-rl; top: 50%; transform: translateY(-50%) scale(-1); left: 40px">
+				<a href="#" class="my-3 text-black-50 ls-1 text-uppercase text-smaller">Facebook</a>
+				<a href="#" class="my-3 text-black-50 ls-1 text-uppercase text-smaller">Twitter</a>
+				<a href="#" class="my-3 text-black-50 ls-1 text-uppercase text-smaller">Instagram</a>
+			</div>
+
+		</section>
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+				<div class="row justify-content-center align-items-center text-center min-vh-100">
+					<div class="col-12 display-3">Content <br>...</div>
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

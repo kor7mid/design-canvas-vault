@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Popup Sale | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.text-color { color: #028090 !important; }
+</style>
+</head>
+<body class="stretched ">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<div class="d-flex flex-column align-items-center justify-content-between min-vh-100">
+					<div></div>
+					<h3 class="mb-2">Modal/Banner on Page Load</h3>
+					<small class="op-05 pb-4" onClick="window.location.reload();" style="cursor: pointer;"><u>Refresh this Page</u></small>
+				</div>
+
+				<div class="modal-on-load" data-target="#block-modal-sale"></div>
+
+				<!-- Modal -->
+				<div class="modal1 mfp-hide" id="block-modal-sale">
+					<div class="modal-dialog modal-dialog-centered modal-lg">
+						<div class="modal-content p-4 p-md-5 rounded-0 border-0" style="background: linear-gradient(to bottom, transparent 40%, #f0f3bd 40%); background-size: 100% auto">
+
+							<div class="row justify-content-center">
+								<div class="col-11">
+									<img src="../previews/preview/popup-banner.jpg" alt="Image" style="border: 20px solid #f0f3bd">
+								</div>
+								<div class="col-12 mt-4 text-center text-md-start">
+									<div class="row ">
+										<div class="col-md-7">
+											<h2 class="mb-2 fw-bold display-4 text-color">Winter Sale!</h2>
+											<h3 class="text-uppercase ls-1 fw-light mb-0 text-color">Upto <strong>50%</strong>Off!</h3>
+										</div>
+
+										<div class="col-md-5 text-md-end mt-4 mt-md-0">
+											<h3 class="mb-0">10th - 31st</h3>
+											<p class="text-uppercase ls-3 text-larger mb-4">December</p>
+											<a href="#" class="btn btn-lg px-4 text-white" style="background-color: #028090;">Shop Now</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

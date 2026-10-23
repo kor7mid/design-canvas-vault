@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team 2 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.team-person {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+		.person-container {
+			border-radius: 50%;
+			height: 312px;
+			-webkit-tap-highlight-color: transparent;
+			transform: scale(0.48);
+			transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+			width: 400px;
+		}
+		.person-container:hover {
+			transform: scale(0.54);
+		}
+		.person-container-inner {
+			position: relative;
+			clip-path: path( "M 390,400 C 390,504.9341 304.9341,590 200,590 95.065898,590 10,504.9341 10,400 V 10 H 200 390 Z" );
+			transform-origin: 50%;
+			top: -200px;
+		}
+		.person-circle {
+			border-radius: 50%;
+			cursor: pointer;
+			height: 380px;
+			left: 10px;
+			pointer-events: none;
+			position: absolute;
+			top: 210px;
+			width: 380px;
+		}
+		.person-img {
+			pointer-events: none;
+			position: relative;
+			transform: translateY(20px) scale(1.16);
+			transform-origin: 50% bottom;
+			transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+			width: 380px;
+			left: 22px;
+			top: 164px;
+		}
+		.person-container:hover .person-img {
+			transform: translateY(0) scale(1.2);
+		}
+		.person-divider {
+			height: 1px;
+			width: 160px;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap min-vh-100 d-flex align-items-center">
+				<div class="container">
+
+					<div class="row justify-content-center mb-5">
+						<div class="col-xl-6 col-lg-8 text-center">
+							<h3 class="h1 fw-bold mb-3">Team</h3>
+						</div>
+					</div>
+
+					<div class="row justify-content-center col-mb-30">
+
+						<div class="col-auto">
+							<div class="team-person">
+								<div class="person-container">
+									<div class="person-container-inner">
+										<img class="person-circle" src="../previews/preview/team-2/1-1.jpg">
+										<img class="person-img" src="../previews/preview/team-2/1.png">
+									</div>
+								</div>
+								<div class="person-divider bg-danger"></div>
+								<div class="fs-4 fw-semibold mb-1 mt-4 text-black">Brian Cumin</div>
+								<div class="text-black-50 text-smaller">Product Manager</div>
+							</div>
+						</div>
+
+						<div class="col-auto">
+							<div class="team-person">
+								<div class="person-container">
+									<div class="person-container-inner">
+										<img class="person-circle" src="../previews/preview/team-2/2-1.jpg">
+										<img class="person-img" src="../previews/preview/team-2/2.png">
+									</div>
+								</div>
+								<div class="person-divider bg-primary"></div>
+								<div class="fs-4 fw-semibold mb-1 mt-4 text-black">Ravi O'Leigh</div>
+								<div class="text-black-50 text-smaller">Product Manager</div>
+							</div>
+						</div>
+
+						<div class="col-auto">
+							<div class="team-person">
+								<div class="person-container">
+									<div class="person-container-inner">
+										<img class="person-circle" src="../previews/preview/team-2/3-1.jpg">
+										<img class="person-img" src="../previews/preview/team-2/3.png">
+									</div>
+								</div>
+								<div class="person-divider bg-success"></div>
+								<div class="fs-4 fw-semibold mb-1 mt-4 text-black">Jackson Pot</div>
+								<div class="text-black-50 text-smaller">Product Manager</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

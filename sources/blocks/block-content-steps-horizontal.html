@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Steps Horizontal | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+@media (min-width: 768px) {
+			.feature-box-border-horizontal .feature-box { position: relative; }
+
+			.feature-box-border-horizontal .feature-box:not(.noborder) .fbox-icon::before,
+			.feature-box-border-horizontal.border-hover-animate .feature-box:not(.noborder) .fbox-icon::after {
+				content: "";
+				position: absolute;
+				top: 31px;
+			    left: calc(50% + 32px);
+			    width: calc(100% - 64px);
+				height: 2px;
+				border: 1px solid #EEE;
+				z-index: 0;
+			}
+
+			.feature-box-border-horizontal.border-dashed .feature-box:not(.noborder) .fbox-icon::before,
+			.feature-box-border-horizontal.border-dashed.border-hover-animate .feature-box:not(.noborder) .fbox-icon::after {
+				border-style: dashed;
+			}
+
+			.feature-box-border-horizontal.border-hover-animate .feature-box:not(.noborder) .fbox-icon::after {
+				display: block;
+				border-color: #222;
+				width: 0;
+				transform-origin: top left;
+				transition: width .3s ease-in-out;
+			}
+
+			/* .feature-box-border-horizontal .feature-box:not(.noborder):nth-child(1) .fbox-icon::before { background-color: #222; } */
+
+			.feature-box-border-horizontal.border-hover-animate .feature-box:not(.noborder):hover .fbox-icon::after {  width: calc(100% - 64px); }
+
+
+			.feature-box-border-horizontal .fbox-icon i,
+			.feature-box-border-horizontal .fbox-border.fbox-light .fbox-icon i {
+				line-height: 60px;
+				font-size: 24px;
+				z-index: 1;
+				text-align: center;
+				box-shadow: 0 0 0px 10px #FFF;
+			}
+
+			.feature-box-border-horizontal .feature-box.flex-column:not(.noborder) .fbox-icon::before,
+			.feature-box-border-horizontal.border-hover-animate .feature-box.flex-column:not(.noborder) .fbox-icon::after {
+				left: calc(0% + 100px);
+			}
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<div class="row feature-box-border-horizontal border-hover-animate col-mb-50 justify-content-center my-5">
+						<div class="col-md-4 feature-box fbox-light fbox-center fbox-effect">
+							<div class="fbox-icon bg-white mb-4">
+								<a href="#"><i>1</i></a>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none text-larger mb-4">Doctors Video Consultation</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, quae rerum dolores aperiam amet enim consequuntur maiores totam odit molestiae vel ut earum deleniti.</p>
+								<a href="#" class="button button-small button-dark button-rounded border-width-1 ms-0 mt-4">Get Started <i class="uil uil-angle-right-b me-0"></i></a>
+							</div>
+						</div>
+
+						<div class="col-md-4 feature-box fbox-light fbox-center fbox-effect">
+							<div class="fbox-icon bg-white mb-4">
+								<a href="#"><i>2</i></a>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none text-larger mb-4">Dietician Consultation</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, quae rerum dolores aperiam amet enim consequuntur maiores totam odit molestiae vel ut earum deleniti.</p>
+							</div>
+						</div>
+
+						<div class="col-md-4 feature-box fbox-light fbox-center fbox-effect noborder">
+							<div class="fbox-icon bg-white mb-4">
+								<a href="#"><i>3</i></a>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none text-larger mb-4">Nurse Assistance</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, quae rerum dolores aperiam amet enim consequuntur maiores totam odit molestiae vel ut earum deleniti.</p>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="line border-double border-default my-6"></div>
+					<div class="clear"></div>
+
+					<div class="row feature-box-border-horizontal border-hover-animate col-mb-50 justify-content-center my-5">
+						<div class="col-md-3 feature-box fbox-light fbox-center fbox-effect">
+							<div class="fbox-icon bg-white mb-4">
+								<a href="#"><i>1</i></a>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none text-larger mb-4">Doctors Video Consultation</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, quae rerum dolores aperiam amet enim consequuntur maiores totam odit molestiae vel ut earum deleniti.</p>
+								<a href="#" class="button button-small button-dark button-rounded border-width-1 ms-0 mt-4">Get Started <i class="uil uil-angle-right-b me-0"></i></a>
+							</div>
+						</div>
+
+						<div class="col-md-3 feature-box fbox-light fbox-center fbox-effect">
+							<div class="fbox-icon bg-white mb-4">
+								<a href="#"><i>2</i></a>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none text-larger mb-4">Dietician Consultation</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, quae rerum dolores aperiam amet enim consequuntur maiores totam odit molestiae vel ut earum deleniti.</p>
+							</div>
+						</div>
+
+						<div class="col-md-3 feature-box fbox-light fbox-center fbox-effect">
+							<div class="fbox-icon bg-white mb-4">
+								<a href="#"><i>4</i></a>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none text-larger mb-4">Home Delivery Medicine</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, quae rerum dolores aperiam amet enim consequuntur maiores totam odit molestiae vel ut earum deleniti.</p>
+							</div>
+						</div>
+
+						<div class="col-md-3 feature-box fbox-light fbox-center fbox-effect noborder">
+							<div class="fbox-icon bg-white mb-4">
+								<a href="#"><i>3</i></a>
+							</div>
+							<div class="fbox-content">
+								<h3 class="text-transform-none text-larger mb-4">Nurse Assistance</h3>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi, quae rerum dolores aperiam amet enim consequuntur maiores totam odit molestiae vel ut earum deleniti.</p>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

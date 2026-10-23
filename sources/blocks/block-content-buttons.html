@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buttons | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+/* .button-reveal */
+		.button.button-reveal i {
+			opacity: 0;
+			left: auto !important;
+			right: 20px !important;
+			background-color: transparent;
+			transition: all .3s ease !important;
+		}
+
+		.button.text-end.button-reveal i {
+			left: 20px !important;
+			right: auto !important;
+		}
+
+		.button:not(.text-end).button-reveal i {
+			left: auto !important;
+			right: 20px !important;
+		}
+
+		.button:hover.button-reveal i {
+			opacity: 1;
+			right: 0 !important;
+			transform: translateX(-10px);
+		}
+
+		.button.button-reveal:not(.text-end):hover span { left: -9% !important; }
+
+		.button.button-reveal.text-end:hover span { left: 9% !important; }
+
+
+
+
+		/* .btn-underline */
+
+		.btn-underline::before,
+		.btn-strikethrough::before {
+			content: "";
+		    display: inline-block;
+		    position: absolute;
+		    bottom: 0;
+		    left: 0;
+		    width: 0%;
+		    height: 1px;
+		    background: #111;
+		    transition: width .3s ease;
+		}
+
+		.btn-strikethrough:hover { color: #AAA; }
+
+		.btn-strikethrough::before {
+			bottom: 50%;
+		}
+
+		.btn-underline:hover::before,
+		.btn-strikethrough:hover::before {
+			width: 100%;
+		}
+
+
+		/* .button-change */
+		.button-change {
+			--height: 2.375rem;
+		    height: var(--height);
+		    line-height: calc(var(--height) - 2px) !important;
+		    border-bottom: 1px solid #222 !important;
+		    padding-top: 0;
+		    padding-bottom: 0;
+		    overflow: hidden;
+		    display: inline-flex;
+    		flex-direction: column-reverse;
+		}
+
+		.button-change.btn-sm { --height: 2rem; }
+		.button-change.btn-lg { --height: 3rem; }
+
+		.button-change span {
+		    position: relative;
+			display: block;
+		    transition: transform .35s ease;
+		    transform: translate3d(0px, 0%, 0px);
+			transform-style: preserve-3d;
+		}
+
+		.button-change:hover span {
+		    transform: translate3d(0px, 100%, 0px);
+
+		}
+
+
+		/* .button-shadow */
+		.btn-shadow,
+		.btn-shadow.reverse:hover {
+			--bg-color: #FFF;
+			--border-color: #666;
+			--position: -5px -5px;
+			box-shadow: var(--position) 0px 0px var(--bg-color),
+				var(--position) 0px 1px var(--border-color);
+			transition: all .3s ease-out !important;
+		}
+
+		.btn-shadow:hover,
+		.btn-shadow.reverse:not(:hover) {
+			box-shadow: 0px 0px 0px 0px var(--bg-color),
+				0px 0px 0px 1px var(--bg-color);
+		}
+
+		.btn-shadow.top-right { --position: 5px -5px !important; }
+		.btn-shadow.bottom-right { --position: 5px 5px !important; }
+		.btn-shadow.bottom-left { --position: -5px 5px !important; }
+
+		.btn-scale i {
+			--width: 30px;
+			position: relative;
+			margin-left: 6px;
+			transition: padding .3s linear;
+		}
+
+		.btn-scale i::after {
+			content: "";
+			opacity: 0;
+			position: absolute;
+			right: 1px;
+			top: 50%;
+			width: 2px;
+			height: 1px;
+			background-color: #444;
+			transition: all .3s linear;
+		}
+
+		.btn-scale:hover i::after {
+			opacity: 1;
+			width: var(--width);
+		}
+
+		.btn-scale:hover i { padding-left: var(--width); }
+
+		.circular-text {
+			position: relative;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+						<div>
+							<a href="#" class="button button-xlarge button-circle button-dark button-reveal text-transform-none ls-0 bg-dark"><i class="bi-arrow-right"></i><span>Learn more</span></a>
+
+							<a href="#" class="button button-xlarge button-circle button-dark button-reveal text-transform-none ls-0 bg-dark text-end"><i class="bi-download"></i><span>Download Now</span></a>
+						</div>
+
+						<div class="line"></div>
+
+						<div>
+							<a href="#" class="btn px-0 position-relative btn-underline"><span>Read more</span></a>
+
+							<a href="#" class="btn px-0 position-relative btn-strikethrough ms-5"><span>Read more</span></a>
+
+							<a href="#" class="btn button-change ms-5 border-bottom px-0 rounded-0">
+								<span>Read more</span>
+								<span>Read more</span>
+							</a>
+
+							<a href="#" class="btn btn-scale ms-5"><span>Read more</span><i class="uil uil-angle-right-b"></i></a>
+
+						</div>
+
+						<div class="line"></div>
+
+						<div>
+							<a href="#" class="btn btn-dark button-change">
+								<span>Contact Us</span>
+								<span>Contact Us</span>
+							</a>
+
+							<a href="#" class="btn btn-outline-dark button-change ms-3">
+								<span>Contact Us</span>
+								<span>Contact Us</span>
+							</a>
+
+							<a href="#" class="btn btn-outline-dark rounded-pill button-change ms-3 px-3">
+								<span>Contact Us</span>
+								<span>Contact Us</span>
+							</a>
+
+							<a href="#" class="btn btn-dark h-bg-danger h-border-danger button-change ms-3">
+								<span>Contact Us</span>
+								<span>noreply@canvas.com</span>
+							</a>
+						</div>
+
+						<div class="line"></div>
+
+						<div>
+							<a href="#" class="btn btn-dark rounded-1 btn-shadow"><span>Default</span></a>
+							<a href="#" class="btn btn-dark rounded-1 btn-shadow ms-4 bottom-right"><span>Bottom Right</span></a>
+							<a href="#" class="btn btn-dark rounded-1 btn-shadow ms-4 bottom-left"><span>Bottom Left</span></a>
+							<a href="#" class="btn btn-dark rounded-1 btn-shadow ms-4 top-right"><span>Top Right</span></a>
+
+							<div class="w-100 my-5"></div>
+
+							<a href="#" class="btn btn-dark rounded-1 btn-shadow reverse"><span>Hover-Default</span></a>
+							<a href="#" class="btn btn-dark rounded-1 btn-shadow reverse ms-4 bottom-right"><span>Hover-Bottom Right</span></a>
+							<a href="#" class="btn btn-dark rounded-1 btn-shadow reverse ms-4 bottom-left"><span>Hover-Bottom Left</span></a>
+							<a href="#" class="btn btn-dark rounded-1 btn-shadow reverse ms-4 top-right"><span>Hover-Top Right</span></a>
+
+							<div class="w-100 my-5"></div>
+
+							<a href="#" class="btn btn-primary btn-shadow" style="--border-color: transparent; --bg-color: #007bff4f;"><span>Hover-Default</span></a>
+							<a href="#" class="btn btn-secondary btn-shadow ms-4 bottom-right" style="--border-color: transparent; --bg-color: #6d757d4f;"><span>Hover-Bottom Right</span></a>
+							<a href="#" class="btn btn-danger btn-shadow ms-4 bottom-left" style="--border-color: transparent; --bg-color: #dc35454f;"><span>Hover-Bottom Left</span></a>
+							<a href="#" class="btn btn-info btn-shadow ms-4 top-right" style="--border-color: transparent; --bg-color: #18a2b84f;"><span>Hover-Top Right</span></a>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

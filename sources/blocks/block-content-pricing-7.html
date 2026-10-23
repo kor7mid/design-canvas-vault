@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing 7 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.pricing-tabs input.switch-toggle-round:checked + label::before {
+			background-color: #007bff
+		}
+
+		.pricing-tabs label.active {
+			background-color: #007bff;
+		}
+
+		.pricing-tabs label.active * {
+			color: #FFF;
+		}
+
+		.pricing-tabs .price small {
+			font-size: 12px;
+			opacity: .7;
+		}
+
+		.pricing-tabs .price-discount {
+			position: relative;
+			top: -12px;
+			margin-left: 10px;
+			background: url('../demos/seo/images/icons/discount.svg') no-repeat 0 0;
+			width: 60px;
+			height: 39px;
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="container">
+
+					<h3 class="text-center mb-6">Pricing Switcher</h3>
+
+					<div class="row gutter-50 justify-content-center">
+
+						<!-- Tabs Links
+						============================================= -->
+						<div class="pricing-tenure-switcher d-flex align-items-center justify-content-center mb-4" data-container="#pricing-switch">
+							<span class="pts-switch pts-false col-auto">Monthly</span>
+							<div class="pts-switcher col-auto">
+								<div class="switch mx-3">
+									<input id="switch-toggle-pricing-tenure" class="switch-toggle switch-toggle-round" type="checkbox">
+									<label for="switch-toggle-pricing-tenure" class="mb-0"></label>
+								</div>
+							</div>
+							<span class="pts-switch pts-true col-auto">Yearly</span>
+							<div class="price-discount"></div>
+						</div>
+
+						<div id="pricing-switch" class="pricing-tabs col-xl-5 col-lg-6 col-md-7">
+							<!-- Tab 1 -->
+							<label for="pricing-plan-nav-basic" class="d-flex align-items-center border rounded p-3 ls-0 mb-2 text-transform-none active">
+								<input type="radio" checked name="pricing-plan-nav" id="pricing-plan-nav-basic" value="Basic">
+								<div class="mx-3 pe-2 pe-lg-3">
+									<h4 class="mb-0 fw-semibold">Basic</h4>
+									<p class="mb-0 fw-normal text-smaller">Free Trail For 30 Days</p>
+								</div>
+								<div class="ms-auto">
+									<div class="pts-content pts-content-false"><h3 class="mb-0 price">Free</h3></div>
+									<div class="pts-content pts-content-true"><h3 class="mb-0 price">Free</h3></div>
+								</div>
+							</label>
+							<!-- Tab 2 -->
+							<label for="pricing-plan-nav-professional" class="d-flex align-items-center border rounded p-3 ls-0 mb-2 text-transform-none">
+								<input type="radio" name="pricing-plan-nav" id="pricing-plan-nav-professional" value="Professional">
+								<div class="mx-3 pe-2 pe-lg-3">
+									<h4 class="mb-0 fw-semibold">Professional</h4>
+									<p class="mb-0 fw-normal text-smaller">For 1 User, 1 website License</p>
+								</div>
+								<div class="ms-auto">
+									<div class="pts-content pts-content-false"><h3 class="mb-0 price">$19 <small>/ month</small></h3></div>
+									<div class="pts-content pts-content-true"><h3 class="mb-0 price">$182 <small>/ yearly</small></h3></div>
+								</div>
+							</label>
+							<!-- Tab 3 -->
+							<label for="pricing-plan-nav-business" class="d-flex align-items-center border rounded p-3 ls-0 mb-2 text-transform-none">
+								<input type="radio" name="pricing-plan-nav" id="pricing-plan-nav-business" value="Business">
+								<div class="mx-3 pe-2 pe-lg-3">
+									<h4 class="mb-0 fw-semibold">Business</h4>
+									<p class="mb-0 fw-normal text-smaller">For 10 Users, Unlimited website License</p>
+								</div>
+								<div class="ms-auto">
+									<div class="pts-content pts-content-false"><h3 class="mb-0 price">$29 <small>/ month</small></h3></div>
+									<div class="pts-content pts-content-true"><h3 class="mb-0 price">$278 <small>/ yearly</small></h3></div>
+								</div>
+							</label>
+						</div>
+
+						<div class="col-xl-5 col-lg-5 col-md-5">
+							<h3>Choose Your Plan</h3>
+							<p>Lorem ipsum dolor sit amet consectetur, adipisicing, elit. Ducimus incidunt enim aperiam esse exercitationem ipsam veritatis culpa repellat architecto et, commodi delectus ratione a soluta? Eum cumque molestias fugit vel.</p>
+
+							<a href="#" class="btn btn-primary">Next Step <i class="bi-arrow-right"></i></a>
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

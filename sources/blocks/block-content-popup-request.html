@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Popup Request | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.mfp-close { display: none !important; }
+</style>
+</head>
+<body class="stretched ">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<div class="d-flex align-items-center justify-content-center min-vh-100">
+					<a href="#block-modal-request" data-lightbox="inline" class="button button-xlarge rounded-pill bg-primary text-transform-none ls-0 px-6 py-3">New Request</a>
+				</div>
+
+				<div class="modal-on-load" data-target="#block-modal-request"></div>
+
+				<!-- Modal -->
+				<div class="modal1 mfp-hide" id="block-modal-request">
+					<div class="modal-dialog modal-dialog-centered modal-lg">
+						<div class="modal-content bg-white p-4 p-md-5 rounded">
+							<div class="d-flex justify-content-between mb-2">
+								<h3 class="mb-0 text-uppercase ls-1">New Request</h3>
+								<a href="#" onClick="jQuery.magnificPopup.close();return false;" class="text-muted h4 mb-0 h-text-danger"><i class="bi-x-circle"></i></a>
+							</div>
+							<div class="line double-line mt-2 mb-4"></div>
+
+							<div class="form-widget">
+
+								<div class="form-result"></div>
+
+								<form class="mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
+
+									<div class="form-process">
+										<div class="css3-spinner">
+											<div class="css3-spinner-scaler"></div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-md-6 form-group">
+											<label class="text-transform-none ls-0 fw-medium" for="template-contactform-name">Name <small>*</small></label>
+											<input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="form-control required">
+										</div>
+
+										<div class="col-md-6 form-group">
+											<label class="text-transform-none ls-0 fw-medium" for="template-contactform-email">Email <small>*</small></label>
+											<input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email form-control">
+										</div>
+
+										<div class="w-100"></div>
+
+										<div class="col-md-6 form-group">
+											<label class="text-transform-none ls-0 fw-medium" for="template-contactform-upload">Upload <small class="text-muted">(Maximum file size allowed is 2048 KB.)</small></label>
+											<div class="form-file">
+												<input type="file" class="form-control" id="template-contactform-upload">
+											</div>
+										</div>
+
+										<div class="col-md-6 form-group">
+											<label class="text-transform-none ls-0 fw-medium" for="template-contactform-subject">Subject</label>
+											<select id="template-contactform-subject" name="template-contactform-subject" class="form-select required">
+												<option disabled selected value="">-- Select One --</option>
+												<option value="Design">Design</option>
+												<option value="Development">Development</option>
+												<option value="Marketing">Marketing</option>
+												<option value="Support">Support</option>
+											</select>
+										</div>
+
+										<div class="w-100"></div>
+
+										<div class="col-12 form-group">
+											<label class="text-transform-none ls-0 fw-medium" for="template-contactform-message">Message <small>*</small></label>
+											<textarea class="required form-control" id="template-contactform-message" name="template-contactform-message" rows="5" cols="30"></textarea>
+										</div>
+
+										<div class="col-12 form-group d-none">
+											<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="form-control">
+										</div>
+
+										<div class="col-12 d-flex justify-content-end">
+											<button class="button ls-0 text-transform-none px-5 py-3 rounded-pill bg-primary ms-2" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message</button>
+										</div>
+									</div>
+
+									<input type="hidden" name="prefix" value="template-contactform-">
+
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

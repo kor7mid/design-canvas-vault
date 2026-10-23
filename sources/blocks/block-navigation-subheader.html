@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Header With Submenu | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+#page-menu-wrap.not-dark * {
+			text-shadow: none !important;
+		}
+
+		#page-menu-wrap.not-dark,
+		#page-menu-wrap.not-dark .page-menu-nav,
+		#page-menu-wrap.not-dark .page-menu-nav .page-menu-container,
+		.page-menu-open #page-menu-wrap.not-dark #page-menu-trigger {
+			background-color: #FFF;
+		}
+
+		#page-menu-wrap.not-dark .page-menu-nav,
+		#page-menu-wrap.not-dark .page-menu-nav .page-menu-container {
+			border-radius: 10px;
+			overflow: hidden;
+		}
+
+		#page-menu-wrap.not-dark .page-menu-title,
+		#page-menu-wrap.not-dark .page-menu-item > a,
+		#page-menu-wrap.not-dark #page-menu-trigger {
+			color: #555;
+		}
+
+		.page-menu-open #page-menu-wrap.not-dark #page-menu-trigger {
+			box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.15);
+			border-radius: 10px;
+		}
+
+		#page-menu-wrap.not-dark .page-menu-item:hover > a,
+		#page-menu-wrap.not-dark .page-menu-item.current > a {
+			background-color: var(--bs-gray-200);
+		}
+
+		@media (min-width: 992px) {
+			#page-menu-wrap.not-dark .page-menu-nav,
+			#page-menu-wrap.not-dark .page-menu-nav .page-menu-container {
+				border-radius: 0;
+			}
+
+			#page-menu-wrap.not-dark .page-menu-item:hover > a,
+			#page-menu-wrap.not-dark .page-menu-item.current > a {
+				background-color: #FFF;
+				box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.2);
+			}
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Header
+		============================================= -->
+		<header id="header" data-sticky-shrink-offset="0">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row justify-content-between">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html">
+								<img class="logo-default mx-auto" srcset="../images/logo.png, ../images/logo@2x.png 2x" src="../images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-dark mx-auto" srcset="../images/logo-dark.png, ../images/logo-dark@2x.png 2x" src="../images/logo-dark@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu">
+
+							<ul class="menu-container">
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<div>Home</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<div>About</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<div>Shop</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<div>Price</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<div>Contact</div>
+									</a>
+								</li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Page Sub Menu
+		============================================= -->
+		<div id="page-menu">
+			<div id="page-menu-wrap" class="not-dark">
+				<div class="container">
+					<div class="page-menu-row py-3">
+
+						<div class="page-menu-title fw-medium me-5">iPhone 13</div>
+
+						<nav class="page-menu-nav">
+							<ul class="page-menu-container">
+								<li class="page-menu-item current"><a href="#"><div>Overview</div></a></li>
+								<li class="page-menu-item"><a href="#"><div>Features</div></a></li>
+								<li class="page-menu-item"><a href="#"><div>Gallery</div></a></li>
+								<li class="page-menu-item"><a href="#"><div>Compare</div></a></li>
+							</ul>
+						</nav>
+
+						<div class="ms-auto me-2 me-lg-0 hstack">
+							<div class="d-none d-sm-block text-end me-3">
+								<small class="d-block text-smaller">Starts from <strong>$299</strong></small>
+								<small class="d-block text-smaller"><em>EMI:</em> <strong>$12.46</strong>/m for 24months</small>
+							</div>
+							<a href="#" class="button rounded-pill m-0">Buy Now</a>
+						</div>
+
+						<div id="page-menu-trigger"><i class="bi-list"></i></div>
+
+					</div>
+				</div>
+			</div>
+		</div><!-- #page-menu end -->
+
+		<!-- <div class="container">
+			<a href="#" class="d-block pb-3 link-primary"><i class="bi-arrow-left me-2"></i> Back to Portfolio</a>
+		</div> -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0 bg-dark dark">
+				<div class="row justify-content-center align-items-center text-center min-vh-100">
+					<h1 class="col-12 display-4 mb-0">Sub Menu<br>...</h1>
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

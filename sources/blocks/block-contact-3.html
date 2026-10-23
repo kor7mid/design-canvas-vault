@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact 3 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.block-form-9 .form-control {
+            --cnvs-input-btn-padding-x: 1.35rem;
+            --cnvs-input-btn-padding-y: 0.75rem;
+            --cnvs-input-btn-border-width: 1px;
+            --cnvs-input-btn-border-color: var(--cnvs-contrast-400);
+			--cnvs-input-btn-input-color: var(--cnvs-contrast-1000);
+			--cnvs-input-focus-color: var(--cnvs-input-btn-input-color);
+            --cnvs-form-control-radius: 50rem;
+		}
+        .block-form-9 textarea.form-control {
+            --cnvs-form-control-radius: 1rem;
+        }
+
+        .block-form-9 .form-control::placeholder {
+            opacity: .5;
+        }
+</style>
+</head>
+<body class="stretched block-form-9">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+				<div class="container mw-lg">
+
+					<div class="row align-items-stretch g-3 gx-lg-6">
+						<div class="col-lg-6 d-flex align-items-center bg-secondary bg-opacity-20 rounded-6">
+							<div class="card bg-transparent border-0">
+                                <div class="card-body p-5 p-lg-6">
+                                    <h3 class="fw-semibold fs-5 mb-5">Send us a Message Directly. <span class="text-secondary text-opacity-50">We will Update You Within 24hrs.</span></h3>
+                                    <div class="row justify-content-between">
+                                        <div class="col-auto">
+                                            <h4 class="text-secondary text-opacity-50 mb-1">Email:</h4>
+                                            <a href="#" class="btn-link fw-semibold link-dark">noreply@semicolonweb.com</a>
+                                        </div>
+                                        <div class="col-auto">
+                                            <h4 class="text-secondary text-opacity-50 mb-1">Call:</h4>
+                                            <a href="#" class="btn-link fw-semibold link-dark">+00 345 35 674</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="line border-dark"></div>
+
+                                    <h3 class="fw-semibold fs-5 mb-5">Our Social Media Links. <span class="text-secondary text-opacity-50">We can get daily updates from our Social Media.</span></h3>
+                                    <a href="#" class="social-icon border-transparent bg-white h-bg-facebook" title="Facebook">
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                        <i class="fa-brands fa-facebook-f"></i>
+                                    </a>
+
+                                    <a href="#" class="social-icon border-transparent bg-white h-bg-delicious" title="Delicious">
+                                        <i class="fa-brands fa-delicious"></i>
+                                        <i class="fa-brands fa-delicious"></i>
+                                    </a>
+
+                                    <a href="#" class="social-icon border-transparent bg-white h-bg-paypal" title="Paypal">
+                                        <i class="fa-brands fa-paypal"></i>
+                                        <i class="fa-brands fa-paypal"></i>
+                                    </a>
+
+                                    <a href="#" class="social-icon border-transparent bg-white h-bg-waze" title="Waze">
+                                        <i class="fa-brands fa-waze"></i>
+                                        <i class="fa-brands fa-waze"></i>
+                                    </a>
+                                </div>
+                            </div>
+						</div>
+						<div class="col-lg-6">
+							<div class="card bg-contrast-0 border-0" style="border-radius: 20px;">
+								<div class="card-body p-5">
+
+									<div class="form-widget">
+
+										<div class="form-result"></div>
+
+										<form class="mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
+
+											<div class="form-process">
+												<div class="css3-spinner">
+													<div class="css3-spinner-scaler"></div>
+												</div>
+											</div>
+
+											<div class="row">
+
+												<div class="col-12 mb-4">
+													<label for="template-contactform-email">Email<small>*</small></label>
+													<input type="email" id="template-contactform-email" name="template-contactform-email" value="" placeholder="noreply@semicolonweb.com" class="required email form-control">
+												</div>
+
+												<div class="col-md-6 mb-4">
+													<label for="template-contactform-name">Name<small>*</small></label>
+													<input type="text" id="template-contactform-name" name="template-contactform-name" value="" placeholder="SemiColonWeb" class="form-control required">
+												</div>
+
+												<div class="col-md-6 mb-4">
+													<label for="template-contactform-phone">Phone<small>*</small></label>
+													<input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" placeholder="+00 345 35 674" class="form-control required">
+												</div>
+
+												<div class="col-12 mb-4">
+													<label for="template-contactform-message">Message<small>*</small></label>
+													<textarea class="form-control required" id="template-contactform-message" name="template-contactform-message" placeholder="Write your message here..." rows="5" cols="30"></textarea>
+												</div>
+
+												<div class="col-12 mb-4 d-none">
+													<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="form-control">
+												</div>
+
+												<div class="col-12">
+													<button class="button button-large bg-secondary bg-opacity-75 h-bg-dark rounded-pill m-0 w-100" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Submit</button>
+												</div>
+											</div>
+
+											<input type="hidden" name="prefix" value="template-contactform-">
+
+										</form>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

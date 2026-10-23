@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Form Layout 10 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.block-form-10 {
+			--cnvs-primary-font: "massilia", sans-serif;
+			--cnvs-body-font: "massilia", sans-serif;
+		}
+
+		.block-form-10 .form-control {
+			--cnvs-input-btn-padding-x: 0;
+			--cnvs-input-btn-padding-y: 0;
+			--cnvs-input-btn-input-bg: transparent;
+			--cnvs-input-focus-bg: transparent;
+			--cnvs-input-btn-border-width: 0px;
+			--cnvs-input-btn-border-color: var(--cnvs-contrast-1000);
+			--cnvs-input-btn-input-color: var(--cnvs-contrast-1000);
+			--cnvs-input-focus-color: var(--cnvs-input-btn-input-color);
+			--cnvs-input-focus-box-shadow: none;
+			--cnvs-form-control-radius: 0;
+			--cnvs-input-btn-font-size: 2.75rem;
+			border-bottom: 1px solid var(--cnvs-input-btn-border-color);
+			font-weight: 600;
+			min-height: 4.5rem;
+			letter-spacing: -1px;
+		}
+
+		.block-form-10 .form-control::placeholder {
+			opacity: .3;
+		}
+
+		.block-form-10 textarea {
+			min-height: 4.5rem;
+            transition: min-height .3s ease;
+        }
+
+		.block-form-10 textarea:focus,
+		.block-form-10 textarea:not(:placeholder-shown) {
+			min-height: 12rem;
+		}
+</style>
+</head>
+<body class="stretched block-form-10">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap bg-danger bg-opacity-10">
+
+				<div class="container">
+					<div class="mb-5 text-md-end ms-auto" style="width: 280px;">
+						<h3 class="mb-2 fw-light">Let's get down to business.</h3>
+						<p class="text-contrast-600 fw-light">Fill in the form or <a href="#"><u>send us an email</u></a>. We’ll be in touch very soon.</p>
+					</div>
+
+					<div class="row justify-content-center py-lg-6">
+						<div class="col-md-8">
+							<div class="form-widget">
+
+								<div class="form-result"></div>
+
+								<form class="mb-0" id="template-contactform" name="template-contactform" action="include/form.php" method="post">
+
+									<div class="form-process">
+										<div class="css3-spinner">
+											<div class="css3-spinner-scaler"></div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-12 mb-5 mb-lg-6">
+											<label for="template-contactform-name" data-animate="fadeInLeftSmall" data-delay="0">Enter Your Full Name<small>*</small></label>
+											<input type="text" id="template-contactform-name" name="template-contactform-name" value="" placeholder="SemiColonWeb" class="form-control form-control-lg required">
+										</div>
+
+										<div class="col-12 mb-5 mb-lg-6">
+											<label for="template-contactform-email" data-animate="fadeInLeftSmall" data-delay="100">Enter Your Email Address<small>*</small></label>
+											<input type="email" id="template-contactform-email" name="template-contactform-email" value="" placeholder="noreply@semicolonweb.com" class="required email form-control form-control-lg">
+										</div>
+
+										<div class="col-12 mb-5">
+											<label for="template-contactform-message" data-animate="fadeInLeftSmall" data-delay="200">Type Your Message<small>*</small></label>
+											<textarea class="form-control form-control-lg required" id="template-contactform-message" name="template-contactform-message" placeholder="Tell us about everything" rows="1"></textarea>
+										</div>
+
+										<div class="col-12 d-none">
+											<input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="form-control form-control-lg">
+										</div>
+
+										<div class="col-12">
+											<button class="button button-xlarge py-3 px-5 bg-danger h-bg-dark m-0" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">Send Message<i class="bi-arrow-right me-0 ms-2"></i></button>
+										</div>
+									</div>
+
+									<input type="hidden" name="prefix" value="template-contactform-">
+
+								</form>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

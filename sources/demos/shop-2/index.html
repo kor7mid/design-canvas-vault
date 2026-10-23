@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Create Shop, Store &amp; eCommerce Websites with Canvas Template. Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today.">
+
+	<!-- Font Imports -->
+	<link rel="stylesheet" href="https://use.typekit.net/aay8rzy.css">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="../../shared/style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="../../shared/css/font-icons.css">
+
+	<!-- Plugins/Components CSS -->
+	<link rel="stylesheet" href="../../shared/css/swiper.css">
+
+	<!-- Niche Demos -->
+	<link rel="stylesheet" href="../../demos/shop-2/shop-2.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../../shared/css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Shop 2 | Canvas</title>
+
+</head>
+
+<body class="stretched">
+
+	<div class="modal-on-load" data-target="#offerModal"></div>
+
+		<!-- On Load Modal -->
+		<div class="modal1 mfp-hide subscribe-widget mx-auto" id="offerModal" style="max-width: 450px;">
+			<div class="bg-black dark p-5 text-center">
+				<h4 class="text-transform-none fw-normal ls-0">20% Off your First Order</h4>
+				<p class="text-smaller op-06">Join Our Newsletter &amp; Get Latest Updates &amp; Offers</p>
+				<div class="widget-subscribe-form-result"></div>
+				<form class="widget-subscribe-form2 mb-2" action="include/subscribe.php" method="post">
+					<input type="email" id="widget-subscribe-form2-email" name="widget-subscribe-form-email2" class="form-control required email rounded-pill" placeholder="Enter your Email Address..">
+					<button class="button button-light button-white rounded-pill mt-3 w-100 mx-0" type="submit">Subscribe</button>
+				</form>
+			</div>
+		</div>
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Top Bar
+		============================================= -->
+		<div id="top-bar" class="bg-color py-3 border-0 z-2">
+			<div class="container">
+				<div class="text-center">
+					<span>Flat 20% off on your First Order. Use this Code: <strong>CANVAS20</strong></span>
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Header
+		============================================= -->
+		<header id="header" class="header-size-md dark transparent-header" data-sticky-shrink="false" data-sticky-class="not-dark">
+			<div id="header-wrap">
+				<div class="container-fluid">
+					<div class="header-row justify-content-lg-between">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="me-lg-auto me-0 order-lg-2 col-lg-auto">
+							<a href="demo-shop-2.html">
+								<img class="logo-default" srcset="../../demos/shop-2/images/logo.png, ../../demos/shop-2/images/logo@2x.png 2x" src="../../demos/shop-2/images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-dark" srcset="../../demos/shop-2/images/logo-dark.png, ../../demos/shop-2/images/logo-dark@2x.png 2x" src="../../demos/shop-2/images/logo-dark@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu me-lg-0 order-lg-3 order-5">
+
+							<!-- Menu Left -->
+							<ul class="menu-container">
+								<li class="menu-item"><a class="menu-link" href="#"><div>FAQs</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Journal</div></a></li><!-- .mega-menu end -->
+								<li class="menu-item"><a class="menu-link" href="#"><div>Contact</div></a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+						<div class="header-misc col-lg-auto order-lg-4 ms-auto ms-lg-0 justify-content-lg-end ">
+
+							<!-- Top Login
+							============================================= -->
+							<div id="top-account" class="header-misc-icon px-3">
+								<a href="#"><i class="bi-people"></i></a>
+							</div><!-- #top-search end -->
+
+							<!-- Top Cart
+							============================================= -->
+							<div id="top-cart" class="header-misc-icon">
+								<a href="#" id="top-cart-trigger"><i class="uil uil-shopping-bag"></i></a>
+								<div class="top-cart-content">
+									<div class="top-cart-title">
+										<h4 class="text-dark">Shopping Cart</h4>
+									</div>
+									<div class="top-cart-items">
+										<div class="top-cart-item">
+											<div class="top-cart-item-image">
+												<a href="#"><img src="../../demos/shop-2/images/cart-thumb-1.jpg" alt="Black Monk Table Jar"></a>
+											</div>
+											<div class="top-cart-item-desc">
+												<div class="top-cart-item-desc-title">
+													<a href="#" class="fw-normal">Black Monk Table Jar</a>
+													<span class="top-cart-item-price d-block">$129.00</span>
+												</div>
+												<div class="top-cart-item-quantity fw-semibold">x 1</div>
+											</div>
+										</div>
+										<div class="top-cart-item">
+											<div class="top-cart-item-image">
+												<a href="#" class="fw-normal"><img src="../../demos/shop-2/images/cart-thumb-2.jpg" alt="White Big Showcase Jar"></a>
+											</div>
+											<div class="top-cart-item-desc">
+												<div class="top-cart-item-desc-title">
+													<a href="#" class="fw-normal">White Big Showcase Jar</a>
+													<span class="top-cart-item-price d-block">$299.99</span>
+												</div>
+												<div class="top-cart-item-quantity fw-semibold">x 1</div>
+											</div>
+										</div>
+									</div>
+									<div class="top-cart-action">
+										<span class="top-checkout-price fw-semibold text-dark">$429.98</span>
+										<button class="button button-mini rounded-pill button-border text-dark h-text-color m-0">View Cart</button>
+									</div>
+								</div>
+							</div><!-- #top-cart end -->
+						</div>
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu with-arrows col-lg-auto me-lg-auto order-lg-1">
+
+							<!-- Menu Left -->
+							<ul class="menu-container">
+								<li class="menu-item"><a class="menu-link" href="#"><div>Home</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Products</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>New Arrivals</div></a></li>
+								<li class="menu-item"><a class="menu-link" href="#"><div>Offers</div></a></li>
+							</ul>
+
+						</nav><!-- #primary-menu end -->
+
+					</div>
+
+				</div>
+
+			</div>
+			<div class="header-wrap-clone"></div>
+
+		</header><!-- #header end -->
+
+		<!-- Slider
+		============================================= -->
+		<section id="slider" class="slider-element swiper_wrapper min-vh-md-100 min-vh-50 include-header include-topbar slider-parallax" data-loop="true" data-dots="true" data-speed="500" data-autolay="5000">
+			<div class="slider-inner">
+
+				<div class="swiper swiper-parent">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide dark">
+							<div class="container-fluid h-100 p-5 p-lg-6">
+								<div class="slider-caption justify-content-end">
+									<h2 data-animate="fadeInUp">Brown Clay <br> table Jar</h2>
+									<p class="my-4 text-smaller" data-animate="fadeInUp" data-delay="100">A New Collection of Summer 2022.</p>
+									<div>
+										<a href="#" data-animate="fadeInUp" data-delay="200" class="button bg-color text-dark rounded-pill fw-normal">Shop Now</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide-bg" style="background-image: url('../../demos/shop-2/images/slider/1.jpg'); background-position: 50% 10%;"></div>
+						</div>
+						<div class="swiper-slide dark">
+							<div class="container-fluid h-100 p-5 p-lg-6">
+								<div class="slider-caption justify-content-end">
+									<h2 data-animate="fadeInUp">Brown Clay table Jar</h2>
+									<p class="my-4 text-smaller" data-animate="fadeInUp" data-delay="100">Featured Collection of 2022.</p>
+									<div>
+										<a href="#" data-animate="fadeInUp" data-delay="200" class="button bg-color text-dark rounded-pill fw-normal">Shop Now</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide-bg" style="background-image: url('../../demos/shop-2/images/slider/2.jpg'); background-position: 50% 10%;"></div>
+						</div>
+						<div class="swiper-slide dark">
+							<div class="container-fluid h-100 p-5 p-lg-6">
+								<div class="slider-caption justify-content-end">
+									<h2 data-animate="fadeInUp">Brown Clay table Jar</h2>
+									<p class="my-4 text-smaller" data-animate="fadeInUp" data-delay="100">Latest Collection of 2022.</p>
+									<div>
+										<a href="#" data-animate="fadeInUp" data-delay="200" class="button bg-color text-dark rounded-pill fw-normal">Shop Now</a>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-slide-bg" style="background-image: url('../../demos/shop-2/images/slider/3.jpg'); background-position: 50% 10%;"></div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+
+				<div class="social-icons">
+					<a href="#" class="social-icon si-small rounded-circle text-white bg-facebook">
+						<i class="fa-brands fa-facebook-f text-white-50"></i>
+						<i class="fa-brands fa-facebook-f"></i>
+					</a>
+					<a href="#" class="social-icon si-small rounded-circle text-white bg-instagram">
+						<i class="bi-instagram text-white-50"></i>
+						<i class="bi-instagram"></i>
+					</a>
+					<a href="#" class="social-icon si-small rounded-circle text-white bg-youtube">
+						<i class="fa-brands fa-youtube text-white-50"></i>
+						<i class="fa-brands fa-youtube"></i>
+					</a>
+				</div>
+
+			</div>
+		</section><!-- #Slider End -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+				<div class="container mw-md mt-lg-6">
+
+					<div class="row gx-5">
+						<div class="col-md-4 text-center">
+							<img src="../../demos/shop-2/images/icons/1.svg" alt=".." height="70">
+							<h3 class="my-3">Quality</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit hdanon magnam</p>
+						</div>
+
+						<div class="col-md-4 text-center">
+							<img src="../../demos/shop-2/images/icons/2.svg" alt=".." height="70">
+							<h3 class="my-3">Solid</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit hdanon magnam</p>
+						</div>
+
+						<div class="col-md-4 text-center">
+							<img src="../../demos/shop-2/images/icons/3.svg" alt=".." height="70">
+							<h3 class="my-3">Premium</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit hdanon magnam</p>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="clear mt-lg-6"></div>
+
+				<div class="section py-lg-0 pt-0">
+					<div class="row g-5 align-items-center">
+						<div class="col-md-6">
+							<img src="../../demos/shop-2/images/section/2.jpg" alt="..">
+						</div>
+
+						<div class="col-md-6 px-5">
+							<div class="mw-xs mx-auto">
+								<h2 class="font-secondary">Please join us at the table, and support the old culture</h2>
+								<p class="lead">Monotonectally reintermediate standardized leadership skills whereas resource sucking convergence. Monotonectally incubate principle-centered internal or "organic" sources for bricks-and-clicks expertise.</p>
+								<div>
+									<a href="#" class="button bg-white text-dark h-bg-dark h-text-light px-4 rounded-pill mx-0">Join Now</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div class="section bg-transparent my-0 my-lg-5 pt-0 pt-lg-5">
+
+					<div class="container-fluid">
+
+						<div class="row g-5">
+							<div class="col-md-7 parallax scroll-detect min-vh-lg-90 min-vh-50">
+								<img src="../../demos/shop-2/images/section/1.jpg" class="parallax-bg">
+							</div>
+
+							<div class="col-md-5 d-md-flex flex-column align-items-center justify-content-center">
+								<div>
+									<p class="mb-3 op-06">Featured Collection</p>
+									<h2 class="display-5 mb-5">Brown Clay <br>Table Jar</h2>
+									<h4 class="mb-3"><del><small class="op-06 me-2">&euro; 199.99</small></del> &euro;129.99 <span class="text-black-50 text-smaller"> Onwards</span></h4>
+									<a href="#" class="button button-dark h-text-dark rounded-pill fw-normal">Shop Now</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="section my-0 pt-0 pt-lg-5 my-lg-5 bg-transparent">
+
+					<div class="container-fluid">
+
+						<div class="row g-5 flex-md-row-reverse">
+							<div class="col-md-7 parallax scroll-detect min-vh-lg-90 min-vh-50">
+								<img src="../../demos/shop-2/images/section/3.jpg" class="parallax-bg">
+							</div>
+
+							<div class="col-md-5 d-flex flex-column align-items-center justify-content-center">
+								<div>
+									<p class="mb-3 op-06">Latest Collection</p>
+									<h2 class="display-5 mb-5">Light Brown<br>Goat Jar</h2>
+									<h4 class="mb-3"><del><small class="op-06 me-2">&euro; 249.99</small></del> &euro;199.99 <span class="text-black-50 text-smaller"> Onwards</span></h4>
+									<a href="#" class="button button-dark h-text-dark rounded-pill fw-normal">Shop Now</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="section bg-transparent my-0 my-lg-6">
+
+					<div class="container-fluid">
+
+						<div class="d-flex align-items-center justify-content-between mb-4">
+							<h3 class="m-0">Explore the New Collection</h3>
+							<a href="#" class="link-dark text-smaller text-uppercase ls-1 fw-medium op-09"><u>Recent Arrivals</u></a>
+						</div>
+
+						<div class="row gutter-custom" style="--custom-gutter: 100px">
+							<div class="col-md-4 text-center">
+								<a href="#"><img src="../../demos/shop-2/images/products/1.jpg" alt=".." class="mb-4"></a>
+								<h4 class="mb-2"><a href="#" class="text-dark"><small class="bg-color px-2 mb-2 py-1 text-smaller rounded-pill">New</small> Light Cup Sets</a></h4>
+								<p class="mb-3 small">&euro;79.99</p>
+							</div>
+
+							<div class="col-md-4 text-center">
+								<a href="#"><img src="../../demos/shop-2/images/products/2.jpg" alt=".." class="mb-4"></a>
+								<h4 class="mb-2"><a href="#" class="text-dark">Black Monk Table Jar</a></h4>
+								<p class="mb-3 small">&euro;129.99</p>
+							</div>
+
+							<div class="col-md-4 text-center">
+								<a href="#"><img src="../../demos/shop-2/images/products/3.jpg" alt=".." class="mb-4"></a>
+								<h4 class="mb-2"><a href="#" class="text-dark"><small class="bg-color px-2 mb-2 py-1 text-smaller rounded-pill">Sale</small> White Big Showcase Jar</a></h4>
+								<p class="mb-3 small"><del><small class="op-06 me-2">&euro; 199.99</small></del>&euro;299.99</p>
+							</div>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="section pb-0 bg-transparent border-top my-0 mt-lg-5">
+					<div class="container pt-5 pb-4">
+						<div class="text-center">
+							<h3 class="mb-0">Follow us on</h3>
+							<a href="https://instagram.com/semicolonweb" target="_blank" class="link-dark small"><u>@semicolonweb</u></a>
+						</div>
+					</div>
+					<div id="instagram-photos-carousel" class="instagram-photos customjs owl-carousel image-carousel carousel-widget mt-5" data-title="false" data-lightbox="gallery" data-count="10" data-user="blog.canvastemplate"  data-nav="true" data-pagi="false" data-items-xs="2" data-items-sm="3" data-items-lg="4" data-margin="0" data-autoplay="4000"></div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+
+		<!-- Footer
+		============================================= -->
+		<footer id="footer" class="border-0 bg-white">
+			<div class="container">
+
+				<!-- Footer Widgets
+				============================================= -->
+				<div class="footer-widgets-wrap">
+					<div class="row col-mb-30">
+
+						<!-- Footer Col 1 -->
+						<div class="col-lg-2 col-md-3 col-6">
+							<div class="widget widget_links widget-li-noicon">
+								<ul class="list-unstyled ms-0">
+									<li class="mb-2"><a href="https://facebook.com/semicolonweb" target="_blank"> Facebook</a></li>
+									<li class="mb-2"><a href="https://instagram.com/semicolonweb" target="_blank"> Instagram</a></li>
+									<li class="mb-2"><a href="https://twitter.com/__semicolon" target="_blank"> Twitter</a></li>
+									<li class="mb-2"><a href="https://youtube.com/c/SemiColonweb/videos" target="_blank"> YouTube</a></li>
+								</ul>
+
+							</div>
+						</div>
+
+						<!-- Footer Col 2 -->
+						<div class="col-lg-2 col-md-3 col-6">
+							<div class="widget widget_links widget-li-noicon">
+								<ul class="list-unstyled ms-0">
+									<li><a href="#">Home</a></li>
+									<li><a href="#">About</a></li>
+									<li><a href="#">FAQs</a></li>
+									<li><a href="#">Promo</a></li>
+									<li><a href="#">Journal</a></li>
+								</ul>
+
+							</div>
+						</div>
+
+						<!-- Footer Col 3 -->
+						<div class="col-md-4">
+							<div class="widget">
+
+								<address class="small mb-4">
+									795 Folsom Ave, Suite 600<br>
+									San Francisco, CA 94107<br>
+								</address>
+
+								<p class="mb-4 small">+ 00 11 222 4444</p>
+
+								<p class="mb-0 text-smaller">Seamlessly disseminate covalent portals and equity invested networks. Globally evisculate holistic scenarios whereas go forward e-services. Rapidiously actualize professional data whereas impactful channels. Credibly re-engineer excellent expertise without resource-leveling e-business.</p>
+
+							</div>
+						</div>
+
+						<!-- Footer Col 5 -->
+						<div class="col-lg-3 offset-lg-1">
+							<div class="widget subscribe-widget" data-loader="button">
+								<h4>20% Off on First Order</h4>
+								<h5 class="small op-08"><strong>Subscribe</strong> to Our Newsletter to get Important News, Amazing Offers &amp; Inside Scoops:</h5>
+								<div class="widget-subscribe-form-result"></div>
+								<form id="widget-subscribe-form" action="include/subscribe.php" method="post" class="mb-0">
+									<input type="email" id="widget-subscribe-form-email" name="widget-subscribe-form-email" class="form-control required email rounded-pill" placeholder="Enter your Email Address">
+									<button class="button button-dark button-black rounded-pill mt-3 w-100 mx-0" type="submit">Subscribe</button>
+								</form>
+							</div>
+						</div>
+
+					</div>
+
+				</div><!-- .footer-widgets-wrap end -->
+
+			</div>
+
+			<!-- Copyrights
+			============================================= -->
+			<div id="copyrights" class="py-3 bg-white py-5">
+				<div class="container">
+
+					<div class="row justify-content-between align-items-center">
+						<div class="col-md-6">
+							Copyrights &copy; 2023 All Rights Reserved by Canvas Inc.
+						</div>
+
+						<div class="col-auto">
+							<ul class="list-unstyled d-flex flex-row mb-2">
+								<li class="me-2"><img src="../../demos/xmas/images/cards/visa.svg" alt="Visa" width="34"></li>
+								<li class="me-2"><img src="../../demos/xmas/images/cards/mc.svg" alt="Master Card" width="34"></li>
+								<li class="me-2"><img src="../../demos/xmas/images/cards/ae.svg" alt="American Express" width="34"></li>
+								<li class="me-2"><img src="../../demos/xmas/images/cards/pp.svg" alt="PayPal" width="34"></li>
+								<li class="me-2"><img src="../../demos/xmas/images/cards/wu.svg" alt="Western Union" width="34"></li>
+							</ul>
+						</div>
+					</div>
+
+				</div>
+			</div><!-- #copyrights end -->
+		</footer><!-- #footer end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- Go To Top
+	============================================= -->
+	<div id="gotoTop" class="uil uil-angle-up"></div>
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="../../shared/js/plugins.min.js"></script>
+	<script src="../../shared/js/functions.bundle.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Testimonials Sticky | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400;500;600;700&family=Lato:wght@300;400;700&family=PT+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  <link rel="stylesheet" href="../shared/css/components/radio-checkbox.css">
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.bg-p-dark,
+		.dark .swiper-scrollbar-drag {
+			background-color: #4F3267;
+		}
+
+		.bg-p-dark,
+		.bg-p-dark h1,
+		.bg-p-dark h2,
+		.bg-p-dark h3,
+		.bg-p-dark h4,
+		.bg-p-dark p {
+			color: #F3E3EC;
+		}
+
+		.font-display { font-family: 'Playfair Display', serif; }
+
+		.swiper-vertical>.swiper-scrollbar {
+			right: 60px;
+			top: 30px;
+			width: 3px;
+			height: 170px;
+			margin: 30px 0;
+		}
+
+		.dark .swiper-scrollbar { background-color: rgba(255, 255, 255, 0.1); }
+		.dark .swiper-scrollbar-drag { background: #F3E3EC; }
+
+		.swiper-pagination-fraction {
+			position: absolute;
+			top: -35px;
+			bottom: auto;
+			left: 0px;
+			height: 233px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: center;
+			font-family: 'Playfair Display', serif;
+			font-size: 1.25rem;
+		}
+
+		.swiper-pagination-current:before,
+		.swiper-pagination-total:before {
+			content: "0";
+		}
+
+		.swiper-pagination-total { color: #F3E3EC; }
+
+		@media (min-width: 992px) {
+			#section-testimonials { height: 200vh; }
+
+			#section-testimonials > .row.section-sticky {
+				position: -webkit-sticky;
+				position: sticky;
+				top: 0;
+				height: 100vh;
+				-webkit-box-align: start;
+				-webkit-align-items: flex-start;
+				-ms-flex-align: start;
+				align-items: flex-start;
+			}
+
+			.swiper-navs { display: none }
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0 overflow-visible">
+
+				<div class="text-center min-vh-50 d-flex align-items-center">
+					<div class="container">
+						<h1 class="mb-0">Scroll Down</h1>
+					</div>
+				</div>
+
+				<div id="section-testimonials" class="position-relative border-top border-bottom border-f5">
+
+					<div class="row section-sticky min-vh-100 mx-0 g-0">
+
+						<div class="col-lg-6 d-flex flex-column min-vh-50 min-vh-lg-100 justify-content-center align-items-center">
+							<h2 class="display-3 mb-0 fw-bolder text-dark font-display px-5"><span class="op-02 text-dark">"</span>When I make my Clients smile that's Real Success.<span class="op-02 text-dark">"</span></h2>
+						</div>
+
+						<div id="section-slider" class="col-lg-6 dark min-vh-100">
+							<div id="slider" class="swiper_wrapper customjs min-vh-100 px-0 px-lg-4">
+								<div class="swiper swiper-parent">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide gradient-blue-purple text-center d-flex flex-column justify-content-center align-items-center px-5">
+											<img class="rounded-circle mb-4" src="../demos/articles/images/authors/1.jpg" alt="Image">
+											<h3 class="mb-0">Jim Séchen</h3>
+											<h5 class="text-muted fw-normal mb-4 text-white-50">Developer</h5>
+											<p class="text-larger font-secondary fst-italic mb-0">"Enthusiastically synergize premier solutions rather than superior leadership skills. Competently negotiate adaptive vortals and enterprise partnerships. Intrinsicly recaptiualize one-to-one results without optimal bandwidth. Conveniently enhance."</p>
+										</div>
+
+										<div class="swiper-slide gradient-grey-brown text-center d-flex flex-column justify-content-center align-items-center px-5">
+											<img class="rounded-circle mb-4" src="../demos/articles/images/authors/2.jpg" alt="Image">
+											<h3 class="mb-0">Ryon Schengra</h3>
+											<h5 class="text-muted fw-normal mb-4 text-white-50">Designer</h5>
+											<p class="text-larger font-secondary fst-italic mb-0">Phosfluorescently maximize virtual niche markets via worldwide best practices. Continually evisculate premium scenarios whereas parallel infrastructures. Continually maximize bleeding-edge solutions.</p>
+										</div>
+
+										<div class="swiper-slide gradient-earth text-center d-flex flex-column justify-content-center align-items-center px-5">
+											<img class="rounded-circle mb-4" src="../demos/articles/images/authors/3.jpg" alt="Image">
+											<h3 class="mb-0">Steve Jobs</h3>
+											<h5 class="text-muted fw-normal mb-4 text-white-50">Developer</h5>
+											<p class="text-larger font-secondary fst-italic mb-0">Lorem ipsum dolor sit amet, consectetur, adipisicing elit. Eligendi dolore esse maiores exercitationem cupiditate neque perferendis explicabo atque amet provident, ipsa harum quibusdam, animi enim fugit distinctio est. Aliquam, odit.</p>
+										</div>
+									</div>
+									<div class="swiper-navs">
+										<div class="slider-arrow-left"><i class="bi-arrow-left"></i></div>
+										<div class="slider-arrow-right"><i class="bi-arrow-right"></i></div>
+									</div>
+									<div class="swiper-scrollbar">
+										<div class="swiper-scrollbar-drag">
+										</div>
+										<div class="swiper-number"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="clear"></div>
+
+				<div class="text-center min-vh-50 d-flex align-items-center">
+					<div class="container">
+						<h1 class="mb-0">Scroll Down</h1>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

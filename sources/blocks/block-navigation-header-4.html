@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Header Layout 4 | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Serif:ital,wght@1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.block-nav-header-4 .modal-dialog {
+			position: fixed;
+			bottom: 100px;
+			right: 40px;
+			margin: 0;
+			max-width: 400px;
+		}
+
+		.block-nav-header-4 button.btn-close {
+			float: none;
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			z-index: 1;
+		}
+
+		.block-nav-header-4 .btn-menu {
+			position: fixed;
+		    bottom: 40px;
+		    right: 40px;
+		    z-index: 299;
+		}
+
+		.block-nav-header-4 .modal.fade:not(.show) .modal-dialog {
+		    -webkit-transform: translate(0, 20px);
+			transform: translate(0, 20px);
+		}
+
+		@media (max-width: 576px) {
+			.block-nav-header-4 .modal-dialog {
+			    max-width: none;
+			    right: 10px
+			}
+			.block-nav-header-4 .btn-menu {
+				bottom: 40px;
+		    	right: 10px;
+			}
+		}
+
+		.block-nav-header-4 ul.scroll-menu {
+			display: flex;
+			flex-direction: column;
+			list-style: none;
+		}
+
+		.block-nav-header-4 ul.scroll-menu li {
+			display: inline-block;
+		}
+
+
+		.block-nav-header-4 ul.scroll-menu li a div {
+			display: block;
+			color: #333;
+			padding: 8px 0;
+			font-size: 1.1rem;
+		}
+
+		.block-nav-header-4 ul.scroll-menu li:hover a div,
+		.block-nav-header-4 ul.scroll-menu li.current a div { color: var(--cnvs-themecolor); }
+
+		.block-nav-header-4 ul.scroll-menu li img {
+			width: 24px;
+			height: 24px;
+			margin-right: 10px;
+		}
+</style>
+</head>
+<body class="stretched block-nav-header-4">
+  <div id="wrapper">
+    <!-- Header
+		============================================= -->
+		<header id="header" class="no-sticky">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo">
+							<a href="index.html">
+								<img class="logo-default" srcset="../images/logo.png, ../images/logo@2x.png 2x" src="../images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-dark" srcset="../images/logo-dark.png, ../images/logo-dark@2x.png 2x" src="../images/logo-dark@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc">
+
+							<!-- Top Search
+							============================================= -->
+							<div id="top-search" class="header-misc-icon">
+								<a href="#" id="top-search-trigger"><i class="uil uil-search"></i><i class="bi-x-lg"></i></a>
+							</div><!-- #top-search end -->
+
+						</div>
+
+						<div class="primary-menu-trigger">
+							<button class="cnvs-hamburger" type="button" title="Open Mobile Menu">
+								<span class="cnvs-hamburger-box"><span class="cnvs-hamburger-inner"></span></span>
+							</button>
+						</div>
+
+						<!-- Primary Navigation
+						============================================= -->
+						<nav class="primary-menu with-arrows">
+							<ul class="menu-container">
+								<li class="menu-item">
+									<a class="menu-link" href="demo-seo.html">
+										<div>Home</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a href="#" class="menu-link">
+										<div>About</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="demo-seo-faqs.html">
+										<div>FAQs</div>
+									</a>
+								</li>
+								<li class="menu-item">
+									<a class="menu-link" href="demo-seo-contact.html">
+										<div>Contact</div>
+									</a>
+								</li>
+							</ul>
+						</nav><!-- #primary-menu end -->
+
+						<form class="top-search-form" action="search.html" method="get">
+							<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter.." autocomplete="off">
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Page Menu
+		============================================= -->
+		<button type="button" class="btn btn-dark btn-lg btn-menu" data-bs-toggle="modal" data-bs-target="#scroll-meu-modal">
+			<i class="bi-list"></i> Our Menu
+		</button>
+
+		<!-- Modal -->
+		<div class="modal fade" id="scroll-meu-modal" tabindex="-1" aria-labelledby="scroll-meu-modalLabel" aria-hidden="true">
+		  <div class="modal-dialog">
+			<div class="modal-content">
+			  <button type="button" class="btn btn-sm btn-close" data-bs-dismiss="modal" aria-label="Close">
+				  <span aria-hidden="true"></span>
+				</button>
+			  <div class="modal-body px-5 py-4">
+				<ul class="scroll-menu one-page-menu mb-2" data-easing="easeInOutExpo" data-offset="0">
+					<li class="current"><a href="#indonesian" data-href="#indonesian"><div><img src="../previews/preview/header-4/indonesian.svg" alt="Icon" width="25">Indonesian</div></a></li>
+					<li><a href="#tacos" data-href="#tacos"><div><img src="../previews/preview/header-4/tacos.svg" alt="Icon" width="25">Tacos & Burritos</div></a></li>
+					<li><a href="#chinese" data-href="#chinese"><div><img src="../previews/preview/header-4/chinese.svg" alt="Icon" width="25">Chinese</div></a></li>
+					<li><a href="#pizza" data-href="#pizza"><div><img src="../previews/preview/header-4/pizza.svg" alt="Icon" width="25">Pizza &amp; Pasta</div></a></li>
+					<li><a href="#indian" data-href="#indian"><div><img src="../previews/preview/header-4/indian.svg" alt="Icon" width="25">Indian</div></a></li>
+					<li><a href="#burgers" data-href="#burgers"><div><img src="../previews/preview/header-4/burgers.svg" alt="Icon" width="25">Burgers</div></a></li>
+					<li><a href="#desserts" data-href="#desserts"><div><img src="../previews/preview/header-4/desserts.svg" alt="Icon" width="25">Desserts</div> </a></li>
+					<li><a href="#beverages" data-href="#beverages"><div><img src="../previews/preview/header-4/bevarage.svg" alt="Icon" width="25">Beverages</div> </a></li>
+				</ul>
+				<small class="op-03 mt-4">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></small>
+			  </div>
+			</div>
+		  </div>
+		</div>
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap py-0">
+
+				<div id="indonesian" class="row page-section justify-content-center align-items-center text-center min-vh-100 bg-light">
+					<h1 class="col-12 display-3 mb-0"><img src="../previews/preview/header-4/indonesian.svg" alt="Icon" width="80" class="mb-4"><br>Indonesian <br>...</h1>
+				</div>
+
+				<div id="tacos" class="row page-section justify-content-center align-items-center text-center min-vh-100">
+					<h1 class="col-12 display-3 mb-0"><img src="../previews/preview/header-4/tacos.svg" alt="Icon" width="80" class="mb-4"><br>Tacos & Burritos <br>...</h1>
+				</div>
+
+				<div id="chinese" class="row page-section justify-content-center align-items-center text-center min-vh-100 bg-light">
+					<h1 class="col-12 display-3 mb-0"><img src="../previews/preview/header-4/chinese.svg" alt="Icon" width="80" class="mb-4"><br>Chinese <br>...</h1>
+				</div>
+
+				<div id="pizza" class="row page-section justify-content-center align-items-center text-center min-vh-100">
+					<h1 class="col-12 display-3 mb-0"><img src="../previews/preview/header-4/pizza.svg" alt="Icon" width="80" class="mb-4"><br>Pizza <br>...</h1>
+				</div>
+
+				<div id="indian" class="row page-section justify-content-center align-items-center text-center min-vh-100 bg-light">
+					<h1 class="col-12 display-3 mb-0"><img src="../previews/preview/header-4/indian.svg" alt="Icon" width="80" class="mb-4"><br>Indian <br>...</h1>
+				</div>
+
+				<div id="burgers" class="row page-section justify-content-center align-items-center text-center min-vh-100">
+					<h1 class="col-12 display-3 mb-0"><img src="../previews/preview/header-4/burgers.svg" alt="Icon" width="80" class="mb-4"><br>Burgers <br>...</h1>
+				</div>
+
+				<div id="desserts" class="row page-section justify-content-center align-items-center text-center min-vh-100 bg-light">
+					<h1 class="col-12 display-3 mb-0"><img src="../previews/preview/header-4/desserts.svg" alt="Icon" width="80" class="mb-4"><br>Desserts <br>...</h1>
+				</div>
+
+				<div id="beverages" class="row page-section justify-content-center align-items-center text-center min-vh-100">
+					<h1 class="col-12 display-3 mb-0"><img src="../previews/preview/header-4/bevarage.svg" alt="Icon" width="80" class="mb-4"><br>Beverages <br>...</h1>
+				</div>
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

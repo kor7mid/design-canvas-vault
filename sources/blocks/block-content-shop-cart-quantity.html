@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shop Prouduct Quantity | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&family=Playfair+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.cart-border .quantity {
+			--cnvs-cart-quantity-bg: transparent;
+			--cnvs-cart-quantity-border-color: #AAA;
+			--cnvs-cart-quantity-bg-hover: #F5F5F5;
+			border: var(--cnvs-cart-quantity-border) solid var(--cnvs-cart-quantity-border-color);
+		}
+
+		.cart-border-2 .quantity {
+			--cnvs-cart-quantity-height: 46px;
+			--cnvs-cart-quantity-bg-hover: transparent;
+			--cnvs-cart-quantity-color-hover: var(--bs-danger);
+		}
+
+		.cart-border.cart-border-2 .qty {
+			--cnvs-cart-quantity-width: 25px;
+		}
+
+		.cart-bg-circle .quantity {
+			--cnvs-cart-quantity-border: 0px;
+			--cnvs-cart-quantity-width: 43px;
+			--cnvs-cart-quantity-height: 43px;
+			transition: none;
+		}
+
+		.dark .quantity {
+			--cnvs-cart-quantity-bg: rgba(0,0,0,0.2);
+			--cnvs-cart-quantity-color: #FFF;
+			--cnvs-cart-quantity-color-hover: var(--cnvs-cart-quantity-color);
+			--cnvs-cart-quantity-border-color: rgba(255,255,255,0.5);
+			--cnvs-cart-quantity-bg-hover: rgba(0,0,0,0.3);
+		}
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+
+				<div class="container mw-md">
+
+					<div class="row g-5 align-items-center">
+						<div class="col-md-5 col-lg-4">
+							<img src="../previews/preview/cart-styles/1.jpg" alt="Image">
+						</div>
+
+						<div class="col-md-7 col-lg-8">
+							<h3 class="fw-bold display-6 mb-5">Cart Quantity - Default</h3>
+
+							<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+							<!-- Quantity & Cart Button
+							============================================= -->
+							<form class="cart mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<div class="quantity">
+									<button type="button" class="minus"><i class="uil uil-minus"></i></button>
+									<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty">
+									<button type="button" class="plus"><i class="uil uil-plus"></i></button>
+								</div>
+								<button type="submit" class="add-to-cart button button-dark rounded m-0">Add to cart</button>
+							</form><!-- Quantity & Cart Button End -->
+						</div>
+					</div>
+
+					<div class="line my-6"></div>
+
+					<div class="row g-5 align-items-center">
+						<div class="col-md-5 col-lg-4">
+							<img src="../previews/preview/cart-styles/2.jpg" alt="Image">
+						</div>
+
+						<div class="col-md-7 col-lg-8">
+							<h3 class="fw-bold display-6 mb-5">Cart Quantity - Border</h3>
+
+							<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+							<!-- Quantity & Cart Button
+							============================================= -->
+							<form class="cart cart-border mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<div class="quantity">
+									<button type="button" class="minus"><i class="uil uil-minus"></i></button>
+									<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty">
+									<button type="button" class="plus"><i class="uil uil-plus"></i></button>
+								</div>
+								<button type="submit" class="add-to-cart button button-dark rounded m-0">Add to cart</button>
+							</form><!-- Quantity & Cart Button End -->
+						</div>
+					</div>
+
+					<div class="line my-6"></div>
+
+					<div class="row g-5 align-items-center">
+						<div class="col-md-5 col-lg-4">
+							<img src="../previews/preview/cart-styles/3.jpg" alt="Image">
+						</div>
+
+						<div class="col-md-7 col-lg-8">
+							<h3 class="fw-bold display-6 mb-5">Cart Quantity - Border Rounded</h3>
+
+							<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+							<!-- Quantity & Cart Button
+							============================================= -->
+							<form class="cart cart-border mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<div class="quantity rounded-5 overflow-hidden">
+									<button type="button" class="minus"><i class="uil uil-minus"></i></button>
+									<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty">
+									<button type="button" class="plus"><i class="uil uil-plus"></i></button>
+								</div>
+								<button type="submit" class="add-to-cart button button-dark rounded m-0">Add to cart</button>
+							</form><!-- Quantity & Cart Button End -->
+						</div>
+					</div>
+
+					<div class="line my-6"></div>
+
+					<div class="row g-5 align-items-center">
+						<div class="col-md-5 col-lg-4">
+							<img src="../previews/preview/cart-styles/4.jpg" alt="Image">
+						</div>
+
+						<div class="col-md-7 col-lg-8">
+							<h3 class="fw-bold display-6 mb-5">Cart Quantity - Border + Color</h3>
+
+							<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+							<!-- Quantity & Cart Button
+							============================================= -->
+							<form class="cart cart-border mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<div class="quantity border-danger">
+									<button type="button" class="minus h-text-danger"><i class="uil uil-minus"></i></button>
+									<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty border-danger">
+									<button type="button" class="plus h-text-danger"><i class="uil uil-plus"></i></button>
+								</div>
+								<button type="submit" class="add-to-cart button button-dark rounded m-0">Add to cart</button>
+							</form><!-- Quantity & Cart Button End -->
+						</div>
+					</div>
+
+					<div class="line my-6"></div>
+
+					<div class="row g-5 align-items-center">
+						<div class="col-md-5 col-lg-4">
+							<img src="../previews/preview/cart-styles/5.jpg" alt="Image">
+						</div>
+
+						<div class="col-md-7 col-lg-8">
+							<h3 class="fw-bold display-6 mb-5">Cart Quantity - Border 2</h3>
+
+							<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+							<!-- Quantity & Cart Button
+							============================================= -->
+							<form class="cart cart-border cart-border-2 mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<div class="quantity overflow-hidden">
+									<button type="button" class="minus"><i class="uil uil-minus"></i></button>
+									<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty border-0">
+									<button type="button" class="plus"><i class="uil uil-plus"></i></button>
+								</div>
+								<button type="submit" class="add-to-cart button button-dark rounded m-0">Add to cart</button>
+							</form><!-- Quantity & Cart Button End -->
+						</div>
+					</div>
+
+					<div class="line my-6"></div>
+
+					<div class="row g-5 align-items-center">
+						<div class="col-md-5 col-lg-4">
+							<img src="../previews/preview/cart-styles/6.jpg" alt="Image">
+						</div>
+
+						<div class="col-md-7 col-lg-8">
+							<h3 class="fw-bold display-6 mb-5">Cart Quantity - Transparent</h3>
+
+							<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+							<!-- Quantity & Cart Button
+							============================================= -->
+							<form class="cart cart-border cart-border-2 mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<div class="quantity overflow-hidden border-0">
+									<button type="button" class="minus"><i class="uil uil-minus"></i></button>
+									<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty border-0">
+									<button type="button" class="plus"><i class="uil uil-plus"></i></button>
+								</div>
+								<button type="submit" class="add-to-cart button button-dark rounded m-0">Add to cart</button>
+							</form><!-- Quantity & Cart Button End -->
+						</div>
+					</div>
+
+					<div class="line my-6"></div>
+
+					<div class="row g-5 align-items-center">
+						<div class="col-md-5 col-lg-4">
+							<img src="../previews/preview/cart-styles/7.jpg" alt="Image">
+						</div>
+
+						<div class="col-md-7 col-lg-8">
+							<h3 class="fw-bold display-6 mb-5">Cart Quantity - Background</h3>
+
+							<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+							<!-- Quantity & Cart Button
+							============================================= -->
+							<form class="cart mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<div class="quantity">
+									<button type="button" class="h-bg-color h-text-light all-ts minus"><i class="uil uil-minus"></i></button>
+									<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty bg-transparent border-0">
+									<button type="button" class="h-bg-color h-text-light all-ts plus"><i class="uil uil-plus"></i></button>
+								</div>
+								<button type="submit" class="add-to-cart button button-dark rounded m-0">Add to cart</button>
+							</form><!-- Quantity & Cart Button End -->
+						</div>
+					</div>
+
+					<div class="line my-6"></div>
+
+					<div class="row g-5 align-items-center">
+						<div class="col-md-5 col-lg-4">
+							<img src="../previews/preview/cart-styles/8.jpg" alt="Image">
+						</div>
+
+						<div class="col-md-7 col-lg-8">
+							<h3 class="fw-bold display-6 mb-5">Cart Quantity - Background Border</h3>
+
+							<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+							<!-- Quantity & Cart Button
+							============================================= -->
+							<form class="cart mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<div class="quantity border">
+									<button type="button" class="h-bg-color h-text-light all-ts minus"><i class="uil uil-minus"></i></button>
+									<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty bg-transparent border-0">
+									<button type="button" class="h-bg-color h-text-light all-ts plus"><i class="uil uil-plus"></i></button>
+								</div>
+								<button type="submit" class="add-to-cart button button-dark rounded m-0">Add to cart</button>
+							</form><!-- Quantity & Cart Button End -->
+						</div>
+					</div>
+
+					<div class="line my-6"></div>
+
+					<div class="row g-5 align-items-center">
+						<div class="col-md-5 col-lg-4">
+							<img src="../previews/preview/cart-styles/9.jpg" alt="Image">
+						</div>
+
+						<div class="col-md-7 col-lg-8">
+							<h3 class="fw-bold display-6 mb-5">Cart Quantity - Background Circle</h3>
+
+							<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+							<!-- Quantity & Cart Button
+							============================================= -->
+							<form class="cart cart-bg-circle mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<div class="quantity">
+									<button type="button" class="h-bg-color rounded-circle h-text-light all-ts minus"><i class="uil uil-minus"></i></button>
+									<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty bg-transparent border-0 mx-2">
+									<button type="button" class="h-bg-color rounded-circle h-text-light all-ts plus"><i class="uil uil-plus"></i></button>
+								</div>
+								<button type="submit" class="add-to-cart button button-dark rounded m-0">Add to cart</button>
+							</form><!-- Quantity & Cart Button End -->
+						</div>
+					</div>
+
+					<div class="line my-6"></div>
+
+					<div class="row g-5 align-items-center">
+						<div class="col-md-5 col-lg-4">
+							<img src="../previews/preview/cart-styles/10.jpg" alt="Image">
+						</div>
+
+						<div class="col-md-7 col-lg-8">
+							<h3 class="fw-bold display-6 mb-5">Cart Quantity - Background Varriant</h3>
+
+							<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+							<!-- Quantity & Cart Button
+							============================================= -->
+							<form class="cart cart-bg-circle mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<div class="quantity">
+									<button type="button" class="bg-danger h-bg-dark rounded-circle text-white minus"><i class="uil uil-minus"></i></button>
+									<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty bg-transparent border-0 mx-2">
+									<button type="button" class="bg-primary h-bg-success rounded-circle text-white plus"><i class="uil uil-plus"></i></button>
+								</div>
+								<button type="submit" class="add-to-cart button button-dark rounded m-0">Add to cart</button>
+							</form><!-- Quantity & Cart Button End -->
+						</div>
+					</div>
+
+				</div>
+
+				<div class="clear my-4"></div>
+
+				<div class="section mb-0 bg-dark dark py-6">
+					<div class="container mw-md">
+						<div class="row g-5 align-items-center">
+							<div class="col-md-5 col-lg-4">
+								<img src="../previews/preview/cart-styles/11.jpg" alt="Image">
+							</div>
+
+							<div class="col-md-7 col-lg-8">
+								<h3 class="fw-bold display-6 mb-5 text-white">Cart Quantity - Dark</h3>
+
+								<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+								<!-- Quantity & Cart Button
+								============================================= -->
+								<form class="cart cart-border mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+									<div class="quantity">
+										<button type="button" class="minus"><i class="uil uil-minus"></i></button>
+										<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty">
+										<button type="button" class="plus"><i class="uil uil-plus"></i></button>
+									</div>
+									<button type="submit" class="add-to-cart button bg-white text-dark rounded m-0">Add to cart</button>
+								</form><!-- Quantity & Cart Button End -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="section mt-0 bg-primary dark py-6">
+					<div class="container mw-md">
+						<div class="row g-5 align-items-center">
+							<div class="col-md-5 col-lg-4">
+								<img src="../previews/preview/cart-styles/12.jpg" alt="Image">
+							</div>
+
+							<div class="col-md-7 col-lg-8">
+								<h3 class="fw-bold display-6 mb-5 text-white">Cart Quantity - Background Primary</h3>
+
+								<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+								<!-- Quantity & Cart Button
+								============================================= -->
+								<form class="cart cart-border mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+									<div class="quantity rounded overflow-hidden" style="--cnvs-cart-quantity-bg: transparent; --cnvs-cart-quantity-border-color: #FFF;">
+										<button type="button" class="minus"><i class="uil uil-minus"></i></button>
+										<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty">
+										<button type="button" class="plus"><i class="uil uil-plus"></i></button>
+									</div>
+									<button type="submit" class="add-to-cart button bg-white text-dark rounded m-0">Add to cart</button>
+								</form><!-- Quantity & Cart Button End -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="clear"></div>
+
+				<div class="container mw-md mt-4">
+					<div class="row g-5 align-items-center">
+						<div class="col-md-5 col-lg-4">
+							<img src="../previews/preview/cart-styles/13.jpg" alt="Image">
+						</div>
+
+						<div class="col-md-7 col-lg-8">
+							<h3 class="fw-bold display-6 mb-5">Cart Quantity - Larger Size</h3>
+
+							<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+							<!-- Quantity & Cart Button
+							============================================= -->
+							<form class="cart cart-border mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<div class="quantity" style="--cnvs-cart-quantity-width: 75px; --cnvs-cart-quantity-height: 75px; --cnvs-cart-quantity-font-size: 1.25rem;">
+									<button type="button" class="minus"><i class="uil uil-minus"></i></button>
+									<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty">
+									<button type="button" class="plus"><i class="uil uil-plus"></i></button>
+								</div>
+								<button type="submit" class="add-to-cart button button-large button-dark rounded m-0 py-4 px-5">Add to cart</button>
+							</form><!-- Quantity & Cart Button End -->
+						</div>
+					</div>
+
+					<div class="line my-6"></div>
+
+					<div class="row g-5 align-items-center">
+						<div class="col-md-5 col-lg-4">
+							<img src="../previews/preview/cart-styles/14.jpg" alt="Image">
+						</div>
+
+						<div class="col-md-7 col-lg-8">
+							<h3 class="fw-bold display-6 mb-5">Cart Quantity - Smaller Size</h3>
+
+							<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+							<!-- Quantity & Cart Button
+							============================================= -->
+							<form class="cart cart-border mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<div class="quantity" style="--cnvs-cart-quantity-width: 40px; --cnvs-cart-quantity-height: 34px; --cnvs-cart-quantity-font-size: 0.825rem;">
+									<button type="button" class="minus"><i class="uil uil-minus"></i></button>
+									<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty">
+									<button type="button" class="plus"><i class="uil uil-plus"></i></button>
+								</div>
+								<button type="submit" class="add-to-cart button button-mini py-2 px-4 button-dark rounded m-0">Add to cart</button>
+							</form><!-- Quantity & Cart Button End -->
+						</div>
+					</div>
+
+					<div class="line my-6"></div>
+
+					<div class="row g-5 align-items-center">
+						<div class="col-md-5 col-lg-4">
+							<img src="../previews/preview/cart-styles/15.jpg" alt="Image">
+						</div>
+
+						<div class="col-md-7 col-lg-8">
+							<h3 class="fw-bold display-6 mb-5">Cart Quantity - Different Icon</h3>
+
+							<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+							<!-- Quantity & Cart Button
+							============================================= -->
+							<form class="cart cart-border mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<div class="quantity">
+									<button type="button" class="minus text-muted h-text-dark"><i class="fa-solid fa-angle-down"></i></button>
+									<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty">
+									<button type="button" class="plus text-muted h-text-dark"><i class="fa-solid fa-angle-up"></i></button>
+								</div>
+								<button type="submit" class="add-to-cart button button-dark rounded m-0">Add to cart</button>
+							</form><!-- Quantity & Cart Button End -->
+						</div>
+					</div>
+
+					<div class="line my-6"></div>
+
+					<div class="row g-5 align-items-center">
+						<div class="col-md-5 col-lg-4">
+							<img src="../previews/preview/cart-styles/16.jpg" alt="Image">
+						</div>
+
+						<div class="col-md-7 col-lg-8">
+							<h3 class="fw-bold display-6 mb-5">Cart Quantity - DropDown</h3>
+
+							<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+							<!-- Quantity & Cart Button
+							============================================= -->
+							<form class="cart cart-border mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<select class="form-select quantity w-auto" aria-label="Default select example">
+									<option selected disabled>0</option>
+									<option value="1">1</option>
+									<option value="2">2</option>
+									<option value="3">3</option>
+									<option value="4">4</option>
+									<option value="5">5</option>
+								</select>
+								<button type="submit" class="add-to-cart button button-dark rounded m-0">Add to cart</button>
+							</form><!-- Quantity & Cart Button End -->
+						</div>
+					</div>
+
+					<div class="line my-6"></div>
+
+					<div class="row g-5 align-items-center">
+						<div class="col-md-5 col-lg-4">
+							<img src="../previews/preview/cart-styles/17.jpg" alt="Image">
+						</div>
+
+						<div class="col-md-7 col-lg-8">
+							<h3 class="fw-bold display-6 mb-5">Cart Quantity - Group</h3>
+
+							<p class="text-larger mb-5">Credibly promote whereas resource maximizing web services. Quickly strategize inexpensive technology with 2.0 convergence.</p>
+
+							<!-- Quantity & Cart Button
+							============================================= -->
+							<form class="cart cart-border cart-border-2 mb-0 d-flex align-items-center" method="post" enctype='multipart/form-data'>
+								<div class="quantity overflow-hidden me-0" style="--cnvs-cart-quantity-height: 62px;--cnvs-cart-quantity-bg: var(--bs-dark); --cnvs-cart-quantity-border: 0px; --cnvs-cart-quantity-bg-hover: var(--bs-dark);">
+									<button type="button" class="minus text-white h-text-warning"><i class="uil uil-minus"></i></button>
+									<input type="number" step="1" min="1" name="quantity" value="1" title="Qty" class="qty border-0 text-light h-bg-transparent">
+									<button type="button" class="plus text-white h-text-warning"><i class="uil uil-plus"></i></button>
+								</div>
+								<button type="submit" class="add-to-cart button button-large bg-warning h-op-09 text-dark py-3 m-0">Add to cart</button>
+							</form><!-- Quantity & Cart Button End -->
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>

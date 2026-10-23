@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta http-equiv="x-ua-compatible" content="IE=edge">
+	<meta name="author" content="SemiColonWeb">
+	<meta name="description" content="Get Canvas to build powerful websites easily with the Highly Customizable &amp; Best Selling Bootstrap Template, today.">
+
+	<!-- Font Imports -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+
+	<!-- Core Style -->
+	<link rel="stylesheet" href="../shared/style.css">
+
+	<!-- Font Icons -->
+	<link rel="stylesheet" href="../shared/css/font-icons.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="../shared/css/custom.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- Document Title
+	============================================= -->
+	<title>Header - Full Menu | Canvas</title>
+
+<style>
+
+	.offcanvas.offcanvas-top {
+		position: absolute;
+		height: max-content;
+		background-color: var(--cnvs-contrast-100);
+		--bs-offcanvas-border-color: rgba(var(--cnvs-contrast-rgb), .1);
+	}
+
+	.nav:not(.primary-nav) .nav-link {
+		--bs-nav-link-padding-x: 0;
+        --bs-nav-link-color: var(--cnvs-contrast-800);
+	}
+
+	.primary-nav .nav-link {
+		--bs-nav-link-padding-y: 8px;
+		--bs-nav-link-font-size: 1.25rem;
+		--bs-nav-link-font-weight: 700;
+		--bs-nav-link-color: var(--cnvs-contrast-800);
+	}
+
+	.primary-nav .nav-link:hover {
+		font-style: italic;
+	}
+
+	.offcanvas .container > .row > *:not(:first-child) {
+		border-left: 1px solid var(--cnvs-contrast-200);
+	}
+
+    .offcanvas-backdrop.show {
+        cursor: url('../images/icons/close.png') 16 16, pointer;
+    }
+
+</style>
+
+</head>
+
+<body class="stretched" data-menu-breakpoint="1200">
+
+	<div class="offcanvas offcanvas-top py-lg-5 py-4" tabindex="-1" data-bs-backdrop="true" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
+        <button type="button" class="btn-close position-absolute top-0 end-0 square-sm p-3 rounded-0" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+		<div class="container">
+			<div class="row g-5">
+				<div class="col-lg-4 col-6">
+					<!-- Primary Navigation
+					============================================= -->
+					<ul class="nav primary-nav flex-column">
+						<li class="nav-item"><a class="nav-link" href="#"><div><i class="me-2 bi-house"></i> Home</div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><div><i class="me-2 bi-person-circle"></i> About</div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><div><i class="me-2 bi-pc-display"></i> Work</div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><div><i class="me-2 bi-microsoft-teams"></i> Team</div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><div><i class="me-2 bi-database"></i> Services</div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><div><i class="me-2 bi-pen"></i> Blogs</div></a></li>
+					</ul>
+				</div>
+				<div class="col-lg-4 col-6">
+					<h4>Helps & Supports</h4>
+					<!-- <div class="posts-sm row col-mb-30" id="post-list-footer">
+						<div class="entry col-12">
+							<div class="grid-inner row">
+								<div class="col-auto">
+									<div class="entry-image">
+										<a href="#"><img src="../images/magazine/thumb/1.jpg" alt="Image" class="rounded"></a>
+									</div>
+								</div>
+								<div class="col">
+									<div class="entry-title">
+										<h4><a href="#">Lorem ipsum dolor sit amet, consectetur</a></h4>
+									</div>
+									<div class="entry-meta">
+										<ul>
+											<li>10th July 2021</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-12">
+							<div class="grid-inner row">
+								<div class="col-auto">
+									<div class="entry-image">
+										<a href="#"><img src="../images/magazine/thumb/2.jpg" alt="Image" class="rounded"></a>
+									</div>
+								</div>
+								<div class="col">
+									<div class="entry-title">
+										<h4><a href="#">Elit Assumenda vel amet dolorum quasi</a></h4>
+									</div>
+									<div class="entry-meta">
+										<ul>
+											<li>10th July 2021</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="entry col-12">
+							<div class="grid-inner row">
+								<div class="col-auto">
+									<div class="entry-image">
+										<a href="#"><img src="../images/magazine/thumb/3.jpg" alt="Image" class="rounded"></a>
+									</div>
+								</div>
+								<div class="col">
+									<div class="entry-title">
+										<h4><a href="#">Debitis nihil placeat, illum est nisi</a></h4>
+									</div>
+									<div class="entry-meta">
+										<ul>
+											<li>10th July 2021</li>
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div> -->
+
+					<!-- Primary Navigation
+					============================================= -->
+					<ul class="nav flex-column">
+						<li class="nav-item"><a class="nav-link" href="#"><div><i class="me-2 bi-chat-dots"></i> Forum Community</div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><div><i class="me-2 bi-question-circle"></i> FAQs</div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><div><i class="me-2 bi-file-earmark-text"></i> Documnentation</div></a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><div><i class="me-2 bi-telephone"></i> Contact Us</div></a></li>
+					</ul>
+				</div>
+
+				<div class="col-lg-4 d-none d-lg-block border-start-0">
+					<div class="card">
+						<div class="card-body bg-contrast-200 p-4">
+							<h3>Get In Touch</h3>
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero consectetur deserunt magnam quasi! Explicabo nobis cupiditate accusamus doloribus deserunt! Nemo?</p>
+							<a href="#"><u>Contact Now</u></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Document Wrapper
+	============================================= -->
+	<div id="wrapper">
+
+		<!-- Header
+		============================================= -->
+		<header id="header">
+			<div id="header-wrap">
+				<div class="container">
+					<div class="header-row">
+
+						<!-- Logo
+						============================================= -->
+						<div id="logo" class="me-5">
+							<a href="index.html">
+								<img class="logo-default" srcset="../images/logo.png, ../images/logo@2x.png 2x" src="../images/logo@2x.png" alt="Canvas Logo">
+								<img class="logo-dark" srcset="../images/logo-dark.png, ../images/logo-dark@2x.png 2x" src="../images/logo-dark@2x.png" alt="Canvas Logo">
+							</a>
+						</div><!-- #logo end -->
+
+						<div class="header-misc ms-auto">
+                            <a data-bs-toggle="offcanvas" href="#offcanvasMenu" role="button" aria-controls="offcanvasMenu" class="offcanvas-btn button button-dark rounded-4 m-0"><i class="bi-list"></i> <span>Menu</span></a>
+                        </div>
+
+					</div>
+				</div>
+			</div>
+			<div class="header-wrap-clone"></div>
+		</header><!-- #header end -->
+
+		<!-- Content
+		============================================= -->
+		<section id="content">
+			<div class="content-wrap">
+				<div class="content-wrap text-center">
+                    <a href="header-offcanvas.html" class="fs-4 link-dark link-opacity-75-hover"><u>Offcanvas - Push Content</u></a>
+					<span class="mx-3">&middot;</span>
+					<a href="header-offcanvas.html" class="fs-4 link-dark link-opacity-75-hover"><u>Offcanvas - Overlay</u></a>
+				</div>
+			</div>
+		</section><!-- #content end -->
+
+	</div><!-- #wrapper end -->
+
+	<!-- JavaScripts
+	============================================= -->
+	<script src="../shared/js/plugins.min.js"></script>
+	<script src="../shared/js/functions.bundle.js"></script>
+
+</body>
+</html>

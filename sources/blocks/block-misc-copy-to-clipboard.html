@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Copy to Clipboard | Design Canvas Vault</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,700;1,400&family=Maitree:wght@300;400;500;600;700&family=Crete+Round:ital,wght@1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../shared/style.css">
+  <link rel="stylesheet" href="../shared/css/font-icons.css">
+  <link rel="stylesheet" href="../shared/css/swiper.css">
+  <link rel="stylesheet" href="../shared/css/animate.css">
+  
+  <link rel="stylesheet" href="../shared/css/custom.css">
+  <style>
+.check-path {
+            fill:var(--bs-secondary);
+            opacity: 0;
+            transition: opacity .3s ease-in-out;
+        }
+
+        .copy-succeed .check-path {
+            opacity: 1;
+        }
+</style>
+</head>
+<body class="stretched">
+  <div id="wrapper">
+    <!-- Content
+		============================================= -->
+		<section id="content">
+
+			<div class="content-wrap">
+
+                <div class="container">
+
+                    <div class="row justify-content-center">
+                        <div class="col-md-6 mb-5">
+                            <div class="input-group mb-3">
+                                <input id="target-input" type="text" class="form-control" value="https://themes.semicolonweb.com/html/canvas/intro.html">
+                                <button class="btn btn-secondary btn-copy" type="button" data-clipboard-target="#target-input" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to Clipboard">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 124.809 142.639" fill="currentColor">
+                                        <g transform="translate(-1035.699 -237)">
+                                            <path fill-rule="evenodd" d="M81.234,13.372a4.457,4.457,0,0,0-4.457-4.457H50.032a4.457,4.457,0,0,0-4.457,4.457v8.915a4.457,4.457,0,0,0,4.457,4.457H76.777a4.457,4.457,0,0,0,4.457-4.457Zm-44.575,0A13.372,13.372,0,0,1,50.032,0H76.777A13.372,13.372,0,0,1,90.149,13.372v8.915A13.372,13.372,0,0,1,76.777,35.66H50.032A13.372,13.372,0,0,1,36.66,22.287Zm-17.83,0h8.915v8.915A22.287,22.287,0,0,0,50.032,44.575H76.777A22.287,22.287,0,0,0,99.064,22.287V13.372h8.915a17.83,17.83,0,0,1,17.83,17.83v93.607a17.83,17.83,0,0,1-17.83,17.83H18.83A17.83,17.83,0,0,1,1,124.809V31.2a17.83,17.83,0,0,1,17.83-17.83Z" transform="translate(1034.699 237)">
+                                            <path class="check-path" d="M51.454,6.186a5.16,5.16,0,0,1,7.362,7.224L31.364,47.743a5.16,5.16,0,0,1-7.431.138L5.728,29.675a5.16,5.16,0,1,1,7.293-7.293l14.407,14.4,23.9-30.445a1.839,1.839,0,0,1,.138-.151Z" transform="translate(1066.109 301.556)">
+                                        </g>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <div class="col-md-6 bg-light p-4">
+                            <pre><code id="target-pre" class="text-danger">&lt;!DOCTYPE html&gt;
+&lt;html dir="ltr" lang="en-US"&gt;
+&lt;head&gt;
+
+	<span class="text-black-50">&lt;!-- Your Stylesheets, &amp; Title
+	============================================= --&gt;</span>
+	...
+
+&lt;/head&gt;
+&lt;body&gt;
+
+	<span class="text-black-50">&lt;!-- The Main Wrapper
+	============================================= --&gt;</span>
+	&lt;div id="wrapper"&gt;
+
+		<span class="text-black-50">&lt;!-- Header
+		============================================= --&gt;</span>
+		&lt;header id="header"&gt;
+
+			...
+
+		&lt;/header&gt;
+
+		<span class="text-black-50">&lt;!-- Site Content
+		============================================= --&gt;</span>
+		&lt;section id="content"&gt;
+
+			&lt;div class="content-wrap"&gt;
+
+				&lt;div class="container"&gt;
+
+					...
+
+				&lt;/div&gt;
+
+			&lt;/div&gt;
+
+		&lt;/section&gt;
+
+		<span class="text-black-50">&lt;!-- Footer
+		============================================= --&gt;</span>
+		&lt;footer id="footer" class="dark"&gt;
+
+			&lt;div class="container"&gt;
+
+				...
+
+			&lt;/div&gt;
+
+			<span class="text-black-50">&lt;!-- Copyrights
+			============================================= --&gt;</span>
+			&lt;div id="copyrights"&gt;
+
+				&lt;div class="container"&gt;
+
+					...
+
+				&lt;/div&gt;
+
+			&lt;/div&gt;
+
+		&lt;/footer&gt;
+
+	&lt;/div&gt;
+
+	<span class="text-black-50">&lt;!-- Your JavaScript Links &amp; Scripts
+	============================================= --&gt;</span>
+	...
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                            <button class="btn btn-sm btn-secondary btn-copy position-absolute end-0 top-0" type="button" data-clipboard-target="#target-pre" data-bs-toggle="tooltip" data-bs-placement="top" title="Copy to Clipboard">
+                                Copy
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+			</div>
+
+		</section><!-- #content end -->
+  </div>
+  <script src="../shared/js/jquery.js"></script>
+  <script src="../shared/js/plugins.min.js"></script>
+  <script src="../shared/js/functions.bundle.js"></script>
+</body>
+</html>
