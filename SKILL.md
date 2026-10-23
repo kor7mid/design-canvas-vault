@@ -17,10 +17,10 @@ This skill grants full access to the curated library of **1,245 Canvas templates
 1. **Zero Memory Bloat (Lazy-Loading Architecture)**: NEVER load all 1,245 files into context. Consult the lightweight catalogs (`catalog/*.md`), query the compact index (`registry/llm-index.json`), or run `node <directory>/scripts/vault-cli.js search <query>` / `inspect <id>`.
 2. **Interactive Lookbook Mode (In-Chat Thumbnails)**: Before generating interface code, present **3 to 4 relevant template options** and render their actual preview images directly in the chat:
    ```markdown
-   | Option | ID              | Name                  | Preview                                        |
-   | ------ | --------------- | --------------------- | ---------------------------------------------- |
-   | 1      | `block-hero-10` | Hero Vacation Minimal | ![hero-10](sources/previews/intro/hero-10.jpg) |
-   | 2      | `block-hero-18` | Hero SaaS Terminal    | ![hero-18](sources/previews/intro/hero-18.jpg) |
+   | Option | ID              | Name                  | Preview                                                                                      |
+   | ------ | --------------- | --------------------- | -------------------------------------------------------------------------------------------- |
+   | 1      | `block-hero-10` | Hero Vacation Minimal | ![hero-10](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/hero-10.jpg) |
+   | 2      | `block-hero-18` | Hero SaaS Terminal    | ![hero-18](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/hero-18.jpg) |
    ```
    The user visually reviews and selects their preferred template.
 3. **Industry Context (79 Business Niches)**: When a specific vertical is requested (Fintech, Medical, SaaS, Real Estate, Restaurant, Legal, Gym, etc.), cross-reference `catalog/01-demos-dna.md` to extract the exact palette (`--cnvs-themecolor`), typography (Google Fonts), and component styling for that industry.
