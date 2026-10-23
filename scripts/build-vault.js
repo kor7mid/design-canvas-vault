@@ -220,7 +220,7 @@ if (fs.existsSync(previewImagesSrc)) {
 }
 
 const rootImagesSrc = path.join(SOURCE_DIR, "images");
-if (fs.existsSync(rootImagesSrc)) {
+if (process.env.COPY_HEAVY_IMAGES === "true" && fs.existsSync(rootImagesSrc)) {
   copyDirSync(rootImagesSrc, imagesDestDir, (filePath, fileName, isDir) => {
     if (isDir && fileName === "blocks") return false;
     return true;
@@ -291,9 +291,12 @@ if (fs.existsSync(sourceDemosDir)) {
         primaryFont = primaryFontMatch[1].trim().replace(/['"]/g, "");
     }
 
-    // Copy demo images if present
+    // Copy demo images only if explicitly requested
     const demoImagesSrc = path.join(nicheSrc, "images");
-    if (fs.existsSync(demoImagesSrc)) {
+    if (
+      process.env.COPY_HEAVY_IMAGES === "true" &&
+      fs.existsSync(demoImagesSrc)
+    ) {
       copyDirSync(demoImagesSrc, path.join(targetNicheDir, "images"));
     }
 
@@ -665,9 +668,12 @@ ensureDir(catalogDir);
 ensureDir(registryDir);
 
 const totalCount = blocksList.length + demosList.length + pagesList.length;
+const CDN_BASE_URL =
+  process.env.CDN_BASE_URL || "https://kor7mid.github.io/design-canvas-vault";
 
 const fullCatalog = {
-  version: "2.0.0",
+  version: "1.0.0",
+  cdnBaseUrl: CDN_BASE_URL,
   generatedAt: new Date().toISOString(),
   counts: {
     blocks: blocksList.length,
@@ -675,9 +681,18 @@ const fullCatalog = {
     pages: pagesList.length,
     total: totalCount,
   },
-  blocks: blocksList,
-  demos: demosList,
-  pages: pagesList,
+  blocks: blocksList.map((b) => ({
+    ...b,
+    previewUrl: b.preview ? `${CDN_BASE_URL}/${b.preview}` : null,
+  })),
+  demos: demosList.map((d) => ({
+    ...d,
+    previewUrl: d.preview ? `${CDN_BASE_URL}/${d.preview}` : null,
+  })),
+  pages: pagesList.map((p) => ({
+    ...p,
+    previewUrl: p.preview ? `${CDN_BASE_URL}/${p.preview}` : null,
+  })),
 };
 fs.writeFileSync(
   path.join(registryDir, "catalog.json"),
@@ -687,11 +702,13 @@ fs.writeFileSync(
 
 const compactLlmIndex = {
   counts: fullCatalog.counts,
+  cdnBaseUrl: CDN_BASE_URL,
   blocks: blocksList.map((b) => ({
     id: b.id,
     name: b.name,
     cat: b.category,
     preview: b.preview,
+    previewUrl: b.preview ? `${CDN_BASE_URL}/${b.preview}` : null,
     tags: b.tags,
   })),
   demos: demosList.map((d) => ({
@@ -700,12 +717,14 @@ const compactLlmIndex = {
     primaryColor: d.primaryColor,
     fonts: [d.bodyFont, d.primaryFont],
     preview: d.preview,
+    previewUrl: d.preview ? `${CDN_BASE_URL}/${d.preview}` : null,
   })),
   pages: pagesList.map((p) => ({
     id: p.id,
     name: p.name,
     sub: p.subcategory,
     preview: p.preview,
+    previewUrl: p.preview ? `${CDN_BASE_URL}/${p.preview}` : null,
   })),
 };
 fs.writeFileSync(
@@ -713,6 +732,68 @@ fs.writeFileSync(
   JSON.stringify(compactLlmIndex),
   "utf8",
 );
+
+// -------------------------------------------------------------
+// Generate Markdown Catalogs with Live CDN URLs
+// -------------------------------------------------------------
+let demosMd = `# 01 — Business Demos & DNA Tokens (79 Niches)
+
+| Niche / Industry | Demo ID | Primary Color | Secondary Color | Typography | Preview Thumbnail |
+|---|---|---|---|---|---|
+`;
+for (const d of demosList) {
+  const prev = d.preview ? `![${d.name}](${CDN_BASE_URL}/${d.preview})` : "-";
+  demosMd += `| **${d.name}** | \`${d.id}\` | \`${d.primaryColor}\` | \`${d.secondaryColor}\` | ${d.bodyFont} / ${d.primaryFont} | ${prev} |\n`;
+}
+fs.writeFileSync(path.join(catalogDir, "01-demos-dna.md"), demosMd, "utf8");
+
+let blocksMd = `# 02 — 243 UI Blocks Catalog\n\n`;
+const categoriesMap = {};
+for (const b of blocksList) {
+  if (!categoriesMap[b.categoryName]) categoriesMap[b.categoryName] = [];
+  categoriesMap[b.categoryName].push(b);
+}
+
+for (const [catName, items] of Object.entries(categoriesMap)) {
+  blocksMd += `\n### ${catName} (${items.length})\n\n`;
+  blocksMd += `| ID | Name | Preview Thumbnail | Tags |\n|---|---|---|---|\n`;
+  for (const item of items) {
+    const previewCell = item.preview
+      ? `![${item.name}](${CDN_BASE_URL}/${item.preview})`
+      : "_None_";
+    blocksMd += `| \`${item.id}\` | ${item.name} | ${previewCell} | \`${item.tags.join(", ")}\` |\n`;
+  }
+}
+fs.writeFileSync(
+  path.join(catalogDir, "02-blocks-catalog.md"),
+  blocksMd,
+  "utf8",
+);
+
+let galleryMd = `# Design Canvas Vault — Visual Gallery & Lookbook
+
+Welcome to the visual lookbook of **Design Canvas Vault** (1,245 templates, 79 business demo design systems).
+
+---
+
+## 79 Business Niche Design Systems (Palettes & Fonts)
+
+| Industry | Demo ID | Primary Color | Secondary Color | Preview Thumbnail |
+|---|---|---|---|---|
+`;
+for (const d of demosList.slice(0, 30)) {
+  const prev = d.preview ? `![${d.name}](${CDN_BASE_URL}/${d.preview})` : "-";
+  galleryMd += `| **${d.name}** | \`${d.id}\` | \`${d.primaryColor}\` | \`${d.secondaryColor}\` | ${prev} |\n`;
+}
+galleryMd += `\n_...and 49 more business niches in [\`catalog/01-demos-dna.md\`](catalog/01-demos-dna.md)._\n\n---\n\n## Featured UI Blocks\n\n`;
+galleryMd += `| ID | Name | Category | Thumbnail |\n|---|---|---|---|\n`;
+for (const b of blocksList.slice(0, 30)) {
+  const prev = b.preview
+    ? `![${b.name}](${CDN_BASE_URL}/${b.preview})`
+    : "_None_";
+  galleryMd += `| \`${b.id}\` | ${b.name} | \`${b.category}\` | ${prev} |\n`;
+}
+fs.writeFileSync(path.join(ROOT_DIR, "GALLERY.md"), galleryMd, "utf8");
 
 console.log(`\n✨ Build 100% COMPLETE!`);
 console.log(`📊 Résumé Exhaustif :`);
