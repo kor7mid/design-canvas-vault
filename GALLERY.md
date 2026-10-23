@@ -1,48 +1,73 @@
-# Design Canvas Vault — Visual Gallery & Lookbook
+# Design Canvas Vault — Visual Gallery
 
-Welcome to the visual gallery of **Design Canvas Vault** (1,245 templates, 79 business demo design systems, and ready-to-use UI components).
+Explore 1,245 curated templates with live online thumbnails.
 
 ---
 
-## 79 Business Niche Design Systems (Palettes & Fonts)
+## 79 Business Demos
 
-| Industry               | Demo ID            | Primary Color | Secondary Color | Typography                    |
-| ---------------------- | ------------------ | ------------- | --------------- | ----------------------------- |
-| **Fintech / Finance**  | `demo-finance`     | `#264653`     | `#E9C46A`       | DM Serif Text / Manrope       |
-| **SaaS Modern**        | `demo-saas`        | `#0b44a7`     | `#ffbd00`       | Hoss Round / Sans-serif       |
-| **Medical & Health**   | `demo-medical`     | `#0088cc`     | `#2C3E50`       | Poppins / Sans-serif          |
-| **Real Estate**        | `demo-real-estate` | `#1ABC9C`     | `#333333`       | Lato / Sans-serif             |
-| **Restaurant / Food**  | `demo-restaurant`  | `#d35400`     | `#2C3E50`       | Playfair Display / Sans-serif |
-| **Gym & Fitness**      | `demo-gym`         | `#e74c3c`     | `#111111`       | Montserrat / Sans-serif       |
-| **Law Firm / Legal**   | `demo-law-firm`    | `#1d2a44`     | `#c5a880`       | Merriweather / Sans-serif     |
-| **Agency Modern**      | `demo-agency`      | `#222222`     | `#1ABC9C`       | Poppins / Sans-serif          |
-| **App Landing**        | `demo-app-landing` | `#445165`     | `#59ba47`       | Poppins / Sans-serif          |
-| **E-Commerce Minimal** | `demo-ecommerce`   | `#000000`     | `#c5a880`       | Montserrat / Sans-serif       |
+| Industry | ID | Primary | Secondary | Preview |
+|---|---|---|---|---|
+| **Academic** | `demo-academic` | `#ECA92D` | `#2C3E50` | ![Academic](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/academic.jpg) |
+| **Agency** | `demo-agency` | `#c0bb62` | `#2C3E50` | ![Agency](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/agency.jpg) |
+| **App Landing** | `demo-app-landing` | `#267DF4` | `#2C3E50` | ![App Landing](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/business.jpg) |
+| **Articles About** | `demo-articles-about` | `#0C1CCC` | `#2C3E50` | ![Articles About](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/articles.jpg) |
+| **Articles Books** | `demo-articles-books` | `#0C1CCC` | `#2C3E50` | ![Articles Books](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/articles.jpg) |
+| **Articles Single** | `demo-articles-single` | `#0C1CCC` | `#2C3E50` | ![Articles Single](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/articles.jpg) |
+| **Articles** | `demo-articles` | `#0C1CCC` | `#2C3E50` | ![Articles](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/articles.jpg) |
+| **Barber** | `demo-barber` | `#BF9456` | `#2C3E50` | ![Barber](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/barber.jpg) |
+| **Beauty Kit** | `demo-beauty-kit` | `#6A1B9A` | `#2C3E50` | ![Beauty Kit](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/beauty.jpg) |
+| **Beauty** | `demo-beauty` | `#6A1B9A` | `#2C3E50` | ![Beauty](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/beauty.jpg) |
+| **Bike** | `demo-bike` | `#E83C3C` | `#2C3E50` | ![Bike](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/bike.jpg) |
+| **Blog Categories** | `demo-blog-categories` | `#F39887` | `#2C3E50` | ![Blog Categories](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/blog.jpg) |
+| **Blog Single** | `demo-blog-single` | `#F39887` | `#2C3E50` | ![Blog Single](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/blog.jpg) |
+| **Blog** | `demo-blog` | `#F39887` | `#2C3E50` | ![Blog](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/blog.jpg) |
+| **Burger** | `demo-burger` | `#FBAF32` | `#2C3E50` | ![Burger](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/burger.jpg) |
+| **Business** | `demo-business` | `#00BED7` | `#2C3E50` | ![Business](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/business.jpg) |
+| **Cafe** | `demo-cafe` | `#c0bb62` | `#2C3E50` | ![Cafe](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/cafe.jpg) |
+| **Car Accessories** | `demo-car-accessories` | `#c85e51` | `#2C3E50` | ![Car Accessories](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/car.jpg) |
+| **Car Blog** | `demo-car-blog` | `#c85e51` | `#2C3E50` | ![Car Blog](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/car.jpg) |
+| **Car Contact** | `demo-car-contact` | `#c85e51` | `#2C3E50` | ![Car Contact](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/car.jpg) |
+| **Car Dealers** | `demo-car-dealers` | `#c85e51` | `#2C3E50` | ![Car Dealers](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/car.jpg) |
+| **Car Faqs** | `demo-car-faqs` | `#c85e51` | `#2C3E50` | ![Car Faqs](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/car.jpg) |
+| **Car Listing** | `demo-car-listing` | `#c85e51` | `#2C3E50` | ![Car Listing](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/car.jpg) |
+| **Car Single** | `demo-car-single` | `#c85e51` | `#2C3E50` | ![Car Single](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/car.jpg) |
+| **Car** | `demo-car` | `#c85e51` | `#2C3E50` | ![Car](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/car.jpg) |
+| **Cleaner** | `demo-cleaner` | `#335EEE` | `#2C3E50` | ![Cleaner](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/cleaner.jpg) |
+| **Conference** | `demo-conference` | `#222222` | `#2C3E50` | ![Conference](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/conference.jpg) |
+| **Construction About Us** | `demo-construction-about-us` | `#F18052` | `#2C3E50` | ![Construction About Us](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/construction.jpg) |
+| **Construction Blog** | `demo-construction-blog` | `#F18052` | `#2C3E50` | ![Construction Blog](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/construction.jpg) |
+| **Construction Careers** | `demo-construction-careers` | `#F18052` | `#2C3E50` | ![Construction Careers](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/construction.jpg) |
 
-_Browse all 79 industries in [`catalog/01-demos-dna.md`](catalog/01-demos-dna.md)._
+_...and 49 more niches in [`catalog/01-demos-dna.md`](catalog/01-demos-dna.md)._
 
 ---
 
 ## Featured UI Blocks
 
-| ID                           | Name         | Category  | Thumbnail                                                |
-| ---------------------------- | ------------ | --------- | -------------------------------------------------------- |
-| `block-hero-1`               | Hero 1       | `hero`    | ![Hero 1](sources/previews/intro/hero-1.jpg)             |
-| `block-hero-2`               | Hero 2       | `hero`    | ![Hero 2](sources/previews/intro/hero-2.jpg)             |
-| `block-hero-3`               | Hero 3       | `hero`    | ![Hero 3](sources/previews/intro/hero-3.jpg)             |
-| `block-hero-4`               | Hero 4       | `hero`    | ![Hero 4](sources/previews/intro/hero-4.jpg)             |
-| `block-hero-5`               | Hero 5       | `hero`    | ![Hero 5](sources/previews/intro/hero-5.jpg)             |
-| `block-hero-6`               | Hero 6       | `hero`    | ![Hero 6](sources/previews/intro/hero-6.jpg)             |
-| `block-hero-7`               | Hero 7       | `hero`    | ![Hero 7](sources/previews/intro/hero-7.jpg)             |
-| `block-hero-10`              | Hero 10      | `hero`    | ![Hero 10](sources/previews/intro/hero-10.jpg)           |
-| `block-content-cards-1`      | Cards 1      | `cards`   | ![Cards 1](sources/previews/intro/cards-1.jpg)           |
-| `block-content-cards-2`      | Cards 2      | `cards`   | ![Cards 2](sources/previews/intro/cards-2.jpg)           |
-| `block-content-cards-switch` | Cards Switch | `cards`   | ![Cards Switch](sources/previews/intro/cards-switch.jpg) |
-| `block-content-pricing-1`    | Pricing 1    | `pricing` | ![Pricing 1](sources/previews/intro/pricing-1.jpg)       |
-| `block-content-pricing-5`    | Pricing 5    | `pricing` | ![Pricing 5](sources/previews/intro/pricing-5.jpg)       |
-| `block-content-pricing-11`   | Pricing 11   | `pricing` | ![Pricing 11](sources/previews/intro/pricing-11.jpg)     |
-| `block-form-1`               | Form 1       | `forms`   | ![Form 1](sources/previews/intro/form-1.jpg)             |
-| `block-footer-1`             | Footer 1     | `footers` | ![Footer 1](sources/previews/intro/footer-1.jpg)         |
-| `block-footer-4`             | Footer 4     | `footers` | ![Footer 4](sources/previews/intro/footer-4.jpg)         |
-
-Explore the full catalog in [`catalog/02-blocks-catalog.md`](catalog/02-blocks-catalog.md) or start the visual interface with `npm start`.
+| ID | Name | Category | Thumbnail |
+|---|---|---|---|
+| `block-admin-1` | Admin 1 | `misc` | ![Admin 1](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/dashboard.jpg) |
+| `block-blank` | Blank | `misc` | ![Blank](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/hero-1.jpg) |
+| `block-blog-grid-hover-2` | Blog Cards 2 | `blog` | ![Blog Cards 2](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/blog-grid-hover-2.jpg) |
+| `block-blog-grid-hover` | Blog Grid Hover | `blog` | ![Blog Grid Hover](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/blog-grid-hover.jpg) |
+| `block-blog-list-hover` | Blog List Hover | `blog` | ![Blog List Hover](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/blog-list-hover.jpg) |
+| `block-blog-single-2` | Blog Single Layout 2 | `blog` | ![Blog Single Layout 2](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/blog-single.jpg) |
+| `block-blog-single-3` | Blog Single Layout 3 | `blog` | ![Blog Single Layout 3](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/blog-single-3.jpg) |
+| `block-blog-single-4` | Blog Single Layout 4 | `blog` | ![Blog Single Layout 4](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/blog-single-4.jpg) |
+| `block-blog-single-5` | Blog Single Layout 5 | `blog` | ![Blog Single Layout 5](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/blog-single-5.jpg) |
+| `block-blog-single-6` | Blog Single Layout 6 | `blog` | ![Blog Single Layout 6](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/blog-single-6.jpg) |
+| `block-carousel-tabs-dark` | Carousel Tabs Dark | `sliders` | ![Carousel Tabs Dark](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/tabs-4.jpg) |
+| `block-carousel-tabs` | Carousel Tab - Light/Dark | `sliders` | ![Carousel Tab - Light/Dark](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/carousel-tab.jpg) |
+| `block-contact-1` | Contact Form | `forms` | ![Contact Form](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/contact-1.jpg) |
+| `block-contact-2` | Contact 2 | `forms` | ![Contact 2](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/contact-2.jpg) |
+| `block-contact-3` | Contact 3 | `forms` | ![Contact 3](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/contact-3.jpg) |
+| `block-content-alert-bottom-fixed` | Alert Bottom | `misc` | ![Alert Bottom](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/alert-5.jpg) |
+| `block-content-alert-custom-width` | Alert Custom Width | `misc` | ![Alert Custom Width](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/alert-custom-width.jpg) |
+| `block-content-alert-float` | Alert Float | `misc` | ![Alert Float](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/alert-3.jpg) |
+| `block-content-alert-sticky` | Alert Sticky | `misc` | ![Alert Sticky](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/alert-2.jpg) |
+| `block-content-alert-top` | Alert Top | `misc` | ![Alert Top](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/alert-4.jpg) |
+| `block-content-alert` | Alerts Default | `misc` | ![Alerts Default](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/alert-1.jpg) |
+| `block-content-buttons` | Buttons | `misc` | ![Buttons](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/buttons.jpg) |
+| `block-content-cards-10` | Card Car Rent | `cards` | ![Card Car Rent](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/cards-10.jpg) |
+| `block-content-cards-2` | Cards 2 | `cards` | ![Cards 2](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/cards-2.jpg) |
