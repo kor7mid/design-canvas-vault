@@ -1,0 +1,8 @@
+# Prevent specific files from being overwritten or imported during merges into target branch
+SKILL-BLUEPRINT.md merge=ours
+.vault-state.json merge=ours
+
+# Exclude internal/blueprint files when creating archives or packaging
+SKILL-BLUEPRINT.md export-ignore
+.vault-state.json export-ignore
+tasks/ export-ignore
