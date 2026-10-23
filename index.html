@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canvas Vault Studio — 1,245 Templates & 79 Design Systems</title>
+  <meta http-equiv="refresh" content="0; url=./studio/index.html">
+  <style>
+    body {
+      background: #000000;
+      color: #888888;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 0;
+    }
+    .loader {
+      width: 24px;
+      height: 24px;
+      border: 2px solid #222;
+      border-top-color: #ededed;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      margin-bottom: 16px;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    a {
+      color: #ededed;
+      text-decoration: none;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"></div>
+  <p><a href="./studio/index.html">Entering Canvas Vault Studio...</a></p>
+  <script>
+    window.location.replace('./studio/index.html');
+  </script>
+</body>
+</html>

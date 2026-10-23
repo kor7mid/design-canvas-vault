@@ -123,10 +123,29 @@ function showToast(message) {
   setTimeout(() => vaultToast.classList.remove("visible"), 2200);
 }
 
+const BASE_PATH = window.location.pathname.includes("/design-canvas-vault")
+  ? "/design-canvas-vault"
+  : "";
+
+/**
+ * @param {string | undefined} p
+ */
+function resolveAssetUrl(p) {
+  if (!p) return `${BASE_PATH}/sources/previews/intro/hero-1.jpg`;
+  const clean = p.startsWith("/") ? p.slice(1) : p;
+  return `${BASE_PATH}/${clean}`;
+}
+
 // Initialize Studio
 async function init() {
   try {
-    const res = await fetch("/api/catalog");
+    let res = await fetch("/api/catalog").catch(() => null);
+    if (!res || !res.ok) {
+      res = await fetch(`${BASE_PATH}/registry/catalog.json`).catch(() => null);
+    }
+    if (!res || !res.ok) {
+      res = await fetch("../registry/catalog.json");
+    }
     catalog = await res.json();
 
     const blocks = (catalog.blocks || []).map((b) => ({
@@ -201,9 +220,7 @@ function renderSidebarCards() {
     const card = document.createElement("div");
     card.className = `vault-card ${activeItem && activeItem.id === item.id ? "active" : ""}`;
 
-    const previewSrc = item.preview
-      ? `/${item.preview}`
-      : "/sources/previews/intro/hero-1.jpg";
+    const previewSrc = resolveAssetUrl(item.preview);
 
     card.innerHTML = `
       <img class="card-media" src="${previewSrc}" alt="${item.name}" loading="lazy">
@@ -268,9 +285,7 @@ function renderGalleryGrid() {
   slice.forEach((item) => {
     const card = document.createElement("div");
     card.className = "lookbook-card";
-    const previewSrc = item.preview
-      ? `/${item.preview}`
-      : "/sources/previews/intro/hero-1.jpg";
+    const previewSrc = resolveAssetUrl(item.preview);
     const catLabel = item.category || item.subcategory || item.type;
 
     card.innerHTML = `
@@ -340,7 +355,10 @@ function selectItem(item) {
   const templateFile =
     item.file || item.htmlPath || (item.cssPath ? item.cssPath : null);
   if (templateFile && liveIframe) {
-    liveIframe.src = `/${templateFile}`;
+    const cleanFile = templateFile.startsWith("/")
+      ? templateFile.slice(1)
+      : templateFile;
+    liveIframe.src = `${BASE_PATH}/${cleanFile}`;
   }
 
   if (item.primaryColor && accentColorPicker) {
@@ -549,7 +567,10 @@ async function renderAssembledPage() {
     const assembledFile = item.file || item.htmlPath;
     if (assembledFile) {
       try {
-        const res = await fetch(`/${assembledFile}`);
+        const cleanFile = assembledFile.startsWith("/")
+          ? assembledFile.slice(1)
+          : assembledFile;
+        const res = await fetch(`${BASE_PATH}/${cleanFile}`);
         const text = await res.text();
         const styleMatch = text.match(/<style[^>]*>([\s\S]*?)<\/style>/i);
         if (styleMatch)
@@ -571,17 +592,17 @@ async function renderAssembledPage() {
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="/sources/shared/style.css">
-  <link rel="stylesheet" href="/sources/shared/css/font-icons.css">
-  <link rel="stylesheet" href="/sources/shared/css/swiper.css">
-  <link rel="stylesheet" href="/sources/shared/css/custom.css">
+  <link rel="stylesheet" href="${BASE_PATH}/sources/shared/style.css">
+  <link rel="stylesheet" href="${BASE_PATH}/sources/shared/css/font-icons.css">
+  <link rel="stylesheet" href="${BASE_PATH}/sources/shared/css/swiper.css">
+  <link rel="stylesheet" href="${BASE_PATH}/sources/shared/css/custom.css">
   <style>${combinedStyles}</style>
 </head>
 <body class="stretched">
   <div id="wrapper">${combinedHtml}</div>
-  <script src="/sources/shared/js/jquery.js"></script>
-  <script src="/sources/shared/js/plugins.min.js"></script>
-  <script src="/sources/shared/js/functions.bundle.js"></script>
+  <script src="${BASE_PATH}/sources/shared/js/jquery.js"></script>
+  <script src="${BASE_PATH}/sources/shared/js/plugins.min.js"></script>
+  <script src="${BASE_PATH}/sources/shared/js/functions.bundle.js"></script>
 </body>
 </html>`;
 }
