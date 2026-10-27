@@ -55,32 +55,67 @@ npm start # or node scripts/vault-cli.js studio
 
 ---
 
-## High-Fidelity Multi-Stack Conversion
+## Context-First & Multi-Stack Conversion
 
-When translating Canvas templates to the user's stack:
+> **Project Context Mandate**: Always inspect the user's existing project files (`package.json`, stylesheets, components) FIRST. Respect the project's native styling architecture (Vanilla CSS, CSS Variables, SCSS, CSS Modules, Bootstrap/Canvas, Styled-Components, Vue Scoped CSS, React Native `StyleSheet`, or Tailwind). **Never force Tailwind CSS or any specific framework unless the project already uses it or the user explicitly asks for it.**
 
-### 1. Next.js / React + Tailwind CSS + shadcn/ui
+### 1. Vanilla HTML5 / Modern CSS / SCSS / CSS Modules
 
-- Convert Bootstrap/Canvas grid classes (`col-md-6`, `row`, `container`) to responsive Tailwind CSS (`grid grid-cols-1 md:grid-cols-2 gap-8`, `max-w-7xl mx-auto px-6`).
-- Export demo design tokens into `tailwind.config.js` using `node scripts/vault-cli.js tokens <demo>`.
-- Replace buttons, forms, and dialogs with accessible `shadcn/ui` primitives.
-- Strictly type all components with TypeScript interfaces.
+- Export design tokens as native CSS Custom Properties (`:root { --color-primary: ...; }`) via `node scripts/vault-cli.js tokens <demo> --format css`.
+- Use modern CSS Grid (`display: grid; grid-template-columns: repeat(12, 1fr)`), Flexbox, and semantic HTML5 landmarks.
 
-### 2. React Native / Expo
+### 2. Next.js / React / Vue / Svelte (Tailwind or CSS Modules)
 
-- Convert elements to `View`, `Text`, `TouchableOpacity`, `ScrollView`, or `FlashList`.
-- Apply design tokens via StyleSheet or NativeWind:
+- Adapt Canvas structures to the project's component architecture.
+- If the project uses Tailwind, export tokens via `node scripts/vault-cli.js tokens <demo> --format tailwind`.
+- Strictly follow existing project conventions for state, props, and typing (JS/JSDoc or TypeScript).
+
+### 3. React Native / Expo
+
+- Convert elements to `View`, `Text`, `Pressable`, `ScrollView`, or `FlashList`.
+- Export tokens via `node scripts/vault-cli.js tokens <demo> --format rn`:
   ```tsx
   import { theme } from "./theme";
   ```
-- Replace CSS animations with `react-native-reanimated`.
+- Replace CSS transitions with `react-native-reanimated`.
 
-### 3. Dark Luxury Theme Guidelines
+### 4. Dark Luxury Theme Guidelines
 
 - Main surface: `#000000` or `#090d16`.
 - Elevated cards: `#0a0a0a` or `rgba(22, 30, 49, 0.7)` with `1px solid rgba(255, 255, 255, 0.08)`.
 - Text hierarchy: Primary `#ededed` / `#f8fafc`, Secondary `#888888` / `#94a3b8`.
 - Contrast: WCAG AA compliant.
+
+---
+
+## Master Design Engineering Knowledge Base (`guidelines/`)
+
+Whenever generating, refactoring, or auditing an interface, apply the stack-agnostic rules from the 4 design engineering manuals located in `guidelines/`:
+
+1. **`guidelines/01-refactoring-ui.md`** (_Refactoring UI_ — Adam Wathan & Steve Schoger):
+   - **3-Tier Text Contrast**: Primary (`#0f172a` / `#f8fafc`), Secondary (`#475569` / `#94a3b8`), Tertiary (`#94a3b8` / `#64748b`).
+   - **De-emphasize to Emphasize**: Soften competing elements rather than inflating font sizes.
+   - **Eliminate Naive `Label: Value` Formats**: Merge context into values (_"12 left in stock"_).
+   - **Baseline Alignment**: Align mixed font sizes (`$49 / mo`) by `align-items: baseline`, never `align-items: center`.
+   - **Numeric Right-Alignment**: Strictly right-align numbers, prices, and percentages in tables (`text-align: right`).
+   - **Hue-Shifting & Tinted Grays**: Shift hues toward yellow when lightening and toward blue/indigo when darkening; never use dead neutral gray.
+   - **Dual-Shadow Elevation & Inner Image Borders**: Combine crisp 1px edge definition with diffused ambient shadows; prevent white image bleed with `box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08)`.
+
+2. **`guidelines/02-dont-make-me-think.md`** (_Don't Make Me Think_ — Steve Krug):
+   - **Zero Cognitive Friction**: Every screen must be self-evident. Omit 50% of words, eliminate "Happy Talk" and form instructions.
+   - **Billboard Design for Scanners**: Leverage conventions, create clear visual zones, ensure unmistakable clickability affordances, and keep headings closer to the paragraph they introduce (`margin-top: 32px; margin-bottom: 8px`).
+   - **The Trunk Test & Information Scent**: Every page needs a prominent `H1` that matches the exact wording of the link clicked; strip global navigation during checkouts/multi-step forms.
+   - **Mobile & Touch Ergonomics**: Enforce minimum `44px × 44px` touch targets, zero hover dependencies (`No cursor = no hover = no clue`), and proper HTML5 `inputmode` keyboards.
+
+3. **`guidelines/03-universal-layout-principles.md`** (_100 Universal Layout Principles_ — Beth Tondreau):
+   - **Grid Families**: Match content to Single-Column (manuscripts), Two-Column (asymmetrical 2:1 golden ratio), Three-Column (editorial hang lines), 12-Column (Khoi Vinh's universal multiple of 3 & 4), or Modular Bento Matrices.
+   - **Swiss Grid & Baseline Lock**: Lock all typography and spacing onto a continuous 4px/8px vertical baseline rhythm; use hairline rules as structural containers.
+   - **Controlled Surprise & Silhouettes**: Establish strict grid order for 80% of the layout, then introduce intentional interruptions (pull quotes, overlapping Z-axis layers, or cutout silhouettes breaking boxy frames).
+
+4. **`guidelines/04-visual-identity-ia-and-ux-writing.md`** (_Visual Identity, IA & IHM Ergonomics_):
+   - **Chromatic Spatiality & Gaze Direction**: Warm colors advance, cool colors recede; avoid pure `#000` on `#FFF` glare; orient human photography gaze directly toward the Primary CTA.
+   - **Ortho-Typography & i18n**: Never stretch fonts, max 3 font families, never hyphenate proper nouns or numbers, respect French vs. English double-punctuation spacing (`&nbsp;:`).
+   - **IA Structures & Zero-Click Rule**: Choose Tree, Persona-Selection, or Funnel IA; expose core interactive value on the hero with zero preliminary clicks; never animate logos/headers (prevents Banner Blindness); strictly ban >3Hz flashing (WCAG 2.3.1 neuro-safety).
 
 ---
 

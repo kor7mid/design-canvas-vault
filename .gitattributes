@@ -1,0 +1,15 @@
+# Prevent specific files from being overwritten or imported during merges into target branch
+SKILL-BLUEPRINT.md merge=ours
+.vault-state.json merge=ours
+tasks/** merge=ours
+
+# Prevent heavy demo stock photos from being merged into target branch
+sources/demos/*/images/** merge=ours
+sources/images/** merge=ours
+
+# Exclude internal files and heavy stock photos when creating archives / exports
+SKILL-BLUEPRINT.md export-ignore
+.vault-state.json export-ignore
+tasks/ export-ignore
+sources/demos/*/images/** export-ignore
+sources/images/** export-ignore

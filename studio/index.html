@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Canvas Vault Studio — 1,245 Templates & 79 Design Systems</title>
+        <title>Design Canvas Vault — 1,245 Templates & 79 Niche Systems</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
@@ -13,79 +13,32 @@
         <link rel="stylesheet" href="./style.css" />
     </head>
     <body>
-        <!-- Header -->
-        <header class="app-header">
-            <div class="brand-wrapper">
-                <div class="brand-badge">▲</div>
-                <div class="brand-info">
-                    <div class="brand-title">Canvas Vault Studio</div>
-                    <div class="brand-count">
-                        1,245 Curated Templates • 79 Niche Systems
+        <!-- Sticky Global Header -->
+        <header class="site-header">
+            <div class="header-container">
+                <div
+                    class="brand-identity"
+                    id="brandResetBtn"
+                    title="Reset filters and return to page 1"
+                >
+                    <div class="brand-mark">▲</div>
+                    <div class="brand-text">
+                        <span class="brand-name">Design Canvas Vault</span>
+                        <span class="brand-sep">/</span>
+                        <span class="brand-tag">1,245 Templates</span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Navigation Island -->
-            <nav class="nav-island">
-                <button class="island-btn active" data-view="split">
-                    <svg
-                        width="13"
-                        height="13"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <rect x="3" y="3" width="18" height="18" rx="2" />
-                        <line x1="9" y1="3" x2="9" y2="21" />
-                    </svg>
-                    Split Studio
-                </button>
-                <button class="island-btn" data-view="gallery">
-                    <svg
-                        width="13"
-                        height="13"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <rect x="3" y="3" width="7" height="7" />
-                        <rect x="14" y="3" width="7" height="7" />
-                        <rect x="14" y="14" width="7" height="7" />
-                        <rect x="3" y="14" width="7" height="7" />
-                    </svg>
-                    Lookbook Gallery
-                </button>
-                <button class="island-btn" data-view="composer">
-                    <svg
-                        width="13"
-                        height="13"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                    >
-                        <path
-                            d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"
-                        />
-                    </svg>
-                    Stack Composer (<span id="headerStackCount">0</span>)
-                </button>
-            </nav>
-
-            <!-- Header Actions -->
-            <div style="display: flex; align-items: center; gap: 10px">
-                <div
-                    class="terminal-pill"
-                    id="btnCopyInstall"
-                    title="Click to copy install command"
+                <button
+                    class="cli-install-pill"
+                    id="btnCopyCli"
+                    title="Click to copy universal install command"
                 >
-                    <span class="terminal-prompt">$</span>
-                    <span>npx skills add kor7mid/design-canvas-vault -g</span>
+                    <span class="cli-prompt">$</span>
+                    <code>npx skills add kor7mid/design-canvas-vault -g</code>
                     <svg
-                        width="12"
-                        height="12"
+                        width="13"
+                        height="13"
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -96,254 +49,130 @@
                             d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
                         />
                     </svg>
-                </div>
+                </button>
             </div>
         </header>
 
-        <!-- Studio Container -->
-        <div class="studio-container">
-            <!-- VIEW 1: Split Studio -->
-            <div class="view-panel active" id="viewSplit" style="width: 100%">
-                <!-- Left Sidebar -->
-                <aside class="studio-sidebar">
-                    <!-- Search Field -->
-                    <div class="sidebar-search-box">
-                        <div class="search-field-wrapper">
-                            <svg
-                                class="search-field-icon"
-                                width="13"
-                                height="13"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                            >
-                                <circle cx="11" cy="11" r="8" />
-                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
-                            </svg>
-                            <input
-                                type="text"
-                                id="searchInput"
-                                class="search-field"
-                                placeholder="Search 1,245 templates, demos, tags..."
-                            />
-                            <span class="search-field-kbd">/</span>
-                        </div>
+        <!-- Main Spacious Catalog -->
+        <main class="catalog-main">
+            <div class="catalog-container">
+                <!-- Hero Search & Wayfinding Section -->
+                <section class="hero-section" id="catalogTopAnchor">
+                    <h1 class="hero-title">
+                        Explore 1,245 Curated Templates &amp; 79 Design Systems
+                    </h1>
+                    <p class="hero-subtitle">
+                        Click any card to open the full-screen live page with
+                        theme customization, or copy its prompt directly.
+                    </p>
+
+                    <!-- Prominent Search Bar -->
+                    <div class="hero-search-wrap">
+                        <svg
+                            class="hero-search-icon"
+                            width="16"
+                            height="16"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <circle cx="11" cy="11" r="8" />
+                            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                        </svg>
+                        <input
+                            type="text"
+                            id="catalogSearchInput"
+                            class="hero-search-input"
+                            placeholder="Search by keyword, industry (fintech, medical, saas), or block ID..."
+                            aria-label="Search templates"
+                        />
+                        <kbd class="hero-search-kbd" title="Press / to search"
+                            >/</kbd
+                        >
                     </div>
 
-                    <!-- Category Rail -->
-                    <div class="category-rail" id="categoryRail">
-                        <button class="rail-chip active" data-cat="all">
-                            All <span class="rail-chip-count">1,245</span>
+                    <!-- Category Filter Pills -->
+                    <div
+                        class="filter-bar"
+                        id="filterBar"
+                        role="toolbar"
+                        aria-label="Template Categories"
+                    >
+                        <button class="filter-pill active" data-cat="all">
+                            All <span class="pill-num">1,245</span>
                         </button>
-                        <button class="rail-chip" data-cat="blocks">
-                            Blocks <span class="rail-chip-count">243</span>
+                        <button class="filter-pill" data-cat="blocks">
+                            UI Blocks <span class="pill-num">243</span>
                         </button>
-                        <button class="rail-chip" data-cat="demos">
-                            Demos <span class="rail-chip-count">220</span>
+                        <button class="filter-pill" data-cat="demos">
+                            79 Business Demos <span class="pill-num">220</span>
                         </button>
-                        <button class="rail-chip" data-cat="pages">
-                            Pages <span class="rail-chip-count">782</span>
+                        <button class="filter-pill" data-cat="pages">
+                            Pages &amp; Layouts
+                            <span class="pill-num">782</span>
                         </button>
-                        <button class="rail-chip" data-cat="hero">
-                            Heros <span class="rail-chip-count">30</span>
+                        <button class="filter-pill" data-cat="hero">
+                            Heros <span class="pill-num">30</span>
                         </button>
-                        <button class="rail-chip" data-cat="pricing">
-                            Pricing <span class="rail-chip-count">11</span>
+                        <button class="filter-pill" data-cat="pricing">
+                            Pricing <span class="pill-num">11</span>
                         </button>
-                        <button class="rail-chip" data-cat="cards">
-                            Cards <span class="rail-chip-count">15</span>
+                        <button class="filter-pill" data-cat="cards">
+                            Cards &amp; Bento <span class="pill-num">15</span>
+                        </button>
+                        <button class="filter-pill" data-cat="forms">
+                            Forms &amp; Auth <span class="pill-num">14</span>
+                        </button>
+                        <button class="filter-pill" data-cat="onepage">
+                            One-Page <span class="pill-num">60</span>
+                        </button>
+                        <button class="filter-pill" data-cat="ecommerce">
+                            E-Commerce <span class="pill-num">45</span>
                         </button>
                     </div>
+                </section>
 
-                    <!-- Cards List -->
-                    <div class="sidebar-cards-scroll" id="sidebarCardsList">
-                        <!-- Populated dynamically -->
-                    </div>
-                </aside>
-
-                <!-- Center Workspace -->
-                <main class="studio-workspace">
-                    <div class="workspace-controls">
-                        <div class="template-active-badge">
-                            <span class="active-id-pill" id="activeIdPill"
-                                >block-hero-10</span
-                            >
-                            <span class="active-name-label" id="activeNameLabel"
-                                >Hero 10</span
-                            >
-                        </div>
-
-                        <div class="workspace-actions">
-                            <!-- Viewport Devices -->
-                            <div class="device-island">
-                                <button
-                                    class="device-btn active"
-                                    data-device="desktop"
-                                >
-                                    Desktop
-                                </button>
-                                <button class="device-btn" data-device="tablet">
-                                    Tablet (768)
-                                </button>
-                                <button class="device-btn" data-device="mobile">
-                                    Mobile (375)
-                                </button>
-                            </div>
-
-                            <!-- Color Palette Picker -->
-                            <div
-                                style="
-                                    display: flex;
-                                    align-items: center;
-                                    gap: 6px;
-                                    font-size: 11px;
-                                    color: var(--text-muted);
-                                "
-                            >
-                                <span>Accent:</span>
-                                <input
-                                    type="color"
-                                    id="accentColorPicker"
-                                    style="
-                                        width: 20px;
-                                        height: 20px;
-                                        border: 1px solid var(--border-card);
-                                        border-radius: 3px;
-                                        background: transparent;
-                                        cursor: pointer;
-                                    "
-                                    value="#0b44a7"
-                                />
-                            </div>
-
-                            <button
-                                id="btnAddToStack"
-                                class="btn-island-action"
-                            >
-                                + Add to Stack
-                            </button>
-                            <button
-                                id="btnCopyPrompt"
-                                class="btn-island-action btn-island-primary"
-                            >
-                                Copy Prompt
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Frame Viewport -->
-                    <div class="canvas-wrapper">
-                        <div class="canvas-frame" id="canvasFrame">
-                            <iframe
-                                id="liveIframe"
-                                class="live-iframe"
-                                src="/sources/blocks/block-hero-10.html"
-                            ></iframe>
-                        </div>
-                    </div>
-                </main>
-            </div>
-
-            <!-- VIEW 2: Lookbook Visual Gallery -->
-            <div class="view-panel" id="viewGallery" style="width: 100%">
-                <div class="lookbook-view-wrapper">
-                    <div class="lookbook-header-bar">
-                        <div class="lookbook-filters" id="galleryCategoryRail">
-                            <button class="rail-chip active" data-cat="all">
-                                All (1,245)
-                            </button>
-                            <button class="rail-chip" data-cat="hero">
-                                Heros (30)
-                            </button>
-                            <button class="rail-chip" data-cat="pricing">
-                                Pricing (11)
-                            </button>
-                            <button class="rail-chip" data-cat="cards">
-                                Cards & Bento (15)
-                            </button>
-                            <button class="rail-chip" data-cat="demos">
-                                79 Demos (220)
-                            </button>
-                            <button class="rail-chip" data-cat="pages">
-                                Pages & Layouts (782)
-                            </button>
-                        </div>
-                        <div>
-                            <input
-                                type="text"
-                                id="gallerySearchInput"
-                                class="lookbook-search-input"
-                                placeholder="Search lookbook gallery..."
-                            />
-                        </div>
-                    </div>
-                    <div class="lookbook-grid-container" id="lookbookGrid">
+                <!-- Results Status Bar & Quick Top Pager -->
+                <div class="results-toolbar" id="gridToolbarAnchor">
+                    <span class="results-counter" id="resultsCounter"
+                        >Showing 1–24 of 1,245 templates</span
+                    >
+                    <div class="top-mini-pager" id="topMiniPager">
                         <!-- Rendered dynamically -->
                     </div>
                 </div>
-            </div>
 
-            <!-- VIEW 3: Page Composer Stack -->
-            <div class="view-panel" id="viewComposer" style="width: 100%">
-                <div class="composer-container">
-                    <div class="composer-sidebar">
-                        <div>
-                            <h3 style="font-size: 14px; font-weight: 600">
-                                Page Stack Blueprint
-                            </h3>
-                            <p
-                                style="
-                                    font-size: 11.5px;
-                                    color: var(--text-muted);
-                                    margin-top: 2px;
-                                "
-                            >
-                                Assemble components into a unified full-page
-                                layout.
-                            </p>
-                        </div>
-                        <div class="composer-stack-list" id="composerStackList">
-                            <!-- Populated dynamically -->
-                        </div>
-                        <div style="display: flex; gap: 8px">
-                            <button
-                                id="btnClearStack"
-                                class="btn-island-action"
-                                style="color: #ef4444"
-                            >
-                                Clear
-                            </button>
-                            <button
-                                id="btnExportPage"
-                                class="btn-island-action btn-island-primary"
-                                style="flex: 1"
-                            >
-                                Copy Page Code
-                            </button>
-                        </div>
-                    </div>
+                <!-- Spacious 3-Column Modular Grid (24 items per page) -->
+                <section
+                    class="templates-grid"
+                    id="templatesGrid"
+                    aria-label="Templates Lookbook Grid"
+                >
+                    <!-- Populated dynamically -->
+                </section>
 
-                    <div class="canvas-wrapper" style="flex: 1">
-                        <div
-                            class="canvas-frame"
-                            style="width: 100%; height: 100%"
-                        >
-                            <iframe
-                                id="composerIframe"
-                                class="live-iframe"
-                            ></iframe>
-                        </div>
-                    </div>
-                </div>
+                <!-- Full Numbered Pagination Bar -->
+                <nav
+                    class="pagination-bar"
+                    id="paginationBar"
+                    aria-label="Catalog Pagination"
+                >
+                    <!-- Rendered dynamically -->
+                </nav>
             </div>
-        </div>
+        </main>
 
         <!-- Toast Notification -->
-        <div class="vault-toast" id="vaultToast">
+        <div
+            class="vault-toast"
+            id="vaultToast"
+            role="status"
+            aria-live="polite"
+        >
             <svg
-                width="14"
-                height="14"
+                width="15"
+                height="15"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -351,7 +180,7 @@
             >
                 <polyline points="20 6 9 17 4 12" />
             </svg>
-            <span id="toastText">Action completed</span>
+            <span id="toastText">Copied to clipboard</span>
         </div>
 
         <script type="module" src="./app.js"></script>
