@@ -1,33 +1,21 @@
 /**
- * Canvas Vault Studio — Bespoke Frontend Architecture
+ * Design Canvas Vault — Paginated Catalog & Full-Screen Page Launcher
  *
- * @typedef {Object} VaultItem
- * @property {string} id
- * @property {string} name
- * @property {'block' | 'demo' | 'page'} type
- * @property {string} [niche]
- * @property {string} [category]
- * @property {string} [subcategory]
- * @property {string} [file]
- * @property {string} [htmlPath]
- * @property {string} [cssPath]
- * @property {string} [preview]
- * @property {string} [primaryColor]
- * @property {string} [secondaryColor]
- * @property {string} [bodyFont]
- * @property {string} [primaryFont]
- * @property {string[]} [tags]
+ * @typedef {import('../types/vault.d.ts').VaultItem} VaultItem
+ * @typedef {import('../types/vault.d.ts').CatalogPayload} CatalogPayload
  */
 
-/**
- * @typedef {Object} CatalogPayload
- * @property {VaultItem[]} blocks
- * @property {VaultItem[]} demos
- * @property {VaultItem[]} pages
- */
+const ITEMS_PER_PAGE = 24;
 
 /** @type {CatalogPayload} */
-let catalog = { blocks: [], demos: [], pages: [] };
+let catalog = {
+  version: "1.0.0",
+  generatedAt: "",
+  counts: { blocks: 0, demos: 0, pages: 0, total: 0 },
+  blocks: [],
+  demos: [],
+  pages: [],
+};
 
 /** @type {VaultItem[]} */
 let allItems = [];
@@ -36,82 +24,22 @@ let allItems = [];
 let filteredItems = [];
 
 let activeCategory = "all";
-
-/** @type {VaultItem | null} */
-let activeItem = null;
-
-/** @type {VaultItem[]} */
-let currentStack = [];
+let currentPage = 1;
 
 // DOM Elements
-const searchInput = /** @type {HTMLInputElement} */ (
-  document.getElementById("searchInput")
+const brandResetBtn = document.getElementById("brandResetBtn");
+const btnCopyCli = document.getElementById("btnCopyCli");
+const catalogSearchInput = /** @type {HTMLInputElement | null} */ (
+  document.getElementById("catalogSearchInput")
 );
-const categoryRail = /** @type {HTMLElement} */ (
-  document.getElementById("categoryRail")
-);
-const sidebarCardsList = /** @type {HTMLElement} */ (
-  document.getElementById("sidebarCardsList")
-);
-const lookbookGrid = /** @type {HTMLElement} */ (
-  document.getElementById("lookbookGrid")
-);
-const liveIframe = /** @type {HTMLIFrameElement} */ (
-  document.getElementById("liveIframe")
-);
-const canvasFrame = /** @type {HTMLElement} */ (
-  document.getElementById("canvasFrame")
-);
-const activeIdPill = /** @type {HTMLElement} */ (
-  document.getElementById("activeIdPill")
-);
-const activeNameLabel = /** @type {HTMLElement} */ (
-  document.getElementById("activeNameLabel")
-);
-const accentColorPicker = /** @type {HTMLInputElement} */ (
-  document.getElementById("accentColorPicker")
-);
-const btnAddToStack = /** @type {HTMLButtonElement} */ (
-  document.getElementById("btnAddToStack")
-);
-const btnCopyPrompt = /** @type {HTMLButtonElement} */ (
-  document.getElementById("btnCopyPrompt")
-);
-const btnCopyInstall = /** @type {HTMLElement} */ (
-  document.getElementById("btnCopyInstall")
-);
-const headerStackCount = /** @type {HTMLElement} */ (
-  document.getElementById("headerStackCount")
-);
-
-// View Switcher Panels
-const viewPanels = {
-  split: document.getElementById("viewSplit"),
-  gallery: document.getElementById("viewGallery"),
-  composer: document.getElementById("viewComposer"),
-};
-
-// Composer Elements
-const composerStackList = /** @type {HTMLElement} */ (
-  document.getElementById("composerStackList")
-);
-const composerIframe = /** @type {HTMLIFrameElement} */ (
-  document.getElementById("composerIframe")
-);
-const btnClearStack = /** @type {HTMLButtonElement} */ (
-  document.getElementById("btnClearStack")
-);
-const btnExportPage = /** @type {HTMLButtonElement} */ (
-  document.getElementById("btnExportPage")
-);
-
-// Toast
-const vaultToast = /** @type {HTMLElement} */ (
-  document.getElementById("vaultToast")
-);
-const toastText = /** @type {HTMLElement} */ (
-  document.getElementById("toastText")
-);
+const filterBar = document.getElementById("filterBar");
+const resultsCounter = document.getElementById("resultsCounter");
+const topMiniPager = document.getElementById("topMiniPager");
+const templatesGrid = document.getElementById("templatesGrid");
+const paginationBar = document.getElementById("paginationBar");
+const gridToolbarAnchor = document.getElementById("gridToolbarAnchor");
+const vaultToast = document.getElementById("vaultToast");
+const toastText = document.getElementById("toastText");
 
 /**
  * @param {string} message
@@ -128,15 +56,69 @@ const BASE_PATH = window.location.pathname.includes("/design-canvas-vault")
   : "";
 
 /**
- * @param {string | undefined} p
+ * @param {VaultItem} item
  */
-function resolveAssetUrl(p) {
+function resolvePreviewUrl(item) {
+  if (item.previewUrl && window.location.hostname.includes("github.io")) {
+    return item.previewUrl;
+  }
+  const p = item.preview;
   if (!p) return `${BASE_PATH}/sources/previews/intro/hero-1.jpg`;
   const clean = p.startsWith("/") ? p.slice(1) : p;
   return `${BASE_PATH}/${clean}`;
 }
 
-// Initialize Studio
+/**
+ * @param {VaultItem} item
+ */
+function resolvePageUrl(item) {
+  if (window.location.hostname.includes("github.io")) {
+    const f =
+      item.file ||
+      item.htmlPath ||
+      item.cssPath ||
+      "sources/blocks/block-hero-10.html";
+    const clean = f.startsWith("/") ? f.slice(1) : f;
+    return `${BASE_PATH}/${clean}`;
+  }
+  return `/${item.id}`;
+}
+
+function readUrlState() {
+  const params = new URLSearchParams(window.location.search);
+  const cat = params.get("cat");
+  const page = parseInt(params.get("page") || "1", 10);
+  const q = params.get("q");
+
+  if (cat) {
+    activeCategory = cat;
+    filterBar?.querySelectorAll(".filter-pill").forEach((p) => {
+      p.classList.toggle(
+        "active",
+        /** @type {HTMLElement} */ (p).dataset.cat === cat,
+      );
+    });
+  }
+  if (q && catalogSearchInput) {
+    catalogSearchInput.value = q;
+  }
+  if (!isNaN(page) && page >= 1) {
+    currentPage = page;
+  }
+}
+
+function syncUrlState() {
+  const params = new URLSearchParams();
+  if (activeCategory !== "all") params.set("cat", activeCategory);
+  const q = catalogSearchInput ? catalogSearchInput.value.trim() : "";
+  if (q) params.set("q", q);
+  if (currentPage > 1) params.set("page", String(currentPage));
+
+  const qs = params.toString();
+  const newUrl = `${window.location.pathname}${qs ? `?${qs}` : ""}`;
+  window.history.replaceState(null, "", newUrl);
+}
+
 async function init() {
   try {
     let res = await fetch("/api/catalog").catch(() => null);
@@ -164,22 +146,21 @@ async function init() {
     }));
 
     allItems = [...blocks, ...demos, ...pages];
-    filteredItems = [...allItems];
-
-    renderSidebarCards();
-    renderGalleryGrid();
-
-    // Select initial item
-    const initial = blocks.find((b) => b.id === "block-hero-10") || blocks[0];
-    if (initial) selectItem(initial);
+    readUrlState();
+    applyFilters(false);
   } catch (err) {
     console.error("Failed to load catalog:", err);
   }
 }
 
-// Filter Logic
-function filterTemplates() {
-  const q = searchInput ? searchInput.value.toLowerCase().trim() : "";
+/**
+ * @param {boolean} [resetPage=true]
+ */
+function applyFilters(resetPage = true) {
+  const q = catalogSearchInput
+    ? catalogSearchInput.value.toLowerCase().trim()
+    : "";
+  if (resetPage) currentPage = 1;
 
   filteredItems = allItems.filter((item) => {
     let matchesCat = true;
@@ -190,426 +171,246 @@ function filterTemplates() {
     else if (activeCategory === "pricing")
       matchesCat = item.id.includes("pricing");
     else if (activeCategory === "cards") matchesCat = item.id.includes("card");
+    else if (activeCategory === "forms")
+      matchesCat = item.id.includes("form") || item.id.includes("login");
+    else if (activeCategory === "onepage")
+      matchesCat = item.id.startsWith("op-") || item.id.includes("onepage");
+    else if (activeCategory === "ecommerce")
+      matchesCat = item.id.includes("shop") || item.id.includes("cart");
 
     if (!matchesCat) return false;
-
     if (!q) return true;
+
     const name = (item.name || item.id || "").toLowerCase();
     const id = item.id.toLowerCase();
     const tags = (item.tags || []).join(" ").toLowerCase();
     return name.includes(q) || id.includes(q) || tags.includes(q);
   });
 
-  renderSidebarCards();
-  renderGalleryGrid();
-}
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filteredItems.length / ITEMS_PER_PAGE),
+  );
+  if (currentPage > totalPages) currentPage = totalPages;
 
-// Render Sidebar Hardware Cards
-function renderSidebarCards() {
-  if (!sidebarCardsList) return;
-  sidebarCardsList.innerHTML = "";
-
-  const slice = filteredItems.slice(0, 80);
-  if (slice.length === 0) {
-    sidebarCardsList.innerHTML =
-      '<div style="padding: 30px; text-align: center; color: var(--text-dim); font-size: 13px;">No templates found.</div>';
-    return;
-  }
-
-  slice.forEach((item) => {
-    const card = document.createElement("div");
-    card.className = `vault-card ${activeItem && activeItem.id === item.id ? "active" : ""}`;
-
-    const previewSrc = resolveAssetUrl(item.preview);
-
-    card.innerHTML = `
-      <img class="card-media" src="${previewSrc}" alt="${item.name}" loading="lazy">
-      <div class="card-content">
-        <div class="card-title">${item.name}</div>
-        <div class="card-id">${item.id}</div>
-        <div class="card-footer">
-          <span class="card-category-tag">${item.category || item.type}</span>
-          ${item.primaryColor ? `<span style="color:${item.primaryColor};">● ${item.primaryColor}</span>` : ""}
-        </div>
-      </div>
-    `;
-
-    card.addEventListener("click", () => selectItem(item));
-    sidebarCardsList.appendChild(card);
-  });
-}
-
-const gallerySearchInput = /** @type {HTMLInputElement | null} */ (
-  document.getElementById("gallerySearchInput")
-);
-const galleryCategoryRail = /** @type {HTMLElement | null} */ (
-  document.getElementById("galleryCategoryRail")
-);
-let galleryActiveCategory = "all";
-
-// Render Lookbook Gallery Grid
-function renderGalleryGrid() {
-  if (!lookbookGrid) return;
-  lookbookGrid.innerHTML = "";
-
-  const q = gallerySearchInput
-    ? gallerySearchInput.value.toLowerCase().trim()
-    : "";
-
-  const galleryItems = allItems.filter((item) => {
-    let match = true;
-    if (galleryActiveCategory === "hero") match = item.id.includes("hero");
-    else if (galleryActiveCategory === "pricing")
-      match = item.id.includes("pricing");
-    else if (galleryActiveCategory === "cards")
-      match = item.id.includes("card");
-    else if (galleryActiveCategory === "demos") match = item.type === "demo";
-    else if (galleryActiveCategory === "pages") match = item.type === "page";
-
-    if (!match) return false;
-    if (!q) return true;
-    return (
-      (item.name || item.id).toLowerCase().includes(q) ||
-      (item.tags || []).some((t) => t.toLowerCase().includes(q))
-    );
-  });
-
-  const slice = galleryItems.slice(0, 120);
-
-  if (slice.length === 0) {
-    lookbookGrid.innerHTML =
-      '<div style="grid-column: 1 / -1; padding: 60px; text-align: center; color: var(--text-dim); font-size: 13px;">No templates found matching your gallery filter.</div>';
-    return;
-  }
-
-  slice.forEach((item) => {
-    const card = document.createElement("div");
-    card.className = "lookbook-card";
-    const previewSrc = resolveAssetUrl(item.preview);
-    const catLabel = item.category || item.subcategory || item.type;
-
-    card.innerHTML = `
-      <div class="lookbook-media-wrap">
-        <img class="lookbook-media-img" src="${previewSrc}" alt="${item.name}" loading="lazy">
-        <span class="lookbook-card-badge">${catLabel}</span>
-      </div>
-      <div class="lookbook-card-body">
-        <div class="lookbook-title">${item.name}</div>
-        <div class="lookbook-id">${item.id}</div>
-        <div class="lookbook-actions">
-          <button class="btn-island-action btn-gallery-open" style="font-size: 11px; padding: 4px 8px;">Open Studio ↗</button>
-          <button class="btn-island-action btn-gallery-stack" style="font-size: 11px; padding: 4px 8px;">+ Stack</button>
-        </div>
-      </div>
-    `;
-
-    card.addEventListener("click", (e) => {
-      const target = /** @type {HTMLElement} */ (e.target);
-      if (target.closest(".btn-gallery-stack")) {
-        currentStack.push(item);
-        if (headerStackCount)
-          headerStackCount.textContent = String(currentStack.length);
-        showToast(`Added [${item.id}] to Stack`);
-        return;
-      }
-      selectItem(item);
-      switchView("split");
-    });
-
-    lookbookGrid.appendChild(card);
-  });
-}
-
-if (gallerySearchInput) {
-  gallerySearchInput.addEventListener("input", renderGalleryGrid);
-}
-
-if (galleryCategoryRail) {
-  galleryCategoryRail.addEventListener("click", (e) => {
-    const target = /** @type {HTMLElement} */ (e.target);
-    const chip = target.closest(".rail-chip");
-    if (!chip) return;
-    galleryCategoryRail
-      .querySelectorAll(".rail-chip")
-      .forEach((c) => c.classList.remove("active"));
-    chip.classList.add("active");
-    galleryActiveCategory =
-      /** @type {HTMLElement} */ (chip).dataset.cat || "all";
-    renderGalleryGrid();
-  });
+  syncUrlState();
+  renderCatalogGrid();
 }
 
 /**
- * Select Item in Studio
- * @param {VaultItem} item
+ * @param {number} page
+ * @param {boolean} [scroll=true]
  */
-function selectItem(item) {
-  activeItem = item;
-  if (activeIdPill) activeIdPill.textContent = item.id;
-  if (activeNameLabel) activeNameLabel.textContent = item.name;
-
-  document
-    .querySelectorAll(".vault-card")
-    .forEach((c) => c.classList.remove("active"));
-
-  const templateFile =
-    item.file || item.htmlPath || (item.cssPath ? item.cssPath : null);
-  if (templateFile && liveIframe) {
-    const cleanFile = templateFile.startsWith("/")
-      ? templateFile.slice(1)
-      : templateFile;
-    liveIframe.src = `${BASE_PATH}/${cleanFile}`;
-  }
-
-  if (item.primaryColor && accentColorPicker) {
-    accentColorPicker.value = item.primaryColor;
+function goToPage(page, scroll = true) {
+  const totalPages = Math.max(
+    1,
+    Math.ceil(filteredItems.length / ITEMS_PER_PAGE),
+  );
+  const target = Math.max(1, Math.min(totalPages, page));
+  if (target === currentPage) return;
+  currentPage = target;
+  syncUrlState();
+  renderCatalogGrid();
+  if (scroll && gridToolbarAnchor) {
+    gridToolbarAnchor.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 }
 
-// Intercept clicks on links inside the iframe so they navigate gracefully inside the Studio
-if (liveIframe) {
-  liveIframe.addEventListener("load", () => {
-    try {
-      const doc =
-        liveIframe.contentDocument || liveIframe.contentWindow?.document;
-      if (!doc) return;
-      doc.addEventListener("click", (e) => {
-        const target = /** @type {HTMLElement} */ (e.target);
-        const link = target.closest("a");
-        if (!link) return;
-        const href = link.getAttribute("href");
-        if (!href || href === "#" || href.startsWith("javascript:")) {
-          e.preventDefault();
-          return;
-        }
-        if (href.endsWith(".html") && !href.startsWith("http")) {
-          e.preventDefault();
-          const base = href.split("/").pop()?.replace(".html", "") || "";
-          const found = allItems.find(
-            (it) =>
-              it.id === base ||
-              it.id === `block-${base}` ||
-              (it.file && it.file.endsWith(href)),
-          );
-          if (found) {
-            selectItem(found);
-            showToast(`Navigated to [${found.id}]`);
-          } else {
-            showToast(`Demo placeholder link: ${href}`);
-          }
-        }
+/**
+ * @param {number} current
+ * @param {number} total
+ * @returns {Array<number | string>}
+ */
+function buildPageList(current, total) {
+  if (total <= 7) {
+    return Array.from({ length: total }, (_, i) => i + 1);
+  }
+  /** @type {Array<number | string>} */
+  const pages = [1];
+  if (current > 3) pages.push("…");
+
+  const start = Math.max(2, current - 1);
+  const end = Math.min(total - 1, current + 1);
+  for (let i = start; i <= end; i++) {
+    pages.push(i);
+  }
+
+  if (current < total - 2) pages.push("…");
+  pages.push(total);
+  return pages;
+}
+
+/**
+ * @param {number} totalPages
+ */
+function renderPaginationControls(totalPages) {
+  if (topMiniPager) {
+    if (totalPages <= 1) {
+      topMiniPager.innerHTML = "";
+    } else {
+      topMiniPager.innerHTML = `
+        <span class="mini-page-indicator">Page ${currentPage} of ${totalPages}</span>
+        <button type="button" class="page-btn" id="topPrevBtn" ${currentPage === 1 ? "disabled" : ""} title="Previous page">←</button>
+        <button type="button" class="page-btn" id="topNextBtn" ${currentPage === totalPages ? "disabled" : ""} title="Next page">→</button>
+      `;
+      document
+        .getElementById("topPrevBtn")
+        ?.addEventListener("click", () => goToPage(currentPage - 1, false));
+      document
+        .getElementById("topNextBtn")
+        ?.addEventListener("click", () => goToPage(currentPage + 1, false));
+    }
+  }
+
+  if (!paginationBar) return;
+  paginationBar.innerHTML = "";
+  if (totalPages <= 1) {
+    paginationBar.style.display = "none";
+    return;
+  }
+  paginationBar.style.display = "flex";
+
+  const prevBtn = document.createElement("button");
+  prevBtn.type = "button";
+  prevBtn.className = "page-btn page-btn-nav";
+  prevBtn.disabled = currentPage === 1;
+  prevBtn.textContent = "← Previous";
+  prevBtn.addEventListener("click", () => goToPage(currentPage - 1, true));
+  paginationBar.appendChild(prevBtn);
+
+  const pageTokens = buildPageList(currentPage, totalPages);
+  for (const token of pageTokens) {
+    if (typeof token === "string") {
+      const span = document.createElement("span");
+      span.className = "page-ellipsis";
+      span.textContent = token;
+      paginationBar.appendChild(span);
+    } else {
+      const btn = document.createElement("button");
+      btn.type = "button";
+      btn.className = `page-btn ${token === currentPage ? "active" : ""}`;
+      btn.textContent = String(token);
+      btn.addEventListener("click", () => goToPage(token, true));
+      paginationBar.appendChild(btn);
+    }
+  }
+
+  const nextBtn = document.createElement("button");
+  nextBtn.type = "button";
+  nextBtn.className = "page-btn page-btn-nav";
+  nextBtn.disabled = currentPage === totalPages;
+  nextBtn.textContent = "Next →";
+  nextBtn.addEventListener("click", () => goToPage(currentPage + 1, true));
+  paginationBar.appendChild(nextBtn);
+}
+
+function renderCatalogGrid() {
+  if (!templatesGrid) return;
+  templatesGrid.innerHTML = "";
+
+  const totalItems = filteredItems.length;
+  const totalPages = Math.max(1, Math.ceil(totalItems / ITEMS_PER_PAGE));
+  const startIdx = (currentPage - 1) * ITEMS_PER_PAGE;
+  const endIdx = Math.min(totalItems, startIdx + ITEMS_PER_PAGE);
+  const slice = filteredItems.slice(startIdx, endIdx);
+
+  if (resultsCounter) {
+    if (totalItems === 0) {
+      resultsCounter.textContent = "0 matching templates";
+    } else {
+      resultsCounter.textContent = `Showing ${startIdx + 1}–${endIdx} of ${totalItems.toLocaleString()} templates`;
+    }
+  }
+
+  renderPaginationControls(totalPages);
+
+  if (slice.length === 0) {
+    templatesGrid.innerHTML = `
+      <div class="catalog-empty-state">
+        <h3 style="font-size: 16px; font-weight: 600; color: var(--text-primary); margin-bottom: 6px;">No Matching Templates</h3>
+        <p style="font-size: 13.5px; color: var(--text-tertiary);">Try clearing your search query or selecting another category pill above.</p>
+      </div>
+    `;
+    return;
+  }
+
+  slice.forEach((item) => {
+    const card = document.createElement("article");
+    card.className = "template-card";
+
+    const previewSrc = resolvePreviewUrl(item);
+    const pageUrl = resolvePageUrl(item);
+    const catLabel =
+      item.category || item.subcategory || item.type || "template";
+
+    card.innerHTML = `
+      <a href="${pageUrl}" class="card-preview-link" title="Open ${item.name} full-screen">
+        <img class="card-preview-img" src="${previewSrc}" alt="${item.name}" loading="lazy">
+        <span class="card-cat-badge">${catLabel}</span>
+      </a>
+      <div class="card-body">
+        <div class="card-header-row">
+          <h2 class="card-name">${item.name}</h2>
+          ${item.primaryColor ? `<span class="card-color-chip"><span style="color:${item.primaryColor};">●</span>${item.primaryColor}</span>` : ""}
+        </div>
+        <div class="card-slug">${item.id}</div>
+        <div class="card-actions-row">
+          <a href="${pageUrl}" class="btn-open-page">Open Live Page →</a>
+          <button type="button" class="btn-copy-prompt" data-id="${item.id}">Copy Prompt</button>
+        </div>
+      </div>
+    `;
+
+    const copyBtn = card.querySelector(".btn-copy-prompt");
+    if (copyBtn) {
+      copyBtn.addEventListener("click", () => {
+        const prompt = `Use template "${item.id}" (${item.name}) from Design Canvas Vault.
+Adapt its layout, visual hierarchy, and design tokens to match my project's existing styling stack and conventions.`;
+        navigator.clipboard.writeText(prompt);
+        showToast(`Copied prompt for [${item.id}]`);
       });
-    } catch (err) {}
-  });
-}
-
-// Live Color Injection
-if (accentColorPicker) {
-  accentColorPicker.addEventListener("input", (e) => {
-    const color = /** @type {HTMLInputElement} */ (e.target).value;
-    try {
-      const doc =
-        liveIframe.contentDocument || liveIframe.contentWindow?.document;
-      if (doc) {
-        doc.documentElement.style.setProperty("--cnvs-themecolor", color);
-      }
-    } catch (err) {}
-  });
-}
-
-// Device Viewport Preset
-document.querySelectorAll(".device-btn").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    document
-      .querySelectorAll(".device-btn")
-      .forEach((b) => b.classList.remove("active"));
-    btn.classList.add("active");
-    const device = /** @type {HTMLElement} */ (btn).dataset.device;
-
-    if (!canvasFrame) return;
-    canvasFrame.classList.remove("tablet", "mobile");
-    if (device === "tablet") canvasFrame.classList.add("tablet");
-    if (device === "mobile") canvasFrame.classList.add("mobile");
-  });
-});
-
-/**
- * Switch Main View
- * @param {string} viewKey
- */
-function switchView(viewKey) {
-  document.querySelectorAll(".island-btn").forEach((btn) => {
-    const el = /** @type {HTMLElement} */ (btn);
-    btn.classList.toggle("active", el.dataset.view === viewKey);
-  });
-
-  Object.entries(viewPanels).forEach(([key, panel]) => {
-    if (panel) {
-      panel.classList.toggle("active", key === viewKey);
     }
-  });
 
-  if (viewKey === "composer") {
-    renderComposerStack();
-  }
+    templatesGrid.appendChild(card);
+  });
 }
 
-document.querySelectorAll(".island-btn").forEach((btn) => {
-  btn.addEventListener("click", () => {
-    const el = /** @type {HTMLElement} */ (btn);
-    if (el.dataset.view) switchView(el.dataset.view);
-  });
-});
-
-// Category Rail Filter
-if (categoryRail) {
-  categoryRail.addEventListener("click", (e) => {
+if (filterBar) {
+  filterBar.addEventListener("click", (e) => {
     const target = /** @type {HTMLElement} */ (e.target);
-    const chip = target.closest(".rail-chip");
-    if (!chip) return;
-    document
-      .querySelectorAll(".rail-chip")
-      .forEach((c) => c.classList.remove("active"));
-    chip.classList.add("active");
-    activeCategory = /** @type {HTMLElement} */ (chip).dataset.cat || "all";
-    filterTemplates();
+    const pill = /** @type {HTMLElement | null} */ (
+      target.closest(".filter-pill")
+    );
+    if (!pill) return;
+    filterBar
+      .querySelectorAll(".filter-pill")
+      .forEach((p) => p.classList.remove("active"));
+    pill.classList.add("active");
+    activeCategory = pill.dataset.cat || "all";
+    applyFilters(true);
   });
 }
 
-// Search input
-if (searchInput) {
-  searchInput.addEventListener("input", filterTemplates);
+if (catalogSearchInput) {
+  catalogSearchInput.addEventListener("input", () => applyFilters(true));
 }
 
-// Keyboard shortcut '/'
-window.addEventListener("keydown", (e) => {
-  if (e.key === "/" && document.activeElement !== searchInput && searchInput) {
-    e.preventDefault();
-    searchInput.focus();
-  }
-});
-
-// Stack Composer Logic
-if (btnAddToStack) {
-  btnAddToStack.addEventListener("click", () => {
-    if (!activeItem) return;
-    currentStack.push(activeItem);
-    if (headerStackCount)
-      headerStackCount.textContent = String(currentStack.length);
-    showToast(`Added [${activeItem.id}] to Page Stack`);
-  });
-}
-
-function renderComposerStack() {
-  if (!composerStackList || !composerIframe) return;
-  composerStackList.innerHTML = "";
-  if (currentStack.length === 0) {
-    composerStackList.innerHTML =
-      '<div style="padding: 30px; text-align: center; color: var(--text-dim); font-size: 12px;">No components in stack yet.<br>Click "+ Add to Stack" in Split Studio.</div>';
-    composerIframe.srcdoc =
-      '<!DOCTYPE html><html><body style="background:#05070c;color:#64748b;font-family:sans-serif;text-align:center;padding:100px;"><h2>Page Stack Empty</h2><p>Add components from Split Studio or Lookbook.</p></body></html>';
-    return;
-  }
-
-  currentStack.forEach((item, index) => {
-    const el = document.createElement("div");
-    el.className = "stack-item-card";
-    el.innerHTML = `
-      <div>
-        <div style="font-size: 13px; font-weight: 600;">${index + 1}. ${item.name}</div>
-        <div style="font-size: 11px; font-family: var(--font-mono); color: var(--text-dim);">${item.id}</div>
-      </div>
-      <button class="btn-island-action btn-remove-item" data-index="${index}" style="padding: 4px 8px; color: #ef4444;">✕</button>
-    `;
-    composerStackList.appendChild(el);
-  });
-
-  composerStackList.querySelectorAll(".btn-remove-item").forEach((b) => {
-    b.addEventListener("click", (e) => {
-      const idx = parseInt(
-        /** @type {HTMLElement} */ (e.currentTarget).dataset.index || "0",
-        10,
+if (brandResetBtn) {
+  brandResetBtn.addEventListener("click", () => {
+    if (catalogSearchInput) catalogSearchInput.value = "";
+    activeCategory = "all";
+    filterBar?.querySelectorAll(".filter-pill").forEach((p) => {
+      p.classList.toggle(
+        "active",
+        /** @type {HTMLElement} */ (p).dataset.cat === "all",
       );
-      removeStackItem(idx);
     });
-  });
-
-  renderAssembledPage();
-}
-
-/**
- * @param {number} index
- */
-function removeStackItem(index) {
-  currentStack.splice(index, 1);
-  if (headerStackCount)
-    headerStackCount.textContent = String(currentStack.length);
-  renderComposerStack();
-}
-
-/** @type {any} */ (window).removeStackItem = removeStackItem;
-
-if (btnClearStack) {
-  btnClearStack.addEventListener("click", () => {
-    currentStack = [];
-    if (headerStackCount) headerStackCount.textContent = "0";
-    renderComposerStack();
-    showToast("Page Stack cleared");
+    applyFilters(true);
   });
 }
 
-async function renderAssembledPage() {
-  if (!composerIframe) return;
-  let combinedStyles = "";
-  let combinedHtml = "";
-
-  for (const item of currentStack) {
-    const assembledFile = item.file || item.htmlPath;
-    if (assembledFile) {
-      try {
-        const cleanFile = assembledFile.startsWith("/")
-          ? assembledFile.slice(1)
-          : assembledFile;
-        const res = await fetch(`${BASE_PATH}/${cleanFile}`);
-        const text = await res.text();
-        const styleMatch = text.match(/<style[^>]*>([\s\S]*?)<\/style>/i);
-        if (styleMatch)
-          combinedStyles += `\n/* ${item.id} */\n` + styleMatch[1];
-        const wrapperMatch = text.match(
-          /<div id="wrapper"[^>]*>([\s\S]*?)<\/div>/i,
-        );
-        if (wrapperMatch) {
-          combinedHtml +=
-            `\n<!-- BLOCK: ${item.id} -->\n` +
-            wrapperMatch[1].replace(/<script[\s\S]*?<\/script>/gi, "");
-        }
-      } catch (err) {}
-    }
-  }
-
-  composerIframe.srcdoc = `<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="${BASE_PATH}/sources/shared/style.css">
-  <link rel="stylesheet" href="${BASE_PATH}/sources/shared/css/font-icons.css">
-  <link rel="stylesheet" href="${BASE_PATH}/sources/shared/css/swiper.css">
-  <link rel="stylesheet" href="${BASE_PATH}/sources/shared/css/custom.css">
-  <style>${combinedStyles}</style>
-</head>
-<body class="stretched">
-  <div id="wrapper">${combinedHtml}</div>
-  <script src="${BASE_PATH}/sources/shared/js/jquery.js"></script>
-  <script src="${BASE_PATH}/sources/shared/js/plugins.min.js"></script>
-  <script src="${BASE_PATH}/sources/shared/js/functions.bundle.js"></script>
-</body>
-</html>`;
-}
-
-// Copy Action Handlers
-if (btnCopyInstall) {
-  btnCopyInstall.addEventListener("click", () => {
+if (btnCopyCli) {
+  btnCopyCli.addEventListener("click", () => {
     navigator.clipboard.writeText(
       "npx skills add kor7mid/design-canvas-vault -g",
     );
@@ -617,29 +418,21 @@ if (btnCopyInstall) {
   });
 }
 
-if (btnCopyPrompt) {
-  btnCopyPrompt.addEventListener("click", () => {
-    if (!activeItem) return;
-    const prompt = `Use template "${activeItem.id}" (${activeItem.name}) from Design Canvas Vault.
-Convert it to Next.js + Tailwind CSS with TypeScript.`;
-    navigator.clipboard.writeText(prompt);
-    showToast("Prompt copied to clipboard");
-  });
-}
+window.addEventListener("keydown", (e) => {
+  if (e.key === "/" && document.activeElement !== catalogSearchInput) {
+    e.preventDefault();
+    catalogSearchInput?.focus();
+    return;
+  }
+  if (document.activeElement !== catalogSearchInput) {
+    if (e.key === "ArrowRight") {
+      goToPage(currentPage + 1, true);
+    } else if (e.key === "ArrowLeft") {
+      goToPage(currentPage - 1, true);
+    }
+  }
+});
 
-if (btnExportPage) {
-  btnExportPage.addEventListener("click", () => {
-    if (currentStack.length === 0) return;
-    const prompt = `Generate a full Next.js + Tailwind page by assembling these Canvas Vault templates:
-${currentStack.map((s, i) => `${i + 1}. [${s.id}] ${s.name}`).join("\n")}
-
-Ensure responsive layout, 60fps transitions, and typed props.`;
-    navigator.clipboard.writeText(prompt);
-    showToast("Full page blueprint copied for AI!");
-  });
-}
-
-// Start
-init();
+void init();
 
 export {};

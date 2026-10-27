@@ -2,22 +2,22 @@
   "name": "design-canvas-vault",
   "version": "1.0.0",
   "description": "850+ curated Canvas templates, 75 business demo design systems, visual lookbook, Studio GUI, and multi-stack code generation for AI and developers.",
-  "main": "scripts/vault-cli.js",
+  "main": "scripts/vault-cli.ts",
   "bin": {
-    "vault": "./scripts/vault-cli.js",
-    "design-canvas-vault": "./scripts/vault-cli.js"
+    "vault": "./scripts/vault-cli.ts",
+    "design-canvas-vault": "./scripts/vault-cli.ts"
   },
   "scripts": {
-    "start": "node scripts/vault-cli.js studio",
-    "studio": "node scripts/vault-cli.js studio",
+    "start": "node --no-warnings scripts/vault-cli.ts studio",
+    "studio": "node --no-warnings scripts/vault-cli.ts studio",
     "build": "node scripts/build-vault.js",
-    "sync": "node scripts/vault-cli.js sync",
-    "search": "node scripts/vault-cli.js search",
-    "inspect": "node scripts/vault-cli.js inspect",
-    "extract": "node scripts/vault-cli.js extract",
-    "tokens": "node scripts/vault-cli.js tokens",
-    "contribute": "node scripts/vault-cli.js contribute",
-    "doctor": "node scripts/vault-cli.js doctor"
+    "sync": "node --no-warnings scripts/vault-cli.ts sync",
+    "search": "node --no-warnings scripts/vault-cli.ts search",
+    "inspect": "node --no-warnings scripts/vault-cli.ts inspect",
+    "extract": "node --no-warnings scripts/vault-cli.ts extract",
+    "tokens": "node --no-warnings scripts/vault-cli.ts tokens",
+    "contribute": "node --no-warnings scripts/vault-cli.ts contribute",
+    "doctor": "node --no-warnings scripts/vault-cli.ts doctor"
   },
   "keywords": [
     "canvas",
