@@ -2,8 +2,9 @@
 node_modules/
 package-lock.json
 
-# Local task tracking & progress
+# Local task tracking & editor settings
 tasks/
+.zed/
 
 # Operating System files
 .DS_Store

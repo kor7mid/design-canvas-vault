@@ -1,12 +1,12 @@
-# Design Canvas Vault — Visual Gallery
+# Design Canvas Vault — Visual Gallery & Lookbook
 
-Explore 1,245 curated templates with live online thumbnails.
+Welcome to the visual lookbook of **Design Canvas Vault** (1,245 templates, 79 business demo design systems).
 
 ---
 
-## 79 Business Demos
+## 79 Business Niche Design Systems (Palettes & Fonts)
 
-| Industry | ID | Primary | Secondary | Preview |
+| Industry | Demo ID | Primary Color | Secondary Color | Preview Thumbnail |
 |---|---|---|---|---|
 | **Academic** | `demo-academic` | `#ECA92D` | `#2C3E50` | ![Academic](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/academic.jpg) |
 | **Agency** | `demo-agency` | `#c0bb62` | `#2C3E50` | ![Agency](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/agency.jpg) |
@@ -39,7 +39,7 @@ Explore 1,245 curated templates with live online thumbnails.
 | **Construction Blog** | `demo-construction-blog` | `#F18052` | `#2C3E50` | ![Construction Blog](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/construction.jpg) |
 | **Construction Careers** | `demo-construction-careers` | `#F18052` | `#2C3E50` | ![Construction Careers](https://kor7mid.github.io/design-canvas-vault/sources/images/intro/niche/new/construction.jpg) |
 
-_...and 49 more niches in [`catalog/01-demos-dna.md`](catalog/01-demos-dna.md)._
+_...and 49 more business niches in [`catalog/01-demos-dna.md`](catalog/01-demos-dna.md)._
 
 ---
 
@@ -71,3 +71,9 @@ _...and 49 more niches in [`catalog/01-demos-dna.md`](catalog/01-demos-dna.md)._
 | `block-content-buttons` | Buttons | `misc` | ![Buttons](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/buttons.jpg) |
 | `block-content-cards-10` | Card Car Rent | `cards` | ![Card Car Rent](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/cards-10.jpg) |
 | `block-content-cards-2` | Cards 2 | `cards` | ![Cards 2](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/cards-2.jpg) |
+| `block-content-cards-3` | Cards 3 | `cards` | ![Cards 3](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/cards-3.jpg) |
+| `block-content-cards-4` | Product Cards | `cards` | ![Product Cards](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/cards-4.jpg) |
+| `block-content-cards-5` | Event Cards | `cards` | ![Event Cards](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/cards-5.jpg) |
+| `block-content-cards-6` | Blog Cards | `cards` | ![Blog Cards](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/cards-6.jpg) |
+| `block-content-cards-7` | Team Cards | `cards` | ![Team Cards](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/cards-7.jpg) |
+| `block-content-cards-8` | Team Cards 2 | `cards` | ![Team Cards 2](https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/cards-8.jpg) |

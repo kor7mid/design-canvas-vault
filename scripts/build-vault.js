@@ -220,7 +220,7 @@ if (fs.existsSync(previewImagesSrc)) {
 }
 
 const rootImagesSrc = path.join(SOURCE_DIR, "images");
-if (fs.existsSync(rootImagesSrc)) {
+if (process.env.COPY_HEAVY_IMAGES === "true" && fs.existsSync(rootImagesSrc)) {
   copyDirSync(rootImagesSrc, imagesDestDir, (filePath, fileName, isDir) => {
     if (isDir && fileName === "blocks") return false;
     return true;
@@ -291,9 +291,12 @@ if (fs.existsSync(sourceDemosDir)) {
         primaryFont = primaryFontMatch[1].trim().replace(/['"]/g, "");
     }
 
-    // Copy demo images if present
+    // Copy demo images only if explicitly requested
     const demoImagesSrc = path.join(nicheSrc, "images");
-    if (fs.existsSync(demoImagesSrc)) {
+    if (
+      process.env.COPY_HEAVY_IMAGES === "true" &&
+      fs.existsSync(demoImagesSrc)
+    ) {
       copyDirSync(demoImagesSrc, path.join(targetNicheDir, "images"));
     }
 
@@ -665,12 +668,11 @@ ensureDir(catalogDir);
 ensureDir(registryDir);
 
 const totalCount = blocksList.length + demosList.length + pagesList.length;
-
 const CDN_BASE_URL =
   process.env.CDN_BASE_URL || "https://kor7mid.github.io/design-canvas-vault";
 
 const fullCatalog = {
-  version: "2.1.0",
+  version: "1.0.0",
   cdnBaseUrl: CDN_BASE_URL,
   generatedAt: new Date().toISOString(),
   counts: {
@@ -731,10 +733,12 @@ fs.writeFileSync(
   "utf8",
 );
 
-// Generate catalog/01-demos-dna.md
+// -------------------------------------------------------------
+// Generate Markdown Catalogs with Live CDN URLs
+// -------------------------------------------------------------
 let demosMd = `# 01 — Business Demos & DNA Tokens (79 Niches)
 
-| Niche / Industry | Demo ID | Primary Color | Secondary Color | Typography | Preview |
+| Niche / Industry | Demo ID | Primary Color | Secondary Color | Typography | Preview Thumbnail |
 |---|---|---|---|---|---|
 `;
 for (const d of demosList) {
@@ -743,7 +747,6 @@ for (const d of demosList) {
 }
 fs.writeFileSync(path.join(catalogDir, "01-demos-dna.md"), demosMd, "utf8");
 
-// Generate catalog/02-blocks-catalog.md
 let blocksMd = `# 02 — 243 UI Blocks Catalog\n\n`;
 const categoriesMap = {};
 for (const b of blocksList) {
@@ -753,7 +756,7 @@ for (const b of blocksList) {
 
 for (const [catName, items] of Object.entries(categoriesMap)) {
   blocksMd += `\n### ${catName} (${items.length})\n\n`;
-  blocksMd += `| ID | Name | Preview | Tags |\n|---|---|---|---|\n`;
+  blocksMd += `| ID | Name | Preview Thumbnail | Tags |\n|---|---|---|---|\n`;
   for (const item of items) {
     const previewCell = item.preview
       ? `![${item.name}](${CDN_BASE_URL}/${item.preview})`
@@ -767,25 +770,28 @@ fs.writeFileSync(
   "utf8",
 );
 
-// Generate GALLERY.md
-let galleryMd = `# Design Canvas Vault — Visual Gallery
+let galleryMd = `# Design Canvas Vault — Visual Gallery & Lookbook
 
-Explore 1,245 curated templates with live online thumbnails.
+Welcome to the visual lookbook of **Design Canvas Vault** (1,245 templates, 79 business demo design systems).
 
 ---
 
-## 79 Business Demos
+## 79 Business Niche Design Systems (Palettes & Fonts)
 
-| Industry | ID | Primary | Secondary | Preview |
+| Industry | Demo ID | Primary Color | Secondary Color | Preview Thumbnail |
 |---|---|---|---|---|
 `;
 for (const d of demosList.slice(0, 30)) {
-  galleryMd += `| **${d.name}** | \`${d.id}\` | \`${d.primaryColor}\` | \`${d.secondaryColor}\` | ![${d.name}](${CDN_BASE_URL}/${d.preview}) |\n`;
+  const prev = d.preview ? `![${d.name}](${CDN_BASE_URL}/${d.preview})` : "-";
+  galleryMd += `| **${d.name}** | \`${d.id}\` | \`${d.primaryColor}\` | \`${d.secondaryColor}\` | ${prev} |\n`;
 }
-galleryMd += `\n_...and 49 more niches in [\`catalog/01-demos-dna.md\`](catalog/01-demos-dna.md)._\n\n---\n\n## Featured UI Blocks\n\n`;
+galleryMd += `\n_...and 49 more business niches in [\`catalog/01-demos-dna.md\`](catalog/01-demos-dna.md)._\n\n---\n\n## Featured UI Blocks\n\n`;
 galleryMd += `| ID | Name | Category | Thumbnail |\n|---|---|---|---|\n`;
-for (const b of blocksList.slice(0, 24)) {
-  galleryMd += `| \`${b.id}\` | ${b.name} | \`${b.category}\` | ![${b.name}](${CDN_BASE_URL}/${b.preview}) |\n`;
+for (const b of blocksList.slice(0, 30)) {
+  const prev = b.preview
+    ? `![${b.name}](${CDN_BASE_URL}/${b.preview})`
+    : "_None_";
+  galleryMd += `| \`${b.id}\` | ${b.name} | \`${b.category}\` | ${prev} |\n`;
 }
 fs.writeFileSync(path.join(ROOT_DIR, "GALLERY.md"), galleryMd, "utf8");
 
