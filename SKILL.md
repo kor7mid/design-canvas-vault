@@ -8,7 +8,11 @@ description: "1,245 curated Canvas templates, 79 business demo design systems, v
 This skill grants full access to the curated library of **1,245 Canvas templates**, **79 business demo design systems**, and design tokens, with interactive **Lookbook Mode** directly inside the chat and surgical CLI extraction tools.
 
 > **Path Resolution**: Paths in this skill resolve relative to `<directory>` (`~/.agents/skills/design-canvas-vault` or the repository root).
-> You can run `node <directory>/scripts/vault-cli.js <command>` from any workspace.
+> You can run `node --no-warnings <directory>/scripts/vault-cli.ts <command>` from any workspace.
+> **Official Live Web Studio & Global CDN**: `https://kor7mid.github.io/design-canvas-vault/`
+>
+> - Online Interactive Catalog: `https://kor7mid.github.io/design-canvas-vault/`
+> - All Preview Thumbnails CDN: `https://kor7mid.github.io/design-canvas-vault/sources/previews/intro/<name>.jpg`
 
 ---
 
@@ -90,7 +94,7 @@ npm start # or node scripts/vault-cli.js studio
 
 ## Master Design Engineering Knowledge Base (`guidelines/`)
 
-Whenever generating, refactoring, or auditing an interface, apply the stack-agnostic rules from the 4 design engineering manuals located in `guidelines/`:
+Whenever generating, refactoring, or auditing an interface, apply the stack-agnostic rules from the 8 design engineering manuals located in `guidelines/`:
 
 1. **`guidelines/01-refactoring-ui.md`** (_Refactoring UI_ — Adam Wathan & Steve Schoger):
    - **3-Tier Text Contrast**: Primary (`#0f172a` / `#f8fafc`), Secondary (`#475569` / `#94a3b8`), Tertiary (`#94a3b8` / `#64748b`).
@@ -116,6 +120,24 @@ Whenever generating, refactoring, or auditing an interface, apply the stack-agno
    - **Chromatic Spatiality & Gaze Direction**: Warm colors advance, cool colors recede; avoid pure `#000` on `#FFF` glare; orient human photography gaze directly toward the Primary CTA.
    - **Ortho-Typography & i18n**: Never stretch fonts, max 3 font families, never hyphenate proper nouns or numbers, respect French vs. English double-punctuation spacing (`&nbsp;:`).
    - **IA Structures & Zero-Click Rule**: Choose Tree, Persona-Selection, or Funnel IA; expose core interactive value on the hero with zero preliminary clicks; never animate logos/headers (prevents Banner Blindness); strictly ban >3Hz flashing (WCAG 2.3.1 neuro-safety).
+
+5. **`guidelines/05-laws-of-ux-and-cognitive-psychology.md`** (_Laws of UX, Cognitive Load & Choice Architecture_ — Yablonski, Sweller, CNIL):
+   - **10 Core Laws of UX**: Jakob's Law (familiar conventions), Fitts's Law (`44×44px` targets + thumb zone + safe gap around destructive actions), Hick's Law (progressive disclosure), Miller's Law (`3–5` item chunks), Postel's Law (empathetic input formatting/paste), Peak–End Rule, Aesthetic–Usability Effect, Von Restorff Isolation (`10%` accent budget), Tesler's Law (absorb complexity in software), and the Doherty Threshold (`<400ms` flow response / skeleton screens).
+   - **Cognitive Load Management**: Segment Intrinsic Load, eliminate Extraneous Load (ban Split-Attention and Redundancy effects), and maximize Germane Load.
+   - **Ethical Choice Architecture & Desirable Friction**: Strictly ban Dark/Deceptive Patterns; introduce conscious confirmation friction for irreversible destructive actions and equal-weight consent options.
+
+6. **`guidelines/06-animation-and-motion-design-systems.md`** (_Animation in Design Systems_ — Val Head / IBM Carbon):
+   - **Productive vs. Expressive Motion**: Use fast, subtle motion (`70ms–240ms`, no overshoot) for productivity UI and expressive motion (`250ms–600ms`) for hero/onboarding moments.
+   - **3 Core Custom Cubic-Beziers**: Ease-Out (`cubic-bezier(0.16, 1, 0.3, 1)`) for entrances, Ease-In (`cubic-bezier(0.4, 0, 1, 1)`, `20–30%` faster) for exits, and Ease-In-Out (`cubic-bezier(0.4, 0, 0.2, 1)`) for on-screen movement.
+   - **Choreography & Compositor Performance**: Overlap staggered list reveals (`30ms–50ms` delay, `<500ms` total cap), animate strictly `transform` and `opacity` (never `transition: all`), and honor `prefers-reduced-motion: reduce`.
+
+7. **`guidelines/07-atomic-design-and-system-architecture.md`** (_Atomic Design_ — Brad Frost):
+   - **5 Atomic Stages**: Structure interfaces as Atoms (zero external margin) $\rightarrow$ Molecules (single responsibility) $\rightarrow$ Organisms (`block-*` sections) $\rightarrow$ Templates (structural skeletons) $\rightarrow$ Pages (real edge-case content validation).
+   - **3-Tier Design Tokens**: Separate Primitive Tokens (`--color-slate-900`) from Semantic Tokens (`--surface-primary`) and Component Tokens (`--btn-primary-bg`).
+
+8. **`guidelines/08-modern-ux-and-generative-ai-patterns.md`** (_UI Design Patterns & Generative AI UX_ — Monge Roffarello / BCG X):
+   - **Proven UI Patterns**: Apply standard Cards, Accordions, Tabs, Breadcrumbs, Bottom Tab Bars, and Numbered Pagination without reinventing interaction models.
+   - **Generative AI & Agentic UX**: Eliminate the blank-canvas problem with clickable starter prompts, blend inline deterministic UI widgets into chat streams, build trust via inline hover citations (`[1]`), and visualize autonomous agent pathways with human-in-the-loop approval gates.
 
 ---
 
