@@ -494,22 +494,21 @@ function cmdStudio(port: number = 3333): void {
       return;
     }
 
-    // 1. Redirect any .html URL to clean extensionless URL
+    // 1. Redirect any non-embedded .html URL to clean extensionless URL
     if (pathname === "/studio/index.html" || pathname === "/index.html") {
       res.writeHead(301, { Location: `/${parsedUrl.search}` });
       res.end();
       return;
     }
 
-    if (pathname.endsWith(".html")) {
+    const isEmbedded = parsedUrl.searchParams.get("embed") === "1";
+
+    if (pathname.endsWith(".html") && !isEmbedded) {
       const cleanSlug = path.basename(pathname, ".html");
-      res.writeHead(301, { Location: `/${cleanSlug}${parsedUrl.search}` });
+      res.writeHead(301, { Location: `/${cleanSlug}` });
       res.end();
       return;
     }
-
-    let isTemplatePage = false;
-    let templateRelDir = "";
 
     if (pathname === "/") {
       pathname = "/studio/index.html";
@@ -526,27 +525,17 @@ function cmdStudio(port: number = 3333): void {
     } else {
       // Check if it is a clean template slug (e.g., /demo-academic, /block-hero-10)
       const slug = pathname.replace(/^\/+/, "");
-      const slugCandidates: Array<{ dir: string; file: string }> = [
-        {
-          dir: "sources/demos",
-          file: path.join(ROOT_DIR, "sources", "demos", `${slug}.html`),
-        },
-        {
-          dir: "sources/blocks",
-          file: path.join(ROOT_DIR, "sources", "blocks", `${slug}.html`),
-        },
-        {
-          dir: "sources/pages",
-          file: path.join(ROOT_DIR, "sources", "pages", `${slug}.html`),
-        },
+      const slugCandidates: Array<string> = [
+        path.join(ROOT_DIR, "sources", "demos", `${slug}.html`),
+        path.join(ROOT_DIR, "sources", "blocks", `${slug}.html`),
+        path.join(ROOT_DIR, "sources", "pages", `${slug}.html`),
       ];
-      const matchedTemplate = slugCandidates.find(
-        (c) => fs.existsSync(c.file) && fs.statSync(c.file).isFile(),
+      const matchedTemplate = slugCandidates.some(
+        (f) => fs.existsSync(f) && fs.statSync(f).isFile(),
       );
       if (matchedTemplate) {
-        pathname = `/${matchedTemplate.dir}/${slug}.html`;
-        templateRelDir = matchedTemplate.dir;
-        isTemplatePage = true;
+        // Serve the Studio SPA shell which renders the template fullscreen at the clean /<slug> URL
+        pathname = "/studio/index.html";
       } else {
         const inStudio = path.join(ROOT_DIR, "studio", pathname);
         if (fs.existsSync(inStudio)) {
@@ -648,88 +637,6 @@ function cmdStudio(port: number = 3333): void {
       };
       if (pathname.startsWith("/studio/") || ext === ".html") {
         headers["Cache-Control"] = "no-store, no-cache, must-revalidate";
-      }
-
-      // Inject Floating Studio Dock & Base URL into standalone template pages
-      if (
-        ext === ".html" &&
-        (isTemplatePage || pathname.startsWith("/sources/"))
-      ) {
-        const templateId = path.basename(absPath, ".html");
-        const relDir =
-          templateRelDir || path.dirname(pathname).replace(/^\/+/, "");
-        const catalogData = loadCatalog();
-        const catalogEntry =
-          catalogData.demos.find((d) => d.id === templateId) ||
-          catalogData.blocks.find((b) => b.id === templateId) ||
-          catalogData.pages.find((p) => p.id === templateId);
-        const initialColor = catalogEntry?.primaryColor || "#ECA92D";
-
-        let rawHtml = fs.readFileSync(absPath, "utf8");
-
-        // Inject <base> so relative assets resolve properly from clean /<id> URL
-        const baseTag = `<base href="/${relDir}/">`;
-        if (rawHtml.includes("<head>")) {
-          rawHtml = rawHtml.replace("<head>", `<head>\n  ${baseTag}`);
-        } else if (rawHtml.includes("<head ")) {
-          rawHtml = rawHtml.replace(
-            /<head[^>]*>/i,
-            (m) => `${m}\n  ${baseTag}`,
-          );
-        }
-
-        // Keep anchor links (#) on the clean /<templateId> URL instead of jumping to /sources/.../#
-        rawHtml = rawHtml.replace(
-          /href="#([^"]*)"/g,
-          `href="/${templateId}#$1"`,
-        );
-        // Rewrite any internal .html links to clean extensionless routes
-        rawHtml = rawHtml.replace(
-          /href="([a-zA-Z0-9_-]+)\.html"/g,
-          'href="/$1"',
-        );
-
-        const floatingDockHtml = `
-<!-- Design Canvas Vault Floating Studio Dock -->
-<div id="vault-floating-dock" style="position:fixed;bottom:20px;right:20px;z-index:999999;display:flex;align-items:center;gap:8px;background:rgba(10,10,14,0.94);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,0.14);box-shadow:0 20px 40px rgba(0,0,0,0.7),inset 0 1px 0 rgba(255,255,255,0.1);padding:8px 12px;border-radius:10px;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;color:#f8fafc;font-size:12px;">
-  <a href="/" onclick="if(document.referrer && document.referrer.includes(location.host)){history.back();return false;}" style="display:inline-flex;align-items:center;gap:6px;background:#1e1e26;border:1px solid rgba(255,255,255,0.12);color:#f8fafc;text-decoration:none;padding:6px 12px;border-radius:6px;font-weight:600;font-size:12px;transition:all 150ms ease;">← Back to Catalog</a>
-  <code style="font-family:monospace;font-size:11px;color:#94a3b8;background:#14141a;padding:4px 8px;border-radius:5px;border:1px solid rgba(255,255,255,0.07);">${templateId}</code>
-  <label style="display:inline-flex;align-items:center;gap:6px;background:#14141a;border:1px solid rgba(255,255,255,0.1);padding:4px 8px;border-radius:6px;cursor:pointer;" title="Live Theme Color Customizer">
-    <input type="color" id="vaultDockColor" value="${initialColor}" style="width:16px;height:16px;border:none;background:transparent;cursor:pointer;padding:0;">
-    <span style="font-size:11px;color:#94a3b8;font-family:monospace;" id="vaultDockHex">${initialColor.toUpperCase()}</span>
-  </label>
-  <button id="vaultDockCopyPrompt" style="background:#f8fafc;color:#000000;border:none;padding:6px 12px;border-radius:6px;font-weight:600;font-size:12px;cursor:pointer;">Copy Prompt</button>
-</div>
-<script>
-(function(){
-  var cp = document.getElementById('vaultDockColor');
-  var hex = document.getElementById('vaultDockHex');
-  if(cp){
-    cp.addEventListener('input', function(e){
-      var val = e.target.value;
-      if(hex) hex.textContent = val.toUpperCase();
-      document.documentElement.style.setProperty('--cnvs-themecolor', val);
-    });
-  }
-  var btn = document.getElementById('vaultDockCopyPrompt');
-  if(btn){
-    btn.addEventListener('click', function(){
-      var prompt = 'Use template "${templateId}" from Design Canvas Vault and adapt it to my project stack and styling conventions.';
-      navigator.clipboard.writeText(prompt);
-      btn.textContent = '✓ Copied!';
-      setTimeout(function(){ btn.textContent = 'Copy Prompt'; }, 1800);
-    });
-  }
-})();
-</script>`;
-        if (rawHtml.includes("</body>")) {
-          rawHtml = rawHtml.replace("</body>", `${floatingDockHtml}\n</body>`);
-        } else {
-          rawHtml += floatingDockHtml;
-        }
-        res.writeHead(200, headers);
-        res.end(rawHtml);
-        return;
       }
 
       res.writeHead(200, headers);

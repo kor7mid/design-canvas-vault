@@ -577,6 +577,203 @@ a:focus-visible {
     text-align: center;
 }
 
+/* -------------------------------------------------------------
+   4. FULL-SCREEN TEMPLATE VIEWER & FLOATING DOCK
+   ------------------------------------------------------------- */
+.fullscreen-viewer {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000;
+    z-index: 500;
+}
+
+.fullscreen-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    display: block;
+    background: #ffffff;
+}
+
+.floating-dock {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(10, 10, 14, 0.94);
+    backdrop-filter: blur(14px);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    box-shadow: var(--highlight-top), var(--shadow-hover);
+    padding: 8px 12px;
+    border-radius: 10px;
+}
+
+.dock-btn-back,
+.dock-btn-code {
+    height: 32px;
+    padding: 0 12px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border-card);
+    box-shadow: var(--highlight-top);
+    color: var(--text-primary);
+    border-radius: 6px;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 140ms ease;
+}
+
+.dock-btn-back:hover,
+.dock-btn-code:hover {
+    border-color: var(--border-hover);
+    background: #242430;
+}
+
+.dock-id-badge {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-secondary);
+    background: var(--bg-card);
+    border: 1px solid var(--border-subtle);
+    padding: 5px 8px;
+    border-radius: 5px;
+}
+
+.dock-color-pill {
+    height: 32px;
+    padding: 0 10px 0 6px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: 6px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--text-secondary);
+}
+
+.dock-color-pill input[type="color"] {
+    width: 18px;
+    height: 18px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dock-btn-primary {
+    height: 32px;
+    padding: 0 14px;
+    background: var(--text-primary);
+    color: var(--bg-page);
+    border: none;
+    border-radius: 6px;
+    font-family: var(--font-sans);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 140ms ease;
+}
+
+.dock-btn-primary:hover {
+    background: #ffffff;
+}
+
+/* Code & Tokens Modal Overlay */
+.code-modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.72);
+    backdrop-filter: blur(6px);
+    z-index: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+}
+
+.code-modal-card {
+    width: 100%;
+    max-width: 820px;
+    height: 75vh;
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    box-shadow: var(--highlight-top), var(--shadow-hover);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    transform: translateY(-4%);
+}
+
+.code-modal-header {
+    height: 54px;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border-subtle);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.code-modal-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.code-modal-body {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    overflow: hidden;
+}
+
+.code-modal-section {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.code-modal-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--text-tertiary);
+}
+
+.code-modal-pre {
+    background: #050507;
+    border: 1px solid var(--border-subtle);
+    border-radius: 8px;
+    padding: 14px;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    line-height: 1.5;
+    color: var(--text-secondary);
+    max-height: 140px;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
 /* Toast Notification */
 .vault-toast {
     position: fixed;

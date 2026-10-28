@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Design Canvas Vault — 1,245 Templates & 79 Design Systems</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap"
+            rel="stylesheet"
+        />
+        <script>
+            window.__VAULT_BASE__ = window.location.pathname.startsWith(
+                "/design-canvas-vault",
+            )
+                ? "/design-canvas-vault"
+                : "";
+            document.write(
+                '<link rel="stylesheet" href="' +
+                    window.__VAULT_BASE__ +
+                    '/studio/style.css">',
+            );
+        </script>
+    </head>
+    <body>
+        <!-- ========================================================= -->
+        <!-- VIEW 1: SPACIOUS PAGINATED CATALOG (HOME)                 -->
+        <!-- ========================================================= -->
+        <div id="catalogView">
+            <!-- Sticky Global Header -->
+            <header class="site-header">
+                <div class="header-container">
+                    <div
+                        class="brand-identity"
+                        id="brandResetBtn"
+                        title="Reset filters and return to page 1"
+                    >
+                        <div class="brand-mark">▲</div>
+                        <div class="brand-text">
+                            <span class="brand-name">Design Canvas Vault</span>
+                            <span class="brand-sep">/</span>
+                            <span class="brand-tag">1,245 Templates</span>
+                        </div>
+                    </div>
+
+                    <button
+                        class="cli-install-pill"
+                        id="btnCopyCli"
+                        title="Click to copy universal install command"
+                    >
+                        <span class="cli-prompt">$</span>
+                        <code
+                            >npx skills add kor7mid/design-canvas-vault -g</code
+                        >
+                        <svg
+                            width="13"
+                            height="13"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                        >
+                            <rect x="9" y="9" width="13" height="13" rx="2" />
+                            <path
+                                d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"
+                            />
+                        </svg>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Main Spacious Catalog -->
+            <main class="catalog-main">
+                <div class="catalog-container">
+                    <!-- Hero Search & Wayfinding Section -->
+                    <section class="hero-section" id="catalogTopAnchor">
+                        <h1 class="hero-title">
+                            Explore 1,245 Curated Templates &amp; 79 Design
+                            Systems
+                        </h1>
+                        <p class="hero-subtitle">
+                            Click any card to open the full-screen live page
+                            with theme customization, or copy its prompt
+                            directly.
+                        </p>
+
+                        <!-- Prominent Search Bar -->
+                        <div class="hero-search-wrap">
+                            <svg
+                                class="hero-search-icon"
+                                width="16"
+                                height="16"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="2"
+                            >
+                                <circle cx="11" cy="11" r="8" />
+                                <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                            </svg>
+                            <input
+                                type="text"
+                                id="catalogSearchInput"
+                                class="hero-search-input"
+                                placeholder="Search by keyword, industry (fintech, medical, saas), or block ID..."
+                                aria-label="Search templates"
+                            />
+                            <kbd
+                                class="hero-search-kbd"
+                                title="Press / to search"
+                                >/</kbd
+                            >
+                        </div>
+
+                        <!-- Category Filter Pills -->
+                        <div
+                            class="filter-bar"
+                            id="filterBar"
+                            role="toolbar"
+                            aria-label="Template Categories"
+                        >
+                            <button class="filter-pill active" data-cat="all">
+                                All <span class="pill-num">1,245</span>
+                            </button>
+                            <button class="filter-pill" data-cat="blocks">
+                                UI Blocks <span class="pill-num">243</span>
+                            </button>
+                            <button class="filter-pill" data-cat="demos">
+                                79 Business Demos
+                                <span class="pill-num">220</span>
+                            </button>
+                            <button class="filter-pill" data-cat="pages">
+                                Pages &amp; Layouts
+                                <span class="pill-num">782</span>
+                            </button>
+                            <button class="filter-pill" data-cat="hero">
+                                Heros <span class="pill-num">30</span>
+                            </button>
+                            <button class="filter-pill" data-cat="pricing">
+                                Pricing <span class="pill-num">11</span>
+                            </button>
+                            <button class="filter-pill" data-cat="cards">
+                                Cards &amp; Bento
+                                <span class="pill-num">15</span>
+                            </button>
+                            <button class="filter-pill" data-cat="forms">
+                                Forms &amp; Auth
+                                <span class="pill-num">14</span>
+                            </button>
+                            <button class="filter-pill" data-cat="onepage">
+                                One-Page <span class="pill-num">60</span>
+                            </button>
+                            <button class="filter-pill" data-cat="ecommerce">
+                                E-Commerce <span class="pill-num">45</span>
+                            </button>
+                        </div>
+                    </section>
+
+                    <!-- Results Status Bar & Quick Top Pager -->
+                    <div class="results-toolbar" id="gridToolbarAnchor">
+                        <span class="results-counter" id="resultsCounter"
+                            >Showing 1–24 of 1,245 templates</span
+                        >
+                        <div class="top-mini-pager" id="topMiniPager">
+                            <!-- Rendered dynamically -->
+                        </div>
+                    </div>
+
+                    <!-- Spacious 3-Column Modular Grid (24 items per page) -->
+                    <section
+                        class="templates-grid"
+                        id="templatesGrid"
+                        aria-label="Templates Lookbook Grid"
+                    >
+                        <!-- Populated dynamically -->
+                    </section>
+
+                    <!-- Full Numbered Pagination Bar -->
+                    <nav
+                        class="pagination-bar"
+                        id="paginationBar"
+                        aria-label="Catalog Pagination"
+                    >
+                        <!-- Rendered dynamically -->
+                    </nav>
+                </div>
+            </main>
+        </div>
+
+        <!-- ========================================================= -->
+        <!-- VIEW 2: FULL-SCREEN TEMPLATE VIEWER (100vw × 100vh)       -->
+        <!-- ========================================================= -->
+        <div
+            id="fullscreenViewer"
+            class="fullscreen-viewer"
+            style="display: none"
+        >
+            <iframe
+                id="fullscreenIframe"
+                class="fullscreen-iframe"
+                title="Live Fullscreen Template"
+            ></iframe>
+
+            <!-- Floating Studio Dock (Bottom Right) -->
+            <div class="floating-dock" id="floatingDock">
+                <button
+                    type="button"
+                    class="dock-btn-back"
+                    id="btnDockBack"
+                    title="Return to catalog (Esc)"
+                >
+                    ← Back to Catalog
+                </button>
+                <code class="dock-id-badge" id="dockTemplateId"
+                    >demo-academic</code
+                >
+                <label
+                    class="dock-color-pill"
+                    title="Customize --cnvs-themecolor live"
+                >
+                    <input
+                        type="color"
+                        id="dockColorPicker"
+                        value="#ECA92D"
+                        aria-label="Theme color customizer"
+                    />
+                    <span id="dockColorHex">#ECA92D</span>
+                </label>
+                <button
+                    type="button"
+                    class="dock-btn-code"
+                    id="btnDockInspectCode"
+                    title="Inspect purified HTML & CSS tokens"
+                >
+                    { } Code
+                </button>
+                <button
+                    type="button"
+                    class="dock-btn-primary"
+                    id="btnDockCopyPrompt"
+                >
+                    Copy Prompt
+                </button>
+            </div>
+
+            <!-- Code & Tokens Modal Overlay -->
+            <div
+                class="code-modal-backdrop"
+                id="codeModalBackdrop"
+                style="display: none"
+            >
+                <div class="code-modal-card">
+                    <div class="code-modal-header">
+                        <div>
+                            <span class="code-modal-title" id="codeModalTitle"
+                                >Template Code &amp; Tokens</span
+                            >
+                            <code
+                                class="dock-id-badge"
+                                id="codeModalId"
+                                style="margin-left: 8px"
+                                >demo-academic</code
+                            >
+                        </div>
+                        <button
+                            type="button"
+                            class="dock-btn-code"
+                            id="btnCloseCodeModal"
+                        >
+                            ✕ Close
+                        </button>
+                    </div>
+                    <div class="code-modal-body">
+                        <div class="code-modal-section">
+                            <div class="code-modal-bar">
+                                <span>CSS DESIGN TOKENS (:ROOT)</span>
+                                <button
+                                    type="button"
+                                    class="dock-btn-code"
+                                    id="btnModalCopyCss"
+                                >
+                                    Copy CSS
+                                </button>
+                            </div>
+                            <pre class="code-modal-pre" id="modalCssCode"></pre>
+                        </div>
+                        <div
+                            class="code-modal-section"
+                            style="flex: 1; min-height: 0"
+                        >
+                            <div class="code-modal-bar">
+                                <span>PURIFIED HTML MARKUP</span>
+                                <button
+                                    type="button"
+                                    class="dock-btn-code"
+                                    id="btnModalCopyHtml"
+                                >
+                                    Copy HTML
+                                </button>
+                            </div>
+                            <pre
+                                class="code-modal-pre"
+                                id="modalHtmlCode"
+                                style="flex: 1; max-height: none"
+                            ></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toast Notification -->
+        <div
+            class="vault-toast"
+            id="vaultToast"
+            role="status"
+            aria-live="polite"
+        >
+            <svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+            >
+                <polyline points="20 6 9 17 4 12" />
+            </svg>
+            <span id="toastText">Copied to clipboard</span>
+        </div>
+
+        <script>
+            const s = document.createElement("script");
+            s.type = "module";
+            s.src = (window.__VAULT_BASE__ || "") + "/studio/app.js";
+            document.body.appendChild(s);
+        </script>
+    </body>
+</html>

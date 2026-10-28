@@ -1,29 +1,45 @@
 # Design Canvas Vault
 
-> **The ultimate repository of 1,245 Canvas templates, 79 business demo design systems, visual Lookbook, local Studio GUI, and AI Agent Skill for Zed.**
+> **The ultimate repository of 1,245 Canvas templates, 79 business demo design systems, 8 Design Engineering Bibles, visual Lookbook, interactive Web Studio, and Universal AI Agent Skill.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Templates](https://img.shields.io/badge/Templates-1%2C245_Indexed-emerald.svg)](#)
-[![Business Demos](https://img.shields.io/badge/Business_Demos-79_Niches-orange.svg)](#)
-[![Zed Skill](https://img.shields.io/badge/Zed_Agent-Skill_Compatible-purple.svg)](#)
+[![Templates](https://img.shields.io/badge/Templates-1%2C245_Indexed-emerald.svg)](https://kor7mid.github.io/design-canvas-vault/)
+[![Business Demos](https://img.shields.io/badge/Business_Demos-79_Niches-orange.svg)](https://kor7mid.github.io/design-canvas-vault/?cat=demos)
+[![Universal Skill](https://img.shields.io/badge/AI_Agent-Universal_Skill-purple.svg)](#universal-skill-installation)
+[![Live Web Studio](https://img.shields.io/badge/Live_Web_Studio-kor7mid.github.io%2Fdesign--canvas--vault-111111?style=flat&logo=githubpages&logoColor=white)](https://kor7mid.github.io/design-canvas-vault/)
 
 ---
 
-## Universal Skill Installation (Zed AI)
+## 🌐 Official Live Web Studio & Online Lookbook
 
-To install this skill globally for your Zed coding agent:
+Browse, search, filter, and open all **1,245 templates** and **79 business design systems** directly in your browser without installing anything:
+
+👉 **Official Website: [https://kor7mid.github.io/design-canvas-vault/](https://kor7mid.github.io/design-canvas-vault/)**
+
+- **Spacious Paginated Catalog**: Filter across 243 UI Blocks, 220 Business Demos, and 782 Application Pages (`24 items/page`, keyboard navigation `←` / `→` and `/` to search).
+- **Full-Screen Live Preview**: Click any card to open the real standalone template page with a floating theme color customizer and one-click prompt copy.
+- **Global CDN**: Hosts all template preview thumbnails and demo assets at `https://kor7mid.github.io/design-canvas-vault/sources/...`.
+
+---
+
+## ⚡ Universal Skill Installation
+
+Install this skill globally for your AI coding agent (Cursor, Claude Code, Windsurf, VS Code, Copilot, Zed, etc.):
 
 ```bash
 npx skills add kor7mid/design-canvas-vault -g
 ```
 
-Once installed, the AI agent has instant access to interactive Lookbook mode, industry-specific recommendations, and multi-stack code conversion.
+Once installed, your AI agent gains instant access to:
+
+1. **Interactive Lookbook Mode**: Renders live preview thumbnails directly in the chat before writing code.
+2. **79 Industry Design Systems**: Automatically applies authentic color palettes and typography pairings for any business vertical.
+3. **8 Design Engineering Bibles (`guidelines/`)**: Enforces battle-tested rules from _Refactoring UI_, _Don't Make Me Think_, _100 Universal Layout Principles_, _Laws of UX_, _Animation in Design Systems_, _Atomic Design_, and _Generative AI UX_.
+4. **Context-First & Stack-Agnostic Generation**: Adapts templates to your project's existing stack (Vanilla CSS, SCSS, CSS Modules, Bootstrap, React, Next.js, Vue, Svelte, or React Native).
 
 ---
 
-## Launch Vault Studio GUI
-
-Preview all 1,245 templates in real time, customize design tokens, compose full-page stacks, and inspect clean code in a minimalist dark interface:
+## 🚀 Run Vault Studio Locally
 
 ```bash
 git clone https://github.com/kor7mid/design-canvas-vault.git
@@ -33,78 +49,68 @@ cd design-canvas-vault
 npm start
 ```
 
-### Studio Highlights:
-
-- **Leaderboard Explorer**: Full searchable database with keyboard shortcuts (`/` to search, `Esc` to close).
-- **Responsive Viewport**: Live rendering with Desktop (100%), Tablet (768px), and Mobile (375px) presets.
-- **Design Token Inspector**: Live color preview and automatic Tailwind config generation.
-- **Page Stack Builder**: Stack multiple blocks (Hero + Cards + Pricing + Footer) to generate a complete page blueprint.
-- **Code Extraction**: One-click copy for clean HTML/CSS and AI prompts.
+- **Clean Semantic URLs**:
+  - Catalog Home: `http://localhost:3333/`
+  - Any Template Live Page: `http://localhost:3333/demo-academic`, `http://localhost:3333/block-hero-10`
 
 ---
 
-## Internal CLI Tools
+## 🛠️ Internal TypeScript CLI (`scripts/vault-cli.ts`)
 
-The repository includes a fast Node.js CLI tool (`scripts/vault-cli.js`) to inspect, extract, and convert templates without context window bloat:
+Query, inspect, and extract surgical code without saturating LLM context windows:
 
 ```bash
 # Search 1,245 templates by keyword, category, or industry
-node scripts/vault-cli.js search "pricing"
-node scripts/vault-cli.js search "fintech" --json
+npm run search -- "pricing"
+npm run search -- "finance" --json
 
-# Inspect DOM structure and design tokens of any template
-node scripts/vault-cli.js inspect block-content-pricing-5
+# Inspect DOM structure, CSS classes, fonts, and colors of any template
+npm run inspect -- block-content-pricing-5
 
-# Extract clean, purified HTML/CSS
-node scripts/vault-cli.js extract block-content-pricing-5
-node scripts/vault-cli.js extract block-hero-10 --html-only
+# Extract clean, purified HTML/CSS markup
+npm run extract -- block-content-pricing-5
+npm run extract -- block-hero-10 --html-only
 
-# Generate Design System tokens (Tailwind, CSS :root, React Native / Expo)
-node scripts/vault-cli.js tokens demo-finance --format tailwind
-node scripts/vault-cli.js tokens demo-saas --format rn
-node scripts/vault-cli.js tokens demo-medical --format css
+# Export Design System tokens (CSS :root variables, Tailwind, or React Native)
+npm run tokens -- demo-finance --format css
+npm run tokens -- demo-finance --format tailwind
+npm run tokens -- demo-saas --format rn
 
-# Validate catalog integrity
-node scripts/vault-cli.js doctor
+# Validate repository integrity across all 1,245 templates
+npm run doctor
 ```
 
 ---
 
-## 79 Business Niche Design Systems
+## 📚 Master Design Engineering Guidelines (`guidelines/`)
 
-Each industry vertical includes a complete visual identity (primary/secondary palette, Google Fonts, and CSS tokens):
-
-| Industry              | Demo ID            | Primary Color | Secondary Color | Typography                    |
-| --------------------- | ------------------ | ------------- | --------------- | ----------------------------- |
-| **Fintech / Finance** | `demo-finance`     | `#264653`     | `#E9C46A`       | DM Serif Text / Manrope       |
-| **SaaS Modern**       | `demo-saas`        | `#0b44a7`     | `#ffbd00`       | Hoss Round / Sans-serif       |
-| **Medical & Health**  | `demo-medical`     | `#0088cc`     | `#2C3E50`       | Poppins / Sans-serif          |
-| **Real Estate**       | `demo-real-estate` | `#1ABC9C`     | `#333333`       | Lato / Sans-serif             |
-| **Restaurant / Food** | `demo-restaurant`  | `#d35400`     | `#2C3E50`       | Playfair Display / Sans-serif |
-| **Gym & Fitness**     | `demo-gym`         | `#e74c3c`     | `#111111`       | Montserrat / Sans-serif       |
-| **Law Firm / Legal**  | `demo-law-firm`    | `#1d2a44`     | `#c5a880`       | Merriweather / Sans-serif     |
-
-_Browse all 79 industries in [`catalog/01-demos-dna.md`](catalog/01-demos-dna.md)._
+- [`guidelines/01-refactoring-ui.md`](guidelines/01-refactoring-ui.md): Complete _Refactoring UI_ engineering manual (3-tier contrast, baseline alignment, hue-shifting, dual-shadow elevation, component micro-tactics).
+- [`guidelines/02-dont-make-me-think.md`](guidelines/02-dont-make-me-think.md): Steve Krug's usability laws (zero cognitive friction, billboard scanning, Trunk Test, information scent, 44×44px touch targets).
+- [`guidelines/03-universal-layout-principles.md`](guidelines/03-universal-layout-principles.md): Beth Tondreau's 100 layout & Swiss grid rules (12-column math, baseline lock, hang lines, z-axis layering).
+- [`guidelines/04-visual-identity-ia-and-ux-writing.md`](guidelines/04-visual-identity-ia-and-ux-writing.md): Color psychology, Vox-ATypI typography, international ortho-typography, IA funnels, and WCAG neuro-safety.
+- [`guidelines/05-laws-of-ux-and-cognitive-psychology.md`](guidelines/05-laws-of-ux-and-cognitive-psychology.md): Jon Yablonski's 10 Laws of UX, Sweller's Cognitive Load Theory, and CNIL Ethical Choice Architecture & Desirable Friction.
+- [`guidelines/06-animation-and-motion-design-systems.md`](guidelines/06-animation-and-motion-design-systems.md): Val Head's motion systems (Productive vs. Expressive motion, duration tokens, custom cubic-bezier curves, choreography, and `prefers-reduced-motion`).
+- [`guidelines/07-atomic-design-and-system-architecture.md`](guidelines/07-atomic-design-and-system-architecture.md): Brad Frost's Atomic Design methodology (Atoms $\rightarrow$ Pages) and 3-tier Primitive/Semantic/Component token architecture.
+- [`guidelines/08-modern-ux-and-generative-ai-patterns.md`](guidelines/08-modern-ux-and-generative-ai-patterns.md): Classical Web/Mobile UI design patterns and BCG X Generative AI / Autonomous Agent UX patterns.
 
 ---
 
-## Catalogs & Gallery
+## 🎨 79 Business Niche Design Systems
 
-- [`catalog/01-demos-dna.md`](catalog/01-demos-dna.md): 79 Business Demos & DNA tokens
-- [`catalog/02-blocks-catalog.md`](catalog/02-blocks-catalog.md): 243 UI Blocks categorized
-- [`catalog/03-pages-layouts.md`](catalog/03-pages-layouts.md): 782 Application & Marketing Pages
-- [`catalog/04-custom-templates.md`](catalog/04-custom-templates.md): Community contributions
-- [`catalog/05-presets-recipes.md`](catalog/05-presets-recipes.md): Pre-assembled full page blueprints
-- [`GALLERY.md`](GALLERY.md): Visual lookbook with thumbnails and prompts
+| Industry                 | Demo ID            | Primary Color | Secondary Color | Typography                    | Live Preview                                                                |
+| ------------------------ | ------------------ | ------------- | --------------- | ----------------------------- | --------------------------------------------------------------------------- |
+| **Academic & Research**  | `demo-academic`    | `#ECA92D`     | `#2C3E50`       | Larken / Acumin Pro           | [Live Demo](https://kor7mid.github.io/design-canvas-vault/demo-academic)    |
+| **Fintech & Finance**    | `demo-finance`     | `#264653`     | `#E9C46A`       | DM Serif Text / Manrope       | [Live Demo](https://kor7mid.github.io/design-canvas-vault/demo-finance)     |
+| **SaaS Modern**          | `demo-saas`        | `#0b44a7`     | `#ffbd00`       | Hoss Round / Sans-serif       | [Live Demo](https://kor7mid.github.io/design-canvas-vault/demo-saas)        |
+| **Medical & Healthcare** | `demo-medical`     | `#0088cc`     | `#2C3E50`       | Poppins / Sans-serif          | [Live Demo](https://kor7mid.github.io/design-canvas-vault/demo-medical)     |
+| **Real Estate**          | `demo-real-estate` | `#1ABC9C`     | `#333333`       | Lato / Sans-serif             | [Live Demo](https://kor7mid.github.io/design-canvas-vault/demo-real-estate) |
+| **Restaurant & Dining**  | `demo-restaurant`  | `#d35400`     | `#2C3E50`       | Playfair Display / Sans-serif | [Live Demo](https://kor7mid.github.io/design-canvas-vault/demo-restaurant)  |
+| **Law Firm & Legal**     | `demo-law-firm`    | `#1d2a44`     | `#c5a880`       | Merriweather / Sans-serif     | [Live Demo](https://kor7mid.github.io/design-canvas-vault/demo-law-firm)    |
+
+_Browse all 79 industries in [`catalog/01-demos-dna.md`](catalog/01-demos-dna.md) and [`GALLERY.md`](GALLERY.md)._
 
 ---
 
-## Contributing
+## 📄 License
 
-See [`CONTRIBUTING.md`](CONTRIBUTING.md) for guidelines on submitting new templates and presets.
-
----
-
-## License
-
-Distributed under the MIT License. See `LICENSE` for details.
+Distributed under the MIT License.
