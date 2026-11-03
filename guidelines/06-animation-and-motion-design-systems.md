@@ -1,7 +1,7 @@
 # 06 — Animation & Motion Design Systems
 
-> **Source Distillation**: *Animation in Design Systems* by Val Head (Adobe) & *Designing Interface Animation* (referencing IBM Carbon, Google Material, Adobe Spectrum, Microsoft Fluent, and Salesforce Lightning motion systems).
-> **Scope**: Universal, stack-agnostic motion tokens, cubic-bezier easing architecture, choreography, and hardware-accelerated performance.
+> **Source Distillation**: *Animation in Design Systems* by Val Head (Adobe), *Designing Interface Animation* (IBM Carbon, Google Material, Adobe Spectrum), and Apple's WWDC *Designing Fluid Interfaces* (2018–2026).
+> **Scope**: Universal, stack-agnostic motion tokens, cubic-bezier easing architecture, physical spring mechanics, 1:1 gesture tracking, momentum projection, choreography, and hardware-accelerated performance.
 
 ---
 
@@ -146,3 +146,48 @@ When introducing motion governance into an existing application:
 1. **Inventory**: Record every existing transition across the product (hover states, modals, page loads, notifications).
 2. **Group by Purpose**: Consolidate all recorded animations into 4–5 purpose-driven buckets (*Micro-interactions, Entrances, Exits, Point-to-Point Layout Shifts, Attention/Status*).
 3. **Consolidate & Tokenize**: Replace arbitrary one-off durations and default CSS easing curves with the standardized Duration and Easing tokens defined above.
+
+---
+
+## 8. Apple Fluid Interfaces: Physical Springs, Direct Manipulation & Momentum
+
+> **Core Principle (WWDC *Designing Fluid Interfaces*)**: An interface feels alive when motion starts from the current on-screen presentation value, inherits the user's release velocity, projects momentum forward, and can be grabbed and reversed at any instant.
+
+### 8.1 Instant Response & 1:1 Direct Manipulation
+- **Respond on `pointerdown`, never wait for `click`/release**: Highlight or depress (`transform: scale(0.97); transition: transform 100ms ease-out`) the instant the pointer touches down.
+- **1:1 Pointer Tracking**: Use Pointer Events with `setPointerCapture` so drag tracking continues even if the pointer leaves the element bounds. Respect the exact `grabOffset` (`e.clientY - el.getBoundingClientRect().top`) so the element never snaps its center to the cursor.
+- **Hysteresis & Parallel Gesture Recognition**: Require a `~10px` movement threshold before committing to a drag/swipe direction, and allow canceling a tap by dragging away before release.
+
+### 8.2 Interruptibility & Presentation-Value Continuity
+- **Never lock out input during a transition**: A user must be able to grab a closing drawer mid-flight and pull it back open.
+- **Animate from the live presentation value**: Always read the element's current on-screen transform on interruption; never jump to the logical start/end state.
+- **Carry velocity through reversals**: Avoid CSS `@keyframes` for gesture-driven UI. Use springs that blend velocity on re-target to prevent a "brick wall" velocity discontinuity. Decompose 2D motion into independent X and Y springs.
+
+### 8.3 Designer-Friendly Spring Parameters (`Damping` & `Response`)
+Apple replaces raw physics (`mass/stiffness/damping`) with two intuitive parameters (mapped to `bounce` + `duration` in Motion / Framer Motion):
+- **Damping Ratio**: Controls overshoot. `1.0` = critically damped (zero bounce, smooth settle — **use as the default for 90% of UI**). `~0.8` = under-damped (slight bounce — **use ONLY when the user's gesture carried physical momentum**, such as a flick or throw).
+- **Response**: How quickly the spring reaches target (`0.3s–0.4s` standard).
+
+| Interaction | Damping | Response | Web Motion Equivalent |
+|---|---|---|---|
+| **Default UI / Reposition (PiP)** | `1.0` | `0.4s` | `{ type: 'spring', bounce: 0, duration: 0.4 }` |
+| **Rotation** | `0.8` | `0.4s` | `{ type: 'spring', bounce: 0.2, duration: 0.4 }` |
+| **Drawer / Bottom Sheet** | `0.8` | `0.3s` | `{ type: 'spring', bounce: 0.2, duration: 0.3 }` |
+
+### 8.4 Velocity Handoff, Momentum Projection & Rubber-Banding
+1. **Velocity Handoff**: Pass the pointer's release velocity (`px/s`) directly into the spring's initial velocity (`relativeVelocity = gestureVelocity / (target - current)` when normalized).
+2. **Momentum Projection (Exponential Decay)**: Never snap to the nearest boundary from the *release* point; project where the flick is *going* and snap to the nearest target from that projected resting point:
+   ```js
+   // decelerationRate ≈ 0.998 (normal scroll feel) | 0.99 (snappier sheet/carousel)
+   function project(initialVelocity, decelerationRate = 0.998) {
+     return (initialVelocity / 1000) * decelerationRate / (1 - decelerationRate);
+   }
+   const projectedEndpoint = currentPosition + project(releaseVelocity);
+   ```
+3. **Rubber-Banding at Boundaries**: Never hard-stop at an edge; resist progressively:
+   ```js
+   function rubberband(overshoot, dimension, constant = 0.55) {
+     return (overshoot * dimension * constant) / (dimension + constant * Math.abs(overshoot));
+   }
+   ```
+4. **Anchored Origins & Multimodal Harmony**: Anchor popovers/menus to their trigger (`transform-origin` set to the button). When pairing motion with sound or haptics, fire visual, audio, and haptic feedback on the **exact same frame**.

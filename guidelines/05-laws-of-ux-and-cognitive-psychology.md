@@ -146,3 +146,16 @@ Introduce **Desirable Friction** to awaken conscious reflection (System 2 slow/d
 - **Symmetrical Consent & Privacy Controls**: Present `Accept` and `Refuse` / `Customize` choices with **equal visual weight, size, and typographic hierarchy** on the same screen layer.
 - **Granular, Layered Transparency**: Instead of dumping a 20-page legal wall of text (exploiting *Information Overload*), provide a scannable 3-bullet human summary with expandable progressive disclosure for full details.
 - **Stopping Cues & Agency**: Prefer clear pagination or explicit "Load More" boundaries over infinite scroll in productivity and catalog interfaces so users maintain spatial awareness and a sense of control.
+
+---
+
+## 5. Apple's 8 Principles of Great Design (WWDC 2026)
+
+1. **Purpose**: Make with intention; decide what *not* to build. Spend the user's attention budget only where it pays off.
+2. **Agency**: Keep people in control with clear choices and easy undo for slips; reserve confirmation dialogs strictly for irreversible destructive actions.
+3. **Responsibility**: Act in the user's interest. Request permissions at the exact moment of need, anticipate AI/data edge cases, and add clear previews/disclaimers.
+4. **Familiarity**: Build on existing mental models and physical metaphors; keep recurring controls in predictable spatial positions.
+5. **Flexibility**: Adapt across touch vs. pointer workflows, viewport sizes, and accessibility preferences.
+6. **Simplicity (Not Minimalism)**: Strip unnecessary steps so the core purpose shines—never bury essential context just to make a screen look empty.
+7. **Craft**: Uncompromising precision in typography, adaptive color, alignment, and zero-latency feedback.
+8. **Delight**: The organic result of getting the first seven principles right, not superficial confetti tacked on top.
