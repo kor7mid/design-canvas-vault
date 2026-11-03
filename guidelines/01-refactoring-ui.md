@@ -224,11 +224,12 @@ Stick strictly to a 10-step handcrafted scale:
 - **Body Copy (14px - 16px)**: Needs room to breathe (`line-height: 1.5` to `1.65`).
 - **Dense/Compact UI (Badges, Buttons)**: Use single-line height (`line-height: 1.0`).
 
-### 4.7 Letter-Spacing (Tracking) Rules
+### 4.7 Letter-Spacing (Tracking) & Optical Sizing Rules
 
-1. **Headlines (24px+)**: Always slightly tighten letter spacing (`letter-spacing: -0.02em` to `-0.03em`). Large letters have naturally wide spacing that must be pulled together.
+1. **Headlines (24px+)**: Always slightly tighten letter spacing (`letter-spacing: -0.02em` to `-0.035em`) and enable `font-optical-sizing: auto`. Large letters have naturally wide spacing that must be pulled together.
 2. **All-Caps / Uppercase Text**: Always INCREASE letter spacing (`letter-spacing: 0.08em` to `0.15em`). Without tracking, capital letters jam together and become unreadable.
 3. **Body Copy (16px)**: Leave tracking at default `0`. Type designers calibrated it perfectly.
+4. **Dynamic Type & Viewport Scaling**: Use `clamp(2rem, 5vw, 4rem)` with `rem`/`em` spacing so layouts scale gracefully when users increase system font sizes.
 
 ### 4.8 Text Alignment & Numbers
 
@@ -332,15 +333,19 @@ Use a consistent elevation ramp to communicate hierarchy:
   1. **An ambient shadow**: Large blur, low opacity, simulates light diffusing around the object.
   2. **A direct shadow**: Small blur, higher opacity, grounds the object and defines its physical silhouette.
 
-### 6.4 Depth in Flat & Dark Mode Design
+### 6.4 Depth in Flat & Dark Mode Design & Translucent Materials
 
 - In Dark Mode, shadows are barely visible against black backgrounds.
 - **The Elevation Rule in Dark Mode**: **Lighter surfaces = Closer to the camera**.
-  - Background: `#000000` (deepest level).
+  - Background: `#08090a` (deepest carbon slate level — avoid pure `#000000` smearing).
   - Level 1 (Resting Card): `#0a0a0a` or `#121212`.
   - Level 2 (Dropdown / Modal): `#1a1a1a`.
   - Level 3 (Tooltip / Focus Ring): `#242424`.
-- Combine surface lightening with a hairline border (`1px solid rgba(255, 255, 255, 0.08)`) to outline elevated surfaces.
+- Combine surface lightening with a hairline border (`1px solid rgba(255, 255, 255, 0.08)`) and an inner top highlight (`box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1)`) to outline elevated surfaces.
+- **Apple Translucent Materials (`backdrop-filter`)**:
+  - Build floating chrome (navbars, toolbars, sheets) as translucent layers (`background: rgba(255, 255, 255, 0.6)` or dark `rgba(9, 9, 11, 0.75)`; `backdrop-filter: blur(20px) saturate(180%)`).
+  - **Never stack a light translucent surface directly onto another translucent surface** — legibility collapses.
+  - **Accessibility Overrides**: Always respect `@media (prefers-reduced-transparency: reduce)` (replace blur with solid background) and `@media (prefers-contrast: more)` (use solid high-contrast borders).
 
 ---
 

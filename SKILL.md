@@ -92,9 +92,9 @@ npm start # or node scripts/vault-cli.js studio
 
 ---
 
-## Master Design Engineering Knowledge Base (`guidelines/`)
+## Master Design Engineering Knowledge Base (`guidelines/` & `notes-sites/`)
 
-Whenever generating, refactoring, or auditing an interface, apply the stack-agnostic rules from the 8 design engineering manuals located in `guidelines/`:
+Whenever generating, refactoring, or auditing an interface, apply the stack-agnostic rules from the 9 design engineering manuals located in `guidelines/` and the 8 sector compendiums in `notes-sites/`:
 
 1. **`guidelines/01-refactoring-ui.md`** (_Refactoring UI_ — Adam Wathan & Steve Schoger):
    - **3-Tier Text Contrast**: Primary (`#0f172a` / `#f8fafc`), Secondary (`#475569` / `#94a3b8`), Tertiary (`#94a3b8` / `#64748b`).
@@ -126,10 +126,10 @@ Whenever generating, refactoring, or auditing an interface, apply the stack-agno
    - **Cognitive Load Management**: Segment Intrinsic Load, eliminate Extraneous Load (ban Split-Attention and Redundancy effects), and maximize Germane Load.
    - **Ethical Choice Architecture & Desirable Friction**: Strictly ban Dark/Deceptive Patterns; introduce conscious confirmation friction for irreversible destructive actions and equal-weight consent options.
 
-6. **`guidelines/06-animation-and-motion-design-systems.md`** (_Animation in Design Systems_ — Val Head / IBM Carbon):
+6. **`guidelines/06-animation-and-motion-design-systems.md`** (_Motion Systems & Apple Fluid Interfaces_ — Val Head, IBM Carbon & Apple WWDC):
    - **Productive vs. Expressive Motion**: Use fast, subtle motion (`70ms–240ms`, no overshoot) for productivity UI and expressive motion (`250ms–600ms`) for hero/onboarding moments.
-   - **3 Core Custom Cubic-Beziers**: Ease-Out (`cubic-bezier(0.16, 1, 0.3, 1)`) for entrances, Ease-In (`cubic-bezier(0.4, 0, 1, 1)`, `20–30%` faster) for exits, and Ease-In-Out (`cubic-bezier(0.4, 0, 0.2, 1)`) for on-screen movement.
-   - **Choreography & Compositor Performance**: Overlap staggered list reveals (`30ms–50ms` delay, `<500ms` total cap), animate strictly `transform` and `opacity` (never `transition: all`), and honor `prefers-reduced-motion: reduce`.
+   - **3 Core Cubic-Beziers & Apple Springs**: Ease-Out (`cubic-bezier(0.16, 1, 0.3, 1)`), Ease-In (`cubic-bezier(0.4, 0, 1, 1)`), Ease-In-Out (`cubic-bezier(0.4, 0, 0.2, 1)`), plus interruptible physical springs (`damping: 1.0, response: 0.3–0.4` by default; `damping: 0.8` only when gesture carries momentum), 1:1 pointer tracking (`setPointerCapture`), velocity handoff, and exponential momentum projection.
+   - **Choreography & Compositor Performance**: Overlap staggered list reveals (`30ms–50ms` delay, `<500ms` total cap), animate strictly `transform` and `opacity`, and honor `prefers-reduced-motion: reduce`.
 
 7. **`guidelines/07-atomic-design-and-system-architecture.md`** (_Atomic Design_ — Brad Frost):
    - **5 Atomic Stages**: Structure interfaces as Atoms (zero external margin) $\rightarrow$ Molecules (single responsibility) $\rightarrow$ Organisms (`block-*` sections) $\rightarrow$ Templates (structural skeletons) $\rightarrow$ Pages (real edge-case content validation).
@@ -138,6 +138,10 @@ Whenever generating, refactoring, or auditing an interface, apply the stack-agno
 8. **`guidelines/08-modern-ux-and-generative-ai-patterns.md`** (_UI Design Patterns & Generative AI UX_ — Monge Roffarello / BCG X):
    - **Proven UI Patterns**: Apply standard Cards, Accordions, Tabs, Breadcrumbs, Bottom Tab Bars, and Numbered Pagination without reinventing interaction models.
    - **Generative AI & Agentic UX**: Eliminate the blank-canvas problem with clickable starter prompts, blend inline deterministic UI widgets into chat streams, build trust via inline hover citations (`[1]`), and visualize autonomous agent pathways with human-in-the-loop approval gates.
+
+9. **`guidelines/09-top-200-sites-playbook.md` & `notes-sites/01..08-*.md`** (_Empirical Audit of 200 Industry-Reference Websites_):
+   - **Anti-AI Directives**: Strictly ban gaudy rainbow text gradients, generic Corporate Memphis flat illustrations, pure `#000000` un-tinted backgrounds on SaaS dashboards, borderless dark cards, and cramped section padding (`<80px`).
+   - **8 Sector Compendiums (`notes-sites/`)**: Reference the 8 factorized sector files (`01-saas-devtools-infrastructure.md` through `08-hospitality-health-modern-services.md`) for real-world computed styles across all 200 sites: intermediate variable weights (`450`/`510`), `1px solid rgba(255,255,255,0.08)` hairline borders, floating pill navbars, and Asymmetric Bento matrices.
 
 ---
 
